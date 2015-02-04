@@ -1,5 +1,6 @@
 <html>
 	<head>
+
 		<link href='//fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
 
 		<style>
@@ -28,10 +29,6 @@
 			.title {
 				font-size: 96px;
 				margin-bottom: 40px;
-			}
-
-			.quote {
-				font-size: 24px;
 			}
 		</style>
 	</head>
