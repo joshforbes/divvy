@@ -2,89 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42cdb1d5-8b6e-4047-bd25-3a856df9e117" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/app.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/badges.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/bootstrap.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/breadcrumbs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/button-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/carousel.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/close.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/code.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/component-animations.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/dropdowns.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/glyphicons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/input-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/jumbotron.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/media.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/background-variant.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/border-radius.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/center-block.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/clearfix.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/gradients.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/grid-framework.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/hide-text.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/image.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/nav-divider.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/nav-vertical-align.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/opacity.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/panels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/progress-bar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/reset-filter.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/resize.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/responsive-visibility.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/size.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/tab-focus.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/table-row.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/text-emphasis.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/text-overflow.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/mixins/vendor-prefixes.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/modals.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/navs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/normalize.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/pager.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/panels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/popovers.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/print.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/progress-bars.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/responsive-embed.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/responsive-utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/scaffolding.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/tables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/theme.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/thumbnails.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/type.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/assets/less/bootstrap/wells.less" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Services/Registrar.php" afterPath="$PROJECT_DIR$/app/Services/Registrar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/mail.php" afterPath="$PROJECT_DIR$/config/mail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/reset.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/reset.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/services.php" afterPath="$PROJECT_DIR$/config/services.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="divvy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ResetsPasswords.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/profiles/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11111111" vertical-offset="0" max-vertical-offset="3425">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.5555556" vertical-offset="0" max-vertical-offset="900">
+              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -136,15 +61,26 @@
         <option value="$PROJECT_DIR$/resources/assets/app.scss" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Services/Registrar.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/constants.php" />
         <option value="$PROJECT_DIR$/config/contants.php" />
         <option value="$PROJECT_DIR$/config/constants.php" />
         <option value="$PROJECT_DIR$/config/mail.php" />
         <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_02_05_002126_create_profiles_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/app/Profile.php" />
+        <option value="$PROJECT_DIR$/app/Services/Registrar.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/reset.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/profiles/show.blade.php" />
       </list>
     </option>
   </component>
@@ -212,6 +148,96 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -226,7 +252,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seeds" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -240,7 +270,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -258,6 +292,90 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -266,7 +384,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="reset&#9;null&#9;null&#10;Config::&#9;null&#9;null&#10;create_u&#9;FILE&#9;file:///Users/josh/code/divvy/database/migrations/2014_10_12_000000_create_users_table.php&#10;migration&#9;null&#9;null&#10;register&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/auth/register.blade.php&#10;regist&#9;FILE&#9;file:///Users/josh/code/divvy/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Registrar.php&#10;password&#9;null&#9;null&#10;auth&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/Auth/AuthController.php&#10;settings&#9;ACTION&#9;Database.Settings&#10;route&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/routes.php" />
+    <property name="SearchEverywhereHistoryKey" value="create_pro&#9;FILE&#9;file:///Users/josh/code/divvy/database/migrations/2015_02_05_002126_create_profiles_table.php&#10;Regist&#9;FILE&#9;file:///Users/josh/code/divvy/app/Services/Registrar.php&#10;reset&#9;null&#9;null&#10;Config::&#9;null&#9;null&#10;create_u&#9;FILE&#9;file:///Users/josh/code/divvy/database/migrations/2014_10_12_000000_create_users_table.php&#10;migration&#9;null&#9;null&#10;register&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/auth/register.blade.php&#10;regist&#9;FILE&#9;file:///Users/josh/code/divvy/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Registrar.php&#10;password&#9;null&#9;null&#10;auth&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/Auth/AuthController.php&#10;settings&#9;ACTION&#9;Database.Settings&#10;route&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/routes.php" />
     <property name="options.lastSelected" value="Laravel.SettingsForm" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -364,40 +482,6 @@
             <marker date="1423073528000" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1423073528000" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1423073528000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7222222" vertical-offset="125" max-vertical-offset="1050">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder=" Create a new controller instance. ..." />
-            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder=" Show the application welcome screen to the user. ..." />
-            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5277778" vertical-offset="300" max-vertical-offset="1200">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding>
-            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1941,85 +2025,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="900">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <marker date="1423091791000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1423091791000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423091791000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="125" max-vertical-offset="1025">
-          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding>
-            <marker date="1423059445000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Create a new authentication controller instance. ..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/Request.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667" vertical-offset="475" max-vertical-offset="2925">
-          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-          <folding>
-            <marker date="1423058347000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The Guard implementation. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The registrar implementation. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Show the application registration form. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Handle a registration request for the application. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Show the application login form. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Handle a login request to the application. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Log the user out of the application. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the post register / login redirect path. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="1025">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <marker date="1423059445000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Create a new password controller instance. ..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -2036,52 +2047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Registrar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4722222" vertical-offset="0" max-vertical-offset="1075">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          <folding>
-            <marker date="1423092233000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1423092233000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092233000" expanded="true" signature="-1:-1" placeholder=" Get a validator for an incoming registration request. ..." />
-            <marker date="1423092233000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423092233000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092233000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092233000" expanded="true" signature="-1:-1" placeholder=" Create a new user instance after a valid registration. ..." />
-            <marker date="1423092233000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423092233000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092233000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8055556" vertical-offset="350" max-vertical-offset="1625">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-          <folding>
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423092367000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.055555556" vertical-offset="0" max-vertical-offset="900">
@@ -2091,40 +2056,6 @@
             <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The name of the database connection to use. ..." />
             <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the migration connection name. ..." />
             <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="950">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1423059445000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1025">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1423059445000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -2260,10 +2191,571 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.16666667" vertical-offset="150" max-vertical-offset="1050">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Create a new controller instance. ..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Show the application dashboard to the user. ..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667" vertical-offset="275" max-vertical-offset="1200">
+          <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
+          <folding>
+            <marker date="1423059445000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" The Guard implementation. ..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Create a new filter instance. ..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Handle an incoming request. ..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7222222" vertical-offset="125" max-vertical-offset="1050">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder=" Create a new controller instance. ..." />
+            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder=" Show the application welcome screen to the user. ..." />
+            <marker date="1423073473000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1423059445000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41666666" vertical-offset="0" max-vertical-offset="900">
+          <caret line="24" column="83" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="83" />
+          <folding>
+            <marker date="1423096302000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423096302000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096302000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="950">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1423059445000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44444445" vertical-offset="0" max-vertical-offset="1025">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding>
+            <marker date="1423096683000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423096683000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096683000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1423096683000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423096683000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096683000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423096683000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1423096683000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3611111" vertical-offset="100" max-vertical-offset="1025">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <marker date="1423059445000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Create a new password controller instance. ..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11111111" vertical-offset="0" max-vertical-offset="3425">
+        <state vertical-scroll-proportion="-1.5277778" vertical-offset="1475" max-vertical-offset="3425">
           <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <marker date="1423058347000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The Guard implementation. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The password broker implementation. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Display the form to request a password reset link. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Send a reset link to the given user. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the e-mail subject line to be used for the reset link email. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Display the password reset view for the given token. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Reset the given user's password. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the post register / login redirect path. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Registrar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7222222" vertical-offset="50" max-vertical-offset="1075">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <marker date="1423097355000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder=" Get a validator for an incoming registration request. ..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder=" Create a new user instance after a valid registration. ..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5277778" vertical-offset="300" max-vertical-offset="1200">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423074685000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8055556" vertical-offset="750" max-vertical-offset="1750">
+          <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+          <folding>
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097562000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30555555" vertical-offset="8775" max-vertical-offset="15875">
+          <caret line="362" column="13" selection-start-line="362" selection-start-column="13" selection-end-line="362" selection-end-column="13" />
+          <folding>
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Throw an HttpException with the given data. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Generate a URL to a controller action. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the available container instance. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the path to the application folder. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Generate an asset path for the application. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the path to the base of the install. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Create a new redirect response to the previous location. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Hash the given value. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get / set the specified configuration value. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the configuration path. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Create a new cookie instance. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the CSRF token value. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Register a new DELETE route with the router. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Register a new GET route with the router. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Write some information to the log. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Log a debug message to the logs. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Retrieve an old input item. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Register a new PATCH route with the router. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Register a new POST route with the router. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Register a new PUT route with the router. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the path to the public folder. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get an instance of the redirector. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Return a new response from the application. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Generate a URL to a named route. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Generate an asset path for the application. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Generate a HTTPS url for the application. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get / set the specified session value. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the path to the storage folder. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Translate the given message. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Translates the given message based on a count. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Generate a url for the application. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the evaluated view contents for the given view. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Gets the value of an environment variable. Supports boolean, empty and null. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Fire an event and call the listeners. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the path to a versioned Elixir file. ..." />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22222222" vertical-offset="1675" max-vertical-offset="2925">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <marker date="1423099153000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder=" The Guard implementation. ..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder=" The registrar implementation. ..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder=" Show the application registration form. ..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder=" Handle a registration request for the application. ..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder=" Show the application login form. ..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder=" Handle a login request to the application. ..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder=" Log the user out of the application. ..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder=" Get the post register / login redirect path. ..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41666666" vertical-offset="50" max-vertical-offset="1025">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+          <folding>
+            <marker date="1423099153000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder=" Create a new authentication controller instance. ..." />
+            <marker date="1423099153000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_02_05_002126_create_profiles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41666666" vertical-offset="0" max-vertical-offset="1200">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="23" selection-end-column="33" />
+          <folding>
+            <marker date="1423096039000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423096039000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096039000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1423096039000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423096039000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096039000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423096039000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096039000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096039000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096039000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1423096039000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="15" />
+          <folding>
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5277778" vertical-offset="400" max-vertical-offset="1975">
+          <caret line="39" column="79" selection-start-line="39" selection-start-column="79" selection-end-line="39" selection-end-column="79" />
+          <folding>
+            <marker date="1423100389000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder=" Display the specified resource. ..." />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder=" Show the form for editing the specified resource. ..." />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1423100389000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5555556" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding>
+            <marker date="1423097355000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder=" The database table used by the model. ..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder=" The attributes that are mass assignable. ..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder=" The attributes excluded from the model's JSON form. ..." />
+            <marker date="1423097355000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2777778" vertical-offset="0" max-vertical-offset="900">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <marker date="1423097181000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423097181000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5277778" vertical-offset="0" max-vertical-offset="1625">
+          <caret line="19" column="0" selection-start-line="6" selection-start-column="12" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423096833000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/reset.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.083333336" vertical-offset="0" max-vertical-offset="1625">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="46" />
+          <folding>
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/profiles/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5555556" vertical-offset="0" max-vertical-offset="900">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding />
         </state>
       </provider>
