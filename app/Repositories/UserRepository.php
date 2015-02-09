@@ -18,4 +18,9 @@ class UserRepository {
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function findByUsername($username)
+    {
+        return User::with('profile')->whereUsername($username)->firstOrFail();
+    }
 }
