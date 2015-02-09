@@ -20,6 +20,6 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-#Profile
+#Profiles
 Route::resource('profile', 'ProfilesController', ['only' => ['show', 'edit', 'update']]);
-Route::get('/{profile}', ['as' => 'profile', 'uses' => 'ProfilesController@show']);
+Route::get('/{profile}', ['as' => 'profile.show', 'uses' => 'ProfilesController@show']);

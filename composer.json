@@ -7,11 +7,15 @@
 	"require": {
 		"laravel/framework": "5.0.*",
 		"barryvdh/laravel-ide-helper": "~2.0",
-		"guzzlehttp/guzzle": "~5.2"
+		"guzzlehttp/guzzle": "~5.2",
+		"illuminate/html": "~5.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
-		"phpspec/phpspec": "~2.1"
+		"phpspec/phpspec": "~2.1",
+	  	"codeception/codeception": "*",
+	  	"janhenkgerritsen/codeception-laravel5": "*",
+	  	"laracasts/testdummy": "~2.0"
 	},
 	"autoload": {
 		"classmap": [

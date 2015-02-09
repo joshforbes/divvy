@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers\Auth;
 
+use App\Commands\RegisterUserCommand;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RegisterUserRequest;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -32,6 +34,23 @@ class AuthController extends Controller {
 		$this->registrar = $registrar;
 
 		$this->middleware('guest', ['except' => 'getLogout']);
+	}
+
+	/**
+	 * Handle a registration request for the application.
+	 *
+	 * @param RegisterUserRequest|\Illuminate\Foundation\Http\FormRequest $request
+	 * @return \Illuminate\Http\Response
+	 */
+	public function postRegister(RegisterUserRequest $request)
+	{
+		$user = $this->dispatch(
+			new RegisterUserCommand($request)
+		);
+
+		$this->auth->login($user);
+
+		return redirect($this->redirectPath());
 	}
 
 

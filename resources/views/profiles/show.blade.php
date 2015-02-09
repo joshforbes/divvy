@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container-fluid">
+
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
@@ -11,14 +11,13 @@
 
 
                         Name: {{ $user->profile->name }}<br/>
-                        Company: {{ $user->profile->name }}<br/>
-                        Location: {{ $user->profile->name }}<br/>
+                        Company: {{ $user->profile->company }}<br/>
+                        Location: {{ $user->profile->location }}<br/>
                         Bio: <p>{{ $user->profile->bio }}</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 

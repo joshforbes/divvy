@@ -1,5 +1,7 @@
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-codeception');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -10,10 +12,6 @@ var elixir = require('laravel-elixir');
  | file for our application, as well as publishing vendor resources.
  |
  */
-
-elixir(function(mix) {
-    mix.sass('app.scss');
-});
 
 
 elixir(function(mix) {
@@ -42,4 +40,6 @@ elixir(function(mix) {
      //'vendor/bower_components/pusher/dist/pusher.min.js',
      //'public/js/vendor/pusher.js'
      //);
+
+    mix.codeception();
 });
