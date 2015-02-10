@@ -19,6 +19,12 @@ class UserRepository {
         ]);
     }
 
+    /**
+     * Find a User by username with their Profile
+     *
+     * @param $username
+     * @return mixed
+     */
     public function findByUsername($username)
     {
         return User::with('profile')->whereUsername($username)->firstOrFail();

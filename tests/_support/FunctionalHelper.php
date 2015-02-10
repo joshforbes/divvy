@@ -1,16 +1,23 @@
 <?php
 namespace Codeception\Module;
 
+use Codeception\Module;
 use Laracasts\TestDummy\Factory as TestDummy;
 
 // here you can define custom actions
 // all public methods declared in helper class will be available in $I
 
-class FunctionalHelper extends \Codeception\Module {
+class FunctionalHelper extends Module {
 
-    public function registerNewUser()
+    public function editProfile(array $data)
     {
+        $I = $this->getModule('Laravel5');
 
+        $I->fillField('name', $data['name']);
+        $I->fillField('location', $data['location']);
+        $I->fillField('company', $data['company']);
+        $I->fillField('bio', $data['bio']);
+        $I->click('Submit');
     }
 
     public function signIn()

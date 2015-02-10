@@ -10,18 +10,25 @@ use Illuminate\Http\Request;
 
 class ProfilesController extends Controller {
 
+	/**
+	 * @var UserRepository
+     */
+	protected $userRepository;
+
+	/**
+	 * @param UserRepository $userRepository
+     */
 	function __construct(UserRepository $userRepository)
 	{
 		$this->userRepository = $userRepository;
 	}
 
-
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param UserRepository $userRepository
 	 * @param $username
 	 * @return Response
+	 * @internal param UserRepository $userRepository
 	 * @internal param int $id
 	 */
 	public function show($username)
@@ -33,9 +40,9 @@ class ProfilesController extends Controller {
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param UserRepository $userRepository
 	 * @param $username
 	 * @return Response
+	 * @internal param UserRepository $userRepository
 	 * @internal param int $id
 	 */
 	public function edit($username)
