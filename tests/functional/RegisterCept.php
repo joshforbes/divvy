@@ -17,5 +17,5 @@ $I->seeRecord('users', [
     'email' => 'test@test.com']);
 $I->seeAuthentication();
 
-$I->amOnPage('/profile/johndoe');
+$I->amOnPage('/johndoe');
 $I->see('johndoe Profile');

@@ -11,7 +11,7 @@ $I->see('johndoe Profile');
 $I->see('Name: John Doe');
 
 $I->click('Edit Profile');
-$I->seeCurrentUrlEquals('/profile/johndoe/edit');
+$I->seeCurrentUrlEquals('/johndoe/edit');
 
 $data = [
     'name' => 'Johnny Doe',

@@ -2,9 +2,8 @@
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
-use Illuminate\Http\RedirectResponse;
 
-class RedirectIfAuthenticated {
+class RedirectIfNotProfileOwner {
 
 	/**
 	 * The Guard implementation.
@@ -23,6 +22,7 @@ class RedirectIfAuthenticated {
 		$this->auth = $auth;
 	}
 
+
 	/**
 	 * Handle an incoming request.
 	 *
@@ -32,11 +32,10 @@ class RedirectIfAuthenticated {
 	 */
 	public function handle($request, Closure $next)
 	{
-		if ($this->auth->check())
+		if ($request->route('username') !== $this->auth->user()->username)
 		{
-			return new RedirectResponse(url('/home'));
+			return redirect()->back();
 		}
-
 		return $next($request);
 	}
 

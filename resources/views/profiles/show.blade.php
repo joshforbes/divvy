@@ -16,7 +16,9 @@
                     Bio: <p>{{ $user->profile->bio }}</p>
                 </div>
             </div>
-            {!! link_to_route('profile.edit', 'Edit Profile', $user->username, ['class' => 'btn btn-primary']) !!}
+            @if ($user->is(Auth::user()))
+                {!! link_to_route('profile.edit', 'Edit Profile', $user->username, ['class' => 'btn btn-primary']) !!}
+            @endif
         </div>
     </div>
 

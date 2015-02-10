@@ -21,5 +21,12 @@ Route::controllers([
 ]);
 
 #Profiles
-Route::resource('profile', 'ProfilesController', ['only' => ['show', 'edit', 'update']]);
-Route::get('/{profile}', ['as' => 'profile.show', 'uses' => 'ProfilesController@show']);
+Route::get('/{username}/edit', [
+	'as' => 'profile.edit',
+	'uses' => 'ProfilesController@edit',
+	'middleware' => 'profile.owner'
+]);
+Route::patch('/{username}', ['as' => 'profile.update', 'uses' => 'ProfilesController@update']);
+
+//Route::resource('profile', 'ProfilesController', ['only' => ['show', 'edit', 'update']]);
+Route::get('/{username}', ['as' => 'profile.show', 'uses' => 'ProfilesController@show']);
