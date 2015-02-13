@@ -3,7 +3,7 @@
 use App\Http\Requests\Request;
 use Auth;
 
-class EditProfileRequest extends Request {
+class UpdateProfileRequest extends Request {
 
     /**
      * Determine if the user is authorized to make this request.

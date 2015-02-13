@@ -1,0 +1,25 @@
+@import "bootstrap";
+
+.hide {
+    display: none;
+}
+
+.avatar-wrap {
+    position: relative;
+    margin-right: 2em;
+
+    .avatar-upload-button {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        background-color: white;
+        width: 200px;
+        height: 3em;
+        opacity: .8;
+        text-align: center;
+        line-height: 3em;
+        cursor: pointer;
+    }
+
+}
+

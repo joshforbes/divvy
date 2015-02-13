@@ -137,6 +137,7 @@ return [
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+		'Intervention\Image\ImageServiceProvider',
 
 		/*
 		 * Application Service Providers...

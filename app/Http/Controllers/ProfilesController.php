@@ -3,10 +3,10 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Http\Requests\EditProfileRequest;
+use App\Http\Requests\UpdateProfileRequest;
+use App\Http\Requests\UploadAvatarRequest;
 use App\Repositories\UserRepository;
-use App\User;
-use Illuminate\Http\Request;
+use Intervention\Image\ImageManager as Image;
 
 class ProfilesController extends Controller {
 
@@ -52,19 +52,51 @@ class ProfilesController extends Controller {
 	}
 
 	/**
-	 * Update the specified resource in storage.
+	 * Update the Profile
 	 *
-	 * @param EditProfileRequest $request
+	 * @param UpdateProfileRequest $request
 	 * @param $username
 	 * @return Response
 	 * @internal param int $id
 	 */
-	public function update(EditProfileRequest $request, $username)
+	public function update(UpdateProfileRequest $request, $username)
 	{
 		$user = $this->userRepository->findByUsername($username);
 		$user->profile->fill($request->all())->save();
 		//Flash::message('Profile updated');
 		return redirect()->route('profile.show', $user->username);
+	}
+
+	/**
+	 *
+	 * Upload the Avatar
+	 *
+	 * @param UploadAvatarRequest $request
+	 * @param $username
+	 * @param Image $image
+	 * @return \Intervention\Image\Image|Image
+	 */
+	public function uploadAvatar(UploadAvatarRequest $request, $username, Image $image)
+	{
+		$image = $image->make($request->file('avatar-input'));
+
+		$imagePath = public_path() . '/images/avatars/';
+		$image->resize(null, 200, function($constraint) {
+			$constraint->aspectRatio();
+		})->crop(200,200)->save($imagePath . uniqid() . '.jpg');
+
+		$user = $this->userRepository->findByUsername($username);
+
+		if (isset($user->profile->avatar_path)) {
+			\File::delete($imagePath . $user->profile->avatar_path);
+		}
+
+		$user->profile->avatar_path = $image->basename;
+
+		$user->profile->save();
+
+		return redirect()->route('profile.edit', $user->username);
+
 	}
 
 }

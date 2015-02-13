@@ -27,6 +27,7 @@ Route::get('/{username}/edit', [
 	'middleware' => 'profile.owner'
 ]);
 Route::patch('/{username}', ['as' => 'profile.update', 'uses' => 'ProfilesController@update']);
+Route::patch('/{username}/upload', ['as' => 'profile.uploadAvatar', 'uses' => 'ProfilesController@uploadAvatar']);
 
 //Route::resource('profile', 'ProfilesController', ['only' => ['show', 'edit', 'update']]);
 Route::get('/{username}', ['as' => 'profile.show', 'uses' => 'ProfilesController@show']);

@@ -44,6 +44,8 @@ class FunctionalHelper extends Module {
         $I->fillField('email', $email);
         $I->fillField('password', $password);
         $I->click('button[type=submit]');
+
+        return $user;
     }
 
     public function haveAnAccount($overrides)

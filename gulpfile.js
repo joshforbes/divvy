@@ -35,11 +35,15 @@ elixir(function(mix) {
      .copy(
      'vendor/bower_components/handlebars/handlebars.min.js',
      'public/js/vendor/handlebars.js'
-     );
+     )
      //.copy(
      //'vendor/bower_components/pusher/dist/pusher.min.js',
      //'public/js/vendor/pusher.js'
      //);
 
     mix.codeception();
+
+    //mix.scripts([
+    //    "app.js"
+    //]);
 });
