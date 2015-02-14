@@ -5,98 +5,97 @@ use App\Http\Controllers\Controller;
 
 use App\Http\Requests\UpdateProfileRequest;
 use App\Http\Requests\UploadAvatarRequest;
+use App\Repositories\AvatarRepository;
+use App\Repositories\ProfileRepository;
 use App\Repositories\UserRepository;
-use Intervention\Image\ImageManager as Image;
 
 class ProfilesController extends Controller {
 
-	/**
-	 * @var UserRepository
+    /**
+     * @var UserRepository
      */
-	protected $userRepository;
-
-	/**
-	 * @param UserRepository $userRepository
+    protected $userRepository;
+    /**
+     * @var ProfileRepository
      */
-	function __construct(UserRepository $userRepository)
-	{
-		$this->userRepository = $userRepository;
-	}
+    private $profileRepository;
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param $username
-	 * @return Response
-	 * @internal param UserRepository $userRepository
-	 * @internal param int $id
-	 */
-	public function show($username)
-	{
-		$user = $this->userRepository->findByUsername($username);
-		return view('profiles.show', compact('user'));
-	}
+    /**
+     * @param UserRepository $userRepository
+     * @param ProfileRepository $profileRepository
+     */
+    function __construct(UserRepository $userRepository, ProfileRepository $profileRepository)
+    {
+        $this->userRepository = $userRepository;
+        $this->profileRepository = $profileRepository;
+    }
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param $username
-	 * @return Response
-	 * @internal param UserRepository $userRepository
-	 * @internal param int $id
-	 */
-	public function edit($username)
-	{
-		$user = $this->userRepository->findByUsername($username);
-		return view('profiles.edit')->withUser($user);
-	}
+    /**
+     * Display the specified resource.
+     *
+     * @param $username
+     * @return Response
+     * @internal param UserRepository $userRepository
+     * @internal param int $id
+     */
+    public function show($username)
+    {
+        $user = $this->userRepository->findByUsername($username);
 
-	/**
-	 * Update the Profile
-	 *
-	 * @param UpdateProfileRequest $request
-	 * @param $username
-	 * @return Response
-	 * @internal param int $id
-	 */
-	public function update(UpdateProfileRequest $request, $username)
-	{
-		$user = $this->userRepository->findByUsername($username);
-		$user->profile->fill($request->all())->save();
-		//Flash::message('Profile updated');
-		return redirect()->route('profile.show', $user->username);
-	}
+        return view('profiles.show', compact('user'));
+    }
 
-	/**
-	 *
-	 * Upload the Avatar
-	 *
-	 * @param UploadAvatarRequest $request
-	 * @param $username
-	 * @param Image $image
-	 * @return \Intervention\Image\Image|Image
-	 */
-	public function uploadAvatar(UploadAvatarRequest $request, $username, Image $image)
-	{
-		$image = $image->make($request->file('avatar-input'));
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param $username
+     * @return Response
+     * @internal param UserRepository $userRepository
+     * @internal param int $id
+     */
+    public function edit($username)
+    {
+        $user = $this->userRepository->findByUsername($username);
 
-		$imagePath = public_path() . '/images/avatars/';
-		$image->resize(null, 200, function($constraint) {
-			$constraint->aspectRatio();
-		})->crop(200,200)->save($imagePath . uniqid() . '.jpg');
+        return view('profiles.edit')->withUser($user);
+    }
 
-		$user = $this->userRepository->findByUsername($username);
 
-		if (isset($user->profile->avatar_path)) {
-			\File::delete($imagePath . $user->profile->avatar_path);
-		}
+    /**
+     * Update the profile
+     *
+     * @param UpdateProfileRequest $request
+     * @param $username
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(UpdateProfileRequest $request, $username)
+    {
+        $this->profileRepository->updateProfileForUser($username, $request);
 
-		$user->profile->avatar_path = $image->basename;
+        //Flash::message('Profile updated');
+        return redirect()->route('profile.show', $username);
+    }
 
-		$user->profile->save();
+    /**
+     *
+     * Upload the Avatar
+     *
+     * @param UploadAvatarRequest $request
+     * @param $username
+     * @param AvatarRepository $avatarRepository
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function uploadAvatar(UploadAvatarRequest $request, $username, AvatarRepository $avatarRepository)
+    {
+        $avatar = $avatarRepository->upload($request->file('avatar-input'));
 
-		return redirect()->route('profile.edit', $user->username);
+        $profile = $this->userRepository->findByUsername($username)->profile;
 
-	}
+        $avatarRepository->delete($profile->avatar_path);
+
+        $this->profileRepository->saveAvatarToProfile($profile, $avatar);
+
+        return redirect()->route('profile.edit', $username);
+    }
 
 }
