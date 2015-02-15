@@ -5,6 +5,6 @@ $I->wantTo('login to my Divvy account');
 
 $I->signIn();
 
-$I->seeCurrentUrlEquals('/home');
+$I->seeCurrentUrlEquals('');
 $I->see('You are logged in!');
 $I->assertTrue(Auth::check());

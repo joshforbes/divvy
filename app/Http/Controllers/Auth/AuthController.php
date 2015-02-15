@@ -22,6 +22,14 @@ class AuthController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
+
+	/**
+	 * Overwrites the redirect path from trait
+	 *
+	 * @var string
+     */
+	protected $redirectTo = '/';
+
 	/**
 	 * Create a new authentication controller instance.
 	 *

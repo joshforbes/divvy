@@ -4818,6 +4818,10 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.navbar-brand {
+  font-family: 'Leckerli One', cursive;
+  font-size: 2.5em; }
+
 .hide {
   display: none; }
 

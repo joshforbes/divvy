@@ -78,7 +78,9 @@ class ProfilesController extends Controller {
 
     /**
      *
-     * Upload the Avatar
+     * Handles a user uploading an avatar image. Transforms into an InterventionImage object
+     * resize to appropriate avatar size and save to avatar image folder. If the user
+     * had an old avatar image, delete it then save the new path to the profile.
      *
      * @param UploadAvatarRequest $request
      * @param $username

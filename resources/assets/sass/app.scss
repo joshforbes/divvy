@@ -1,4 +1,11 @@
+@import "variables";
+
 @import "bootstrap";
+
+.navbar-brand {
+    font-family: 'Leckerli One', cursive;
+    font-size: 2.5em;
+}
 
 .hide {
     display: none;
