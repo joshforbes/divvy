@@ -1348,24 +1348,24 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container {
+.container, .container-small {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container:before, .container:after {
+  .container:before, .container-small:before, .container:after, .container-small:after {
     content: " ";
     display: table; }
-  .container:after {
+  .container:after, .container-small:after {
     clear: both; }
   @media (min-width: 768px) {
-    .container {
+    .container, .container-small {
       width: 750px; } }
   @media (min-width: 992px) {
-    .container {
+    .container, .container-small {
       width: 970px; } }
   @media (min-width: 1200px) {
-    .container {
+    .container, .container-small {
       width: 1170px; } }
 
 .container-fluid {
@@ -1388,7 +1388,7 @@ pre {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .splash-signup-section .registration-wrapper, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .splash-signup-section .text-wrapper, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1657,7 +1657,7 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .splash-signup-section .registration-wrapper, .col-md-5, .col-md-6, .col-md-7, .splash-signup-section .text-wrapper, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
@@ -1665,13 +1665,13 @@ pre {
     width: 16.66667%; }
   .col-md-3 {
     width: 25%; }
-  .col-md-4 {
+  .col-md-4, .splash-signup-section .registration-wrapper {
     width: 33.33333%; }
   .col-md-5 {
     width: 41.66667%; }
   .col-md-6 {
     width: 50%; }
-  .col-md-7 {
+  .col-md-7, .splash-signup-section .text-wrapper {
     width: 58.33333%; }
   .col-md-8 {
     width: 66.66667%; }
@@ -1737,7 +1737,7 @@ pre {
     left: 100%; }
   .col-md-offset-0 {
     margin-left: 0%; }
-  .col-md-offset-1 {
+  .col-md-offset-1, .splash-signup-section .registration-wrapper {
     margin-left: 8.33333%; }
   .col-md-offset-2 {
     margin-left: 16.66667%; }
@@ -2995,7 +2995,7 @@ tbody.collapse.in {
 
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 60px;
   margin-bottom: 20px;
   border: 1px solid transparent; }
   .navbar:before, .navbar:after {
@@ -3053,11 +3053,11 @@ tbody.collapse.in {
     .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
       max-height: 200px; } }
 
-.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
+.container > .navbar-header, .container-small > .navbar-header, .container > .navbar-collapse, .container-small > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
-    .container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
+    .container > .navbar-header, .container-small > .navbar-header, .container > .navbar-collapse, .container-small > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
       margin-right: 0;
       margin-left: 0; } }
 
@@ -3088,16 +3088,16 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
+  padding: 20px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 50px; }
+  height: 60px; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
   .navbar-brand > img {
     display: block; }
   @media (min-width: 768px) {
-    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    .navbar > .container .navbar-brand, .navbar > .container-small .navbar-brand, .navbar > .container-fluid .navbar-brand {
       margin-left: -15px; } }
 
 .navbar-toggle {
@@ -3105,8 +3105,8 @@ tbody.collapse.in {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 13px;
+  margin-bottom: 13px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -3125,7 +3125,7 @@ tbody.collapse.in {
       display: none; } }
 
 .navbar-nav {
-  margin: 7.5px -15px; }
+  margin: 10px -15px; }
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -3152,8 +3152,8 @@ tbody.collapse.in {
       .navbar-nav > li {
         float: left; }
         .navbar-nav > li > a {
-          padding-top: 15px;
-          padding-bottom: 15px; } }
+          padding-top: 20px;
+          padding-bottom: 20px; } }
 
 .navbar-form {
   margin-left: -15px;
@@ -3162,8 +3162,8 @@ tbody.collapse.in {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 8px;
-  margin-bottom: 8px; }
+  margin-top: 13px;
+  margin-bottom: 13px; }
   @media (min-width: 768px) {
     .navbar-form .form-group {
       display: inline-block;
@@ -3225,18 +3225,18 @@ tbody.collapse.in {
   border-bottom-left-radius: 0; }
 
 .navbar-btn {
-  margin-top: 8px;
-  margin-bottom: 8px; }
+  margin-top: 13px;
+  margin-bottom: 13px; }
   .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-    margin-top: 10px;
-    margin-bottom: 10px; }
+    margin-top: 15px;
+    margin-bottom: 15px; }
   .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
-    margin-top: 14px;
-    margin-bottom: 14px; }
+    margin-top: 19px;
+    margin-bottom: 19px; }
 
 .navbar-text {
-  margin-top: 15px;
-  margin-bottom: 15px; }
+  margin-top: 20px;
+  margin-bottom: 20px; }
   @media (min-width: 768px) {
     .navbar-text {
       float: left;
@@ -3559,30 +3559,30 @@ a.badge:hover, a.badge:focus {
   text-decoration: none;
   cursor: pointer; }
 
-.jumbotron {
+.jumbotron, .splash-signup-section {
   padding: 30px 15px;
   margin-bottom: 30px;
   color: inherit;
   background-color: #eeeeee; }
-  .jumbotron h1, .jumbotron .h1 {
+  .jumbotron h1, .splash-signup-section h1, .jumbotron .h1, .splash-signup-section .h1 {
     color: inherit; }
-  .jumbotron p {
+  .jumbotron p, .splash-signup-section p {
     margin-bottom: 15px;
     font-size: 21px;
     font-weight: 200; }
-  .jumbotron > hr {
+  .jumbotron > hr, .splash-signup-section > hr {
     border-top-color: #d5d5d5; }
-  .container .jumbotron, .container-fluid .jumbotron {
+  .container .jumbotron, .container-small .jumbotron, .container .splash-signup-section, .container-small .splash-signup-section, .container-fluid .jumbotron, .container-fluid .splash-signup-section {
     border-radius: 6px; }
-  .jumbotron .container {
+  .jumbotron .container, .splash-signup-section .container, .jumbotron .container-small, .splash-signup-section .container-small {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
-    .jumbotron {
+    .jumbotron, .splash-signup-section {
       padding: 48px 0; }
-      .container .jumbotron, .container-fluid .jumbotron {
+      .container .jumbotron, .container-small .jumbotron, .container .splash-signup-section, .container-small .splash-signup-section, .container-fluid .jumbotron, .container-fluid .splash-signup-section {
         padding-left: 60px;
         padding-right: 60px; }
-      .jumbotron h1, .jumbotron .h1 {
+      .jumbotron h1, .splash-signup-section h1, .jumbotron .h1, .splash-signup-section .h1 {
         font-size: 63px; } }
 
 .thumbnail {
@@ -4818,9 +4818,43 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.navbar-brand {
-  font-family: 'Leckerli One', cursive;
-  font-size: 2.5em; }
+.container-small {
+  width: 980px; }
+
+/** NAV **/
+.navbar {
+  margin-bottom: 0; }
+  .navbar .navbar-brand {
+    font-family: 'Leckerli One', cursive;
+    font-size: 2.5em; }
+
+/** SPLASH **/
+.splash-signup-section {
+  background-color: black;
+  color: white;
+  padding: 6em 0; }
+  .splash-signup-section .splash-hero-wrapper {
+    margin-left: -15px;
+    margin-right: -15px; }
+    .splash-signup-section .splash-hero-wrapper:before, .splash-signup-section .splash-hero-wrapper:after {
+      content: " ";
+      display: table; }
+    .splash-signup-section .splash-hero-wrapper:after {
+      clear: both; }
+  .splash-signup-section .text-wrapper {
+    padding-left: 0; }
+  .splash-signup-section .registration-wrapper {
+    margin-top: 2em;
+    padding-right: 0; }
+  .splash-signup-section .form-group {
+    margin-top: 1em;
+    margin-bottom: 0em; }
+  .splash-signup-section .form-control {
+    height: 3em; }
+  .splash-signup-section .btn {
+    margin-top: 1em;
+    font-weight: 600;
+    font-size: 1.2em; }
 
 .hide {
   display: none; }

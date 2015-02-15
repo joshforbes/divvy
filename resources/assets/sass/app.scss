@@ -1,10 +1,60 @@
 @import "variables";
-
 @import "bootstrap";
 
-.navbar-brand {
-    font-family: 'Leckerli One', cursive;
-    font-size: 2.5em;
+.container-small {
+    @extend .container;
+    width: 980px;
+}
+
+/** NAV **/
+
+.navbar {
+    margin-bottom: 0;
+
+    .navbar-brand {
+        font-family: 'Leckerli One', cursive;
+        font-size: 2.5em;
+    }
+}
+
+/** SPLASH **/
+.splash-signup-section {
+    @extend .jumbotron;
+    background-color: black;
+    color: white;
+    padding: 6em 0;
+
+    .splash-hero-wrapper {
+        @include make-row();
+    }
+
+    .text-wrapper {
+        @extend .col-md-7;
+        padding-left: 0;
+    }
+
+    .registration-wrapper {
+        margin-top: 2em;
+        padding-right: 0;
+        @extend .col-md-offset-1;
+        @extend .col-md-4;
+    }
+
+    .form-group {
+        margin-top: 1em;
+        margin-bottom: 0em;
+    }
+
+    .form-control {
+        height: 3em;
+    }
+
+    .btn {
+        margin-top: 1em;
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
 }
 
 .hide {
