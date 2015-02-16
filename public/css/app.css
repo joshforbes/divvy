@@ -4828,7 +4828,9 @@ button.close {
     font-family: 'Leckerli One', cursive;
     font-size: 2.5em; }
 
-/** SPLASH **/
+/**
+SPLASH
+**/
 .splash-signup-section {
   background-color: black;
   color: white;
@@ -4855,6 +4857,25 @@ button.close {
     margin-top: 1em;
     font-weight: 600;
     font-size: 1.2em; }
+
+/**
+DASH
+**/
+.input-group {
+  margin: 20px auto;
+  width: 50%; }
+  .input-group input[type="text"] {
+    outline: none;
+    width: 60%;
+    height: 4em;
+    padding-left: 1em;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+  .input-group .btn {
+    width: 40%;
+    height: 4em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
 
 .hide {
   display: none; }

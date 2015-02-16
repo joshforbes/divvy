@@ -17,7 +17,10 @@
     }
 }
 
-/** SPLASH **/
+/**
+SPLASH
+**/
+
 .splash-signup-section {
     @extend .jumbotron;
     background-color: black;
@@ -55,6 +58,30 @@
         font-size: 1.2em;
     }
 
+}
+
+/**
+DASH
+**/
+
+.input-group {
+    margin: 20px auto;
+    width: 50%;
+
+    input[type="text"] {
+        outline: none;
+        width: 60%;
+        height: 4em;
+        padding-left: 1em;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .btn {
+        width: 40%;
+        height: 4em;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 }
 
 .hide {

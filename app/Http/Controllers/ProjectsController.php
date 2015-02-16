@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Http\Requests\CreateProjectRequest;
 use App\Project;
 use Illuminate\Http\Request;
 
@@ -31,11 +32,16 @@ class ProjectsController extends Controller {
 	/**
 	 * Store a newly created resource in storage.
 	 *
+	 * @param CreateProjectRequest $request
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateProjectRequest $request)
 	{
-		//
+		$input = $request->all();
+
+		$project = Project::create($input);
+
+		return redirect()->route('project.show', $project->id);
 	}
 
 	/**
@@ -46,7 +52,7 @@ class ProjectsController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		return Project::find($id)->firstOrFail();
 	}
 
 	/**
