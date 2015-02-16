@@ -43,6 +43,26 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	}
 
 	/**
+	 * A User has many Projects
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+	public function projects()
+	{
+		return $this->belongsToMany('App\Project');
+	}
+
+	/**
+	 * A User can be the admin of many Projects
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+	public function adminProjects()
+	{
+		return $this->belongsToMany('App\Project', 'project_adminUser');
+	}
+
+	/**
 	 * Determine if the given user is the same
 	 * as the current one.
 	 *

@@ -18,6 +18,9 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+#Projects
+Route::get('/projects', 'ProjectsController@index');
+
 #Profiles
 Route::get('/{username}/edit', [
 	'as' => 'profile.edit',
@@ -26,6 +29,5 @@ Route::get('/{username}/edit', [
 ]);
 Route::patch('/{username}', ['as' => 'profile.update', 'uses' => 'ProfilesController@update']);
 Route::patch('/{username}/upload', ['as' => 'profile.uploadAvatar', 'uses' => 'ProfilesController@uploadAvatar']);
-
-//Route::resource('profile', 'ProfilesController', ['only' => ['show', 'edit', 'update']]);
 Route::get('/{username}', ['as' => 'profile.show', 'uses' => 'ProfilesController@show']);
+
