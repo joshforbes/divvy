@@ -13,6 +13,7 @@
             <div class="input-group">
                 {{--{!! Form::select('users[]', $users, null, ['id' => 'usersList', 'multiple'])!!}--}}
                 <select name="user" id="usersList" data-placeholder="Add a User to Project">
+                    <option></option>
                     @foreach ( $users as $email => $username )
                         <option value="{{$email}}">{{$username}}</option>
                     @endforeach

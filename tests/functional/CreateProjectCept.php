@@ -10,3 +10,7 @@ $I->click('Create Project');
 
 $I->seeCurrentUrlEquals('/p/1');
 $I->see('Test project');
+
+$I->seeRecord('projects', [
+    'name' => 'Test project',
+]);

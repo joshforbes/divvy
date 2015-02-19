@@ -17,3 +17,7 @@ $factory('App\Profile', [
     'created_at' => $faker->date(),
     'updated_at' => $faker->date()
 ]);
+
+$factory('App\Project', [
+    'name' => $faker->sentence()
+]);

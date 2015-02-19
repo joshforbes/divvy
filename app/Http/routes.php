@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/database', function() {
+	var_dump(\App\User::all()->toArray());
+});
+
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
 
 Route::controllers([

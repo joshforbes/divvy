@@ -1,6 +1,7 @@
 <?php
 namespace Codeception\Module;
 
+use Auth;
 use Codeception\Module;
 use Laracasts\TestDummy\Factory as TestDummy;
 
@@ -48,6 +49,17 @@ class FunctionalHelper extends Module {
         return $user;
     }
 
+    public function amAProjectAdmin()
+    {
+        $project = $this->haveAProject([]);
+        $user = Auth::user();
+
+        $project->adminUsers()->attach($user);
+        $project->users()->attach($user);
+
+        return $project;
+    }
+
     public function haveAnAccount($overrides)
     {
         return TestDummy::create('App\User', $overrides);
@@ -56,6 +68,11 @@ class FunctionalHelper extends Module {
     public function haveAProfile($overrides)
     {
         return Testdummy::create('App\Profile', $overrides);
+    }
+
+    public function haveAProject($overrides)
+    {
+        return Testdummy::create('App\Project', $overrides);
     }
 
 }

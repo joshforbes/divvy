@@ -3,6 +3,15 @@
 @section('content')
     <div class="container">
         <div class="row">
+            @if ($errors->any())
+                <div class="flash flash-error">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
                 {!! Form::open(['route' => 'project.store']) !!}
 
                 <!-- Title Form Input -->
