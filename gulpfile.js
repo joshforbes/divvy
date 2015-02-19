@@ -18,12 +18,10 @@ elixir(function(mix) {
  mix.sass('app.scss')
      .copy(
      'vendor/bower_components/jquery/dist/jquery.min.js',
-     'public/js/vendor/jquery.js'
-     )
+     'public/js/vendor/jquery.js')
      .copy(
      'vendor/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-     'public/js/vendor/bootstrap.js'
-     )
+     'public/js/vendor/bootstrap.js')
      //.copy(
      //'vendor/bower_components/font-awesome/css/font-awesome.min.css',
      //'public/css/vendor/font-awesome.css'
@@ -34,8 +32,13 @@ elixir(function(mix) {
      //)
      .copy(
      'vendor/bower_components/handlebars/handlebars.min.js',
-     'public/js/vendor/handlebars.js'
-     )
+     'public/js/vendor/handlebars.js')
+     .copy(
+     'vendor/bower_components/select2/dist/js/select2.min.js',
+     'public/js/vendor/select2.js')
+     .copy(
+     'vendor/bower_components/select2/dist/css/select2.min.css',
+     'public/css/vendor/select2.css');
      //.copy(
      //'vendor/bower_components/pusher/dist/pusher.min.js',
      //'public/js/vendor/pusher.js'

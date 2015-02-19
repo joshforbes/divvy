@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model {
 
-	protected $fillable = ['title', 'description'];
+	protected $fillable = ['name', 'description'];
 
 	/**
 	 * A Project has many Users

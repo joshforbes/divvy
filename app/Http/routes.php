@@ -19,8 +19,8 @@ Route::controllers([
 ]);
 
 #Projects
-Route::get('/p', 'ProjectsController@index');
 Route::post('/p', ['as' => 'project.store', 'uses' => 'ProjectsController@store']);
+Route::post('/p/{id}/addUser', ['as' => 'project.addUser', 'uses' => 'ProjectsController@addUser']);
 Route::get('/p/{id}', ['as' => 'project.show', 'uses' => 'ProjectsController@show']);
 
 #Profiles

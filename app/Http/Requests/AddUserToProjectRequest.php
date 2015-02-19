@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class CreateProjectRequest extends Request {
+class AddUserToProjectRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -11,7 +11,8 @@ class CreateProjectRequest extends Request {
 	 */
 	public function authorize()
 	{
-		return \Auth::check();
+		//if admin - need to add
+		return true;
 	}
 
 	/**
@@ -22,7 +23,7 @@ class CreateProjectRequest extends Request {
 	public function rules()
 	{
 		return [
-			'name' => 'required'
+			'user' => 'required|email'
 		];
 	}
 

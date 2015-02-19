@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Divvy</title>
 
+    @yield('css')
     <link href="/css/app.css" rel="stylesheet">
 
     <!-- Fonts -->
@@ -30,6 +31,7 @@
 <script src="/js/vendor/jquery.js"></script>
 <script src="/js/vendor/bootstrap.js"></script>
 <script src="/js/vendor/handlebars.js"></script>
+@yield('js')
 <script src="/js/app.js"></script>
 </body>
 </html>

@@ -5,7 +5,8 @@ $I->wantTo('I want to create a new project');
 
 $I->signIn();
 
-$I->fillField('title', 'Test project');
-$I->click('button[type=submit]');
+$I->fillField('name', 'Test project');
+$I->click('Create Project');
 
-
+$I->seeCurrentUrlEquals('/p/1');
+$I->see('Test project');

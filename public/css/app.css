@@ -4859,7 +4859,7 @@ SPLASH
     font-size: 1.2em; }
 
 /**
-DASH
+DASHBOARD
 **/
 .input-group {
   margin: 20px auto;
@@ -4871,6 +4871,19 @@ DASH
     padding-left: 1em;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
+  .input-group .select2 {
+    width: 60% !important; }
+  .input-group .select2-selection {
+    height: 4em;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid lightgray; }
+  .input-group span#select2-usersList-container {
+    line-height: 4em;
+    padding-left: 1em; }
+  .input-group span.select2-selection__arrow {
+    display: none; }
   .input-group .btn {
     width: 40%;
     height: 4em;

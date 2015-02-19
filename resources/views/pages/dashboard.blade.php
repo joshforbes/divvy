@@ -7,7 +7,7 @@
 
                 <!-- Title Form Input -->
                 <div class="input-group">
-                    {!! Form::text('title', null, ['placeholder' => 'Name the Project']) !!}
+                    {!! Form::text('name', null, ['placeholder' => 'Name the Project']) !!}
                     {!! Form::submit('Create Project', ['class' => 'btn btn-info']) !!}
                 </div>
 

@@ -29,4 +29,9 @@ class UserRepository {
     {
         return User::with('profile')->whereUsername($username)->firstOrFail();
     }
+
+    public function findByEmail($email)
+    {
+        return User::whereEmail($email)->first();
+    }
 }
