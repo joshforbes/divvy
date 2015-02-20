@@ -26,4 +26,10 @@ class Profile extends Model {
         return $this->belongsTo('App\User', 'user_id');
     }
 
+    public static function forNewUser()
+    {
+        return new static;
+    }
+
+
 }

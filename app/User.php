@@ -8,72 +8,92 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
-	use Authenticatable, CanResetPassword;
+    use Authenticatable, CanResetPassword;
 
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-	protected $table = 'users';
-
-	/**
-	 * The attributes that are mass assignable.
-	 *
-	 * @var array
-	 */
-	protected $fillable = ['username', 'email', 'password'];
-
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-	protected $hidden = ['password', 'remember_token'];
-
-
-	/**
-	 * A User has one Profile
-	 *
-	 * @return \Illuminate\Database\Eloquent\Relations\HasOne
+    /**
+     * The database table used by the model.
+     *
+     * @var string
      */
-	public function profile()
-	{
-		return $this->hasOne('App\Profile');
-	}
+    protected $table = 'users';
 
-	/**
-	 * A User has many Projects
-	 *
-	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
      */
-	public function projects()
-	{
-		return $this->belongsToMany('App\Project');
-	}
+    protected $fillable = ['username', 'email', 'password'];
 
-	/**
-	 * A User can be the admin of many Projects
-	 *
-	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    /**
+     * The attributes excluded from the model's JSON form.
+     *
+     * @var array
      */
-	public function adminProjects()
-	{
-		return $this->belongsToMany('App\Project', 'project_adminUser');
-	}
+    protected $hidden = ['password', 'remember_token'];
 
-	/**
-	 * Determine if the given user is the same
-	 * as the current one.
-	 *
-	 * @param  $user
-	 * @return bool
-	 */
-	public function is($user)
-	{
-		if (is_null($user)) return false;
-		return $this->username == $user->username;
-	}
+
+    /**
+     * A User has one Profile
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function profile()
+    {
+        return $this->hasOne('App\Profile');
+    }
+
+    /**
+     * A User has many Projects
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function projects()
+    {
+        return $this->belongsToMany('App\Project');
+    }
+
+    /**
+     * A User can be the admin of many Projects
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function adminProjects()
+    {
+        return $this->belongsToMany('App\Project', 'project_adminUser');
+    }
+
+    /**
+     * Register a new user
+     *
+     * @param $username
+     * @param $email
+     * @param $password
+     * @return User
+     */
+    public static function register($username, $email, $password)
+    {
+        $user = new static([
+            'username' => $username,
+            'email' => $email,
+            'password' => bcrypt($password)
+        ]);
+
+        return $user;
+    }
+
+    /**
+     * Determine if the given user is the same
+     * as the current one.
+     *
+     * @param  $user
+     * @return bool
+     */
+    public function is($user)
+    {
+        if (is_null($user)) return false;
+
+        return $this->username == $user->username;
+    }
 
 
 }

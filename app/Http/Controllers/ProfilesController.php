@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\Avatar;
+use App\Commands\ProcessAvatarUploadCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -70,7 +72,7 @@ class ProfilesController extends Controller {
      */
     public function update(UpdateProfileRequest $request, $username)
     {
-        $this->profileRepository->updateProfileForUser($username, $request);
+        $this->profileRepository->updateProfileFor($username, $request->all());
 
         //Flash::message('Profile updated');
         return redirect()->route('profile.show', $username);
@@ -84,18 +86,13 @@ class ProfilesController extends Controller {
      *
      * @param UploadAvatarRequest $request
      * @param $username
-     * @param AvatarRepository $avatarRepository
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function uploadAvatar(UploadAvatarRequest $request, $username, AvatarRepository $avatarRepository)
+    public function uploadAvatar(UploadAvatarRequest $request, $username)
     {
-        $avatar = $avatarRepository->upload($request->file('avatar-input'));
-
-        $profile = $this->userRepository->findByUsername($username)->profile;
-
-        $avatarRepository->delete($profile->avatar_path);
-
-        $this->profileRepository->saveAvatarToProfile($profile, $avatar);
+        $this->dispatch(
+            new ProcessAvatarUploadCommand($request->file('avatar-input'), $username)
+        );
 
         return redirect()->route('profile.edit', $username);
     }

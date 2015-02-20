@@ -1,6 +1,7 @@
 <?php namespace App\Repositories;
 
 
+use File;
 use Intervention\Image\Image;
 use Intervention\Image\ImageManager;
 
@@ -28,36 +29,28 @@ class AvatarRepository {
 
     /**
      * Take an image input from the User, make an InterventionImage Object
-     * resize it to the proper dimensions and save the file to the
-     * avatar images folder
      *
-     * @param $image
+     * @param $file
      * @return Image
      */
-    public function upload($image)
+    public function create($file)
     {
-        $avatar = $this->imageManager->make($image);
-
-        $this->resize($avatar);
-
-        $this->save($avatar);
-
-        return $avatar;
-
+        return $this->imageManager->make($file);
     }
 
     /**
      * Resize an InterventionImage object to the proper avatar size
      *
      * @param Image $avatar
+     * @param int $size
      * @return Image
      */
-    public function resize(Image $avatar)
+    public function resizeAndCrop(Image $avatar, $size = 200)
     {
-        $avatar->resize(null, 200, function ($constraint)
+        $avatar->resize(null, $size, function ($constraint)
         {
             $constraint->aspectRatio();
-        })->crop(200, 200);
+        })->crop($size, $size);
 
         return $avatar;
     }
@@ -81,7 +74,7 @@ class AvatarRepository {
      */
     public function delete($avatarPath)
     {
-        \File::delete($this->imagePath . $avatarPath);
+        File::delete($this->imagePath . $avatarPath);
     }
 
 }

@@ -1,23 +1,25 @@
 <?php namespace App\Repositories;
 
+use App\Profile;
 use App\User;
 
 class UserRepository {
 
     /**
-     * Create a new user instance.
+     * Persist a user
      *
-     * @param  array  $data
-     * @return User
+     * @param User $user
      */
-    public function create(array $data)
+    public function save(User $user)
     {
-        return User::create([
-            'username' => $data['username'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        $user->save();
     }
+
+    public function saveProfile(Profile $profile, User $user)
+    {
+        return $user->profile()->save($profile);
+    }
+
 
     /**
      * Find a User by username with their Profile
@@ -30,6 +32,12 @@ class UserRepository {
         return User::with('profile')->whereUsername($username)->firstOrFail();
     }
 
+    /**
+     * Find a User by email
+     *
+     * @param $email
+     * @return mixed
+     */
     public function findByEmail($email)
     {
         return User::whereEmail($email)->first();

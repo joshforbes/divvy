@@ -11,9 +11,16 @@ class ProfileRepository {
         $profile->save();
     }
 
-    public function updateProfileForUser($username, $request)
+    public function updateProfileFor($username, $updatedData)
     {
         $profile = User::whereUsername($username)->firstOrFail()->profile;
-        $profile->fill($request->all())->save();
+        $profile->fill($updatedData)->save();
     }
+
+    public function findByUsername($username)
+    {
+         return User::whereUsername($username)->firstOrFail()->profile;
+
+    }
+
 }
