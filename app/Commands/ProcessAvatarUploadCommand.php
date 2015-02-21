@@ -1,5 +1,6 @@
 <?php namespace App\Commands;
 
+use App\Avatar;
 use App\Commands\Command;
 
 use App\Http\Requests\Request;
@@ -24,23 +25,21 @@ class ProcessAvatarUploadCommand extends Command implements SelfHandling {
 	/**
 	 * Execute the command.
 	 *
-	 * @param AvatarRepository $avatarRepository
+	 * @param Avatar $avatar
 	 * @param ProfileRepository $profileRepository
 	 */
-	public function handle(AvatarRepository $avatarRepository, ProfileRepository $profileRepository)
+	public function handle(Avatar $avatar, ProfileRepository $profileRepository)
 	{
 		$profile = $profileRepository->findByUsername($this->username);
 
-		$avatar = $avatarRepository->create($this->file);
+		$avatar = $avatar->create($this->file);
 
-		$avatarRepository->resizeAndCrop($avatar);
-
-		$avatarRepository->save($avatar);
+		$avatar->resizeAndCrop()->save();
 
 		//if the Profile already has an avatar - delete the old one
-		$avatarRepository->delete($profile->avatar_path);
+		$avatar->delete($profile->avatar_path);
 
-		$profileRepository->saveAvatarToProfile($profile, $avatar);
+		$profileRepository->saveAvatar($profile, $avatar->getImage());
 	}
 
 }

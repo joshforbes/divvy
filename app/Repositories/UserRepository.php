@@ -15,11 +15,15 @@ class UserRepository {
         $user->save();
     }
 
+    /**
+     * @param Profile $profile
+     * @param User $user
+     * @return \Illuminate\Database\Eloquent\Model
+     */
     public function saveProfile(Profile $profile, User $user)
     {
         return $user->profile()->save($profile);
     }
-
 
     /**
      * Find a User by username with their Profile
@@ -41,5 +45,17 @@ class UserRepository {
     public function findByEmail($email)
     {
         return User::whereEmail($email)->first();
+    }
+
+    /**
+     * Return a key value array of Username => Email
+     * for all users. Useful for building a select
+     * box.
+     *
+     * @return mixed
+     */
+    public function getUsernameEmailArray()
+    {
+        return User::lists('username', 'email');
     }
 }

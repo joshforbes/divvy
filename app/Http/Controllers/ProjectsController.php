@@ -1,17 +1,35 @@
 <?php namespace App\Http\Controllers;
 
+use App\Commands\StartNewProjectCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\AddUserToProjectRequest;
 use App\Http\Requests\CreateProjectRequest;
 use App\Project;
+use App\Repositories\ProjectRepository;
 use App\Repositories\UserRepository;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ProjectsController extends Controller {
+
+    /**
+     * @var UserRepository
+     */
+    private $userRepository;
+    /**
+     * @var ProjectRepository
+     */
+    private $projectRepository;
+
+    public function __construct(UserRepository $userRepository, ProjectRepository $projectRepository)
+    {
+        $this->userRepository = $userRepository;
+        $this->projectRepository = $projectRepository;
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -21,13 +39,9 @@ class ProjectsController extends Controller {
      */
     public function store(CreateProjectRequest $request)
     {
-        $input = $request->all();
-
-        $user = \Auth::user();
-        $project = Project::create($input);
-
-        $project->adminUsers()->attach($user);
-        $project->users()->attach($user);
+        $project = $this->dispatch(
+            new StartNewProjectCommand($request, \Auth::user())
+        );
 
         return redirect()->route('project.show', $project->id);
     }
@@ -38,21 +52,20 @@ class ProjectsController extends Controller {
      *
      * @param AddUserToProjectRequest $request
      * @param $projectId
-     * @param UserRepository $userRepository
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function addUser(AddUserToProjectRequest $request, $projectId, UserRepository $userRepository)
+    public function addUser(AddUserToProjectRequest $request, $projectId)
     {
-        $project = Project::find($projectId);
+        $project = $this->projectRepository->findById($projectId);
 
-        $user = $userRepository->findByEmail($request->input('user'));
+        $user = $this->userRepository->findByEmail($request->input('user'));
 
         if (!$user)
         {
             dd('invite email');
         }
 
-        $project->users()->attach($user->id);
+        $this->projectRepository->addUser($user, $project);
 
         return redirect()->route('project.show', $project->id);
     }
@@ -65,8 +78,8 @@ class ProjectsController extends Controller {
      */
     public function show($id)
     {
-        $project = Project::with('adminUsers', 'users')->whereId($id)->firstOrFail();
-        $users = User::lists('username', 'email');
+        $project = $this->projectRepository->findById($id);
+        $users = $this->projectRepository->usersNotInProjectArray($project);
 
         return view('projects.show', compact('project', 'users'));
     }

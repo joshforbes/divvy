@@ -26,4 +26,19 @@ class Project extends Model {
 		return $this->belongsToMany('App\User', 'project_adminUser');
 	}
 
+	/**
+	 * Start a new Project
+	 *
+	 * @param $name
+	 * @return static
+     */
+	public static function start($name)
+	{
+		$project = new static([
+			'name' => $name
+		]);
+
+		return $project;
+	}
+
 }

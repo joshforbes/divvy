@@ -1,17 +1,23 @@
-<?php namespace App\Repositories;
-
+<?php namespace App;
 
 use File;
 use Intervention\Image\Image;
 use Intervention\Image\ImageManager;
 
-class AvatarRepository {
+class Avatar {
 
     /**
      * The public path where Avatar images are stored
      * @var string
      */
     protected $imagePath;
+
+
+    /**
+     * The intervention image object
+     * @var
+     */
+    protected $image;
 
     /**
      * @var ImageManager
@@ -27,54 +33,68 @@ class AvatarRepository {
         $this->imageManager = $imageManager;
     }
 
+
     /**
      * Take an image input from the User, make an InterventionImage Object
      *
      * @param $file
-     * @return Image
+     * @return $this
      */
     public function create($file)
     {
-        return $this->imageManager->make($file);
+        $this->image = $this->imageManager->make($file);
+
+        return $this;
     }
 
     /**
      * Resize an InterventionImage object to the proper avatar size
      *
-     * @param Image $avatar
      * @param int $size
-     * @return Image
+     * @return $this
      */
-    public function resizeAndCrop(Image $avatar, $size = 200)
+    public function resizeAndCrop($size = 200)
     {
-        $avatar->resize(null, $size, function ($constraint)
+        $this->image->resize(null, $size, function ($constraint)
         {
             $constraint->aspectRatio();
         })->crop($size, $size);
 
-        return $avatar;
+        return $this;
     }
 
     /**
-     * Save an InterventionImage object to the avatar folder
+     * Save the image to the avatar folder
      * and give it a unique name
      *
-     * @param Image $avatar
-     * @return Image
+     * @return bool
      */
-    public function save(Image $avatar)
+    public function save()
     {
-        return $avatar->save($this->imagePath . uniqid() . '.jpg');
+        $filename = $this->imagePath . uniqid() . 'jpg';
+        $this->image->save($filename);
+
+        return file_exists($filename);
     }
 
     /**
      * Delete an Avatar file
      *
      * @param $avatarPath
+     *
+     * @return bool
      */
     public function delete($avatarPath)
     {
-        File::delete($this->imagePath . $avatarPath);
+        return File::delete($this->imagePath . $avatarPath);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 
 }
