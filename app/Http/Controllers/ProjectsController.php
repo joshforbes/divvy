@@ -1,32 +1,24 @@
 <?php namespace App\Http\Controllers;
 
+use App\Commands\AddMemberToProjectCommand;
 use App\Commands\StartNewProjectCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\AddUserToProjectRequest;
 use App\Http\Requests\CreateProjectRequest;
-use App\Project;
 use App\Repositories\ProjectRepository;
-use App\Repositories\UserRepository;
-use App\User;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Auth;
 
 class ProjectsController extends Controller {
 
-    /**
-     * @var UserRepository
-     */
-    private $userRepository;
     /**
      * @var ProjectRepository
      */
     private $projectRepository;
 
-    public function __construct(UserRepository $userRepository, ProjectRepository $projectRepository)
+    public function __construct(ProjectRepository $projectRepository)
     {
-        $this->userRepository = $userRepository;
         $this->projectRepository = $projectRepository;
     }
 
@@ -40,7 +32,7 @@ class ProjectsController extends Controller {
     public function store(CreateProjectRequest $request)
     {
         $project = $this->dispatch(
-            new StartNewProjectCommand($request, \Auth::user())
+            new StartNewProjectCommand($request, Auth::user())
         );
 
         return redirect()->route('project.show', $project->id);
@@ -56,16 +48,9 @@ class ProjectsController extends Controller {
      */
     public function addUser(AddUserToProjectRequest $request, $projectId)
     {
-        $project = $this->projectRepository->findById($projectId);
-
-        $user = $this->userRepository->findByEmail($request->input('user'));
-
-        if (!$user)
-        {
-            dd('invite email');
-        }
-
-        $this->projectRepository->addUser($user, $project);
+        $project = $this->dispatch(
+            new AddMemberToProjectCommand($request, $projectId)
+        );
 
         return redirect()->route('project.show', $project->id);
     }
