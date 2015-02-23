@@ -58,15 +58,22 @@ class ProjectsController extends Controller {
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param $projectId
      * @return Response
      */
-    public function show($id)
+    public function show($projectId)
     {
-        $project = $this->projectRepository->findById($id);
-        $users = $this->projectRepository->usersNotInProjectArray($project);
+        $project = $this->projectRepository->findById($projectId);
 
-        return view('projects.show', compact('project', 'users'));
+        if (Auth::user()->isAdmin($projectId))
+        {
+            $users = $this->projectRepository->usersNotInProjectArray($project);
+
+            return view('projects.admin', compact('project', 'users'));
+        }
+
+        return view('projects.member', compact('project'));
+
     }
 
     /**

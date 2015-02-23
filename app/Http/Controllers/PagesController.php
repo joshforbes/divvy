@@ -22,7 +22,8 @@ class PagesController extends Controller {
             return view('pages.splash');
         }
 
-        return view('pages.dashboard');
+        $projects = Auth::user()->projects;
+        return view('pages.dashboard', compact('projects'));
 
     }
 

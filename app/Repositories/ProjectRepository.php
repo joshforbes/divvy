@@ -42,7 +42,6 @@ class ProjectRepository {
         $ids = \DB::table('project_user')->where('project_id', '=', $project->id)->lists('user_id');
 
         return User::whereNotIn('id', $ids)->lists('username', 'email');
-
     }
 
 

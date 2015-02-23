@@ -31,11 +31,7 @@ class FunctionalHelper extends Module {
         $user = $this->haveAnAccount([
             'username' => $username,
             'email' => $email,
-            'password' => bcrypt($password)
-        ]);
-
-        $this->haveAProfile([
-            'user_id' =>  $user->id,
+            'password' => bcrypt($password),
             'name' => $name
         ]);
 
@@ -62,12 +58,10 @@ class FunctionalHelper extends Module {
 
     public function haveAnAccount($overrides)
     {
-        return TestDummy::create('App\User', $overrides);
-    }
+        $user = TestDummy::create('App\User', $overrides);
+        Testdummy::create('App\Profile', ['user_id' => $user->id] + $overrides);
 
-    public function haveAProfile($overrides)
-    {
-        return Testdummy::create('App\Profile', $overrides);
+        return $user;
     }
 
     public function haveAProject($overrides)

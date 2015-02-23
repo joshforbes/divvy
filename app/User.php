@@ -95,5 +95,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->username == $user->username;
     }
 
+    public function isAdmin($projectId)
+    {
+        return $this->adminProjects->contains($projectId);
+    }
+
 
 }

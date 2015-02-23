@@ -1,6 +1,7 @@
 <?php namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
+use Auth;
 
 class AddUserToProjectRequest extends Request {
 
@@ -11,8 +12,8 @@ class AddUserToProjectRequest extends Request {
 	 */
 	public function authorize()
 	{
-		//if admin - need to add
-		return true;
+		$projectId = $this->route('id');
+		return Auth::user()->isAdmin($projectId);
 	}
 
 	/**
