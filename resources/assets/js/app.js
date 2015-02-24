@@ -1,3 +1,5 @@
-$(".avatar-upload-button").click(function(){
-    $("#avatar-input").click();
-});
+
+(function() {
+    profileModule.init();
+    projectModule.init();
+}());

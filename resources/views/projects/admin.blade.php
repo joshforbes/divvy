@@ -7,11 +7,13 @@
 @section('content')
     <div class="container">
 
-        <div class="row">
-            {!! Form::open(['route' => ['project.addUser', $project->id]]) !!}
+        <div class="row" data-model="projectModule">
+            {!! Form::open([
+                'data-remote',
+                'data-remote-on-success' => 'show',
+                'route' => ['project.addUser', $project->id]]) !!}
 
             <div class="input-group">
-                {{--{!! Form::select('users[]', $users, null, ['id' => 'usersList', 'multiple'])!!}--}}
                 <select name="user" id="usersList" data-placeholder="Add a User to Project">
                     <option></option>
                     @foreach ( $users as $email => $username )

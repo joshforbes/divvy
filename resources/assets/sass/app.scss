@@ -1,5 +1,7 @@
 @import "variables";
 @import "bootstrap";
+@import "components";
+
 
 .container-small {
     @extend .container;
@@ -112,6 +114,8 @@ DASHBOARD
     display: none;
 }
 
+
+/** PROFILE **/
 .avatar-wrap {
     position: relative;
     margin-right: 2em;

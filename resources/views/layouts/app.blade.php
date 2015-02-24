@@ -32,6 +32,6 @@
 <script src="/js/vendor/bootstrap.js"></script>
 <script src="/js/vendor/handlebars.js"></script>
 @yield('js')
-<script src="/js/app.js"></script>
+<script src="/js/all.js"></script>
 </body>
 </html>

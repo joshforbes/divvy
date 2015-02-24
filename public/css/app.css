@@ -4893,6 +4893,7 @@ DASHBOARD
 .hide {
   display: none; }
 
+/** PROFILE **/
 .avatar-wrap {
   position: relative;
   margin-right: 2em; }

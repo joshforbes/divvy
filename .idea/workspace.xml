@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42cdb1d5-8b6e-4047-bd25-3a856df9e117" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/projects/member.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/AddUserToProjectCept.php" afterPath="$PROJECT_DIR$/tests/functional/AddUserToProjectCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/AddUserToProjectRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/AddUserToProjectRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" afterPath="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/FunctionalTester.php" afterPath="$PROJECT_DIR$/tests/functional/FunctionalTester.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/_components.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/utilities/ajax.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/avatars/54e8f89e8bef8jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/_variables.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/projects/admin.blade.php" afterPath="$PROJECT_DIR$/resources/views/projects/admin.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app.js" afterPath="$PROJECT_DIR$/resources/assets/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/app.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/app.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="divvy.iws" />
@@ -38,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard.blade.php">
+      <file leaf-file-name="projectModule.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/projectModule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8055556" vertical-offset="0" max-vertical-offset="1000">
-              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.3888889" vertical-offset="0" max-vertical-offset="900">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -56,15 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/SplashOrDashboard.php" />
-        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
-        <option value="$PROJECT_DIR$/tests/functional/RegisterCept.php" />
-        <option value="$PROJECT_DIR$/resources/assets/sass/_variables.scss" />
-        <option value="$PROJECT_DIR$/resources/views/pages/splash.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2015_02_16_002917_create_tasks_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_16_003453_create_comments_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_16_003716_create_attachments_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
@@ -72,10 +64,7 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/partials/nav.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_16_002407_create_projects_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/CreateProjectRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/resources/assets/sass/app.scss" />
         <option value="$PROJECT_DIR$/tests/_output/CreateProjectCept.fail.html" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_16_004848_create_project_user_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_16_004907_create_project_adminUser_table.php" />
@@ -99,7 +88,6 @@
         <option value="$PROJECT_DIR$/tests/functional/ProfileCept.php" />
         <option value="$PROJECT_DIR$/tests/functional/AddUserToProjectCept.php" />
         <option value="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" />
-        <option value="$PROJECT_DIR$/resources/views/projects/admin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/projects/show.blade.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/AddUserToProjectRequest.php" />
@@ -107,6 +95,19 @@
         <option value="$PROJECT_DIR$/app/Repositories/ProjectRepository.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/_variables.scss" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/app.scss" />
+        <option value="$PROJECT_DIR$/resources/assets/js/utilities/ajax.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/modules/profileModule.js" />
+        <option value="$PROJECT_DIR$/public/js/app.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/test.js" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/all.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/resources/views/projects/admin.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" />
       </list>
     </option>
   </component>
@@ -222,7 +223,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -237,6 +238,130 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utilities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,6 +497,7 @@
       <recent name="$PROJECT_DIR$/public/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/assets/js/helpers" />
       <recent name="$PROJECT_DIR$/resources/views/pages" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/resources/assets/sass" />
@@ -462,310 +588,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16666667" vertical-offset="0" max-vertical-offset="900">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding>
-            <marker date="1424270946000" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;Divvy&quot;...}" />
-            <marker date="1424270946000" expanded="true" signature="-1:-1" placeholder="{&quot;bootstrap-sass&quot;: &quot;~3.3.3&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39" vertical-offset="549" max-vertical-offset="1450">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding>
-            <marker date="1424270991000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
-            <marker date="1424270991000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424270991000" expanded="true" signature="-1:-1" placeholder="//..." />
-            <marker date="1424270991000" expanded="true" signature="-1:-1" placeholder="//..." />
-            <marker date="1424270991000" expanded="true" signature="-1:-1" placeholder="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16666667" vertical-offset="0" max-vertical-offset="5525">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <marker date="1423058347000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The container instance. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The redirector instance. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The URI to redirect to if validation fails. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The route to redirect to if validation fails. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The controller action to redirect to if validation fails. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The key to be used for the view error bag. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" The input keys that should not be flashed on redirect. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the validator instance for the request. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Handle a failed validation attempt. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Determine if the request passes the authorization check. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Handle a failed authorization attempt. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the proper failed validation response for the request. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the response for a forbidden operation. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Format the errors from the given Validator instance. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the URL to redirect to on a validation error. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Set the Redirector instance. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Set the container implementation. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Set custom messages for validator errors. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/ValidatesWhenResolvedTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19444445" vertical-offset="0" max-vertical-offset="2025">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <marker date="1423058347000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Provides default implementation of ValidatesWhenResolved contract. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Validate the class instance. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Get the validator instance for the request. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Handle a failed validation attempt. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Deteremine if the request passes the authorization check. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder=" Handle a failed authorization attempt. ..." />
-            <marker date="1423058347000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/sass/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6944444" vertical-offset="1750" max-vertical-offset="3475">
-          <caret line="95" column="26" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
-          <folding>
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424302417000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_02_16_002917_create_tasks_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44444445" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <marker date="1424046708000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1424046708000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_02_16_002407_create_projects_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44444445" vertical-offset="0" max-vertical-offset="975">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding>
-            <marker date="1424135319000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1424135319000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424135319000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1424135319000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424135319000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424135319000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424135319000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1424135319000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_02_16_004848_create_project_user_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4722222" vertical-offset="50" max-vertical-offset="975">
-          <caret line="20" column="91" selection-start-line="20" selection-start-column="91" selection-end-line="20" selection-end-column="91" />
-          <folding>
-            <marker date="1424305672000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/_output/CreateProjectCept.fail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="1500" max-vertical-offset="6250">
-          <caret line="72" column="138" selection-start-line="72" selection-start-column="77" selection-end-line="72" selection-end-column="138" />
-          <folding>
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424534273000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_02_16_004907_create_project_adminUser_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5277778" vertical-offset="0" max-vertical-offset="975">
-          <caret line="20" column="91" selection-start-line="20" selection-start-column="91" selection-end-line="20" selection-end-column="91" />
-          <folding>
-            <marker date="1424305672000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1424305672000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functional.suite.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1423334762000" expanded="true" signature="-1:-1" placeholder="modules:" />
-            <marker date="1423334762000" expanded="true" signature="-1:-1" placeholder="enabled:" />
-            <marker date="1423334762000" expanded="true" signature="-1:-1" placeholder="config:" />
-            <marker date="1423334762000" expanded="true" signature="-1:-1" placeholder="Laravel5:" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functional/LoginCept.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25" vertical-offset="0" max-vertical-offset="900">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="900">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/_output/UploadAvatarCept.fail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4166666" vertical-offset="1275" max-vertical-offset="4225">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1424532427000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424532427000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424532427000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424532427000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424532427000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424532427000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424532427000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424532427000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424532427000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424532427000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424532427000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Avatar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.6388888" vertical-offset="0" max-vertical-offset="2575">
-          <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
-          <folding>
-            <marker date="1424532902000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder=" The public path where Avatar images are stored ..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder=" The intervention image object ..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder=" @var ImageManager ..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder=" @param ImageManager $imageManager ..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder=" Take an image input from the User, make an InterventionImage Object ..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder=" Resize an InterventionImage object to the proper avatar size ..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder=" Save the image to the avatar folder ..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder=" Delete an Avatar file ..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1424532902000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6944444" vertical-offset="600" max-vertical-offset="1650">
@@ -1209,26 +1031,6 @@
             <marker date="1424532789000" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1424532789000" expanded="true" signature="-1:-1" placeholder=" Find a profile by the provided username ..." />
             <marker date="1424532789000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/projects/admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5555556" vertical-offset="0" max-vertical-offset="1550">
-          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
-          <folding>
-            <marker date="1424579216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424579216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424579216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424579216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424579216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424579216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424579216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424579216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424579216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424579216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424579216000" expanded="true" signature="-1:-1" placeholder="{&quot;tags&quot;: true...}" />
           </folding>
         </state>
       </provider>
@@ -1881,8 +1683,256 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8055556" vertical-offset="0" max-vertical-offset="1000">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.5277778" vertical-offset="0" max-vertical-offset="1075">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="60" />
+          <folding>
+            <marker date="1424659774000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424659774000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424659774000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424659774000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424659774000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424659774000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424659774000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424659774000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="8584" max-vertical-offset="21700">
+          <caret line="355" column="36" selection-start-line="355" selection-start-column="36" selection-end-line="355" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46222222" vertical-offset="8459" max-vertical-offset="21750">
+          <caret line="355" column="36" selection-start-line="355" selection-start-column="36" selection-end-line="355" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/_components.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9444444" vertical-offset="1850" max-vertical-offset="3575">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424711789000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75" vertical-offset="0" max-vertical-offset="1450">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;laravel/laravel&quot;...}" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="{&quot;laravel/framework&quot;: &quot;5.0.*&quot;...}" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="{&quot;phpunit/phpunit&quot;: &quot;~4.0&quot;...}" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="{&quot;App\\&quot;: &quot;app/&quot;...}" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1423797918000" expanded="true" signature="-1:-1" placeholder="{&quot;preferred-install&quot;: &quot;dist&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1423089616000" expanded="true" signature="-1:-1" placeholder="{&quot;directory&quot;: &quot;vendor/bower_components&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1424270946000" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;Divvy&quot;...}" />
+            <marker date="1424270946000" expanded="true" signature="-1:-1" placeholder="{&quot;bootstrap-sass&quot;: &quot;~3.3.3&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1423228457000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423228457000" expanded="true" signature="-1:-1" placeholder="{&quot;gulp&quot;: &quot;^3.8.8&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7222222" vertical-offset="175" max-vertical-offset="1075">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding>
+            <marker date="1424716055000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424716055000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424716055000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424716055000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.083333336" vertical-offset="0" max-vertical-offset="900">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <folding>
+            <marker date="1424730482000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5555556" vertical-offset="525" max-vertical-offset="1750">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424806649000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/utilities/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9444444" vertical-offset="100" max-vertical-offset="2300">
+          <caret line="38" column="64" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="64" />
+          <folding>
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424714228000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9444444" vertical-offset="350" max-vertical-offset="1675">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+          <folding>
+            <marker date="1424731119000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
+            <marker date="1424731119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424731119000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1424731119000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1424731119000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1424731119000" expanded="true" signature="-1:-1" placeholder="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/projects/admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30555555" vertical-offset="0" max-vertical-offset="1600">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <marker date="1424731209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424731209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424731209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424731209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424731209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424731209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424731209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424731209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424731209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424731209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424731209000" expanded="true" signature="-1:-1" placeholder="{&quot;tags&quot;: true...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/profileModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8611111" vertical-offset="50" max-vertical-offset="1000">
+          <caret line="33" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/projectModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3888889" vertical-offset="0" max-vertical-offset="900">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding />
         </state>
       </provider>
