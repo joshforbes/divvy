@@ -50,7 +50,7 @@ class FunctionalHelper extends Module {
         $project = $this->haveAProject([]);
         $user = Auth::user();
 
-        $project->adminUsers()->attach($user);
+        $project->admins()->attach($user);
         $project->users()->attach($user);
 
         return $project;

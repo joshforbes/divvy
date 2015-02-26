@@ -4890,6 +4890,9 @@ DASHBOARD
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
 
+.select-members .select2 {
+  width: 100% !important; }
+
 .hide {
   display: none; }
 

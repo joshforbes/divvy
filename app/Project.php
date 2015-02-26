@@ -21,9 +21,19 @@ class Project extends Model {
 	 *
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-	public function adminUsers()
+	public function admins()
 	{
 		return $this->belongsToMany('App\User', 'project_adminUser');
+	}
+
+	/**
+	 * A Project has many tasks
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+	public function tasks()
+	{
+		return $this->hasMany('App\Task');
 	}
 
 	/**

@@ -63,6 +63,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     /**
+     * A User can have many tasks
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function tasks()
+    {
+        return $this->belongsToMany('App\Task');
+    }
+
+    /**
      * Register a new user
      *
      * @param $username
@@ -95,9 +105,26 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->username == $user->username;
     }
 
+    /**
+     * Determine if the current user is the admin of a given Project
+     *
+     * @param $projectId
+     * @return mixed
+     */
     public function isAdmin($projectId)
     {
         return $this->adminProjects->contains($projectId);
+    }
+
+    /**
+     * Determine if the current user is a member of a given project
+     *
+     * @param $projectId
+     * @return mixed
+     */
+    public function isMember($projectId)
+    {
+        return $this->projects->contains($projectId);
     }
 
 

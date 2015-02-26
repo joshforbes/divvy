@@ -29,6 +29,7 @@ class AddMemberToProjectCommand extends Command implements SelfHandling {
 	 *
 	 * @param ProjectRepository $projectRepository
 	 * @param UserRepository $userRepository
+	 * @return mixed
 	 */
 	public function handle(ProjectRepository $projectRepository, UserRepository $userRepository)
 	{

@@ -27,6 +27,9 @@ Route::post('/p', ['as' => 'project.store', 'uses' => 'ProjectsController@store'
 Route::post('/p/{id}/addUser', ['as' => 'project.addUser', 'uses' => 'ProjectsController@addUser']);
 Route::get('/p/{id}', ['as' => 'project.show', 'uses' => 'ProjectsController@show']);
 
+#Tasks
+Route::post('/p/{id}/task', ['as' => 'task.store', 'uses' => 'TasksController@store']);
+
 #Profiles
 Route::get('/{username}/edit', [
 	'as' => 'profile.edit',
