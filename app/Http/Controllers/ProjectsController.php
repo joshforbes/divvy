@@ -8,7 +8,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\AddUserToProjectRequest;
 use App\Http\Requests\CreateProjectRequest;
 use App\Repositories\ProjectRepository;
-use Auth;
 
 class ProjectsController extends Controller {
 
@@ -32,7 +31,7 @@ class ProjectsController extends Controller {
     public function store(CreateProjectRequest $request)
     {
         $project = $this->dispatch(
-            new StartNewProjectCommand($request, Auth::user())
+            new StartNewProjectCommand($request, $this->user)
         );
 
         return redirect()->route('project.show', $project->id);
@@ -65,7 +64,7 @@ class ProjectsController extends Controller {
     {
         $project = $this->projectRepository->findById($projectId);
 
-        if (Auth::user()->isAdmin($projectId))
+        if ($this->user->isAdmin($projectId))
         {
             $users = $this->projectRepository->usersNotInProjectArray($project);
 

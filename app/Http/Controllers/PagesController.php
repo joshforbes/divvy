@@ -17,12 +17,12 @@ class PagesController extends Controller {
      */
     public function index()
     {
-        if (!Auth::check())
+        if (!$this->signedIn)
         {
             return view('pages.splash');
         }
 
-        $projects = Auth::user()->projects;
+        $projects = $this->user->projects;
         return view('pages.dashboard', compact('projects'));
 
     }
