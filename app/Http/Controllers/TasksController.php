@@ -4,10 +4,15 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\AddTaskToProjectRequest;
+use App\Repositories\ProjectRepository;
 use App\Repositories\TaskRepository;
 use App\Task;
 use Illuminate\Http\Request;
 
+/**
+ * Class TasksController
+ * @package App\Http\Controllers
+ */
 class TasksController extends Controller {
 
     /**
@@ -23,11 +28,17 @@ class TasksController extends Controller {
     /**
      * Show the form for creating a new resource.
      *
+     * @param ProjectRepository $projectRepository
+     * @param $projectId
      * @return Response
      */
-    public function create()
+    public function create(ProjectRepository $projectRepository, $projectId)
     {
-        //
+        $project = $projectRepository->findById($projectId);
+
+        $members = $projectRepository->usersInProjectArray($project);
+
+        return view('tasks.create', compact('project', 'members'));
     }
 
     /**
@@ -59,12 +70,16 @@ class TasksController extends Controller {
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param TaskRepository $taskRepository
+     * @param $projectId
+     * @param $taskId
      * @return Response
      */
-    public function show($id)
+    public function show(TaskRepository $taskRepository, $projectId, $taskId)
     {
-        //
+        $task = $taskRepository->findByIdInProject($projectId, $taskId);
+
+        return view('tasks.show', compact('task'));
     }
 
     /**

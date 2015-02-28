@@ -28,6 +28,8 @@ class ProfilesController extends Controller {
      */
     function __construct(UserRepository $userRepository, ProfileRepository $profileRepository)
     {
+        parent::__construct();
+
         $this->userRepository = $userRepository;
         $this->profileRepository = $profileRepository;
     }

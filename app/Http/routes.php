@@ -29,6 +29,8 @@ Route::get('/p/{id}', ['as' => 'project.show', 'uses' => 'ProjectsController@sho
 
 #Tasks
 Route::post('/p/{id}/task', ['as' => 'task.store', 'uses' => 'TasksController@store']);
+Route::get('/p/{id}/task/create', ['as' => 'task.create', 'uses' => 'TasksController@create']);
+Route::get('/p/{projectId}/task/{taskId}', ['as' => 'task.show', 'uses' => 'TasksController@show']);
 
 #Profiles
 Route::get('/{username}/edit', [

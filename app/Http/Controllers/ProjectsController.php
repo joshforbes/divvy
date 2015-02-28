@@ -18,6 +18,8 @@ class ProjectsController extends Controller {
 
     public function __construct(ProjectRepository $projectRepository)
     {
+        parent::__construct();
+
         $this->projectRepository = $projectRepository;
     }
 

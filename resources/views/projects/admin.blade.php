@@ -26,53 +26,27 @@
         <br/><br/><br/>
 
         <div class="row">
-            <div class="tasks-container col-md-6">
+            <div class="tasks-container col-md-8">
                 @if($project->tasks)
 
                     <h2>Tasks:</h2>
+                    <a href="{{ route('task.create', $project->id) }}">Add a Task</a>
                     <ul class="list-group">
                         @foreach($project->tasks as $task)
                             <li class="list-group-item">
-                                {{ $task->name }}
+                                <h4>{{ $task->name }}</h4>
+                                <p>{{ $task->description }}</p>
                                 @if($task->users)
                                     @foreach($task->users as $user)
                                         {!! $user->profile->present()->avatarHtml('30px') !!}
                                     @endforeach
-                                @endif<br/>
-                                {{ $task->description }} <br/>
+                                @endif
                             </li>
                         @endforeach
                     </ul>
                 @endif
             </div>
 
-            <div class="col-md-6">
-                <h2>Add Task:</h2>
-
-                {!! Form::open(['route' => ['task.store', $project->id]]) !!}
-
-                <!-- Task Name Form Input -->
-                <div class="form-group">
-                    {!! Form::label('name', 'Task Name: ') !!}
-                    {!! Form::text('name', null, ['class' => 'form-control']) !!}
-                </div>
-
-                <!-- Description Form Input -->
-                <div class="form-group">
-                    {!! Form::label('description', 'Description: ') !!}
-                    {!! Form::text('description', null, ['class' => 'form-control']) !!}
-                </div>
-
-                <div class="form-group select-members">
-                    {!! Form::select('members[]', $members, null, ['class' => 'js-member-list', 'multiple']) !!}
-                </div>
-
-                <div class="form-group">
-                    {!! Form::submit('Add', ['class' => 'btn btn-primary form-control']) !!}
-                </div>
-
-                {!! Form::close() !!}
-            </div>
         </div>
 
 
