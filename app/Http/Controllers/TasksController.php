@@ -3,7 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Http\Requests\AddTaskToProjectRequest;
+use App\Http\Requests\TaskRequest;
 use App\Repositories\ProjectRepository;
 use App\Repositories\TaskRepository;
 use App\Task;
@@ -44,12 +44,12 @@ class TasksController extends Controller {
     /**
      * Store a newly created resource in storage.
      *
-     * @param AddTaskToProjectRequest $request
+     * @param TaskRequest $request
      * @param TaskRepository $taskRepository
      * @param $projectId
      * @return Response
      */
-    public function store(AddTaskToProjectRequest $request, TaskRepository $taskRepository, $projectId)
+    public function store(TaskRequest $request, TaskRepository $taskRepository, $projectId)
     {
         $task = Task::assign([
             'name'        => $request->name,
@@ -59,10 +59,7 @@ class TasksController extends Controller {
 
         $taskRepository->save($task);
 
-        if ($request->members)
-        {
-            $taskRepository->assignTo($request->members, $task);
-        }
+        $taskRepository->assignTo($request->members, $task);
 
         return redirect()->route('project.show', $projectId);
     }
@@ -85,23 +82,42 @@ class TasksController extends Controller {
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param ProjectRepository $projectRepository
+     * @param TaskRepository $taskRepository
+     * @param $projectId
+     * @param $taskId
      * @return Response
      */
-    public function edit($id)
+    public function edit(ProjectRepository $projectRepository, TaskRepository $taskRepository, $projectId, $taskId)
     {
-        //
+        $task = $taskRepository->findByIdInProject($projectId, $taskId);
+
+        $project = $task->project;
+
+        $members = $projectRepository->usersInProjectArray($project);
+
+        return view('tasks.edit', compact('task', 'project', 'members'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  int $id
+     * @param TaskRequest $request
+     * @param TaskRepository $taskRepository
+     * @param $projectId
+     * @param $taskId
      * @return Response
      */
-    public function update($id)
+    public function update(TaskRequest $request, TaskRepository $taskRepository, $projectId, $taskId)
     {
-        //
+        $task = $taskRepository->updateTask($taskId, $request->all());
+
+        $taskRepository->assignTo($request->memberList, $task);
+
+
+        //Flash::message('Profile updated');
+        return redirect()->route('project.show', $projectId);
+        //return redirect()->route('task.show', $projectId, $taskId);
     }
 
     /**

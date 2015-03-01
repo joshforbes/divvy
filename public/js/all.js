@@ -134,7 +134,7 @@ var projectModule = (function() {
     return {
         settings: {
             selectBoxSelected: $('.select2-selection__rendered'),
-            selectBoxOption: $('#usersList option')
+            selectBoxOption: $('.js-user-list option')
         },
 
         addUser: function() {

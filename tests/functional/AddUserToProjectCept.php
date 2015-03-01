@@ -22,10 +22,10 @@ $project = $I->amAProjectAdmin($user);
 $I->amOnPage('/p/' . $project->id);
 
 $I->selectOption('user', 'jane@test.com');
-$I->click('Add');
+$I->click('input[type=submit]');
 
 $I->selectOption('user', 'test@test.com');
-$I->click('Add');
+$I->click('input[type=submit]');
 
 $I->seeRecord('project_user', [
     'project_id' => $project->id,

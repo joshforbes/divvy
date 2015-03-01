@@ -48,7 +48,7 @@ class ProjectRepository {
      */
     public function findById($id)
     {
-        return Project::with('admins', 'users')->whereId($id)->firstOrFail();
+        return Project::with('admins', 'users', 'tasks')->whereId($id)->firstOrFail();
     }
 
     /**

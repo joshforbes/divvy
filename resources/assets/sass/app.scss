@@ -110,6 +110,46 @@ DASHBOARD
     }
 }
 
+
+.task-container {
+    height: 400px;
+    width: 95%;
+    background-color: #FFFAE4;
+    color: #464646;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.task-container__header {
+    width: 100%;
+    background-color: #26393D;
+    height: 50px;
+    margin-top: -10px;
+    color: #FFFAE4;
+
+    a {
+        text-decoration: none;
+        color: #FFFAE4;
+
+    }
+
+    h4 {
+        line-height: 50px;
+        margin-left: 10px;
+    }
+
+    &__edit-link {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.task-container__body {
+    padding: 15px;
+}
+
+
 .select-members {
     .select2 {
         width: 100% !important;

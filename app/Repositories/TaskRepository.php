@@ -25,7 +25,24 @@ class TaskRepository {
      */
     public function findByIdInProject($projectId, $taskId)
     {
-        return Task::whereProjectId($projectId)->whereId($taskId)->firstOrFail();
+        //return Task::whereProjectId($projectId)->whereId($taskId)->firstOrFail();
+        return Task::with('project', 'project.users')->whereProjectId($projectId)->whereId($taskId)->firstOrFail();
+
+    }
+
+
+    /**
+     * Updates the Task with the given id
+     *
+     * @param $taskId
+     * @param $updatedData
+     * @return mixed
+     */
+    public function updateTask($taskId, $updatedData)
+    {
+        $task = Task::find($taskId)->firstOrFail();
+        $task->fill($updatedData)->save();
+        return $task;
     }
 
 
@@ -35,9 +52,12 @@ class TaskRepository {
      * @param array $members
      * @param Task $task
      */
-    public function assignTo(array $members, Task $task)
+    public function assignTo(array $members = null, Task $task)
     {
-        $task->users()->attach($members);
+        if(!$members) {
+            return $task->users()->detach();
+        }
+        return $task->users()->sync($members);
     }
 
 }

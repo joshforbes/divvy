@@ -30,4 +30,14 @@ class Task extends Model {
     {
         return $this->belongsToMany('App\User');
     }
+
+    /**
+     * Get a list of user ids associated with the current task
+     *
+     * @return array
+     */
+    public function getMemberListAttribute()
+    {
+        return $this->users->lists('id');
+    }
 }

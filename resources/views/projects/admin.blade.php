@@ -6,7 +6,45 @@
 
 @section('content')
     <div class="container">
-        <h1>{{ $project->name }}</h1>
+        <div class="page-header">
+            <h1>{{ $project->name }}</h1>
+        </div>
+
+        @if($project->tasks)
+            <div class="row">
+                <div class="tasks-container col-md-12">
+                    <h2>Tasks:</h2>
+
+                    <p><a href="{{ route('task.create', $project->id) }}">Add a Task</a></p>
+
+                    @foreach($project->tasks as $task)
+                        <div class="col-md-6">
+                            <div class="task-container">
+                                <div class="task-container__header">
+                                    <a href="{{ route('task.show', [$project->id, $task->id]) }}"><h4>{{ $task->name }}</h4></a>
+                                    <div class="task-container__header__edit-link"><a href="{{ route('task.edit', [$project->id, $task->id]) }}">edit</a></div>
+                                </div>
+
+                                <div class="task-container__body">
+                                <p>{{ $task->description }}</p>
+                                @if($task->users)
+                                    @foreach($task->users as $user)
+                                        {!! $user->profile->present()->avatarHtml('30px') !!}
+                                    @endforeach
+                                @endif
+                                </div>
+
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+
+            </div>
+        @endif
+
+
+        <br/><br/><br/>
 
         <div class="row">
             {!! Form::open(['route' => ['project.addUser', $project->id]]) !!}
@@ -22,35 +60,6 @@
             </div>
             {!! Form::close() !!}
         </div>
-
-        <br/><br/><br/>
-
-        <div class="row">
-            <div class="tasks-container col-md-8">
-                @if($project->tasks)
-
-                    <h2>Tasks:</h2>
-                    <a href="{{ route('task.create', $project->id) }}">Add a Task</a>
-                    <ul class="list-group">
-                        @foreach($project->tasks as $task)
-                            <li class="list-group-item">
-                                <h4>{{ $task->name }}</h4>
-                                <p>{{ $task->description }}</p>
-                                @if($task->users)
-                                    @foreach($task->users as $user)
-                                        {!! $user->profile->present()->avatarHtml('30px') !!}
-                                    @endforeach
-                                @endif
-                            </li>
-                        @endforeach
-                    </ul>
-                @endif
-            </div>
-
-        </div>
-
-
-        <br/><br/><br/>
 
         <div class="members-container">
             <p>Admins:

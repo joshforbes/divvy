@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class AddTaskToProjectRequest extends Request {
+class TaskRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
