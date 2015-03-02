@@ -16,16 +16,6 @@ use Illuminate\Http\Request;
 class TasksController extends Controller {
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
      * Show the form for creating a new resource.
      *
      * @param ProjectRepository $projectRepository
@@ -61,7 +51,7 @@ class TasksController extends Controller {
 
         $taskRepository->assignTo($request->members, $task);
 
-        return redirect()->route('project.show', $projectId);
+        return redirect()->route('task.show', [$projectId, $task->id]);
     }
 
     /**
@@ -114,10 +104,8 @@ class TasksController extends Controller {
 
         $taskRepository->assignTo($request->memberList, $task);
 
-
         //Flash::message('Profile updated');
-        return redirect()->route('project.show', $projectId);
-        //return redirect()->route('task.show', $projectId, $taskId);
+        return redirect()->route('task.show', [$projectId, $taskId]);
     }
 
     /**

@@ -56,6 +56,13 @@ class FunctionalHelper extends Module {
         return $project;
     }
 
+    public function addAUserToMyProject($user, $project)
+    {
+        $project->users()->attach($user);
+
+        return $project;
+    }
+
     public function haveAnAccount($overrides)
     {
         $user = TestDummy::create('App\User', $overrides);

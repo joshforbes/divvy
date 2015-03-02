@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42cdb1d5-8b6e-4047-bd25-3a856df9e117" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Http/Requests/AddTaskToProjectRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/TaskRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/testing.sqlite" afterPath="$PROJECT_DIR$/storage/testing.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/AddUserToProjectCept.php" afterPath="$PROJECT_DIR$/tests/functional/AddUserToProjectCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Task.php" afterPath="$PROJECT_DIR$/app/Task.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/AddTaskToProjectCept.php" afterPath="$PROJECT_DIR$/tests/functional/AddTaskToProjectCept.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" afterPath="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/FunctionalTester.php" afterPath="$PROJECT_DIR$/tests/functional/FunctionalTester.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/TaskRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/TaskRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/_variables.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/projects/admin.blade.php" afterPath="$PROJECT_DIR$/resources/views/projects/admin.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/all.js" afterPath="$PROJECT_DIR$/public/js/all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/app.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/tasks/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/tasks/show.blade.php" />
     </list>
     <ignored path="divvy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TasksController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TasksController.php">
+      <file leaf-file-name="AddTaskToProjectCept.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/functional/AddTaskToProjectCept.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25" vertical-offset="2400" max-vertical-offset="3325">
-              <caret line="112" column="70" selection-start-line="112" selection-start-column="70" selection-end-line="112" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.8055556" vertical-offset="425" max-vertical-offset="1550">
+              <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -83,7 +75,6 @@
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" />
         <option value="$PROJECT_DIR$/app/Http/Requests/AddTaskToProjectRequest.php" />
-        <option value="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_26_001756_create_task_user_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_16_002917_create_tasks_table.php" />
         <option value="$PROJECT_DIR$/app/Project.php" />
@@ -94,12 +85,10 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" />
-        <option value="$PROJECT_DIR$/resources/views/tasks/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/tasks/create.blade.php" />
         <option value="$PROJECT_DIR$/tests/functional/AddUserToProjectCept.php" />
         <option value="$PROJECT_DIR$/resources/assets/sass/_variables.scss" />
         <option value="$PROJECT_DIR$/tests/_output/AddTaskToProjectCept.fail.html" />
-        <option value="$PROJECT_DIR$/tests/functional/AddTaskToProjectCept.php" />
         <option value="$PROJECT_DIR$/resources/views/projects/admin.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/sass/app.scss" />
         <option value="$PROJECT_DIR$/app/Repositories/ProjectRepository.php" />
@@ -109,6 +98,9 @@
         <option value="$PROJECT_DIR$/app/Http/Requests/TaskRequest.php" />
         <option value="$PROJECT_DIR$/app/Repositories/TaskRepository.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" />
+        <option value="$PROJECT_DIR$/resources/views/tasks/show.blade.php" />
+        <option value="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" />
+        <option value="$PROJECT_DIR$/tests/functional/AddTaskToProjectCept.php" />
       </list>
     </option>
   </component>
@@ -213,24 +205,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="_support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_output" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -456,38 +430,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -598,7 +540,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="create.&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/tasks/create.blade.php&#10;TaskC&#9;null&#9;null&#10;_variable&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/_variables.scss&#10;dash&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/pages/dashboard.blade.php&#10;Register&#9;FILE&#9;file:///Users/josh/code/divvy/app/Commands/RegisterUserCommand.php&#10;_vari&#9;FILE&#9;file:///Users/josh/code/divvy/vendor/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss&#10;.scss&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/app.scss&#10;profilepre&#9;null&#9;null&#10;projectCont&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;var&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/_variables.scss&#10;Profil&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProfilesController.php&#10;artisan&#9;null&#9;null&#10;sass.js&#9;FILE&#9;file:///Users/josh/code/divvy/node_modules/laravel-elixir/ingredients/sass.js&#10;sass&#9;FILE&#9;file:///Users/josh/code/divvy/node_modules/laravel-elixir/ingredients/sass.js&#10;less.js&#9;FILE&#9;file:///Users/josh/code/divvy/node_modules/laravel-elixir/ingredients/less.js&#10;config&#9;FILE&#9;file:///Users/josh/code/divvy/node_modules/laravel-elixir/Config.js&#10;app.php&#9;FILE&#9;file:///Users/josh/code/divvy/config/app.php&#10;p&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProfilesController.php&#10;create_pro&#9;FILE&#9;file:///Users/josh/code/divvy/database/migrations/2015_02_05_002126_create_profiles_table.php&#10;Regist&#9;FILE&#9;file:///Users/josh/code/divvy/app/Services/Registrar.php&#10;reset&#9;null&#9;null&#10;Config::&#9;null&#9;null&#10;create_u&#9;FILE&#9;file:///Users/josh/code/divvy/database/migrations/2014_10_12_000000_create_users_table.php&#10;migration&#9;null&#9;null&#10;register&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/auth/register.blade.php&#10;regist&#9;FILE&#9;file:///Users/josh/code/divvy/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Registrar.php&#10;password&#9;null&#9;null&#10;auth&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/Auth/AuthController.php&#10;settings&#9;ACTION&#9;Database.Settings&#10;route&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/routes.php" />
+    <property name="SearchEverywhereHistoryKey" value="plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;settings&#9;ACTION&#9;Database.Settings&#10;create.&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/tasks/create.blade.php&#10;TaskC&#9;null&#9;null&#10;_variable&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/_variables.scss&#10;dash&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/pages/dashboard.blade.php&#10;Register&#9;FILE&#9;file:///Users/josh/code/divvy/app/Commands/RegisterUserCommand.php&#10;_vari&#9;FILE&#9;file:///Users/josh/code/divvy/vendor/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss&#10;.scss&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/app.scss&#10;profilepre&#9;null&#9;null&#10;projectCont&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;var&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/_variables.scss&#10;Profil&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProfilesController.php&#10;artisan&#9;null&#9;null&#10;sass.js&#9;FILE&#9;file:///Users/josh/code/divvy/node_modules/laravel-elixir/ingredients/sass.js&#10;sass&#9;FILE&#9;file:///Users/josh/code/divvy/node_modules/laravel-elixir/ingredients/sass.js&#10;less.js&#9;FILE&#9;file:///Users/josh/code/divvy/node_modules/laravel-elixir/ingredients/less.js&#10;config&#9;FILE&#9;file:///Users/josh/code/divvy/node_modules/laravel-elixir/Config.js&#10;app.php&#9;FILE&#9;file:///Users/josh/code/divvy/config/app.php&#10;p&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProfilesController.php&#10;create_pro&#9;FILE&#9;file:///Users/josh/code/divvy/database/migrations/2015_02_05_002126_create_profiles_table.php&#10;Regist&#9;FILE&#9;file:///Users/josh/code/divvy/app/Services/Registrar.php&#10;reset&#9;null&#9;null&#10;Config::&#9;null&#9;null&#10;create_u&#9;FILE&#9;file:///Users/josh/code/divvy/database/migrations/2014_10_12_000000_create_users_table.php&#10;migration&#9;null&#9;null&#10;register&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/auth/register.blade.php&#10;regist&#9;FILE&#9;file:///Users/josh/code/divvy/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Registrar.php&#10;password&#9;null&#9;null&#10;auth&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/Auth/AuthController.php&#10;route&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/routes.php" />
     <property name="options.lastSelected" value="Laravel.SettingsForm" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -949,16 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tasks/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <marker date="1425092859000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41666666" vertical-offset="0" max-vertical-offset="900">
@@ -989,287 +921,287 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="66850">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1424577682000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" Inherited Methods ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
-            <marker date="1424577682000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" Inherited Methods ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1425260759000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1387,83 +1319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/_output/AddUserToProjectCept.fail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3275">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="{&quot;placeholder&quot;: 'Assign the Task?'...}" />
-            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="{&quot;tags&quot;: true...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/_support/FunctionalHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11111111" vertical-offset="900" max-vertical-offset="1900">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <marker date="1424887109000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1424887109000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424887109000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424887109000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424887109000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424887109000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424887109000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424887109000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424887109000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functional/AddUserToProjectCept.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5833333" vertical-offset="125" max-vertical-offset="1075">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2015_02_16_004848_create_project_user_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8333333" vertical-offset="0" max-vertical-offset="975">
@@ -1494,63 +1349,6 @@
             <marker date="1424909987000" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1424909987000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
             <marker date="1424909987000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/_output/AddTaskToProjectCept.fail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0833334" vertical-offset="975" max-vertical-offset="3525">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="{&quot;placeholder&quot;: 'Assign the Task?'...}" />
-            <marker date="1425175195000" expanded="true" signature="-1:-1" placeholder="{&quot;tags&quot;: true...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functional/AddTaskToProjectCept.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4722222" vertical-offset="0" max-vertical-offset="900">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding>
-            <marker date="1425175385000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425175385000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1837,23 +1635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9722222" vertical-offset="75" max-vertical-offset="1225">
-          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-          <folding>
-            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder=" A Task belongs to one project ..." />
-            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder=" A Task can be assigned to many Users ..." />
-            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder=" Get a list of user ids associated with the current task ..." />
-            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.055555556" vertical-offset="1150" max-vertical-offset="2050">
@@ -1956,22 +1737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5277778" vertical-offset="150" max-vertical-offset="1100">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-          <folding>
-            <marker date="1425221933000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/ProfileRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6666667" vertical-offset="150" max-vertical-offset="1200">
@@ -1989,30 +1754,211 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5277778" vertical-offset="150" max-vertical-offset="1100">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <marker date="1425221933000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425221933000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/TaskRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6388889" vertical-offset="250" max-vertical-offset="1675">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        <state vertical-scroll-proportion="-0.083333336" vertical-offset="750" max-vertical-offset="1650">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
           <folding>
-            <marker date="1425225285000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1425225285000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1425225285000" expanded="true" signature="-1:-1" placeholder=" Persist a task ..." />
-            <marker date="1425225285000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425225285000" expanded="true" signature="-1:-1" placeholder=" Find a Task by the specified Id and Project Id ..." />
-            <marker date="1425225285000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425225285000" expanded="true" signature="-1:-1" placeholder=" Updates the Task with the given id ..." />
-            <marker date="1425225285000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425225285000" expanded="true" signature="-1:-1" placeholder=" Assign the task to the specified members ..." />
-            <marker date="1425225285000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1425225285000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425259001000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1425259001000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425259001000" expanded="true" signature="-1:-1" placeholder=" Persist a task ..." />
+            <marker date="1425259001000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425259001000" expanded="true" signature="-1:-1" placeholder=" Find a Task by the specified Id and Project Id ..." />
+            <marker date="1425259001000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425259001000" expanded="true" signature="-1:-1" placeholder=" Updates the Task with the given id ..." />
+            <marker date="1425259001000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425259001000" expanded="true" signature="-1:-1" placeholder=" Assign the task to the specified members ..." />
+            <marker date="1425259001000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425259001000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TasksController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25" vertical-offset="2400" max-vertical-offset="3325">
-          <caret line="112" column="70" selection-start-line="112" selection-start-column="70" selection-end-line="112" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.5833333" vertical-offset="1000" max-vertical-offset="3025">
+          <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
+          <folding>
+            <marker date="1425259505000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder=" Class TasksController ..." />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder=" Display the specified resource. ..." />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder=" Show the form for editing the specified resource. ..." />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1425259505000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7222222" vertical-offset="300" max-vertical-offset="1225">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+          <folding>
+            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder=" A Task belongs to one project ..." />
+            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder=" A Task can be assigned to many Users ..." />
+            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder=" Get a list of user ids associated with the current task ..." />
+            <marker date="1425220162000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tasks/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="900">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <marker date="1425259954000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425259954000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425259954000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425259954000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425259954000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425259954000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/functional/AddUserToProjectCept.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7222222" vertical-offset="75" max-vertical-offset="1075">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding>
+            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099117000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/_support/FunctionalHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7777778" vertical-offset="800" max-vertical-offset="2075">
+          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+          <folding>
+            <marker date="1425260635000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1425260635000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260635000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425260635000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425260635000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260635000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260635000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425260635000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425260635000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425260635000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/_output/AddUserToProjectCept.fail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3275">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="{&quot;placeholder&quot;: 'Assign the Task?'...}" />
+            <marker date="1425099099000" expanded="true" signature="-1:-1" placeholder="{&quot;tags&quot;: true...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/_output/AddTaskToProjectCept.fail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0555556" vertical-offset="950" max-vertical-offset="2050">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425260760000" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/functional/AddTaskToProjectCept.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8055556" vertical-offset="425" max-vertical-offset="1550">
+          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
           <folding />
         </state>
       </provider>

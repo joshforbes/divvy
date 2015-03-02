@@ -26,8 +26,7 @@ class TaskRepository {
     public function findByIdInProject($projectId, $taskId)
     {
         //return Task::whereProjectId($projectId)->whereId($taskId)->firstOrFail();
-        return Task::with('project', 'project.users')->whereProjectId($projectId)->whereId($taskId)->firstOrFail();
-
+        return Task::with('project')->whereProjectId($projectId)->whereId($taskId)->firstOrFail();
     }
 
 
