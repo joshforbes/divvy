@@ -56,6 +56,7 @@ class FunctionalHelper extends Module {
         return $project;
     }
 
+
     public function addAUserToMyProject($user, $project)
     {
         $project->users()->attach($user);
@@ -74,6 +75,15 @@ class FunctionalHelper extends Module {
     public function haveAProject($overrides)
     {
         return Testdummy::create('App\Project', $overrides);
+    }
+
+    public function haveATask($overrides, array $users)
+    {
+        $task = Testdummy::create('App\Task', $overrides);
+        foreach ($users as $user) {
+            $task->users()->attach($user);
+        }
+        return $task;
     }
 
 }

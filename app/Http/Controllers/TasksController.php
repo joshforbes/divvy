@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Commands\AddTaskToProjectCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -41,15 +42,10 @@ class TasksController extends Controller {
      */
     public function store(TaskRequest $request, TaskRepository $taskRepository, $projectId)
     {
-        $task = Task::assign([
-            'name'        => $request->name,
-            'description' => $request->description,
-            'project_id'  => $projectId,
-        ]);
 
-        $taskRepository->save($task);
-
-        $taskRepository->assignTo($request->members, $task);
+        $task = $this->dispatch(
+            new AddTaskToProjectCommand($request, $projectId)
+        );
 
         return redirect()->route('task.show', [$projectId, $task->id]);
     }

@@ -21,3 +21,9 @@ $factory('App\Profile', [
 $factory('App\Project', [
     'name' => $faker->sentence()
 ]);
+
+$factory('App\Task', [
+    'project_id' => 'factory:App\Project',
+    'name' => $faker->sentence(),
+    'description' => $faker->paragraph(),
+]);
