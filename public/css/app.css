@@ -988,8 +988,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
-  color: #FFFAE4;
-  background-color: #40627C; }
+  color: #eeeeee;
+  background-color: #777777; }
 
 input, button, select, textarea {
   font-family: inherit;
@@ -1024,7 +1024,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #40627C;
+  background-color: #777777;
   border: 1px solid #ddd;
   border-radius: 4px;
   transition: all .2s ease-in-out;
@@ -1897,7 +1897,7 @@ th {
   .table > tbody + tbody {
     border-top: 2px solid #ddd; }
   .table .table {
-    background-color: #40627C; }
+    background-color: #777777; }
 
 .table-condensed > thead > tr > th, .table-condensed > thead > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > tfoot > tr > td {
   padding: 5px; }
@@ -2929,7 +2929,7 @@ tbody.collapse.in {
         border-color: #eeeeee #eeeeee #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #555555;
-      background-color: #40627C;
+      background-color: #777777;
       border: 1px solid #ddd;
       border-bottom-color: transparent;
       cursor: default; }
@@ -2979,7 +2979,7 @@ tbody.collapse.in {
       border-bottom: 1px solid #ddd;
       border-radius: 4px 4px 0 0; }
     .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a, .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
-      border-bottom-color: #40627C; } }
+      border-bottom-color: #777777; } }
 
 .tab-content > .tab-pane {
   display: none;
@@ -3253,23 +3253,23 @@ tbody.collapse.in {
       margin-right: 0; } }
 
 .navbar-default {
-  background-color: #26393D;
-  border-color: #192629; }
+  background-color: #555555;
+  border-color: #454545; }
   .navbar-default .navbar-brand {
-    color: #FFFAE4; }
+    color: white; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-      color: #fff1b1;
+      color: #e6e6e6;
       background-color: transparent; }
   .navbar-default .navbar-text {
     color: #777; }
   .navbar-default .navbar-nav > li > a {
-    color: #FFFAE4; }
+    color: white; }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
       color: #333;
       background-color: transparent; }
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #555;
-    background-color: #192629; }
+    background-color: #454545; }
   .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
     color: #ccc;
     background-color: transparent; }
@@ -3280,28 +3280,28 @@ tbody.collapse.in {
     .navbar-default .navbar-toggle .icon-bar {
       background-color: #888; }
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: #192629; }
+    border-color: #454545; }
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    background-color: #192629;
+    background-color: #454545;
     color: #555; }
   @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-      color: #FFFAE4; }
+      color: white; }
       .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #333;
         background-color: transparent; }
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
       color: #555;
-      background-color: #192629; }
+      background-color: #454545; }
     .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
       color: #ccc;
       background-color: transparent; } }
   .navbar-default .navbar-link {
-    color: #FFFAE4; }
+    color: white; }
     .navbar-default .navbar-link:hover {
       color: #333; }
   .navbar-default .btn-link {
-    color: #FFFAE4; }
+    color: white; }
     .navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
       color: #333; }
     .navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:hover, fieldset[disabled] .navbar-default .btn-link:focus {
@@ -3590,7 +3590,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857;
-  background-color: #40627C;
+  background-color: #777777;
   border: 1px solid #ddd;
   border-radius: 4px;
   transition: border .2s ease-in-out; }
@@ -3602,7 +3602,7 @@ a.badge:hover, a.badge:focus {
     margin-right: auto; }
   .thumbnail .caption {
     padding: 9px;
-    color: #FFFAE4; }
+    color: #eeeeee; }
 
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   border-color: #337ab7; }
@@ -4891,22 +4891,22 @@ DASHBOARD
     border-bottom-left-radius: 0; }
 
 .task-container {
-  height: 400px;
+  height: 600px;
   width: 95%;
-  background-color: #FFFAE4;
-  color: #464646;
+  background-color: #eeeeee;
+  color: #555555;
   margin-bottom: 30px;
   position: relative; }
 
 .task-container__header {
   width: 100%;
-  background-color: #26393D;
+  background-color: #333333;
   height: 50px;
   margin-top: -10px;
-  color: #FFFAE4; }
+  color: #eeeeee; }
   .task-container__header a {
     text-decoration: none;
-    color: #FFFAE4; }
+    color: #eeeeee; }
   .task-container__header h4 {
     line-height: 50px;
     margin-left: 10px; }
@@ -4917,6 +4917,23 @@ DASHBOARD
 
 .task-container__body {
   padding: 15px; }
+  .task-container__body__subtasks {
+    margin-top: 10px; }
+    .task-container__body__subtasks ul {
+      padding-left: 0; }
+    .task-container__body__subtasks li {
+      padding-left: 10px;
+      margin-bottom: 10px;
+      list-style: none;
+      height: 30px;
+      line-height: 30px; }
+      .task-container__body__subtasks li a {
+        text-decoration: none;
+        color: #555555; }
+  .task-container__body .form-group {
+    width: 80%; }
+  .task-container__body .form-control {
+    width: 100%; }
 
 .select-members .select2 {
   width: 100% !important; }

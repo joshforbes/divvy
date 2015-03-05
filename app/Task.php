@@ -32,6 +32,16 @@ class Task extends Model {
     }
 
     /**
+     * A Task has many subtasks
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function subtasks()
+    {
+        return $this->hasMany('App\Subtask');
+    }
+
+    /**
      * Get a list of user ids associated with the current task
      *
      * @return array

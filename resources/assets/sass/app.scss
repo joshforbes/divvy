@@ -112,24 +112,25 @@ DASHBOARD
 
 
 .task-container {
-    height: 400px;
+    height: 600px;
     width: 95%;
-    background-color: #FFFAE4;
-    color: #464646;
+    background-color: $gray-lighter;
+    color: $gray;
     margin-bottom: 30px;
     position: relative;
+
 }
 
 .task-container__header {
     width: 100%;
-    background-color: #26393D;
+    background-color: $gray-dark;
     height: 50px;
     margin-top: -10px;
-    color: #FFFAE4;
+    color: $gray-lighter;
 
     a {
         text-decoration: none;
-        color: #FFFAE4;
+        color: $gray-lighter;
 
     }
 
@@ -147,7 +148,40 @@ DASHBOARD
 
 .task-container__body {
     padding: 15px;
+
+    &__subtasks {
+        margin-top: 10px;
+
+        ul {
+            padding-left: 0;
+        }
+
+        li {
+            padding-left: 10px;
+            margin-bottom: 10px;
+            list-style: none;
+            height: 30px;
+            line-height: 30px;
+
+            a {
+                text-decoration: none;
+                color: $gray;
+            }
+        }
+
+
+
+    }
+
+    .form-group {
+        width: 80%;
+    }
+
+    .form-control {
+        width: 100%;
+    }
 }
+
 
 
 .select-members {

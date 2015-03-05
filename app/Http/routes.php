@@ -11,6 +11,12 @@
 |
 */
 
+//Event::listen('illuminate.query', function($sql)
+//{
+//	var_dump($sql);
+//});
+
+
 Route::get('/database', function() {
 	var_dump(\App\User::all()->toArray());
 });
@@ -34,6 +40,11 @@ Route::get('/p/{projectId}/task/{taskId}', ['as' => 'task.show', 'uses' => 'Task
 Route::get('/p/{projectId}/task/{taskId}/edit', ['as' => 'task.edit', 'uses' => 'TasksController@edit']);
 Route::patch('/p/{projectId}/task/{taskId}', ['as' => 'task.update', 'uses' => 'TasksController@update']);
 
+
+#Subtasks
+Route::post('/p/{projectId}/task/{taskId}', ['as' => 'subtask.store', 'uses' => 'SubtasksController@store']);
+Route::get('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask.show', 'uses' => 'SubtasksController@show']);
+Route::delete('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask.destroy', 'uses' => 'SubtasksController@destroy']);
 
 #Profiles
 Route::get('/{username}/edit', [

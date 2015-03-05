@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Commands\AddTaskToProjectCommand;
+use App\Commands\ModifyTaskCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -36,13 +37,11 @@ class TasksController extends Controller {
      * Store a newly created resource in storage.
      *
      * @param TaskRequest $request
-     * @param TaskRepository $taskRepository
      * @param $projectId
      * @return Response
      */
-    public function store(TaskRequest $request, TaskRepository $taskRepository, $projectId)
+    public function store(TaskRequest $request, $projectId)
     {
-
         $task = $this->dispatch(
             new AddTaskToProjectCommand($request, $projectId)
         );
@@ -61,8 +60,10 @@ class TasksController extends Controller {
     public function show(TaskRepository $taskRepository, $projectId, $taskId)
     {
         $task = $taskRepository->findByIdInProject($projectId, $taskId);
+        $project = $task->project;
+        $subtasks = $task->subtasks;
 
-        return view('tasks.show', compact('task'));
+        return view('tasks.show', compact('task', 'project', 'subtasks'));
     }
 
     /**
@@ -89,16 +90,15 @@ class TasksController extends Controller {
      * Update the specified resource in storage.
      *
      * @param TaskRequest $request
-     * @param TaskRepository $taskRepository
      * @param $projectId
      * @param $taskId
      * @return Response
      */
-    public function update(TaskRequest $request, TaskRepository $taskRepository, $projectId, $taskId)
+    public function update(TaskRequest $request, $projectId, $taskId)
     {
-        $task = $taskRepository->updateTask($taskId, $request->all());
-
-        $taskRepository->assignTo($request->memberList, $task);
+        $this->dispatch(
+            new ModifyTaskCommand($request, $taskId)
+        );
 
         //Flash::message('Profile updated');
         return redirect()->route('task.show', [$projectId, $taskId]);

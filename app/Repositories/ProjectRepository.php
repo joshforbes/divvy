@@ -48,8 +48,9 @@ class ProjectRepository {
      */
     public function findById($id)
     {
-        return Project::with('admins', 'users', 'tasks')->whereId($id)->firstOrFail();
+        return Project::with('tasks.users.profile', 'admins.profile', 'tasks.subtasks')->whereId($id)->firstOrFail();
     }
+
 
     /**
      * Returns an array of users that are not members of the  project

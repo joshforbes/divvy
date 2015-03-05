@@ -49,8 +49,8 @@ $I->click('Add');
 $I->seeCurrentUrlEquals('/p/' . $project->id . '/task/' . $task->id);
 $I->see('Updating name');
 $I->see('Updating description');
-$I->see('testuser');
-$I->see('reagano');
+//$I->see('testuser');
+//$I->see('reagano');
 
 $I->seeRecord('tasks', [
     'name' => 'Updating name',
