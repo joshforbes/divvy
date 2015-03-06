@@ -46,6 +46,12 @@ Route::post('/p/{projectId}/task/{taskId}', ['as' => 'subtask.store', 'uses' => 
 Route::get('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask.show', 'uses' => 'SubtasksController@show']);
 Route::delete('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask.destroy', 'uses' => 'SubtasksController@destroy']);
 
+#Discussions
+Route::post('/p/{projectId}/task/{taskId}/discussion', ['as' => 'discussion.store', 'uses' => 'DiscussionsController@store']);
+Route::get('/p/{projectId}/task/{taskId}/discussion/{discussionId}', ['as' => 'discussion.show', 'uses' => 'DiscussionsController@show']);
+//Route::delete('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask.destroy', 'uses' => 'DiscussionsController@destroy']);
+
+
 #Profiles
 Route::get('/{username}/edit', [
 	'as' => 'profile.edit',

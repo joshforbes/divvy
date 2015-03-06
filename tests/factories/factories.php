@@ -27,3 +27,9 @@ $factory('App\Task', [
     'name' => $faker->sentence(),
     'description' => $faker->paragraph(),
 ]);
+
+$factory('App\Subtask', [
+   'task_id' => 'factory:App\Task',
+    'name' => $faker->sentence(),
+    'isCompleted' => 0
+]);

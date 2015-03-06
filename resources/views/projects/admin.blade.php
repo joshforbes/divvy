@@ -53,6 +53,20 @@
                                             </ul>
                                         @endif
                                     </div>
+                                    <div class="task-container__body__discussions">
+
+                                        @if($task->discussions)
+                                            <h4>Discussions</h4>
+                                            <ul>
+                                                @foreach($task->discussions as $discussion)
+                                                    <li>
+                                                        <a href="{{ route('discussion.show', [$project->id, $task->id, $discussion->id]) }}">{{ $discussion->title }}</a>
+                                                        <span class="author">{{ $discussion->author->username }}</span>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        @endif
+                                    </div>
 
                                     @if($task->users)
                                         @foreach($task->users as $user)

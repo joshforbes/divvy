@@ -42,6 +42,16 @@ class Task extends Model {
     }
 
     /**
+     * A Task has many discussions
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function discussions()
+    {
+        return $this->hasMany('App\Discussion');
+    }
+
+    /**
      * Get a list of user ids associated with the current task
      *
      * @return array

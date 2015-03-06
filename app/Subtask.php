@@ -4,6 +4,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subtask extends Model {
 
+	/**
+	 * The attributes that can be mass assigned
+	 *
+	 * @var array
+     */
 	protected $fillable = ['name', 'isCompleted', 'task_id'];
 
 	/**
@@ -16,6 +21,12 @@ class Subtask extends Model {
 		return $this->belongsTo('App\Task');
 	}
 
+	/**
+	 * Create a new instance of subtask
+	 *
+	 * @param array $attributes
+	 * @return static
+     */
 	public static function add(array $attributes)
 	{
 		return new static($attributes);

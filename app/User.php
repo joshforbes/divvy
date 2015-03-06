@@ -43,6 +43,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     /**
+     * A User can start many Discussions
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function discussions()
+    {
+        return $this->hasMany('App\Discussion');
+    }
+
+    /**
      * A User has many Projects
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany

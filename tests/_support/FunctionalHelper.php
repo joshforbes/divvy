@@ -86,4 +86,11 @@ class FunctionalHelper extends Module {
         return $task;
     }
 
+    public function haveASubtask($overrides)
+    {
+        $subtask = Testdummy::create('App\Subtask', $overrides);
+
+        return $subtask;
+    }
+
 }
