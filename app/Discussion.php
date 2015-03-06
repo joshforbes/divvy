@@ -27,6 +27,16 @@ class Discussion extends Model {
 	}
 
 	/**
+	 * A discussion can have many comments
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+	public function comments()
+	{
+		return $this->morphMany('App\Comment', 'commentable');
+	}
+
+	/**
 	 * Start a new Discussion
 	 *
 	 * @param array $attributes

@@ -22,6 +22,16 @@ class Subtask extends Model {
 	}
 
 	/**
+	 * A subtask can have many comments
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+	public function comments()
+	{
+		return $this->morphMany('App\Comment', 'commentable');
+	}
+
+	/**
 	 * Create a new instance of subtask
 	 *
 	 * @param array $attributes
