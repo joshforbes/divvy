@@ -114,16 +114,17 @@ DASHBOARD
 .task-container {
     height: 600px;
     width: 95%;
-    background-color: $gray-lighter;
+    background-color: #FFF;
     color: $gray;
     margin-bottom: 30px;
     position: relative;
+    box-shadow: 0 0 1px $accent-color;
 
 }
 
 .task-container__header {
     width: 100%;
-    background-color: $gray-dark;
+    background-color: $accent-color;
     height: 50px;
     margin-top: -10px;
     color: $gray-lighter;

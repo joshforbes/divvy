@@ -12,6 +12,19 @@ use Illuminate\Http\Request;
 class SubtasksController extends Controller {
 
     /**
+     * @var SubtaskRepository
+     */
+    private $subtaskRepository;
+
+    /**
+     * @param SubtaskRepository $subtaskRepository
+     */
+    public function __construct(SubtaskRepository $subtaskRepository)
+    {
+        $this->subtaskRepository = $subtaskRepository;
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param SubtaskRequest $request

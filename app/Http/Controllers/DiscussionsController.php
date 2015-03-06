@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class DiscussionsController extends Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -41,7 +46,7 @@ class DiscussionsController extends Controller {
 	public function store(DiscussionRequest $request, $projectId, $taskId)
 	{
 		$this->dispatch(
-			new StartDiscussionInTaskCommand($request, $taskId, $this->user)
+			new StartDiscussionInTaskCommand($request, $taskId, $this->user->id)
 		);
 
 		//return redirect()->route('task.show', [$projectId, $taskId]);

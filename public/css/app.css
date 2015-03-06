@@ -988,8 +988,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
-  color: #eeeeee;
-  background-color: #777777; }
+  color: #184D59;
+  background-color: #F2F2F2; }
 
 input, button, select, textarea {
   font-family: inherit;
@@ -1024,7 +1024,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #777777;
+  background-color: #F2F2F2;
   border: 1px solid #ddd;
   border-radius: 4px;
   transition: all .2s ease-in-out;
@@ -1897,7 +1897,7 @@ th {
   .table > tbody + tbody {
     border-top: 2px solid #ddd; }
   .table .table {
-    background-color: #777777; }
+    background-color: #F2F2F2; }
 
 .table-condensed > thead > tr > th, .table-condensed > thead > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > tfoot > tr > td {
   padding: 5px; }
@@ -2270,7 +2270,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: white; }
+  color: #33a4bd; }
 
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -2929,7 +2929,7 @@ tbody.collapse.in {
         border-color: #eeeeee #eeeeee #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #555555;
-      background-color: #777777;
+      background-color: #F2F2F2;
       border: 1px solid #ddd;
       border-bottom-color: transparent;
       cursor: default; }
@@ -2979,7 +2979,7 @@ tbody.collapse.in {
       border-bottom: 1px solid #ddd;
       border-radius: 4px 4px 0 0; }
     .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a, .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
-      border-bottom-color: #777777; } }
+      border-bottom-color: #F2F2F2; } }
 
 .tab-content > .tab-pane {
   display: none;
@@ -3253,8 +3253,8 @@ tbody.collapse.in {
       margin-right: 0; } }
 
 .navbar-default {
-  background-color: #555555;
-  border-color: #454545; }
+  background-color: #F23030;
+  border-color: #f01111; }
   .navbar-default .navbar-brand {
     color: white; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -3269,7 +3269,7 @@ tbody.collapse.in {
       background-color: transparent; }
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #555;
-    background-color: #454545; }
+    background-color: #f01111; }
   .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
     color: #ccc;
     background-color: transparent; }
@@ -3280,9 +3280,9 @@ tbody.collapse.in {
     .navbar-default .navbar-toggle .icon-bar {
       background-color: #888; }
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: #454545; }
+    border-color: #f01111; }
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    background-color: #454545;
+    background-color: #f01111;
     color: #555; }
   @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -3292,7 +3292,7 @@ tbody.collapse.in {
         background-color: transparent; }
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
       color: #555;
-      background-color: #454545; }
+      background-color: #f01111; }
     .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
       color: #ccc;
       background-color: transparent; } }
@@ -3590,7 +3590,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857;
-  background-color: #777777;
+  background-color: #F2F2F2;
   border: 1px solid #ddd;
   border-radius: 4px;
   transition: border .2s ease-in-out; }
@@ -3602,7 +3602,7 @@ a.badge:hover, a.badge:focus {
     margin-right: auto; }
   .thumbnail .caption {
     padding: 9px;
-    color: #eeeeee; }
+    color: #184D59; }
 
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   border-color: #337ab7; }
@@ -4893,14 +4893,15 @@ DASHBOARD
 .task-container {
   height: 600px;
   width: 95%;
-  background-color: #eeeeee;
+  background-color: #FFF;
   color: #555555;
   margin-bottom: 30px;
-  position: relative; }
+  position: relative;
+  box-shadow: 0 0 1px #184D59; }
 
 .task-container__header {
   width: 100%;
-  background-color: #333333;
+  background-color: #184D59;
   height: 50px;
   margin-top: -10px;
   color: #eeeeee; }

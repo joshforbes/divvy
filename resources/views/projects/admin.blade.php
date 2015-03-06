@@ -57,6 +57,15 @@
 
                                         @if($task->discussions)
                                             <h4>Discussions</h4>
+
+                                            {!! Form::open(['class' => 'form-inline', 'route' => ['discussion.store', $project->id, $task->id]]) !!}
+                                            <div class="form-group">
+                                                {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'What do you want to say?']) !!}
+                                            </div>
+                                            {!! Form::submit('Start', ['class' => 'btn btn-default']) !!}
+                                            {!! Form::close() !!}
+                                            <br/>
+
                                             <ul>
                                                 @foreach($task->discussions as $discussion)
                                                     <li>
