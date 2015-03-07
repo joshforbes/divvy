@@ -1,0 +1,46 @@
+.project-overview {
+    padding: 10px;
+    height: 250px;
+    position: relative;
+    box-shadow: 0 0 3px $accent-color;
+    background-color: white;
+
+    &__header {
+        width: 100%;
+        color: $accent-color;
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-left: 5px;
+    }
+
+    &__members {
+        text-align: center;
+        color: $accent-color;
+        margin-top: 50px;
+    }
+
+    &__tasks {
+        text-align: center;
+        color: $accent-color;
+    }
+
+    &__footer {
+        width: 100%;
+        background-color: $accent-color;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: white;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    &__new-project {
+        margin-top: 40px;
+        width: 100%;
+        font-size: 2em;
+        //line-height: 250px;
+        text-align: center;
+    }
+}

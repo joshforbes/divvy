@@ -2,6 +2,13 @@
 @import "bootstrap";
 @import "components";
 
+@import "pages/dashboard";
+@import "pages/create-project";
+
+
+@import "components/project-overview";
+@import "components/create-project";
+
 
 .container-small {
     @extend .container;

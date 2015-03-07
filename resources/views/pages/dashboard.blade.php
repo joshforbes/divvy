@@ -2,36 +2,31 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
-            {!! Form::open(['route' => 'project.store']) !!}
 
-            <!-- Title Form Input -->
-            <div class="input-group">
-                {!! Form::text('name', null, ['placeholder' => 'Name the Project']) !!}
-                {!! Form::submit('Create Project', ['class' => 'btn btn-info']) !!}
-            </div>
+        <section class="projects">
 
-            {!! Form::close() !!}
-        </div>
+            <article class="project-overview-wrapper">
+                <a href="{{ route('project.create') }}">
+                    <div class="project-overview">
+                        <div class="project-overview__new-project">
+                            + <br/>
+                            Create New Project
+                        </div>
+                    </div>
+                </a>
+            </article>
 
-        @if($projects)
+            @if($projects)
+                @foreach($projects as $project)
+                    <article class="project-overview-wrapper">
+                        @include('projects.partials.project-overview')
+                    </article>
+                @endforeach
+            @endif
 
-            <div class="row">
-                <div class="projects-wrapper col-md-offset-4 col-md-4">
-                    <h2>Projects:</h2>
-                    <ul class="list-group">
-                        @foreach($projects as $project)
-                            <li class="list-group-item">
-                                <a href="{{ route('project.show', $project->id) }}">{{$project->name}}</a>
-                                @if(Auth::user()->isAdmin($project->id))
-                                    <span class="badge">Admin</span>
-                                @endif
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-        @endif
+        </section>
+
 
     </div>
+
 @endsection

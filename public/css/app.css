@@ -4818,6 +4818,145 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.projects {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 50px; }
+  .projects:before, .projects:after {
+    content: " ";
+    display: table; }
+  .projects:after {
+    clear: both; }
+
+.project-overview-wrapper {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 768px) {
+    .project-overview-wrapper {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 992px) {
+    .project-overview-wrapper {
+      float: left;
+      width: 25%; } }
+
+.create-project-wrapper {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .create-project-wrapper:before, .create-project-wrapper:after {
+    content: " ";
+    display: table; }
+  .create-project-wrapper:after {
+    clear: both; }
+
+.create-project-wrapper .create-project {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .create-project-wrapper .create-project {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 992px) {
+    .create-project-wrapper .create-project {
+      margin-left: 25%; } }
+
+.project-overview {
+  padding: 10px;
+  height: 250px;
+  position: relative;
+  box-shadow: 0 0 3px #184D59;
+  background-color: white; }
+  .project-overview__header {
+    width: 100%;
+    color: #184D59;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-left: 5px; }
+  .project-overview__members {
+    text-align: center;
+    color: #184D59;
+    margin-top: 50px; }
+  .project-overview__tasks {
+    text-align: center;
+    color: #184D59; }
+  .project-overview__footer {
+    width: 100%;
+    background-color: #184D59;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    height: 30px;
+    line-height: 30px; }
+  .project-overview__new-project {
+    margin-top: 40px;
+    width: 100%;
+    font-size: 2em;
+    text-align: center; }
+
+.create-project {
+  padding: 0 !important;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0 0 3px #184D59; }
+  .create-project__header {
+    width: 100%;
+    background-color: #184D59;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    text-align: center; }
+  .create-project__input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background-color: #eeeeee;
+    color: #184D59;
+    border: 0;
+    margin-bottom: 1px; }
+    .create-project__input::-moz-placeholder {
+      color: #184D59;
+      opacity: 1; }
+    .create-project__input:-ms-input-placeholder {
+      color: #184D59; }
+    .create-project__input::-webkit-input-placeholder {
+      color: #184D59; }
+  .create-project__button {
+    color: white;
+    background-color: #184D59;
+    border-color: black;
+    padding: 10px 15px;
+    font-size: 1em;
+    line-height: 1em;
+    border-radius: 5px;
+    border: 0px;
+    box-shadow: 0px 1px black;
+    margin-top: 20px;
+    margin-left: 70%;
+    margin-bottom: 20px; }
+    .create-project__button:hover, .create-project__button:focus, .create-project__button.focus, .create-project__button:active, .create-project__button.active, .open > .create-project__button.dropdown-toggle {
+      color: white;
+      background-color: #0d2a31;
+      border-color: black; }
+    .create-project__button:active, .create-project__button.active, .open > .create-project__button.dropdown-toggle {
+      background-image: none; }
+    .create-project__button.disabled, .create-project__button.disabled:hover, .create-project__button.disabled:focus, .create-project__button.disabled.focus, .create-project__button.disabled:active, .create-project__button.disabled.active, .create-project__button[disabled], .create-project__button[disabled]:hover, .create-project__button[disabled]:focus, .create-project__button[disabled].focus, .create-project__button[disabled]:active, .create-project__button[disabled].active, fieldset[disabled] .create-project__button, fieldset[disabled] .create-project__button:hover, fieldset[disabled] .create-project__button:focus, fieldset[disabled] .create-project__button.focus, fieldset[disabled] .create-project__button:active, fieldset[disabled] .create-project__button.active {
+      background-color: #184D59;
+      border-color: black; }
+    .create-project__button .badge {
+      color: #184D59;
+      background-color: white; }
+
 .container-small {
   width: 980px; }
 

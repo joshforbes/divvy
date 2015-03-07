@@ -23,6 +23,16 @@ class ProjectsController extends Controller {
         $this->projectRepository = $projectRepository;
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @param $projectId
+     * @return Response
+     */
+    public function create()
+    {
+        return view('projects.create', compact('project'));
+    }
 
     /**
      * Store a newly created resource in storage.

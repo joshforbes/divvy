@@ -1,0 +1,8 @@
+.create-project-wrapper {
+    @include make-row();
+}
+
+.create-project-wrapper .create-project {
+    @include make-md-column(6);
+    @include make-md-column-offset(3);
+}

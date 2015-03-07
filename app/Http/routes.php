@@ -30,6 +30,7 @@ Route::controllers([
 
 #Projects
 Route::post('/p', ['as' => 'project.store', 'uses' => 'ProjectsController@store']);
+Route::get('/p/create', ['as' => 'project.create', 'uses' => 'ProjectsController@create']);
 Route::post('/p/{id}/addUser', ['as' => 'project.addUser', 'uses' => 'ProjectsController@addUser']);
 Route::get('/p/{id}', ['as' => 'project.show', 'uses' => 'ProjectsController@show']);
 
