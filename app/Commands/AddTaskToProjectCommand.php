@@ -25,7 +25,7 @@ class AddTaskToProjectCommand extends Command implements SelfHandling {
 		$this->name = $request->name;
 		$this->description = $request->description;
 		$this->projectId = $projectId;
-		$this->members = $request->members;
+		$this->memberList = $request->memberList;
 	}
 
 	/**
@@ -44,7 +44,7 @@ class AddTaskToProjectCommand extends Command implements SelfHandling {
 
 		$taskRepository->save($task);
 
-		$taskRepository->assignTo($this->members, $task);
+		$taskRepository->assignTo($this->memberList, $task);
 
 		return $task;
 	}

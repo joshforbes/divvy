@@ -22,13 +22,13 @@ $I->addAUserToMyProject($thirdUser, $project);
 
 $I->amOnPage('/p/' . $project->id);
 
-$I->click('Add a Task');
+$I->click('+ Task');
 $I->seeCurrentUrlEquals('/p/' . $project->id . '/task/create');
 
 $I->fillField('name', 'Test Task');
 $I->fillField('description', 'A Test Task');
 
-$I->selectOption('members[]', ['johndoe', 'janedoe', 'testuser']);
+$I->selectOption('memberList[]', ['johndoe', 'janedoe', 'testuser']);
 
 $I->click('Add');
 

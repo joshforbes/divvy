@@ -1,0 +1,7 @@
+.tasks {
+     @include make-row();
+ }
+
+.task-wrapper {
+    @include make-md-column(6);
+}

@@ -6,95 +6,36 @@
 
 @section('content')
     <div class="container">
-        <div class="page-header">
-            <h1>{{ $project->name }}</h1>
+
+        <div class="project-header">
+
+            <div class="project-header__title">
+                <h1 class="project-header__name">{{ $project->name }}</h1>
+                <p class="project-header__description">{{ $project->description }}</p>
+            </div>
+
+            <div class="project-header__summary">
+                <span class="project-header__member-count">{{ count($project->users) }}<br/>Members</span>
+            </div>
+
         </div>
 
         @if($project->tasks)
-            <div class="row">
-                <div class="tasks-container col-md-12">
-                    <h2>Tasks:</h2>
+            <div class="tasks-header">
+                <span class="tasks-header__task-count">{{ count($project->tasks) }} Tasks</span>
+                <a class="tasks-header__add-task" href="{{ route('task.create', $project->id) }}">+ Task</a>
+            </div>
 
-                    <p><a href="{{ route('task.create', $project->id) }}">Add a Task</a></p>
+            <div class="tasks">
+                @foreach($project->tasks as $task)
+                    <div class="task-wrapper">
 
-                    @foreach($project->tasks as $task)
-                        <div class="col-md-6">
-                            <div class="task-container">
-                                <div class="task-container__header">
-                                    <a href="{{ route('task.show', [$project->id, $task->id]) }}">
-                                        <h4>{{ $task->name }}</h4></a>
+                        @include('tasks.partials.task')
 
-                                    <div class="task-container__header__edit-link">
-                                        <a href="{{ route('task.edit', [$project->id, $task->id]) }}">edit</a>
-                                    </div>
-                                </div>
-
-                                <div class="task-container__body">
-
-                                    {!! Form::open(['class' => 'form-inline', 'route' => ['subtask.store', $project->id, $task->id]]) !!}
-                                    <div class="form-group">
-                                        {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'What needs to be done?']) !!}
-                                    </div>
-                                    {!! Form::submit('Add', ['class' => 'btn btn-default']) !!}
-                                    {!! Form::close() !!}
-
-                                    <div class="task-container__body__subtasks">
-                                        @if($task->subtasks)
-                                            <ul>
-                                                @foreach($task->subtasks as $subtask)
-                                                    <li>
-                                                        {!! Form::open(['method' => 'DELETE', 'class' => 'form-inline', 'route' => ['subtask.destroy', $project->id, $task->id, $subtask->id]]) !!}
-                                                        <input type="checkbox"/>
-                                                        <a href="{{ route('subtask.show', [$project->id, $task->id, $subtask->id]) }}">{{ $subtask->name }}</a>
-                                                        {!! Form::submit('Delete', ['class' => 'btn btn-default btn-sm pull-right']) !!}
-                                                        {!! Form::close() !!}
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        @endif
-                                    </div>
-                                    <div class="task-container__body__discussions">
-
-                                        @if($task->discussions)
-                                            <h4>Discussions</h4>
-
-                                            {!! Form::open(['class' => 'form-inline', 'route' => ['discussion.store', $project->id, $task->id]]) !!}
-                                            <div class="form-group">
-                                                {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'What do you want to say?']) !!}
-                                            </div>
-                                            {!! Form::submit('Start', ['class' => 'btn btn-default']) !!}
-                                            {!! Form::close() !!}
-                                            <br/>
-
-                                            <ul>
-                                                @foreach($task->discussions as $discussion)
-                                                    <li>
-                                                        <a href="{{ route('discussion.show', [$project->id, $task->id, $discussion->id]) }}">{{ $discussion->title }}</a>
-                                                        <span class="author">{{ $discussion->author->username }}</span>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        @endif
-                                    </div>
-
-                                    @if($task->users)
-                                        @foreach($task->users as $user)
-                                            {!! $user->profile->present()->avatarHtml('30px') !!}
-                                        @endforeach
-                                    @endif
-                                </div>
-
-                            </div>
-                        </div>
-                    @endforeach
-
-                </div>
-
+                    </div>
+                @endforeach
             </div>
         @endif
-
-
-        <br/><br/><br/>
 
         <div class="row">
             {!! Form::open(['route' => ['project.addUser', $project->id]]) !!}
@@ -112,15 +53,6 @@
         </div>
 
         <div class="members-container">
-            <p>Admins:
-                @foreach($project->admins as $admin)
-                    <a href="{!! route('profile.show', $admin->username) !!}">
-                        {!! $admin->profile->present()->avatarHtml('40px') !!}
-                    </a>
-                @endforeach
-            </p>
-
-
             <p>Users:
                 @foreach($project->users as $user)
                     <a href="{!! route('profile.show', $user->username) !!}">
@@ -129,19 +61,16 @@
                 @endforeach
             </p>
         </div>
-
-
     </div>
+
+
+
 
 @endsection
 
 @section('js')
     <script src="/js/vendor/select2.js"></script>
     <script>
-        $(".js-member-list").select2({
-            placeholder: 'Assign the Task?'
-        });
-
         $("#usersList").select2({
             tags: true,
             placeholder: 'Pick a User or enter an email address'

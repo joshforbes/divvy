@@ -40,12 +40,14 @@ class Project extends Model {
 	 * Start a new Project
 	 *
 	 * @param $name
+	 * @param $description
 	 * @return static
-     */
-	public static function start($name)
+	 */
+	public static function start($name, $description)
 	{
 		$project = new static([
-			'name' => $name
+			'name' => $name,
+			'description' => $description
 		]);
 
 		return $project;

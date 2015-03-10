@@ -4,10 +4,19 @@
 
 @import "pages/dashboard";
 @import "pages/create-project";
+@import "pages/create-task";
+@import "pages/project-admin";
+@import "pages/task-show";
+@import "pages/login";
 
 
 @import "components/project-overview";
 @import "components/create-project";
+@import "components/task-form";
+@import "components/project-header";
+@import "components/tasks-header";
+@import "components/task";
+@import "components/login-form";
 
 
 .container-small {
@@ -32,7 +41,7 @@ SPLASH
 
 .splash-signup-section {
     @extend .jumbotron;
-    background-color: black;
+    background-color: $accent-color;
     color: white;
     padding: 6em 0;
 
@@ -65,12 +74,14 @@ SPLASH
         margin-top: 1em;
         font-weight: 600;
         font-size: 1.2em;
+        border-color: $nav-bar-color;
+        background-color: $accent-color;
     }
 
 }
 
 /**
-DASHBOARD
+ADD USER TO PROJECT
 **/
 
 .input-group {
@@ -91,7 +102,6 @@ DASHBOARD
     }
 
     .select2-selection {
-        //padding-left: 1em;
         height: 4em;
         outline: none;
         border-top-right-radius: 0;
@@ -118,85 +128,6 @@ DASHBOARD
 }
 
 
-.task-container {
-    height: 600px;
-    width: 95%;
-    background-color: #FFF;
-    color: $gray;
-    margin-bottom: 30px;
-    position: relative;
-    box-shadow: 0 0 1px $accent-color;
-
-}
-
-.task-container__header {
-    width: 100%;
-    background-color: $accent-color;
-    height: 50px;
-    margin-top: -10px;
-    color: $gray-lighter;
-
-    a {
-        text-decoration: none;
-        color: $gray-lighter;
-
-    }
-
-    h4 {
-        line-height: 50px;
-        margin-left: 10px;
-    }
-
-    &__edit-link {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-}
-
-.task-container__body {
-    padding: 15px;
-
-    &__subtasks {
-        margin-top: 10px;
-
-        ul {
-            padding-left: 0;
-        }
-
-        li {
-            padding-left: 10px;
-            margin-bottom: 10px;
-            list-style: none;
-            height: 30px;
-            line-height: 30px;
-
-            a {
-                text-decoration: none;
-                color: $gray;
-            }
-        }
-
-
-
-    }
-
-    .form-group {
-        width: 80%;
-    }
-
-    .form-control {
-        width: 100%;
-    }
-}
-
-
-
-.select-members {
-    .select2 {
-        width: 100% !important;
-    }
-}
 
 .hide {
     display: none;

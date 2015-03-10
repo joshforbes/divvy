@@ -44,7 +44,7 @@ $I->fillField('description', 'Updating description');
 
 $I->selectOption('memberList[]', ['testuser', 'reagano']);
 
-$I->click('Add');
+$I->click('input[type="submit"]');
 
 $I->seeCurrentUrlEquals('/p/' . $project->id . '/task/' . $task->id);
 $I->see('Updating name');

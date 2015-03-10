@@ -1,0 +1,8 @@
+.task-form-wrapper {
+    @include make-row();
+}
+
+.task-form-wrapper .task-form {
+    @include make-md-column(6);
+    @include make-md-column-offset(3);
+}

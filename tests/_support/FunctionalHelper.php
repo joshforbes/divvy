@@ -40,7 +40,7 @@ class FunctionalHelper extends Module {
         $I->amOnPage('/auth/login');
         $I->fillField('email', $email);
         $I->fillField('password', $password);
-        $I->click('button[type=submit]');
+        $I->click('input[type=submit]');
 
         return $user;
     }

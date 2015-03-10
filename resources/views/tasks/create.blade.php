@@ -6,40 +6,27 @@
 
 @section('content')
     <div class="container">
-        <div class="row col-md-4 col-md-offset-4">
-
-            <h2>Add Task:</h2>
-
-            {!! Form::open(['route' => ['task.store', $project->id]]) !!}
-
-            <!-- Task Name Form Input -->
-            <div class="form-group">
-                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Task Name']) !!}
+        <div class="task-form-wrapper">
+            {!! Form::open(['class' => 'task-form', 'route' => ['task.store', $project->id]]) !!}
+            <div class="task-form__header">
+                Add a Task
             </div>
 
-            <!-- Description Form Input -->
-            <div class="form-group">
-                {!! Form::textarea('description', null, ['class' => 'form-control', 'placeholder' => 'Description']) !!}
-            </div>
+            {!! Form::text('name', null, ['placeholder' => 'Task Name', 'class' => 'task-form__input']) !!}
+            {!! Form::text('description', null, ['placeholder' => 'Description', 'class' => 'task-form__input']) !!}
+            {!! Form::select('memberList[]', $members, null, ['class' => 'task-form__member-select', 'multiple']) !!}
 
-            <div class="form-group select-members">
-                {!! Form::select('members[]', $members, null, ['class' => 'js-member-list', 'multiple']) !!}
-            </div>
-
-            <div class="form-group">
-                {!! Form::submit('Add', ['class' => 'btn btn-primary form-control']) !!}
-            </div>
+            {!! Form::submit('Add Task', ['class' => 'task-form__button']) !!}
 
             {!! Form::close() !!}
         </div>
     </div>
-
 @endsection
 
 @section('js')
     <script src="/js/vendor/select2.js"></script>
     <script>
-        $(".js-member-list").select2({
+        $(".task-form__member-select").select2({
             placeholder: 'Assign the Task?'
         });
     </script>

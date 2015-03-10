@@ -38,7 +38,7 @@ class TaskRepository {
      */
     public function updateTask($taskId, $updatedData)
     {
-        $task = Task::find($taskId)->firstOrFail();
+        $task = Task::findOrFail($taskId);
         $task->fill($updatedData)->save();
         return $task;
     }

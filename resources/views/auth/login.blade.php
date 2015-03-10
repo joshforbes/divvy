@@ -1,63 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
-				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
+	<div class="container">
+		<div class="login-wrapper">
 
-					<form class="form-horizontal" role="form" method="POST" action="/auth/login">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
-						</div>
+			{!! Form::open(['class' => 'login-form', 'url' => '/auth/login']) !!}
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
-							</div>
-						</div>
+				<h3 class="login-form__header">Please Sign In</h3>
+				{!! Form::email('email', null, ['class' => 'login-form__input', 'value' => old('email'), 'placeholder' => 'EMAIL']) !!}
 
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="remember"> Remember Me
-									</label>
-								</div>
-							</div>
-						</div>
+				{!! Form::password('password', ['class' => 'login-form__input', 'placeholder' => 'PASSWORD']) !!}
 
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary" style="margin-right: 15px;">
-									Login
-								</button>
-
-								<a href="/password/email">Forgot Your Password?</a>
-							</div>
-						</div>
-					</form>
+				<div class="login-form__link-lockup">
+					<span class="login-form__remember"><input type="checkbox" name="remember"> Remember Me</span>
+					<a class="login-form__forgot"  href="/password/email">Forgot?</a>
 				</div>
-			</div>
+
+				{!! Form::submit('Login', ['class' => 'login-form__button']) !!}
+			{!! Form::close() !!}
+
 		</div>
+
 	</div>
-</div>
+
 @endsection

@@ -1,0 +1,8 @@
+.login-wrapper {
+    @include make-row();
+}
+
+.login-form {
+    @include make-md-column-offset(4);
+    @include make-md-column(4);
+}

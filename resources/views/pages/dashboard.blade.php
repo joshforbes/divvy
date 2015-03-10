@@ -9,7 +9,7 @@
                 <a href="{{ route('project.create') }}">
                     <div class="project-overview">
                         <div class="project-overview__new-project">
-                            + <br/>
+                            +<br/>
                             Create New Project
                         </div>
                     </div>

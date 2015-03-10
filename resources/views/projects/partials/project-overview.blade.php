@@ -3,6 +3,7 @@
         <div class="project-overview__header">
             {{$project->name}}
         </div>
+        <p class="project-overview__description">{{$project->description}}</p>
         <div class="project-overview__summary">
             <div class="project-overview__members">{{count($project->users)}} Members</div>
             <div class="project-overview__tasks">{{count($project->tasks)}} Tasks</div>

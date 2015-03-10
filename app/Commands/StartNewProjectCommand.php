@@ -21,6 +21,7 @@ class StartNewProjectCommand extends Command implements SelfHandling {
 	public function __construct(Request $request, $admin)
 	{
 		$this->projectName = $request->name;
+		$this->description = $request->description;
 		$this->admin = $admin;
 	}
 
@@ -33,7 +34,7 @@ class StartNewProjectCommand extends Command implements SelfHandling {
 	 */
 	public function handle(ProjectRepository $projectRepository)
 	{
-		$project = Project::start($this->projectName);
+		$project = Project::start($this->projectName, $this->description);
 		$projectRepository->save($project);
 
 		$projectRepository->addAdmin($this->admin, $project);

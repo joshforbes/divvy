@@ -1,0 +1,31 @@
+.project-header{
+    @include make-row();
+    margin-bottom: 50px;
+    margin-top: 30px;
+
+    &__title {
+        @include make-md-column(7);
+    }
+
+    &__name {
+        font-size: 2em;
+        margin-bottom: 5px;
+
+    }
+
+    &__description {
+
+    }
+
+    &__summary {
+        @include make-md-column-offset(2);
+        @include make-md-column(3);
+        margin-top: 30px;
+    }
+
+    &__member-count {
+        float: right;
+        text-align: right;
+    }
+
+}
