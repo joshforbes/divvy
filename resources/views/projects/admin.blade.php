@@ -53,7 +53,7 @@
         </div>
 
         <div class="members-container">
-            <p>Users:
+            <p>Members:
                 @foreach($project->users as $user)
                     <a href="{!! route('profile.show', $user->username) !!}">
                         {!! $user->profile->present()->avatarHtml('40px') !!}
