@@ -4953,6 +4953,53 @@ button.close {
       float: left;
       width: 33.33333%; } }
 
+.discussion-wrapper {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .discussion-wrapper:before, .discussion-wrapper:after {
+    content: " ";
+    display: table; }
+  .discussion-wrapper:after {
+    clear: both; }
+
+.discussion {
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .discussion:before, .discussion:after {
+    content: " ";
+    display: table; }
+  .discussion:after {
+    clear: both; }
+  @media (min-width: 992px) {
+    .discussion {
+      margin-left: 8.33333%; } }
+  @media (min-width: 992px) {
+    .discussion {
+      float: left;
+      width: 83.33333%; } }
+  .discussion__sidebar {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 992px) {
+      .discussion__sidebar {
+        float: left;
+        width: 16.66667%; } }
+  .discussion__main-content {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 992px) {
+      .discussion__main-content {
+        float: left;
+        width: 83.33333%; } }
+
 .project-overview {
   padding: 10px;
   height: 250px;
@@ -5313,6 +5360,23 @@ button.close {
     margin-bottom: 20px;
     border-radius: 3px;
     font-size: 1em; }
+
+.discussion {
+  margin-top: 30px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 0 3px #184D59; }
+  .discussion__avatar img {
+    float: right;
+    border-radius: 60px; }
+  .discussion__title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.5em; }
+  .discussion__meta {
+    font-size: .9em; }
+  .discussion__main-content {
+    padding-right: 40px; }
 
 .container-small {
   width: 980px; }
