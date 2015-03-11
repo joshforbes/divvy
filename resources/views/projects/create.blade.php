@@ -14,8 +14,6 @@
                 {!! Form::submit('Create Project', ['class' => 'create-project__button']) !!}
 
 
-
-
             {!! Form::close() !!}
         </div>
     </div>

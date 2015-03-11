@@ -75,5 +75,13 @@
             tags: true,
             placeholder: 'Pick a User or enter an email address'
         });
+
+        $(".task__add-button").click(function() {
+            $(this).siblings(".task__discussion-form").removeClass("hide");
+        });
+
+        $(".discussion-form__button--cancel").click(function() {
+            $(this).closest(".task__discussion-form").addClass("hide");
+        });
     </script>
 @endsection

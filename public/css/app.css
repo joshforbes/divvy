@@ -5285,6 +5285,28 @@ button.close {
       .task__add-form__button .badge {
         color: #184D59;
         background-color: white; }
+  .task__add-button {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 0 30px;
+    color: white;
+    background-color: #184D59;
+    border-color: #184D59;
+    border: 0;
+    width: 85%;
+    height: 3em; }
+    .task__add-button:hover, .task__add-button:focus, .task__add-button.focus, .task__add-button:active, .task__add-button.active, .open > .task__add-button.dropdown-toggle {
+      color: white;
+      background-color: #0d2a31;
+      border-color: #0b2329; }
+    .task__add-button:active, .task__add-button.active, .open > .task__add-button.dropdown-toggle {
+      background-image: none; }
+    .task__add-button.disabled, .task__add-button.disabled:hover, .task__add-button.disabled:focus, .task__add-button.disabled.focus, .task__add-button.disabled:active, .task__add-button.disabled.active, .task__add-button[disabled], .task__add-button[disabled]:hover, .task__add-button[disabled]:focus, .task__add-button[disabled].focus, .task__add-button[disabled]:active, .task__add-button[disabled].active, fieldset[disabled] .task__add-button, fieldset[disabled] .task__add-button:hover, fieldset[disabled] .task__add-button:focus, fieldset[disabled] .task__add-button.focus, fieldset[disabled] .task__add-button:active, fieldset[disabled] .task__add-button.active {
+      background-color: #184D59;
+      border-color: #184D59; }
+    .task__add-button .badge {
+      color: #184D59;
+      background-color: white; }
   .task__subtasks-wrapper {
     padding: 0 30px;
     margin-bottom: 30px; }
@@ -5377,6 +5399,72 @@ button.close {
     font-size: .9em; }
   .discussion__main-content {
     padding-right: 40px; }
+
+.discussion-form {
+  width: 95%;
+  height: 95%;
+  z-index: 100;
+  background-color: #eeeeee;
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #184D59; }
+  .discussion-form__input {
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: 600em;
+    background-color: white;
+    color: #184D59;
+    border: 0;
+    margin-bottom: 40px; }
+    .discussion-form__input::-moz-placeholder {
+      color: #184D59;
+      opacity: 1; }
+    .discussion-form__input:-ms-input-placeholder {
+      color: #184D59; }
+    .discussion-form__input::-webkit-input-placeholder {
+      color: #184D59; }
+  .discussion-form__input--textarea {
+    height: 350px;
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 20px; }
+  .discussion-form__button {
+    color: white;
+    background-color: #184D59;
+    border-color: black;
+    padding: 20px 100px;
+    font-size: 1em;
+    line-height: 1em;
+    border-radius: 5px;
+    border: 0px;
+    box-shadow: 0px 1px black;
+    float: right;
+    margin: 20px; }
+    .discussion-form__button:hover, .discussion-form__button:focus, .discussion-form__button.focus, .discussion-form__button:active, .discussion-form__button.active, .open > .discussion-form__button.dropdown-toggle {
+      color: white;
+      background-color: #0d2a31;
+      border-color: black; }
+    .discussion-form__button:active, .discussion-form__button.active, .open > .discussion-form__button.dropdown-toggle {
+      background-image: none; }
+    .discussion-form__button.disabled, .discussion-form__button.disabled:hover, .discussion-form__button.disabled:focus, .discussion-form__button.disabled.focus, .discussion-form__button.disabled:active, .discussion-form__button.disabled.active, .discussion-form__button[disabled], .discussion-form__button[disabled]:hover, .discussion-form__button[disabled]:focus, .discussion-form__button[disabled].focus, .discussion-form__button[disabled]:active, .discussion-form__button[disabled].active, fieldset[disabled] .discussion-form__button, fieldset[disabled] .discussion-form__button:hover, fieldset[disabled] .discussion-form__button:focus, fieldset[disabled] .discussion-form__button.focus, fieldset[disabled] .discussion-form__button:active, fieldset[disabled] .discussion-form__button.active {
+      background-color: #184D59;
+      border-color: black; }
+    .discussion-form__button .badge {
+      color: #184D59;
+      background-color: white; }
+  .discussion-form__button--cancel {
+    padding: 20px 30px;
+    font-size: 1em;
+    line-height: 1em;
+    border-radius: 5px;
+    border: 1px solid #777777;
+    background-color: #eeeeee;
+    color: #184D59; }
 
 .container-small {
   width: 980px; }

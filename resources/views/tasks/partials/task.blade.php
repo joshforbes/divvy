@@ -28,12 +28,16 @@
         </ul>
     @endif
 
-    {!! Form::open(['class' => 'task__add-form', 'route' => ['discussion.store', $project->id, $task->id]]) !!}
-        {!! Form::text('title', null, ['class' => 'task__add-form__input', 'placeholder' => 'What do you want to say?']) !!}
-        {!! Form::submit('Add', ['class' => 'task__add-form__button']) !!}
-    {!! Form::close() !!}
+    <button class="task__add-button">Start a New Discussion</button>
 
-    @if($task->discussions)
+    {{--{!! Form::open(['class' => 'task__add-form', 'route' => ['discussion.store', $project->id, $task->id]]) !!}--}}
+        {{--{!! Form::text('title', null, ['class' => 'task__add-form__input', 'placeholder' => 'What do you want to say?']) !!}--}}
+        {{--{!! Form::submit('Add', ['class' => 'task__add-form__button']) !!}--}}
+    {{--{!! Form::close() !!}--}}
+    @include('discussions.partials.form')
+
+
+@if($task->discussions)
         <ul class="task__discussions-wrapper">
             @foreach($task->discussions as $discussion)
                 <li class="task__discussion">

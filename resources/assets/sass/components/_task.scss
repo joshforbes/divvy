@@ -50,6 +50,17 @@
         }
     }
 
+    &__add-button {
+        display: block;
+        margin: 0 auto 30px;
+        padding: 0 30px;
+        @include button-variant(white, $accent-color, $accent-color);
+        border: 0;
+        width: 85%;
+        height: 3em;
+
+    }
+
     &__subtasks-wrapper {
         padding: 0 30px;
         margin-bottom: 30px;
