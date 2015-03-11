@@ -73,10 +73,10 @@ class ProjectsController extends Controller {
      */
     public function show($projectId)
     {
-        $project = $this->projectRepository->findById($projectId);
-
         if ($this->user->isAdmin($projectId))
         {
+            $project = $this->projectRepository->findById($projectId);
+
             $users = $this->projectRepository->usersNotInProjectArray($project);
 
             $members = $this->projectRepository->usersInProjectArray($project);
@@ -84,7 +84,11 @@ class ProjectsController extends Controller {
             return view('projects.admin', compact('project', 'users', 'members'));
         }
 
-        return view('projects.member', compact('project'));
+        $project = $this->projectRepository->findByIdForMember($projectId);
+
+        $currentUserTasks = $this->projectRepository->tasksForUserInProject($this->user->id, $project);
+
+        return view('projects.member', compact('project', 'currentUserTasks'));
 
     }
 

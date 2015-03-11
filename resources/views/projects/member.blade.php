@@ -3,42 +3,38 @@
 @section('content')
     <div class="container">
 
-        <h1>{{ $project->name }}</h1>
-        <br/>
+        <div class="project-header">
 
-        <div class="row">
-            <div class="tasks-container col-md-6">
-                @if(Auth::user()->tasks)
-
-                    <h2>Your Tasks:</h2>
-                    <ul class="list-group">
-                        @foreach(Auth::user()->tasks as $task)
-                            <li class="list-group-item">
-                                {{ $task->name }}
-                                @if($task->users)
-                                    @foreach($task->users as $user)
-                                        {!! $user->profile->present()->avatarHtml('30px') !!}
-                                    @endforeach
-                                @endif<br/>
-                                {{ $task->description }} <br/>
-                            </li>
-                        @endforeach
-                    </ul>
-                @endif
+            <div class="project-header__title">
+                <h1 class="project-header__name">{{ $project->name }}</h1>
+                <p class="project-header__description">{{ $project->description }}</p>
             </div>
+
+            <div class="project-header__summary">
+                <span class="project-header__member-count">{{ count($project->users) }}<br/>Members</span>
+            </div>
+
         </div>
 
-        <div class="members-container">
-            <p>Admins:
-                @foreach($project->admins as $admin)
-                    <a href="{!! route('profile.show', $admin->username) !!}">
-                        {!! $admin->profile->present()->avatarHtml('40px') !!}
-                    </a>
+        @if(isset($currentUserTasks))
+            <div class="tasks-header">
+                <span class="tasks-header__task-count">{{ count($currentUserTasks) }} Tasks</span>
+            </div>
+
+            <div class="tasks">
+                @foreach($currentUserTasks as $task)
+                    <div class="task-wrapper">
+
+                        @include('tasks.partials.task')
+
+                    </div>
                 @endforeach
-            </p>
+            </div>
+        @endif
 
 
-            <p>Users:
+        <div class="members-container">
+            <p>Members:
                 @foreach($project->users as $user)
                     <a href="{!! route('profile.show', $user->username) !!}">
                         {!! $user->profile->present()->avatarHtml('40px') !!}

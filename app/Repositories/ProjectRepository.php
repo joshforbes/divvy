@@ -48,7 +48,17 @@ class ProjectRepository {
      */
     public function findById($id)
     {
-        return Project::with('tasks.users.profile', 'users.profile', 'admins.profile', 'tasks.subtasks', 'tasks.discussions.author')->whereId($id)->firstOrFail();
+        return Project::with('tasks.users.profile', 'users.profile', 'admins.profile', 'tasks.subtasks', 'tasks.discussions.author.profile')->whereId($id)->firstOrFail();
+    }
+
+    /**
+     * Find a project by id - with less eager loading for Member view
+     *
+     * @param $id
+     */
+    public function findByIdForMember($id)
+    {
+        return Project::with('users.profile')->whereId($id)->firstOrFail();
     }
 
 
@@ -74,6 +84,21 @@ class ProjectRepository {
     public function usersInProjectArray($project)
     {
         return $project->users()->lists('username', 'user_id');
+    }
+
+    /**
+     * Find tasks for the specified user in the specified project
+     *
+     * @param $userId
+     * @param Project $project
+     * @return mixed
+     */
+    public function tasksForUserInProject($userId, Project $project)
+    {
+        return $project->tasks()->with('subtasks', 'discussions.author.profile', 'users.profile')
+            ->whereHas('users', function($q) use($userId){
+                $q->where('user_id', $userId);
+            })->get();
     }
 
 

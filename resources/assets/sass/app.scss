@@ -27,7 +27,7 @@
 /** NAV **/
 
 .navbar {
-    margin-bottom: 0;
+    margin-bottom: 10px;
 
     .navbar-brand {
         font-family: 'Leckerli One', cursive;
@@ -41,8 +41,8 @@ SPLASH
 
 .splash-signup-section {
     @extend .jumbotron;
-    background-color: $accent-color;
-    color: white;
+    background-color: $gray-lighter;
+    color: $accent-color;
     padding: 6em 0;
 
     .splash-hero-wrapper {
@@ -74,8 +74,8 @@ SPLASH
         margin-top: 1em;
         font-weight: 600;
         font-size: 1.2em;
-        border-color: $nav-bar-color;
         background-color: $accent-color;
+        border: 0;
     }
 
 }

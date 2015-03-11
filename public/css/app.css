@@ -5319,7 +5319,7 @@ button.close {
 
 /** NAV **/
 .navbar {
-  margin-bottom: 0; }
+  margin-bottom: 10px; }
   .navbar .navbar-brand {
     font-family: 'Leckerli One', cursive;
     font-size: 2.5em; }
@@ -5328,8 +5328,8 @@ button.close {
 SPLASH
 **/
 .splash-signup-section {
-  background-color: #184D59;
-  color: white;
+  background-color: #eeeeee;
+  color: #184D59;
   padding: 6em 0; }
   .splash-signup-section .splash-hero-wrapper {
     margin-left: -15px;
@@ -5353,8 +5353,8 @@ SPLASH
     margin-top: 1em;
     font-weight: 600;
     font-size: 1.2em;
-    border-color: #F23030;
-    background-color: #184D59; }
+    background-color: #184D59;
+    border: 0; }
 
 /**
 ADD USER TO PROJECT
