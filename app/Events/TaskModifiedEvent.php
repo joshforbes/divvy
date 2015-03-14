@@ -25,6 +25,6 @@ class TaskModifiedEvent extends Event {
 
 	public function createMessage($taskName)
 	{
-		return 'The settings for the task "' . $taskName . '" was modified';
+		return 'The settings for the task "' . $taskName . '" were modified';
 	}
 }

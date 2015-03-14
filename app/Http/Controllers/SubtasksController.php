@@ -2,6 +2,10 @@
 
 use App\Commands\AddSubtaskToTaskCommand;
 use App\Commands\LeaveCommentOnSubtaskCommand;
+use App\Commands\RemoveSubtaskCommand;
+use App\Events\SubtaskCompletedEvent;
+use App\Events\SubtaskWasCompletedEvent;
+use App\Events\SubtaskWasIncompleteEvent;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -10,6 +14,7 @@ use App\Http\Requests\SubtaskRequest;
 use App\Repositories\SubtaskRepository;
 use App\Subtask;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SubtasksController extends Controller {
 
@@ -39,7 +44,7 @@ class SubtasksController extends Controller {
     public function store(SubtaskRequest $request, $projectId, $taskId)
     {
         $this->dispatch(
-            new AddSubtaskToTaskCommand($request, $taskId)
+            new AddSubtaskToTaskCommand($request, $taskId, $this->user)
         );
 
         //return redirect()->route('task.show', [$projectId, $taskId]);
@@ -57,7 +62,7 @@ class SubtasksController extends Controller {
     {
 
         $this->dispatch(
-            new LeaveCommentOnSubtaskCommand($request, $subtaskId, $this->user->id)
+            new LeaveCommentOnSubtaskCommand($request, $subtaskId, $this->user)
         );
 
         return redirect()->back();
@@ -106,14 +111,18 @@ class SubtasksController extends Controller {
 
     public function complete(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
     {
-        $subtaskRepository->complete($subtaskId);
+        $subtask = $subtaskRepository->complete($subtaskId);
+
+        \Event::fire(new SubtaskWasCompletedEvent($subtask, $this->user));
 
         return redirect()->back();
     }
 
     public function notComplete(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
     {
-        $subtaskRepository->notComplete($subtaskId);
+        $subtask = $subtaskRepository->notComplete($subtaskId);
+
+        \Event::fire(new SubtaskWasIncompleteEvent($subtask, $this->user));
 
         return redirect()->back();
     }
@@ -122,16 +131,17 @@ class SubtasksController extends Controller {
     /**
      * Remove the specified resource from storage.
      *
-     * @param SubtaskRepository $subtaskRepository
      * @param $projectId
      * @param $taskId
      * @param $subtaskId
      * @return Response
      * @internal param int $id
      */
-    public function destroy(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
+    public function destroy($projectId, $taskId, $subtaskId)
     {
-        $subtaskRepository->deleteById($subtaskId);
+        $this->dispatch(
+            new RemoveSubtaskCommand($subtaskId, $this->user)
+        );
 
         return redirect()->back();
     }

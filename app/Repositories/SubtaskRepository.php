@@ -29,7 +29,9 @@ class SubtaskRepository {
 
         $subtask->isCompleted = 1;
 
-        return $subtask->save();
+        $subtask->save();
+
+        return $subtask;
     }
 
     /**
@@ -44,7 +46,9 @@ class SubtaskRepository {
 
         $subtask->isCompleted = 0;
 
-        return $subtask->save();
+        $subtask->save();
+
+        return $subtask;
     }
 
 
@@ -81,9 +85,27 @@ class SubtaskRepository {
         return Subtask::find($subtaskId);
     }
 
+    /**
+     * Delete a subtask by Id
+     *
+     * @param $id
+     * @return bool|null
+     * @throws \Exception
+     */
     public function deleteById($id)
     {
         return Subtask::find($id)->delete();
+    }
+
+    /**
+     * Delete by model
+     *
+     * @param $subtask
+     * @return bool|null
+     */
+    public function delete(Subtask $subtask)
+    {
+        return $subtask->delete();
     }
 
 }

@@ -16,6 +16,32 @@ class EventServiceProvider extends ServiceProvider {
 		],
 		'App\Events\TaskModifiedEvent' => [
 			'App\Handlers\Events\LogProjectActivity'
+		],
+		//task complete
+		//task delete
+		'App\Events\SubtaskAddedToTaskEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
+		'App\Events\SubtaskWasDeletedEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
+		'App\Events\SubtaskWasCompletedEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
+		'App\Events\SubtaskWasIncompleteEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
+		//edit subtask
+		'App\Events\DiscussionStartedInTaskEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
+		//delete discussion
+		//edit discussion
+		'App\Events\CommentWasLeftOnDiscussionEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
+		'App\Events\CommentWasLeftOnSubtaskEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
 		]
 	];
 

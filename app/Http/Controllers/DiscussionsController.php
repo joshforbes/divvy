@@ -48,7 +48,7 @@ class DiscussionsController extends Controller {
 	public function store(DiscussionRequest $request, $projectId, $taskId)
 	{
 		$this->dispatch(
-			new StartDiscussionInTaskCommand($request, $taskId, $this->user->id)
+			new StartDiscussionInTaskCommand($request, $taskId, $this->user)
 		);
 
 		//return redirect()->route('task.show', [$projectId, $taskId]);
@@ -65,7 +65,7 @@ class DiscussionsController extends Controller {
 	{
 
 		$this->dispatch(
-			new LeaveCommentOnDiscussionCommand($request, $discussionId, $this->user->id)
+			new LeaveCommentOnDiscussionCommand($request, $discussionId, $this->user)
 		);
 
 		return redirect()->back();

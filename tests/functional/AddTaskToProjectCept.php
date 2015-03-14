@@ -32,7 +32,7 @@ $I->selectOption('memberList[]', ['johndoe', 'janedoe', 'testuser']);
 
 $I->click('Add');
 
-$I->seeCurrentUrlEquals('/p/' . $project->id . '/task/1');
+$I->seeCurrentUrlEquals('/p/' . $project->id);
 $I->see('Test Task');
 //$I->see('janedoe');
 //$I->see('testuser');

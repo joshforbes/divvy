@@ -25,7 +25,7 @@ class TaskAddedToProjectEvent extends Event {
 
 	public function createMessage($taskName)
 	{
-		return 'A new task was added: ' . $taskName;
+		return 'A new task was added: "' . $taskName . '"';
 	}
 
 

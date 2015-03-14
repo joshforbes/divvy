@@ -2,35 +2,28 @@
 
 use App\Commands\Command;
 
-use App\Comment;
-use App\Events\CommentWasLeftOnSubtaskEvent;
-use App\Http\Requests\Request;
+use App\Events\SubtaskWasDeletedEvent;
 use App\Repositories\SubtaskRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Contracts\Events\Dispatcher;
 
-class LeaveCommentOnSubtaskCommand extends Command implements SelfHandling {
-
-	protected $body;
-	protected $subtaskId;
-	protected $user;
+class RemoveSubtaskCommand extends Command implements SelfHandling {
 
 	/**
 	 * Create a new command instance.
 	 *
-	 * @param Request $request
 	 * @param $subtaskId
 	 * @param $user
 	 */
-	public function __construct(Request $request, $subtaskId, $user)
+	public function __construct($subtaskId, $user)
 	{
-		$this->body = $request->body;
 		$this->subtaskId = $subtaskId;
 		$this->user = $user;
 	}
 
 	/**
 	 * Execute the command.
+	 *
 	 * @param SubtaskRepository $subtaskRepository
 	 * @param Dispatcher $event
 	 */
@@ -38,13 +31,13 @@ class LeaveCommentOnSubtaskCommand extends Command implements SelfHandling {
 	{
 		$subtask = $subtaskRepository->findById($this->subtaskId);
 
-		Comment::leaveOn($subtask, [
-			'body' => $this->body,
-			'user_id' => $this->user->id
-		]);
+		$subtaskName = $subtask->name;
+		$taskName = $subtask->task->name;
+		$projectId = $subtask->task->project_id;
 
-		$event->fire(new CommentWasLeftOnSubtaskEvent($subtask, $this->user));
+		$subtaskRepository->delete($subtask);
 
+		$event->fire(new SubtaskWasDeletedEvent($subtaskName, $taskName, $projectId, $this->user));
 	}
 
 }
