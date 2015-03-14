@@ -23,7 +23,7 @@ class LogProjectActivity {
 	 *
 	 * @param  TaskAddedToProjectEvent $event
 	 */
-	public function handle(TaskAddedToProjectEvent $event)
+	public function handle($event)
 	{
 		$activity = Activity::log([
 			'body' => $event->message,

@@ -13,6 +13,9 @@ class EventServiceProvider extends ServiceProvider {
 	protected $listen = [
 		'App\Events\TaskAddedToProjectEvent' => [
 			'App\Handlers\Events\LogProjectActivity'
+		],
+		'App\Events\TaskModifiedEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
 		]
 	];
 
