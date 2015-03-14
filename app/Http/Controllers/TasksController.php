@@ -46,7 +46,7 @@ class TasksController extends Controller {
             new AddTaskToProjectCommand($request, $projectId)
         );
 
-        return redirect()->route('task.show', [$projectId, $task->id]);
+        return redirect()->route('project.show', [$projectId]);
     }
 
     /**

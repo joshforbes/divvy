@@ -48,7 +48,7 @@ class Task extends Model {
      */
     public function discussions()
     {
-        return $this->hasMany('App\Discussion');
+        return $this->hasMany('App\Discussion')->orderBy('created_at', 'desc');
     }
 
     /**

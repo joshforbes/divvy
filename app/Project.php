@@ -37,6 +37,16 @@ class Project extends Model {
 	}
 
 	/**
+	 * A Project has many Activities
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+	 */
+	public function activity()
+	{
+		return $this->hasMany('App\Activity')->orderBy('created_at', 'desc');
+	}
+
+	/**
 	 * Start a new Project
 	 *
 	 * @param $name

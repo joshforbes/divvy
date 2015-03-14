@@ -2,10 +2,12 @@
 
 use App\Commands\Command;
 
+use App\Events\TaskAddedToProjectEvent;
 use App\Http\Requests\Request;
 use App\Repositories\TaskRepository;
 use App\Task;
 use Illuminate\Contracts\Bus\SelfHandling;
+use Illuminate\Contracts\Events\Dispatcher;
 
 class AddTaskToProjectCommand extends Command implements SelfHandling {
 
@@ -32,9 +34,10 @@ class AddTaskToProjectCommand extends Command implements SelfHandling {
 	 * Execute the command.
 	 *
 	 * @param TaskRepository $taskRepository
+	 * @param Dispatcher $event
 	 * @return static
 	 */
-	public function handle(TaskRepository $taskRepository)
+	public function handle(TaskRepository $taskRepository, Dispatcher $event)
 	{
 		$task = Task::assign([
 			'name'        => $this->name,
@@ -45,6 +48,8 @@ class AddTaskToProjectCommand extends Command implements SelfHandling {
 		$taskRepository->save($task);
 
 		$taskRepository->assignTo($this->memberList, $task);
+
+		$event->fire(new TaskAddedToProjectEvent($task->name, $task->project_id));
 
 		return $task;
 	}

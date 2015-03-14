@@ -5480,6 +5480,15 @@ button.close {
     background-color: #eeeeee;
     color: #184D59; }
 
+.activity-log {
+  width: 50%;
+  margin-bottom: 30px; }
+  .activity-log__header {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 600; }
+
 .container-small {
   width: 980px; }
 
