@@ -16,11 +16,6 @@
 //	var_dump($sql);
 //});
 
-
-Route::get('/database', function() {
-	var_dump(\App\User::all()->toArray());
-});
-
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
 
 Route::controllers([
@@ -46,12 +41,18 @@ Route::patch('/p/{projectId}/task/{taskId}', ['as' => 'task.update', 'uses' => '
 Route::post('/p/{projectId}/task/{taskId}', ['as' => 'subtask.store', 'uses' => 'SubtasksController@store']);
 Route::get('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask.show', 'uses' => 'SubtasksController@show']);
 Route::delete('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask.destroy', 'uses' => 'SubtasksController@destroy']);
+Route::post('/p/{projectId}/task/{taskId}/subtask/{subtaskId}/complete', ['as' => 'subtask.complete', 'uses' => 'SubtasksController@complete']);
+Route::post('/p/{projectId}/task/{taskId}/subtask/{subtaskId}/notComplete', ['as' => 'subtask.notComplete', 'uses' => 'SubtasksController@notComplete']);
+
 
 #Discussions
 Route::post('/p/{projectId}/task/{taskId}/discussion', ['as' => 'discussion.store', 'uses' => 'DiscussionsController@store']);
 Route::get('/p/{projectId}/task/{taskId}/discussion/{discussionId}', ['as' => 'discussion.show', 'uses' => 'DiscussionsController@show']);
 //Route::delete('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask.destroy', 'uses' => 'DiscussionsController@destroy']);
 
+#Comments
+Route::post('/comment/discussion/{discussionId}', ['as' => 'comment.storeDiscussion', 'uses' => 'DiscussionsController@storeComment']);
+Route::post('/comment/subtask/{subtaskId}', ['as' => 'comment.storeSubtask', 'uses' => 'SubtasksController@storeComment']);
 
 #Profiles
 Route::get('/{username}/edit', [

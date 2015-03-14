@@ -25,7 +25,7 @@ class DiscussionRepository {
      */
     public function findByIdInTaskAndProject($discussionId, $taskId, $projectId)
     {
-        $discussion = Discussion::with('task.project', 'author')
+        $discussion = Discussion::with('task.project', 'author', 'comments.author')
             ->whereHas('task', function($q) use($taskId){
                 $q->whereId($taskId);
             })
@@ -35,6 +35,18 @@ class DiscussionRepository {
             ->findOrFail($discussionId);
 
         return $discussion;
+    }
+
+
+    /**
+     * Find a Discussion by the specified ID
+     *
+     * @param $discussionId
+     * @return \Illuminate\Support\Collection|null|static
+     */
+    public function findById($discussionId)
+    {
+        return Discussion::find($discussionId);
     }
 
 

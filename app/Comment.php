@@ -22,4 +22,29 @@ class Comment extends Model {
         return $this->morphTo();
     }
 
+
+    /**
+     * A comment belongs to one author
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function author()
+    {
+        return $this->belongsTo('App\User', 'user_id');
+
+    }
+
+
+    /**
+     * Leave a new comment on a commentable object
+     *
+     * @param $owner
+     * @param array $attributes
+     * @return mixed
+     */
+    public static function leaveOn($owner, array $attributes)
+    {
+        return $owner->comments()->create($attributes);
+    }
+
 }

@@ -53,6 +53,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     /**
+     * A user can leave many Comments
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    /**
      * A User has many Projects
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany

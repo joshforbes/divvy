@@ -1,9 +1,11 @@
 <?php namespace App\Http\Controllers;
 
 use App\Commands\AddSubtaskToTaskCommand;
+use App\Commands\LeaveCommentOnSubtaskCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Http\Requests\LeaveCommentRequest;
 use App\Http\Requests\SubtaskRequest;
 use App\Repositories\SubtaskRepository;
 use App\Subtask;
@@ -21,6 +23,8 @@ class SubtasksController extends Controller {
      */
     public function __construct(SubtaskRepository $subtaskRepository)
     {
+        parent::__construct();
+
         $this->subtaskRepository = $subtaskRepository;
     }
 
@@ -43,6 +47,23 @@ class SubtasksController extends Controller {
     }
 
     /**
+     * Store a comment in storage and attach it to the subtask
+     *
+     * @param LeaveCommentRequest $request
+     * @param $subtaskId
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function storeComment(LeaveCommentRequest $request, $subtaskId)
+    {
+
+        $this->dispatch(
+            new LeaveCommentOnSubtaskCommand($request, $subtaskId, $this->user->id)
+        );
+
+        return redirect()->back();
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param SubtaskRepository $subtaskRepository
@@ -56,8 +77,9 @@ class SubtasksController extends Controller {
         $subtask = $subtaskRepository->findByIdInTaskAndProject($subtaskId, $taskId, $projectId);
         $task = $subtask->task;
         $project = $task->project;
+        $comments = $subtask->comments;
 
-        return view('subtasks.show', compact('subtask', 'task', 'project'));
+        return view('subtasks.show', compact('subtask', 'task', 'project', 'comments'));
     }
 
     /**
@@ -81,6 +103,21 @@ class SubtasksController extends Controller {
     {
         //
     }
+
+    public function complete(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
+    {
+        $subtaskRepository->complete($subtaskId);
+
+        return redirect()->back();
+    }
+
+    public function notComplete(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
+    {
+        $subtaskRepository->notComplete($subtaskId);
+
+        return redirect()->back();
+    }
+
 
     /**
      * Remove the specified resource from storage.

@@ -1,10 +1,12 @@
 <?php namespace App\Http\Controllers;
 
+use App\Commands\LeaveCommentOnDiscussionCommand;
 use App\Commands\StartDiscussionInTaskCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\DiscussionRequest;
+use App\Http\Requests\LeaveCommentRequest;
 use App\Repositories\DiscussionRepository;
 use Illuminate\Http\Request;
 
@@ -54,6 +56,22 @@ class DiscussionsController extends Controller {
 	}
 
 	/**
+	 * Store a comment in storage and attach it to the discussion
+	 * @param LeaveCommentRequest $request
+	 * @param $discussionId
+	 * @return \Illuminate\Http\RedirectResponse
+	 */
+	public function storeComment(LeaveCommentRequest $request, $discussionId)
+	{
+
+		$this->dispatch(
+			new LeaveCommentOnDiscussionCommand($request, $discussionId, $this->user->id)
+		);
+
+		return redirect()->back();
+	}
+
+	/**
 	 * Display the specified resource.
 	 *
 	 * @param DiscussionRepository $discussionRepository
@@ -67,8 +85,9 @@ class DiscussionsController extends Controller {
 		$discussion = $discussionRepository->findByIdInTaskAndProject($discussionId, $taskId, $projectId);
 		$task = $discussion->task;
 		$project = $task->project;
+		$comments = $discussion->comments;
 
-		return view('discussions.show', compact('discussion', 'task', 'project'));
+		return view('discussions.show', compact('discussion', 'task', 'project', 'comments'));
 	}
 
 	/**

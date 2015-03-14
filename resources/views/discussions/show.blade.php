@@ -11,6 +11,26 @@
         <div class="discussion-wrapper">
             @include('discussions.partials.discussion')
         </div>
+
+        <div class="comment-form-wrapper">
+            {!! Form::open(['route' => ['comment.storeDiscussion', $discussion->id], 'class' => 'comment-form']) !!}
+                {!! Form::text('body', null, ['class' => 'comment-form__input', 'placeholder' => 'Enter a comment']) !!}
+                {!! Form::submit('Add', ['class' => 'btn btn-primary form-control']) !!}
+            {!! Form::close() !!}
+        </div>
+
+        <div class="comments-wrapper">
+
+            @foreach($comments as $comment)
+
+            <div class="comment">
+                {{ $comment->body }}
+                {{ $comment->author->username }}
+            </div>
+
+            @endforeach
+        </div>
+
     </div>
 
 

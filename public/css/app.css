@@ -5309,14 +5309,28 @@ button.close {
       background-color: white; }
   .task__subtasks-wrapper {
     padding: 0 30px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    position: relative; }
   .task__subtask {
     margin-bottom: 10px;
     height: 30px;
     list-style: none;
-    width: 100%; }
+    width: 100%;
+    line-height: 30px; }
+    .task__subtask__complete-form {
+      float: right; }
     .task__subtask__delete-form {
       float: right; }
+  .task__subtask--completed {
+    position: relative;
+    opacity: .4; }
+    .task__subtask--completed .task__subtask__link:before {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      border-bottom: 1px solid #777777;
+      width: 100%; }
   .task__discussions-wrapper {
     padding: 0 30px;
     margin-bottom: 30px; }

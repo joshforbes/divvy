@@ -18,6 +18,38 @@ class SubtaskRepository {
     }
 
     /**
+     * Marks the specified subtask complete
+     *
+     * @param $subtaskId
+     * @return bool
+     */
+    public function complete($subtaskId)
+    {
+        $subtask = Subtask::find($subtaskId);
+
+        $subtask->isCompleted = 1;
+
+        return $subtask->save();
+    }
+
+    /**
+     * Marks the specified subtask as not completed
+     *
+     * @param $subtaskId
+     * @return bool
+     */
+    public function notComplete($subtaskId)
+    {
+        $subtask = Subtask::find($subtaskId);
+
+        $subtask->isCompleted = 0;
+
+        return $subtask->save();
+    }
+
+
+
+    /**
      * Find a Subtask by the specified Id
      *
      * @param $subtaskId
@@ -35,6 +67,18 @@ class SubtaskRepository {
             ->findOrFail($subtaskId);
 
         return $subtask;
+    }
+
+
+    /**
+     * Find a subtask by specified Id
+     *
+     * @param $subtaskId
+     * @return \Illuminate\Support\Collection|null|static
+     */
+    public function findById($subtaskId)
+    {
+        return Subtask::find($subtaskId);
     }
 
     public function deleteById($id)

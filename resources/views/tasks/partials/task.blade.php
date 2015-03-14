@@ -17,23 +17,40 @@
     @if($task->subtasks)
         <ul class="task__subtasks-wrapper">
             @foreach($task->subtasks as $subtask)
+                @if($subtask->isCompleted === '0')
                 <li class="task__subtask">
                     <input class="task__subtask__checkbox" type="checkbox"/>
                     <a class ="task__subtask__link" href="{{ route('subtask.show', [$project->id, $task->id, $subtask->id]) }}">{{ $subtask->name }}</a>
+                    {!! Form::open(['class' => 'task__subtask__complete-form', 'route' => ['subtask.complete', $project->id, $task->id, $subtask->id]]) !!}
+                        {!! Form::submit('Complete', ['class' => 'task__subtask__complete']) !!}
+                    {!! Form::close() !!}
                     {!! Form::open(['class' => 'task__subtask__delete-form', 'method' => 'DELETE', 'route' => ['subtask.destroy', $project->id, $task->id, $subtask->id]]) !!}
                         {!! Form::submit('Delete', ['class' => 'task__subtask__delete']) !!}
                     {!! Form::close() !!}
                 </li>
+                @endif
             @endforeach
+
+            @foreach($task->subtasks as $subtask)
+                @if($subtask->isCompleted === '1')
+                    <li class="task__subtask task__subtask--completed">
+                        <input class="task__subtask__checkbox" type="checkbox"/>
+                        <a class ="task__subtask__link" href="{{ route('subtask.show', [$project->id, $task->id, $subtask->id]) }}">{{ $subtask->name }}</a>
+                        {!! Form::open(['class' => 'task__subtask__complete-form', 'route' => ['subtask.notComplete', $project->id, $task->id, $subtask->id]]) !!}
+                        {!! Form::submit('Not Complete', ['class' => 'task__subtask__complete']) !!}
+                        {!! Form::close() !!}
+                        {!! Form::open(['class' => 'task__subtask__delete-form', 'method' => 'DELETE', 'route' => ['subtask.destroy', $project->id, $task->id, $subtask->id]]) !!}
+                        {!! Form::submit('Delete', ['class' => 'task__subtask__delete']) !!}
+                        {!! Form::close() !!}
+                    </li>
+                @endif
+            @endforeach
+
         </ul>
     @endif
 
     <button class="task__add-button">Start a New Discussion</button>
 
-    {{--{!! Form::open(['class' => 'task__add-form', 'route' => ['discussion.store', $project->id, $task->id]]) !!}--}}
-        {{--{!! Form::text('title', null, ['class' => 'task__add-form__input', 'placeholder' => 'What do you want to say?']) !!}--}}
-        {{--{!! Form::submit('Add', ['class' => 'task__add-form__button']) !!}--}}
-    {{--{!! Form::close() !!}--}}
     @include('discussions.partials.form')
 
 
