@@ -15,8 +15,8 @@
 
         <div class="comment-form-wrapper">
             {!! Form::open(['route' => ['comment.storeSubtask', $subtask->id], 'class' => 'comment-form']) !!}
-            {!! Form::text('body', null, ['class' => 'comment-form__input', 'placeholder' => 'Enter a comment']) !!}
-            {!! Form::submit('Add', ['class' => 'btn btn-primary form-control']) !!}
+            {!! Form::text('body', null, ['class' => 'comment-form__input', 'placeholder' => 'Add a comment']) !!}
+            {!! Form::submit('Add this comment', ['class' => 'btn btn-primary form-control']) !!}
             {!! Form::close() !!}
         </div>
 

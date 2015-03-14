@@ -93,4 +93,11 @@ class FunctionalHelper extends Module {
         return $subtask;
     }
 
+    public function haveADiscussion($overrides)
+    {
+        $discussion = Testdummy::create('App\Discussion', $overrides);
+
+        return $discussion;
+    }
+
 }

@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42cdb1d5-8b6e-4047-bd25-3a856df9e117" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Comment.php" afterPath="$PROJECT_DIR$/app/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/DiscussionRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/DiscussionRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/DiscussionsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DiscussionsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/SubtaskRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/SubtaskRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SubtasksController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubtasksController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/components/_task.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/components/_task.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" afterPath="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/FunctionalTester.php" afterPath="$PROJECT_DIR$/tests/functional/FunctionalTester.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/factories/factories.php" afterPath="$PROJECT_DIR$/tests/factories/factories.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/discussions/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/discussions/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/subtasks/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/subtasks/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/tasks/partials/task.blade.php" afterPath="$PROJECT_DIR$/resources/views/tasks/partials/task.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="divvy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="task.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/tasks/partials/task.blade.php">
+      <file leaf-file-name="AddCommentToSubtaskCept.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/functional/AddCommentToSubtaskCept.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8333333" vertical-offset="150" max-vertical-offset="2050">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8611111" vertical-offset="0" max-vertical-offset="975">
+              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -57,9 +49,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/assets/sass/components/_task-form.scss" />
-        <option value="$PROJECT_DIR$/resources/assets/sass/components/_create-project.scss" />
-        <option value="$PROJECT_DIR$/app/Commands/AddTaskToProjectCommand.php" />
         <option value="$PROJECT_DIR$/resources/views/tasks/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Commands/ModifyTaskCommand.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_16_003453_create_comments_table.php" />
@@ -76,7 +65,6 @@
         <option value="$PROJECT_DIR$/resources/assets/sass/pages/_task-show.scss" />
         <option value="$PROJECT_DIR$/resources/assets/sass/pages/_login.scss" />
         <option value="$PROJECT_DIR$/resources/assets/sass/components/_login-form.scss" />
-        <option value="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" />
         <option value="$PROJECT_DIR$/tests/functional/AddTaskToProjectCept.php" />
         <option value="$PROJECT_DIR$/resources/views/tasks/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/projects/member.blade.php" />
@@ -97,17 +85,21 @@
         <option value="$PROJECT_DIR$/app/Http/Requests/LeaveCommentRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DiscussionsController.php" />
         <option value="$PROJECT_DIR$/app/Comment.php" />
-        <option value="$PROJECT_DIR$/resources/views/discussions/show.blade.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Repositories/DiscussionRepository.php" />
         <option value="$PROJECT_DIR$/app/Commands/LeaveCommentOnDiscussionCommand.php" />
         <option value="$PROJECT_DIR$/app/Commands/LeaveCommentOnSubtaskCommand.php" />
-        <option value="$PROJECT_DIR$/resources/views/subtasks/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SubtasksController.php" />
         <option value="$PROJECT_DIR$/app/Repositories/SubtaskRepository.php" />
         <option value="$PROJECT_DIR$/resources/views/tasks/partials/task.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/sass/components/_task.scss" />
+        <option value="$PROJECT_DIR$/resources/views/subtasks/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/discussions/show.blade.php" />
+        <option value="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" />
+        <option value="$PROJECT_DIR$/tests/factories/factories.php" />
+        <option value="$PROJECT_DIR$/tests/functional/AddCommentToDiscussionCept.php" />
+        <option value="$PROJECT_DIR$/tests/functional/AddCommentToSubtaskCept.php" />
       </list>
     </option>
   </component>
@@ -194,6 +186,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="functional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -681,45 +691,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/functional/AddTaskToProjectCept.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5555556" vertical-offset="100" max-vertical-offset="1550">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/sass/pages/_task-show.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1388889" vertical-offset="0" max-vertical-offset="900">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tasks/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2777778" vertical-offset="0" max-vertical-offset="900">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.22222222" vertical-offset="200" max-vertical-offset="1725">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TasksController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5" vertical-offset="925" max-vertical-offset="2875">
-          <caret line="100" column="10" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6388889" vertical-offset="725" max-vertical-offset="2700">
@@ -881,19 +852,6 @@
             <marker date="1426194593000" expanded="false" signature="-1:-1" placeholder="..." />
             <marker date="1426194593000" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1426194593000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functional/AddDiscussionToTaskCept.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7222222" vertical-offset="125" max-vertical-offset="1025">
-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-          <folding>
-            <marker date="1426194774000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426194774000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426194774000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426194774000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1219,22 +1177,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/discussions/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3888889" vertical-offset="0" max-vertical-offset="1075">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="19" selection-end-column="14" />
-          <folding>
-            <marker date="1426263139000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426263139000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426263139000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426263139000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426263139000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426263139000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426263139000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Subtask.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
@@ -1248,23 +1190,6 @@
             <marker date="1425645709000" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1425645709000" expanded="true" signature="-1:-1" placeholder=" Create a new instance of subtask ..." />
             <marker date="1425645709000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/subtasks/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="100" max-vertical-offset="1000">
-          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
-          <folding>
-            <marker date="1426264525000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426264525000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426264525000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426264525000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426264525000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426264525000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426264525000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1426264525000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1394,8 +1319,142 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/tasks/partials/task.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8333333" vertical-offset="150" max-vertical-offset="2050">
+        <state vertical-scroll-proportion="0.44444445" vertical-offset="500" max-vertical-offset="2050">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <marker date="1426282882000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426282882000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426282882000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426282882000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426282882000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426282882000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426282882000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426282882000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/subtasks/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3888889" vertical-offset="100" max-vertical-offset="1000">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding>
+            <marker date="1426300697000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300697000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300697000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300697000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300697000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300697000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300697000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300697000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/discussions/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4722222" vertical-offset="0" max-vertical-offset="1075">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <folding>
+            <marker date="1426300724000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300724000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300724000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300724000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300724000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300724000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426300724000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" Creates the application. ..." />
+            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/factories/factories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8055556" vertical-offset="275" max-vertical-offset="1200">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding>
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301142000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/_support/FunctionalHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8888889" vertical-offset="1625" max-vertical-offset="2675">
+          <caret line="99" column="27" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+          <folding>
+            <marker date="1426301059000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426301059000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/functional/AddDiscussionToTaskCept.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8611111" vertical-offset="0" max-vertical-offset="1025">
+          <caret line="31" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <marker date="1426194774000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426194774000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426194774000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426194774000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/functional/AddCommentToDiscussionCept.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7222222" vertical-offset="0" max-vertical-offset="1000">
+          <caret line="26" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <marker date="1426301676000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301676000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301676000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301676000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301676000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426301676000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/functional/AddCommentToSubtaskCept.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8611111" vertical-offset="0" max-vertical-offset="975">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
           <folding />
         </state>
       </provider>
