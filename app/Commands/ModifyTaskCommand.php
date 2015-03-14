@@ -39,7 +39,7 @@ class ModifyTaskCommand extends Command implements SelfHandling {
 
 		$taskRepository->assignTo($this->memberList, $task);
 
-		$event->fire(new TaskModifiedEvent($task->name, $task->project_id));
+		$event->fire(new TaskModifiedEvent($task));
 
 	}
 

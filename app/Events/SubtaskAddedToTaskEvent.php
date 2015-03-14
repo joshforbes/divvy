@@ -26,7 +26,7 @@ class SubtaskAddedToTaskEvent extends Event {
 
 	public function createMessage($username, $subtaskName, $taskName)
 	{
-		return $username . ' added a new subtask "' . $subtaskName . '" to the task "' . $taskName . '"';
+		return '<strong>' . htmlentities($username) . '</strong> added a new subtask <strong>' . htmlentities($subtaskName) . '</strong> to the task <strong>' . htmlentities($taskName) . '</strong>';
 	}
 
 

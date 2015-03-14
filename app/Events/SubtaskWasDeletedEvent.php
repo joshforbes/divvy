@@ -28,7 +28,7 @@ class SubtaskWasDeletedEvent extends Event {
 
 	public function createMessage($username, $subtaskName, $taskName)
 	{
-		return $username . ' deleted the subtask "' . $subtaskName . '" from the task "' . $taskName . '"';
+		return '<strong>' . htmlentities($username) . '</strong> deleted the subtask <strong>' . htmlentities($subtaskName) . '</strong> from the task <strong>' . htmlentities($taskName) . '</strong>';
 	}
 
 

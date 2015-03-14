@@ -25,7 +25,7 @@ class CommentWasLeftOnSubtaskEvent extends Event {
 
 	public function createMessage($username, $subtaskName, $taskName)
 	{
-		return $username . ' left a comment on "' . $subtaskName . '" in the task "' . $taskName . '"';
+		return '<strong>' . htmlentities($username) . '</strong> left a comment on <strong>' . htmlentities($subtaskName) . '</strong> in the task <strong>' . htmlentities($taskName) . '</strong>';
 	}
 
 

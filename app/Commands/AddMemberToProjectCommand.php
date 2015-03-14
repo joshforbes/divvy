@@ -2,9 +2,11 @@
 
 use App\Commands\Command;
 
+use App\Events\MemberJoinedProjectEvent;
 use App\Repositories\ProjectRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
+use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Http\Request;
 
 class AddMemberToProjectCommand extends Command implements SelfHandling {
@@ -29,9 +31,10 @@ class AddMemberToProjectCommand extends Command implements SelfHandling {
 	 *
 	 * @param ProjectRepository $projectRepository
 	 * @param UserRepository $userRepository
+	 * @param Dispatcher $event
 	 * @return mixed
 	 */
-	public function handle(ProjectRepository $projectRepository, UserRepository $userRepository)
+	public function handle(ProjectRepository $projectRepository, UserRepository $userRepository, Dispatcher $event)
 	{
 		$project = $projectRepository->findById($this->projectId);
 
@@ -43,6 +46,8 @@ class AddMemberToProjectCommand extends Command implements SelfHandling {
 		}
 
 		$projectRepository->addUser($user, $project);
+
+		$event->fire(new MemberJoinedProjectEvent($user, $project));
 
 		return $project;
 	}

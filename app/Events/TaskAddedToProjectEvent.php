@@ -14,18 +14,17 @@ class TaskAddedToProjectEvent extends Event {
 	/**
 	 * Create a new event instance.
 	 *
-	 * @param $taskName
-	 * @param $projectId
+	 * @param $task
 	 */
-	public function __construct($taskName, $projectId)
+	public function __construct($task)
 	{
-		$this->message = $this->createMessage($taskName);
-		$this->projectId = $projectId;
+		$this->message = $this->createMessage($task->name);
+		$this->projectId = $task->project_id;
 	}
 
 	public function createMessage($taskName)
 	{
-		return 'A new task was added: "' . $taskName . '"';
+		return 'A new task was added: <strong>' . htmlentities($taskName) . '</strong>';
 	}
 
 

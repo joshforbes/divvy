@@ -26,7 +26,7 @@ class DiscussionStartedInTaskEvent extends Event {
 
 	public function createMessage($username, $discussionTitle, $taskName)
 	{
-		return $username . ' posted a new message "' . $discussionTitle . '" in the task "' . $taskName . '"';
+		return '<strong>' . htmlentities($username) . '</strong> posted a new message <strong>' . htmlentities($discussionTitle) . '</strong> in the task <strong>' . htmlentities($taskName) . '</strong>';
 	}
 
 

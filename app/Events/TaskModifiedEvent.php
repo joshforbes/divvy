@@ -14,17 +14,16 @@ class TaskModifiedEvent extends Event {
 	/**
 	 * Create a new event instance.
 	 *
-	 * @param $taskName
-	 * @param $projectId
+	 * @param $task
 	 */
-	public function __construct($taskName, $projectId)
+	public function __construct($task)
 	{
-		$this->message = $this->createMessage($taskName);
-		$this->projectId = $projectId;
+		$this->message = $this->createMessage($task->name);
+		$this->projectId = $task->project_id;
 	}
 
 	public function createMessage($taskName)
 	{
-		return 'The settings for the task "' . $taskName . '" were modified';
+		return 'The settings for the task <strong>' . htmlentities($taskName) . '</strong> were modified';
 	}
 }

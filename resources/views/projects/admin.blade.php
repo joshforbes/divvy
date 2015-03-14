@@ -24,7 +24,7 @@
             <div class="activity-log">
                 <span class="activity-log__header">Latest Project Activity:</span>
                 @foreach($project->activity as $activity)
-                <p>{{ $activity->created_at->diffForHumans() }} - {{ $activity->body }}</p>
+                <p>{{ $activity->created_at->diffForHumans() }} - {!! $activity->body !!}</p>
 
                 @endforeach
             </div>

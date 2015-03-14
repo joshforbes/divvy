@@ -26,7 +26,7 @@ class CommentWasLeftOnDiscussionEvent extends Event {
 
 	public function createMessage($username, $discussionTitle, $taskName)
 	{
-		return $username . ' left a comment on "' . $discussionTitle . '" in the task "' . $taskName . '"';
+		return '<strong>' . htmlentities($username) . '</strong> left a comment on <strong>' . htmlentities($discussionTitle) . '</strong> in the task <strong>' . htmlentities($taskName) . '</strong>';
 	}
 
 

@@ -20,13 +20,13 @@ class SubtaskWasCompletedEvent extends Event {
 	 */
 	public function __construct(Subtask $subtask, User $user)
 	{
-		$this->message = $this->createMessage	($user->username, $subtask->name, $subtask->task->name);
+		$this->message = $this->createMessage($user->username, $subtask->name, $subtask->task->name);
 		$this->projectId = $subtask->task->project_id;
 	}
 
 	public function createMessage($username, $subtaskName, $taskName)
 	{
-		return $username . ' completed the subtask "' . $subtaskName . '" from the task "' . $taskName . '"';
+		return '<strong>' . htmlentities($username) . '</strong> completed the subtask <strong>' . htmlentities($subtaskName) . '</strong> from the task <strong>' . htmlentities($taskName) . '</strong>';
 	}
 
 

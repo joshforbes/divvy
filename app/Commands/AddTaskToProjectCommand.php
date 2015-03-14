@@ -49,7 +49,7 @@ class AddTaskToProjectCommand extends Command implements SelfHandling {
 
 		$taskRepository->assignTo($this->memberList, $task);
 
-		$event->fire(new TaskAddedToProjectEvent($task->name, $task->project_id));
+		$event->fire(new TaskAddedToProjectEvent($task));
 
 		return $task;
 	}
