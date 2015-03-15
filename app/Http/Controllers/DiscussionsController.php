@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Commands\LeaveCommentOnDiscussionCommand;
+use App\Commands\RemoveDiscussionCommand;
 use App\Commands\StartDiscussionInTaskCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -114,13 +115,18 @@ class DiscussionsController extends Controller {
 
 	/**
 	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
+	 * @param $projectId
+	 * @param $taskId
+	 * @param $discussionId
+	 * @return \Illuminate\Http\RedirectResponse
 	 */
-	public function destroy($id)
+	public function destroy($projectId, $taskId, $discussionId)
 	{
-		//
+		$this->dispatch(
+			new RemoveDiscussionCommand($discussionId, $this->user)
+		);
+
+		return redirect()->back();
 	}
 
 }

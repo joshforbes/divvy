@@ -5321,6 +5321,8 @@ button.close {
       float: right; }
     .task__subtask__delete-form {
       float: right; }
+    .task__subtask__edit-button {
+      float: right; }
   .task__subtask--completed {
     position: relative;
     opacity: .4; }
@@ -5336,6 +5338,7 @@ button.close {
     margin-bottom: 30px; }
   .task__discussion {
     margin-bottom: 10px;
+    height: 30px;
     list-style: none;
     width: 100%; }
     .task__discussion__avatar img {
@@ -5348,6 +5351,9 @@ button.close {
       margin-top: -10px;
       font-size: .8em;
       color: #777777; }
+    .task__discussion__delete-form {
+      margin-top: -30px;
+      float: right; }
   .task__users {
     position: absolute;
     bottom: 0;
@@ -5488,6 +5494,14 @@ button.close {
     margin-bottom: 10px;
     font-size: 1.1em;
     font-weight: 600; }
+
+.subtask-form {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 5%; }
+  .subtask-form__input {
+    width: 55%; }
 
 .container-small {
   width: 980px; }

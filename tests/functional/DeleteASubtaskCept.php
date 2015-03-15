@@ -25,9 +25,9 @@ $I->seeRecord('subtasks', [
     'name' => 'A subtask'
 ]);
 
-$I->click('input[value="Delete"]');
+$I->click(['class' => 'task__subtask__delete']);
 $I->seeCurrentUrlEquals('/p/' . $project->id);
-$I->dontSee('A subtask');
+$I->dontSee('A subtask', '.task__subtask__link');
 
 $I->dontSeeRecord('subtasks', [
     'name' => 'A subtask'

@@ -49,6 +49,29 @@ class DiscussionRepository {
         return Discussion::find($discussionId);
     }
 
+    /**
+     * Delete a discussion by Id
+     *
+     * @param $id
+     * @return bool|null
+     * @throws \Exception
+     */
+    public function deleteById($id)
+    {
+        return Discussion::find($id)->delete();
+    }
+
+    /**
+     * Delete by model
+     * @param Discussion $discussion
+     * @return bool|null
+     * @throws \Exception
+     */
+    public function delete(Discussion $discussion)
+    {
+        return $discussion->delete();
+    }
+
 
 }
 

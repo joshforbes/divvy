@@ -2,6 +2,7 @@
 
 use App\Commands\AddSubtaskToTaskCommand;
 use App\Commands\LeaveCommentOnSubtaskCommand;
+use App\Commands\ModifySubtaskCommand;
 use App\Commands\RemoveSubtaskCommand;
 use App\Events\SubtaskCompletedEvent;
 use App\Events\SubtaskWasCompletedEvent;
@@ -100,14 +101,24 @@ class SubtasksController extends Controller {
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  int $id
-     * @return Response
+     * @param SubtaskRequest $request
+     * @param $projectId
+     * @param $taskId
+     * @param $subtaskId
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update($id)
+    public function update(SubtaskRequest $request, $projectId, $taskId, $subtaskId)
     {
-        //
+        $this->dispatch(
+            new ModifySubtaskCommand($request, $subtaskId, $this->user)
+        );
+
+        return redirect()->back();
+
+//        return redirect()->route('task.show', [$projectId, $taskId]);
     }
+
+
 
     public function complete(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
     {

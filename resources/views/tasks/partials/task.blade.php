@@ -19,6 +19,7 @@
             @foreach($task->subtasks as $subtask)
                 @if($subtask->isCompleted === '0')
                 <li class="task__subtask">
+                    <div class="task__subtask__controls-wrapper">
                     <input class="task__subtask__checkbox" type="checkbox"/>
                     <a class ="task__subtask__link" href="{{ route('subtask.show', [$project->id, $task->id, $subtask->id]) }}">{{ $subtask->name }}</a>
                     {!! Form::open(['class' => 'task__subtask__complete-form', 'route' => ['subtask.complete', $project->id, $task->id, $subtask->id]]) !!}
@@ -27,6 +28,9 @@
                     {!! Form::open(['class' => 'task__subtask__delete-form', 'method' => 'DELETE', 'route' => ['subtask.destroy', $project->id, $task->id, $subtask->id]]) !!}
                         {!! Form::submit('Delete', ['class' => 'task__subtask__delete']) !!}
                     {!! Form::close() !!}
+                    <button class="task__subtask__edit-button">Edit</button>
+                    </div>
+                    @include('subtasks.partials.edit-form')
                 </li>
                 @endif
             @endforeach
@@ -61,6 +65,9 @@
                     <span class="task__discussion__avatar">{!! $discussion->author->profile->present()->avatarHtml('30px') !!}</span>
                     <a class="task__discussion__title" href="{{ route('discussion.show', [$project->id, $task->id, $discussion->id]) }}">{{ $discussion->title }}</a>
                     <span class="task__discussion__date">{{ $discussion->created_at->diffForHumans() }}</span>
+                    {!! Form::open(['class' => 'task__discussion__delete-form', 'method' => 'DELETE', 'route' => ['discussion.destroy', $project->id, $task->id, $discussion->id]]) !!}
+                        {!! Form::submit('Delete', ['class' => 'task__discussion__delete']) !!}
+                    {!! Form::close() !!}
                 </li>
             @endforeach
         </ul>

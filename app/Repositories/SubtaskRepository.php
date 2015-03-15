@@ -108,5 +108,19 @@ class SubtaskRepository {
         return $subtask->delete();
     }
 
+    /**
+     * Updates the Subtask with the given id
+     *
+     * @param $subtaskId
+     * @param $updatedData
+     * @return mixed
+     */
+    public function updateTask($subtaskId, $updatedData)
+    {
+        $subtask = Subtask::findOrFail($subtaskId);
+        $subtask->fill($updatedData)->save();
+        return $subtask;
+    }
+
 }
 

@@ -93,5 +93,17 @@
         $(".discussion-form__button--cancel").click(function() {
             $(this).closest(".task__discussion-form").addClass("hide");
         });
+
+        $(".task__subtask__edit-button").click(function() {
+            $(this).closest(".task__subtask__controls-wrapper").addClass("hide");
+            $(this).parent().siblings().removeClass("hide");
+        });
+
+        $(".subtask-form__button--cancel").click(function(e) {
+            e.preventDefault();
+            $(".task__subtask__controls-wrapper").removeClass("hide");
+            $(".subtask-form").addClass("hide");
+        });
+
     </script>
 @endsection

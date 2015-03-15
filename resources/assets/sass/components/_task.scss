@@ -89,6 +89,10 @@
 
         &__delete {}
 
+        &__edit-button {
+            float: right;
+        }
+
     }
 
     &__subtask--completed {
@@ -113,7 +117,7 @@
 
     &__discussion {
         margin-bottom: 10px;
-        //height: 30px;
+        height: 30px;
         list-style: none;
         width: 100%;
 
@@ -134,6 +138,11 @@
             margin-top: -10px;
             font-size: .8em;
             color: $gray-light;
+        }
+
+        &__delete-form {
+            margin-top: -30px;
+            float: right;
         }
     }
 
