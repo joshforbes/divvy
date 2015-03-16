@@ -1,0 +1,29 @@
+<?php namespace App\Events;
+
+use App\Events\Event;
+
+use Illuminate\Queue\SerializesModels;
+
+class TaskWasDeletedEvent extends Event {
+
+	use SerializesModels;
+
+	public $message;
+	public $projectId;
+
+	/**
+	 * Create a new event instance.
+	 *
+	 * @param $task
+	 */
+	public function __construct($taskName, $projectId)
+	{
+		$this->message = $this->createMessage($taskName);
+		$this->projectId = $projectId;
+	}
+
+	public function createMessage($taskName)
+	{
+		return 'A task was deleted: <strong>' . htmlentities($taskName) . '</strong>';
+	}
+}

@@ -2,6 +2,7 @@
 
 use App\Commands\AddTaskToProjectCommand;
 use App\Commands\ModifyTaskCommand;
+use App\Commands\RemoveTaskCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -107,12 +108,18 @@ class TasksController extends Controller {
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
-     * @return Response
+     * @internal param int $id
+     * @param $projectId
+     * @param $taskId
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy($id)
+    public function destroy($projectId, $taskId)
     {
-        //
+        $this->dispatch(
+            new RemoveTaskCommand($taskId, $this->user)
+        );
+
+        return redirect()->back();
     }
 
 }

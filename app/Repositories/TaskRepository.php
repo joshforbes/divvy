@@ -17,6 +17,17 @@ class TaskRepository {
     }
 
     /**
+     * Find a Task by specified Id
+     *
+     * @param $taskId
+     * @return \Illuminate\Support\Collection|null|static
+     */
+    public function findById($taskId)
+    {
+        return Task::find($taskId);
+    }
+
+    /**
      * Find a Task by the specified Id and Project Id
      *
      * @param $projectId
@@ -56,6 +67,29 @@ class TaskRepository {
             return $task->users()->detach();
         }
         return $task->users()->sync($members);
+    }
+
+    /**
+     * Delete a Task by Id
+     *
+     * @param $id
+     * @return bool|null
+     * @throws \Exception
+     */
+    public function deleteById($id)
+    {
+        return Task::find($id)->delete();
+    }
+
+    /**
+     * Delete by model
+     * @param Task $task
+     * @return bool|null
+     * @throws \Exception
+     */
+    public function delete(Task $task)
+    {
+        return $task->delete();
     }
 
 }

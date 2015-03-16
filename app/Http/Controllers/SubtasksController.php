@@ -114,8 +114,6 @@ class SubtasksController extends Controller {
         );
 
         return redirect()->back();
-
-//        return redirect()->route('task.show', [$projectId, $taskId]);
     }
 
 

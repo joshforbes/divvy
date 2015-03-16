@@ -18,7 +18,9 @@ class EventServiceProvider extends ServiceProvider {
 			'App\Handlers\Events\LogProjectActivity'
 		],
 		//task complete
-		//task delete
+		'App\Events\TaskWasDeletedEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
 		'App\Events\SubtaskAddedToTaskEvent' => [
 			'App\Handlers\Events\LogProjectActivity'
 		],
@@ -40,7 +42,9 @@ class EventServiceProvider extends ServiceProvider {
 		'App\Events\DiscussionWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity'
 		],
-		//edit discussion
+		'App\Events\DiscussionWasModifiedEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
 		'App\Events\CommentWasLeftOnDiscussionEvent' => [
 			'App\Handlers\Events\LogProjectActivity'
 		],
@@ -52,6 +56,7 @@ class EventServiceProvider extends ServiceProvider {
 		'App\Events\MemberJoinedProjectEvent' => [
 			'App\Handlers\Events\LogProjectActivity'
 		]
+		//remove member
 	];
 
 	/**

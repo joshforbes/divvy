@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Commands\LeaveCommentOnDiscussionCommand;
+use App\Commands\ModifyDiscussionCommand;
 use App\Commands\RemoveDiscussionCommand;
 use App\Commands\StartDiscussionInTaskCommand;
 use App\Http\Requests;
@@ -104,14 +105,21 @@ class DiscussionsController extends Controller {
 
 	/**
 	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
+	 * @param DiscussionRequest $request
+	 * @param $projectId
+	 * @param $taskId
+	 * @param $discussionId
+	 * @return \Illuminate\Http\RedirectResponse
 	 */
-	public function update($id)
+	public function update(DiscussionRequest $request, $projectId, $taskId, $discussionId)
 	{
-		//
+		$this->dispatch(
+			new ModifyDiscussionCommand($request, $discussionId, $this->user)
+		);
+
+		return redirect()->back();
 	}
+
 
 	/**
 	 * Remove the specified resource from storage.

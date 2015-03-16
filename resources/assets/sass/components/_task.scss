@@ -18,10 +18,22 @@
             color: white;
         }
 
+        &__delete-form {
+            display: inline;
+        }
+
+        &__delete-link {
+            float:right;
+            line-height: 50px;
+            margin-right: 20px;
+            color: white;
+            cursor: pointer;
+        }
+
         &__edit-link {
             float: right;
             line-height: 50px;
-            margin-right: 20px;
+            margin-right: 10px;
             color: white;
         }
     }
@@ -80,7 +92,7 @@
         &__link {}
 
         &__complete-form {
-            float: right;
+            display: inline;
         }
 
         &__delete-form {
@@ -112,7 +124,6 @@
     &__discussions-wrapper {
         padding: 0 30px;
         margin-bottom: 30px;
-
     }
 
     &__discussion {
@@ -143,6 +154,12 @@
         &__delete-form {
             margin-top: -30px;
             float: right;
+        }
+
+        &__edit-button {
+            float: right;
+            margin-top: -30px;
+            margin-right: 60px;
         }
     }
 

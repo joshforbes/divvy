@@ -72,6 +72,20 @@ class DiscussionRepository {
         return $discussion->delete();
     }
 
+    /**
+     * Updates the Discussion with the given id
+     *
+     * @param $discussionId
+     * @param $updatedData
+     * @return mixed
+     */
+    public function updateDiscussion($discussionId, $updatedData)
+    {
+        $discussion = Discussion::findOrFail($discussionId);
+        $discussion->fill($updatedData)->save();
+        return $discussion;
+    }
+
 
 }
 

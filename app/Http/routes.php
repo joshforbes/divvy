@@ -35,6 +35,7 @@ Route::get('/p/{id}/task/create', ['as' => 'task.create', 'uses' => 'TasksContro
 Route::get('/p/{projectId}/task/{taskId}', ['as' => 'task.show', 'uses' => 'TasksController@show']);
 Route::get('/p/{projectId}/task/{taskId}/edit', ['as' => 'task.edit', 'uses' => 'TasksController@edit']);
 Route::patch('/p/{projectId}/task/{taskId}', ['as' => 'task.update', 'uses' => 'TasksController@update']);
+Route::delete('/p/{projectId}/task/{taskId}', ['as' => 'task.destroy', 'uses' => 'TasksController@destroy']);
 
 
 #Subtasks
@@ -48,6 +49,7 @@ Route::post('/p/{projectId}/task/{taskId}/subtask/{subtaskId}/notComplete', ['as
 #Discussions
 Route::post('/p/{projectId}/task/{taskId}/discussion', ['as' => 'discussion.store', 'uses' => 'DiscussionsController@store']);
 Route::get('/p/{projectId}/task/{taskId}/discussion/{discussionId}', ['as' => 'discussion.show', 'uses' => 'DiscussionsController@show']);
+Route::patch('/p/{projectId}/task/{taskId}/discussion/{discussionId}', ['as' => 'discussion.update', 'uses' => 'DiscussionsController@update']);
 Route::delete('/p/{projectId}/task/{taskId}/discussion/{discussionId}', ['as' => 'discussion.destroy', 'uses' => 'DiscussionsController@destroy']);
 
 

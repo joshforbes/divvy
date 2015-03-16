@@ -60,4 +60,14 @@ class Task extends Model {
     {
         return $this->users->lists('id');
     }
+
+    /**
+     * If all subtasks are completed, returns true
+     *
+     * @return bool
+     */
+    public function isCompletable()
+    {
+        return $this->subtasks()->where('isCompleted', 0)->count() === 0;
+    }
 }

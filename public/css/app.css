@@ -5250,10 +5250,18 @@ button.close {
       line-height: 50px;
       margin-left: 20px;
       color: white; }
-    .task__header__edit-link {
+    .task__header__delete-form {
+      display: inline; }
+    .task__header__delete-link {
       float: right;
       line-height: 50px;
       margin-right: 20px;
+      color: white;
+      cursor: pointer; }
+    .task__header__edit-link {
+      float: right;
+      line-height: 50px;
+      margin-right: 10px;
       color: white; }
   .task__description {
     padding: 0 20px;
@@ -5318,7 +5326,7 @@ button.close {
     width: 100%;
     line-height: 30px; }
     .task__subtask__complete-form {
-      float: right; }
+      display: inline; }
     .task__subtask__delete-form {
       float: right; }
     .task__subtask__edit-button {
@@ -5354,6 +5362,10 @@ button.close {
     .task__discussion__delete-form {
       margin-top: -30px;
       float: right; }
+    .task__discussion__edit-button {
+      float: right;
+      margin-top: -30px;
+      margin-right: 60px; }
   .task__users {
     position: absolute;
     bottom: 0;
