@@ -24,7 +24,7 @@
     @if($task->subtasks)
         <ul class="task__subtasks-wrapper">
             @foreach($task->subtasks as $subtask)
-                @if($subtask->isCompleted === '0')
+                @if(!$subtask->isCompleted())
                 <li class="task__subtask">
                     <div class="task__subtask__controls-wrapper">
                     {!! Form::open(['class' => 'task__subtask__complete-form', 'route' => ['subtask.complete', $project->id, $task->id, $subtask->id]]) !!}
@@ -42,7 +42,7 @@
             @endforeach
 
             @foreach($task->subtasks as $subtask)
-                @if($subtask->isCompleted === '1')
+                @if($subtask->isCompleted())
                     <li class="task__subtask task__subtask--completed">
                         {!! Form::open(['class' => 'task__subtask__complete-form', 'route' => ['subtask.notComplete', $project->id, $task->id, $subtask->id]]) !!}
                             <input class="task__subtask__checkbox" type="checkbox" checked/>

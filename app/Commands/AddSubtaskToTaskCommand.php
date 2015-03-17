@@ -35,7 +35,7 @@ class AddSubtaskToTaskCommand extends Command implements SelfHandling {
     {
         $subtask = Subtask::add([
             'name'        => $this->name,
-            'isCompleted' => 0,
+            'is_complete' => 0,
             'task_id'     => $this->taskId,
         ]);
 

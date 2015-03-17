@@ -42,4 +42,15 @@ class Subtask extends Model {
 		return new static($attributes);
 	}
 
+
+	/**
+	 * Returns a boolean based on whether the subtask is completed
+	 *
+	 * @return mixed
+     */
+	public function isCompleted()
+	{
+		return $this->is_complete;
+	}
+
 }

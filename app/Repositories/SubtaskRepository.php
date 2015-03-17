@@ -27,7 +27,7 @@ class SubtaskRepository {
     {
         $subtask = Subtask::find($subtaskId);
 
-        $subtask->isCompleted = 1;
+        $subtask->is_complete = 1;
 
         $subtask->save();
 
@@ -44,14 +44,12 @@ class SubtaskRepository {
     {
         $subtask = Subtask::find($subtaskId);
 
-        $subtask->isCompleted = 0;
+        $subtask->is_complete = 0;
 
         $subtask->save();
 
         return $subtask;
     }
-
-
 
     /**
      * Find a Subtask by the specified Id
