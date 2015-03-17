@@ -15,7 +15,7 @@ $task = $I->haveATask([
 
 $I->amOnPage('/p/' . $project->id);
 
-$I->click('Start a New Discussion');
+$I->click('button[class="task__add-button"]');
 $I->fillField('input[name="title"]', 'A discussion title');
 $I->fillField('textarea[name="body"]', 'A discussion body');
 $I->click('input[class="discussion-form__button"]');
