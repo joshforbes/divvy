@@ -22,6 +22,10 @@
             display: inline;
         }
 
+        &__complete-form {
+            display: inline;
+        }
+
         &__delete-link {
             float:right;
             line-height: 50px;
@@ -35,6 +39,14 @@
             line-height: 50px;
             margin-right: 10px;
             color: white;
+        }
+
+        &__complete-link {
+            float: right;
+            line-height: 50px;
+            margin-right: 10px;
+            color: white;
+            cursor: pointer;
         }
     }
 

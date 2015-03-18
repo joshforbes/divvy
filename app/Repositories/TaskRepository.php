@@ -92,4 +92,38 @@ class TaskRepository {
         return $task->delete();
     }
 
+    /**
+     * Marks the specified task as complete
+     *
+     * @param $taskId
+     * @return bool
+     */
+    public function complete($taskId)
+    {
+        $task = Task::find($taskId);
+
+        $task->is_complete = 1;
+
+        $task->save();
+
+        return $task;
+    }
+
+    /**
+     * Marks the specified task as not completed
+     *
+     * @param $taskId
+     * @return bool
+     */
+    public function notComplete($taskId)
+    {
+        $task = Task::find($taskId);
+
+        $task->is_complete = 0;
+
+        $task->save();
+
+        return $task;
+    }
+
 }

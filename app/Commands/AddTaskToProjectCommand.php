@@ -43,6 +43,7 @@ class AddTaskToProjectCommand extends Command implements SelfHandling {
 			'name'        => $this->name,
 			'description' => $this->description,
 			'project_id'  => $this->projectId,
+			'is_complete' => 0
 		]);
 
 		$taskRepository->save($task);

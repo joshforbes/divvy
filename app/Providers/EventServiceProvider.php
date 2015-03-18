@@ -17,7 +17,12 @@ class EventServiceProvider extends ServiceProvider {
 		'App\Events\TaskModifiedEvent' => [
 			'App\Handlers\Events\LogProjectActivity'
 		],
-		//task complete
+		'App\Events\TaskWasCompletedEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
+		'App\Events\TaskWasIncompleteEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
 		'App\Events\TaskWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity'
 		],

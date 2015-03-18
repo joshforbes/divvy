@@ -11,6 +11,7 @@
 
             <div class="project-header__title">
                 <h1 class="project-header__name">{{ $project->name }}</h1>
+
                 <p class="project-header__description">{{ $project->description }}</p>
             </div>
 
@@ -24,7 +25,7 @@
             <div class="activity-log">
                 <span class="activity-log__header">Latest Project Activity:</span>
                 @foreach($project->activity->take(3 ) as $activity)
-                <p>{{ $activity->created_at->diffForHumans() }} - {!! $activity->body !!}</p>
+                    <p>{{ $activity->created_at->diffForHumans() }} - {!! $activity->body !!}</p>
 
                 @endforeach
             </div>
@@ -38,11 +39,25 @@
 
             <div class="tasks">
                 @foreach($project->tasks as $task)
-                    <div class="task-wrapper">
+                    @if(!$task->isCompleted())
+                        <div class="task-wrapper">
 
-                        @include('tasks.partials.task')
+                            @include('tasks.partials.task')
 
-                    </div>
+                        </div>
+                    @endif
+                @endforeach
+            </div>
+            <div class="tasks">
+                <h2>Completed Tasks:</h2>
+                @foreach($project->tasks as $task)
+                    @if($task->isCompleted())
+                        <div class="task-wrapper">
+
+                            @include('tasks.partials.task')
+
+                        </div>
+                    @endif
                 @endforeach
             </div>
         @endif
@@ -90,7 +105,11 @@
             $(this).parent(".task__header__delete-form").submit();
         });
 
-        $(".task__subtask__complete-form").on("change", "input:checkbox", function(){
+        $(".task__header__complete-link").click(function() {
+            $(this).parent(".task__header__complete-form").submit();
+        });
+
+        $(".task__subtask__complete-form").on("change", "input:checkbox", function() {
             $(this).parent(".task__subtask__complete-form").submit();
         });
 

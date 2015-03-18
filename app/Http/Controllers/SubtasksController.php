@@ -117,7 +117,15 @@ class SubtasksController extends Controller {
     }
 
 
-
+    /**
+     * Complete the subtask
+     *
+     * @param SubtaskRepository $subtaskRepository
+     * @param $projectId
+     * @param $taskId
+     * @param $subtaskId
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function complete(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
     {
         $subtask = $subtaskRepository->complete($subtaskId);
@@ -127,7 +135,16 @@ class SubtasksController extends Controller {
         return redirect()->back();
     }
 
-    public function notComplete(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
+    /**
+     * The subtask was incomplete
+     *
+     * @param SubtaskRepository $subtaskRepository
+     * @param $projectId
+     * @param $taskId
+     * @param $subtaskId
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function incomplete(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
     {
         $subtask = $subtaskRepository->notComplete($subtaskId);
 

@@ -1,8 +1,12 @@
 <?php namespace App\Http\Controllers;
 
 use App\Commands\AddTaskToProjectCommand;
+use App\Commands\CompleteTaskCommand;
 use App\Commands\ModifyTaskCommand;
 use App\Commands\RemoveTaskCommand;
+use App\Commands\ReopenTaskCommand;
+use App\Events\TaskWasCompletedEvent;
+use App\Events\TaskWasIncompleteEvent;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -117,6 +121,38 @@ class TasksController extends Controller {
     {
         $this->dispatch(
             new RemoveTaskCommand($taskId, $this->user)
+        );
+
+        return redirect()->back();
+    }
+
+    /**
+     * Complete the task
+     *
+     * @param $projectId
+     * @param $taskId
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function complete($projectId, $taskId)
+    {
+        $this->dispatch(
+            new CompleteTaskCommand($taskId)
+        );
+
+        return redirect()->back();
+    }
+
+    /**
+     * The task was incomplete
+     *
+     * @param $projectId
+     * @param $taskId
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function incomplete($projectId, $taskId)
+    {
+        $this->dispatch(
+            new ReopenTaskCommand($taskId)
         );
 
         return redirect()->back();

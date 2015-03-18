@@ -6,14 +6,19 @@
             <a class="task__header__delete-link">delete</a>
         {!! Form::close() !!}
         <a class="task__header__edit-link" href="{{ route('task.edit', [$project->id, $task->id]) }}">edit</a>
+        @if($task->isCompletable() && !$task->isCompleted())
+            {!! Form::open(['class' => 'task__header__complete-form', 'route' => ['task.complete', $project->id, $task->id]]) !!}
+                <a class="task__header__complete-link">complete</a>
+            {!! Form::close() !!}
+        @elseif($task->isCompleted())
+            {!! Form::open(['class' => 'task__header__complete-form', 'route' => ['task.incomplete', $project->id, $task->id]]) !!}
+                <a class="task__header__complete-link">re-open</a>
+            {!! Form::close() !!}
+        @endif
     </div>
 
     @if(isset($showDescription))
         <p class="task__description">{{ $task->description }}</p>
-    @endif
-
-    @if($task->isCompletable())
-        Complete
     @endif
 
     {!! Form::open(['class' => 'task__add-form', 'route' => ['subtask.store', $project->id, $task->id]]) !!}
@@ -44,7 +49,7 @@
             @foreach($task->subtasks as $subtask)
                 @if($subtask->isCompleted())
                     <li class="task__subtask task__subtask--completed">
-                        {!! Form::open(['class' => 'task__subtask__complete-form', 'route' => ['subtask.notComplete', $project->id, $task->id, $subtask->id]]) !!}
+                        {!! Form::open(['class' => 'task__subtask__complete-form', 'route' => ['subtask.incomplete', $project->id, $task->id, $subtask->id]]) !!}
                             <input class="task__subtask__checkbox" type="checkbox" checked/>
                         {!! Form::close() !!}
                         <a class ="task__subtask__link" href="{{ route('subtask.show', [$project->id, $task->id, $subtask->id]) }}">{{ $subtask->name }}</a>

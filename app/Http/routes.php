@@ -36,6 +36,8 @@ Route::get('/p/{projectId}/task/{taskId}', ['as' => 'task.show', 'uses' => 'Task
 Route::get('/p/{projectId}/task/{taskId}/edit', ['as' => 'task.edit', 'uses' => 'TasksController@edit']);
 Route::patch('/p/{projectId}/task/{taskId}', ['as' => 'task.update', 'uses' => 'TasksController@update']);
 Route::delete('/p/{projectId}/task/{taskId}', ['as' => 'task.destroy', 'uses' => 'TasksController@destroy']);
+Route::post('/p/{projectId}/task/{taskId}/complete', ['as' => 'task.complete', 'uses' => 'TasksController@complete']);
+Route::post('/p/{projectId}/task/{taskId}/incomplete', ['as' => 'task.incomplete', 'uses' => 'TasksController@incomplete']);
 
 
 #Subtasks
@@ -44,7 +46,7 @@ Route::get('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask
 Route::patch('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask.update', 'uses' => 'SubtasksController@update']);
 Route::delete('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask.destroy', 'uses' => 'SubtasksController@destroy']);
 Route::post('/p/{projectId}/task/{taskId}/subtask/{subtaskId}/complete', ['as' => 'subtask.complete', 'uses' => 'SubtasksController@complete']);
-Route::post('/p/{projectId}/task/{taskId}/subtask/{subtaskId}/notComplete', ['as' => 'subtask.notComplete', 'uses' => 'SubtasksController@notComplete']);
+Route::post('/p/{projectId}/task/{taskId}/subtask/{subtaskId}/incomplete', ['as' => 'subtask.incomplete', 'uses' => 'SubtasksController@incomplete']);
 
 #Discussions
 Route::post('/p/{projectId}/task/{taskId}/discussion', ['as' => 'discussion.store', 'uses' => 'DiscussionsController@store']);

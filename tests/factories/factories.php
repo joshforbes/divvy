@@ -26,12 +26,13 @@ $factory('App\Task', [
     'project_id'  => 'factory:App\Project',
     'name'        => $faker->sentence(),
     'description' => $faker->paragraph(),
+    'is_complete' => 0
 ]);
 
 $factory('App\Subtask', [
     'task_id'     => 'factory:App\Task',
     'name'        => $faker->sentence(),
-    'isCompleted' => 0
+    'is_complete' => 0
 ]);
 
 $factory('App\Discussion', [

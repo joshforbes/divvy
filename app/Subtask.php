@@ -9,7 +9,7 @@ class Subtask extends Model {
 	 *
 	 * @var array
      */
-	protected $fillable = ['name', 'isCompleted', 'task_id'];
+	protected $fillable = ['name', 'is_complete', 'task_id'];
 
 	/**
 	 * A Subtask belongs to one task

@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model {
 
-    protected $fillable = ['name', 'description', 'project_id', 'user_id'];
+    protected $fillable = ['name', 'description', 'project_id', 'user_id', 'is_complete'];
 
     public static function assign(array $attributes)
     {
@@ -69,5 +69,15 @@ class Task extends Model {
     public function isCompletable()
     {
         return $this->subtasks()->where('is_complete', 0)->count() === 0;
+    }
+
+    /**
+     * Returns a boolean based on whether the task is completed
+     *
+     * @return mixed
+     */
+    public function isCompleted()
+    {
+        return $this->is_complete;
     }
 }

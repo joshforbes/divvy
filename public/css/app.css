@@ -5252,6 +5252,8 @@ button.close {
       color: white; }
     .task__header__delete-form {
       display: inline; }
+    .task__header__complete-form {
+      display: inline; }
     .task__header__delete-link {
       float: right;
       line-height: 50px;
@@ -5263,6 +5265,12 @@ button.close {
       line-height: 50px;
       margin-right: 10px;
       color: white; }
+    .task__header__complete-link {
+      float: right;
+      line-height: 50px;
+      margin-right: 10px;
+      color: white;
+      cursor: pointer; }
   .task__description {
     padding: 0 20px;
     margin-bottom: 30px; }
