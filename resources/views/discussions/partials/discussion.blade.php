@@ -9,6 +9,6 @@
             <a href="{{ route('profile.show', $discussion->author->username) }}">{{$discussion->author->username}}</a>
             {{ $discussion->created_at->diffForHumans() }}
         </p>
-        <p class="discussion_body">{{ $discussion->body }}</p>
+        <p class="discussion__body">{{ $discussion->body }}</p>
     </div>
 </div>

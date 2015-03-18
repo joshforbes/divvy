@@ -13,21 +13,12 @@
         </div>
 
         <div class="comment-form-wrapper">
-            {!! Form::open(['route' => ['comment.storeDiscussion', $discussion->id], 'class' => 'comment-form']) !!}
-                {!! Form::text('body', null, ['class' => 'comment-form__input', 'placeholder' => 'Add a comment']) !!}
-                {!! Form::submit('Add this comment', ['class' => 'btn btn-primary form-control']) !!}
-            {!! Form::close() !!}
+            @include('comments.partials.form')
         </div>
 
         <div class="comments-wrapper">
-
             @foreach($comments as $comment)
-
-            <div class="comment">
-                {{ $comment->body }}
-                {{ $comment->author->username }}
-            </div>
-
+                @include('comments.partials.comment')
             @endforeach
         </div>
 
