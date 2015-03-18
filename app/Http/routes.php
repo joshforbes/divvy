@@ -11,10 +11,10 @@
 |
 */
 
-//Event::listen('illuminate.query', function($sql)
-//{
-//	var_dump($sql);
-//});
+Event::listen('illuminate.query', function($sql)
+{
+	var_dump($sql);
+});
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
 
@@ -58,6 +58,9 @@ Route::delete('/p/{projectId}/task/{taskId}/discussion/{discussionId}', ['as' =>
 #Comments
 Route::post('/comment/discussion/{discussionId}', ['as' => 'comment.storeDiscussion', 'uses' => 'DiscussionsController@storeComment']);
 Route::post('/comment/subtask/{subtaskId}', ['as' => 'comment.storeSubtask', 'uses' => 'SubtasksController@storeComment']);
+Route::delete('/p/{projectId}/task/{taskId}/comment/{commentId}', ['as' => 'comment.destroy', 'uses' => 'CommentsController@destroy']);
+Route::patch('/p/{projectId}/task/{taskId}/comment/{commentId}', ['as' => 'comment.update', 'uses' => 'CommentsController@update']);
+
 
 #Profiles
 Route::get('/{username}/edit', [

@@ -56,8 +56,12 @@ class EventServiceProvider extends ServiceProvider {
 		'App\Events\CommentWasLeftOnSubtaskEvent' => [
 			'App\Handlers\Events\LogProjectActivity'
 		],
-		//delete comment
-		//edit comment
+		'App\Events\CommentWasDeletedEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
+		'App\Events\CommentWasModifiedEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
+		],
 		'App\Events\MemberJoinedProjectEvent' => [
 			'App\Handlers\Events\LogProjectActivity'
 		]
