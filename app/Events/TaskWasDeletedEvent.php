@@ -14,7 +14,8 @@ class TaskWasDeletedEvent extends Event {
 	/**
 	 * Create a new event instance.
 	 *
-	 * @param $task
+	 * @param $taskName
+	 * @param $projectId
 	 */
 	public function __construct($taskName, $projectId)
 	{

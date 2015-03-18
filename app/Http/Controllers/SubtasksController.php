@@ -1,21 +1,18 @@
 <?php namespace App\Http\Controllers;
 
 use App\Commands\AddSubtaskToTaskCommand;
+use App\Commands\CompleteSubtaskCommand;
 use App\Commands\LeaveCommentOnSubtaskCommand;
 use App\Commands\ModifySubtaskCommand;
 use App\Commands\RemoveSubtaskCommand;
+use App\Commands\ReopenSubtaskCommand;
 use App\Events\SubtaskCompletedEvent;
-use App\Events\SubtaskWasCompletedEvent;
-use App\Events\SubtaskWasIncompleteEvent;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\LeaveCommentRequest;
 use App\Http\Requests\SubtaskRequest;
 use App\Repositories\SubtaskRepository;
-use App\Subtask;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class SubtasksController extends Controller {
 
@@ -72,31 +69,19 @@ class SubtasksController extends Controller {
     /**
      * Display the specified resource.
      *
-     * @param SubtaskRepository $subtaskRepository
      * @param $projectId
      * @param $taskId
      * @param $subtaskId
      * @return Response
      */
-    public function show(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
+    public function show($projectId, $taskId, $subtaskId)
     {
-        $subtask = $subtaskRepository->findByIdInTaskAndProject($subtaskId, $taskId, $projectId);
+        $subtask = $this->subtaskRepository->findByIdInTaskAndProject($subtaskId, $taskId, $projectId);
         $task = $subtask->task;
         $project = $task->project;
         $comments = $subtask->comments;
 
         return view('subtasks.show', compact('subtask', 'task', 'project', 'comments'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        //
     }
 
     /**
@@ -120,17 +105,16 @@ class SubtasksController extends Controller {
     /**
      * Complete the subtask
      *
-     * @param SubtaskRepository $subtaskRepository
      * @param $projectId
      * @param $taskId
      * @param $subtaskId
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function complete(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
+    public function complete($projectId, $taskId, $subtaskId)
     {
-        $subtask = $subtaskRepository->complete($subtaskId);
-
-        \Event::fire(new SubtaskWasCompletedEvent($subtask, $this->user));
+        $this->dispatch(
+            new CompleteSubtaskCommand($subtaskId, $this->user)
+        );
 
         return redirect()->back();
     }
@@ -138,17 +122,16 @@ class SubtasksController extends Controller {
     /**
      * The subtask was incomplete
      *
-     * @param SubtaskRepository $subtaskRepository
      * @param $projectId
      * @param $taskId
      * @param $subtaskId
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function incomplete(SubtaskRepository $subtaskRepository, $projectId, $taskId, $subtaskId)
+    public function incomplete($projectId, $taskId, $subtaskId)
     {
-        $subtask = $subtaskRepository->notComplete($subtaskId);
-
-        \Event::fire(new SubtaskWasIncompleteEvent($subtask, $this->user));
+        $this->dispatch(
+            new ReopenSubtaskCommand($subtaskId, $this->user)
+        );
 
         return redirect()->back();
     }

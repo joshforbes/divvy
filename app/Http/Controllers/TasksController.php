@@ -11,6 +11,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\TaskRequest;
+use App\Project;
 use App\Repositories\ProjectRepository;
 use App\Repositories\TaskRepository;
 use App\Task;
@@ -22,18 +23,28 @@ use Illuminate\Http\Request;
  */
 class TasksController extends Controller {
 
+    protected $projectRepository;
+    protected $taskRepository;
+
+    public function __construct(ProjectRepository $projectRepository, TaskRepository $taskRepository)
+    {
+        parent::__construct();
+
+        $this->projectRepository = $projectRepository;
+        $this->taskRepository = $taskRepository;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
-     * @param ProjectRepository $projectRepository
      * @param $projectId
      * @return Response
      */
-    public function create(ProjectRepository $projectRepository, $projectId)
+    public function create($projectId)
     {
-        $project = $projectRepository->findById($projectId);
+        $project = $this->projectRepository->findById($projectId);
 
-        $members = $projectRepository->usersInProjectArray($project);
+        $members = $this->projectRepository->usersInProjectArray($project);
 
         return view('tasks.create', compact('project', 'members'));
     }
@@ -57,14 +68,13 @@ class TasksController extends Controller {
     /**
      * Display the specified resource.
      *
-     * @param TaskRepository $taskRepository
      * @param $projectId
      * @param $taskId
      * @return Response
      */
-    public function show(TaskRepository $taskRepository, $projectId, $taskId)
+    public function show($projectId, $taskId)
     {
-        $task = $taskRepository->findByIdInProject($projectId, $taskId);
+        $task = $this->taskRepository->findByIdInProject($projectId, $taskId);
         $project = $task->project;
         $subtasks = $task->subtasks;
 
@@ -74,19 +84,17 @@ class TasksController extends Controller {
     /**
      * Show the form for editing the specified resource.
      *
-     * @param ProjectRepository $projectRepository
-     * @param TaskRepository $taskRepository
      * @param $projectId
      * @param $taskId
      * @return Response
      */
-    public function edit(ProjectRepository $projectRepository, TaskRepository $taskRepository, $projectId, $taskId)
+    public function edit($projectId, $taskId)
     {
-        $task = $taskRepository->findByIdInProject($projectId, $taskId);
+        $task = $this->taskRepository->findByIdInProject($projectId, $taskId);
 
         $project = $task->project;
 
-        $members = $projectRepository->usersInProjectArray($project);
+        $members = $this->projectRepository->usersInProjectArray($project);
 
         return view('tasks.edit', compact('task', 'project', 'members'));
     }
@@ -120,7 +128,7 @@ class TasksController extends Controller {
     public function destroy($projectId, $taskId)
     {
         $this->dispatch(
-            new RemoveTaskCommand($taskId, $this->user)
+            new RemoveTaskCommand($taskId)
         );
 
         return redirect()->back();

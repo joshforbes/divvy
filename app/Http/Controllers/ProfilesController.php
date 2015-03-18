@@ -13,13 +13,7 @@ use App\Repositories\UserRepository;
 
 class ProfilesController extends Controller {
 
-    /**
-     * @var UserRepository
-     */
     protected $userRepository;
-    /**
-     * @var ProfileRepository
-     */
     private $profileRepository;
 
     /**
