@@ -68,7 +68,7 @@ class Task extends Model {
      */
     public function isCompletable()
     {
-        return $this->subtasks()->where('is_complete', 0)->count() === 0;
+        return $this->subtasks->where('is_complete', 0)->count() === 0;
     }
 
     /**

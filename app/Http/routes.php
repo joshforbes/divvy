@@ -11,10 +11,10 @@
 |
 */
 
-Event::listen('illuminate.query', function($sql)
-{
-	var_dump($sql);
-});
+//Event::listen('illuminate.query', function($sql)
+//{
+//	var_dump($sql);
+//});
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
 

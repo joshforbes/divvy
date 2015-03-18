@@ -59,7 +59,7 @@ class SubtaskRepository {
      */
     public function findByIdInTaskAndProject($subtaskId, $taskId, $projectId)
     {
-        $subtask = Subtask::with('task.project')
+        $subtask = Subtask::with('task.project', 'comments.author.profile')
             ->whereHas('task', function($q) use($taskId){
                 $q->whereId($taskId);
             })

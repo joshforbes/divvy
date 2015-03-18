@@ -25,7 +25,7 @@ class DiscussionRepository {
      */
     public function findByIdInTaskAndProject($discussionId, $taskId, $projectId)
     {
-        $discussion = Discussion::with('task.project', 'author', 'comments.author')
+        $discussion = Discussion::with('task.project', 'author', 'comments.author.profile')
             ->whereHas('task', function($q) use($taskId){
                 $q->whereId($taskId);
             })
