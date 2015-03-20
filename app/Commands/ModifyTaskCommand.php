@@ -16,12 +16,13 @@ class ModifyTaskCommand extends Command implements SelfHandling {
 	 * @param Request $request
 	 * @param $taskId
 	 */
-	public function __construct(Request $request, $taskId)
+	public function __construct(Request $request, $taskId, $user)
 	{
 		$this->name = $request->name;
 		$this->description = $request->description;
 		$this->memberList = $request->memberList;
 		$this->taskId = $taskId;
+		$this->user = $user;
 	}
 
 	/**
@@ -39,7 +40,7 @@ class ModifyTaskCommand extends Command implements SelfHandling {
 
 		$taskRepository->assignTo($this->memberList, $task);
 
-		$event->fire(new TaskModifiedEvent($task));
+		$event->fire(new TaskModifiedEvent($task, $this->user));
 
 	}
 

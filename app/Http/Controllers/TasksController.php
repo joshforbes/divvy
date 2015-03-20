@@ -58,8 +58,8 @@ class TasksController extends Controller {
      */
     public function store(TaskRequest $request, $projectId)
     {
-        $task = $this->dispatch(
-            new AddTaskToProjectCommand($request, $projectId)
+        $this->dispatch(
+            new AddTaskToProjectCommand($request, $projectId, $this->user)
         );
 
         return redirect()->route('project.show', [$projectId]);
@@ -110,7 +110,7 @@ class TasksController extends Controller {
     public function update(TaskRequest $request, $projectId, $taskId)
     {
         $this->dispatch(
-            new ModifyTaskCommand($request, $taskId)
+            new ModifyTaskCommand($request, $taskId, $this->user)
         );
 
         //Flash::message('Profile updated');
@@ -128,7 +128,7 @@ class TasksController extends Controller {
     public function destroy($projectId, $taskId)
     {
         $this->dispatch(
-            new RemoveTaskCommand($taskId)
+            new RemoveTaskCommand($taskId, $this->user)
         );
 
         return redirect()->back();
@@ -144,7 +144,7 @@ class TasksController extends Controller {
     public function complete($projectId, $taskId)
     {
         $this->dispatch(
-            new CompleteTaskCommand($taskId)
+            new CompleteTaskCommand($taskId, $this->user)
         );
 
         return redirect()->back();
@@ -160,7 +160,7 @@ class TasksController extends Controller {
     public function incomplete($projectId, $taskId)
     {
         $this->dispatch(
-            new ReopenTaskCommand($taskId)
+            new ReopenTaskCommand($taskId, $this->user)
         );
 
         return redirect()->back();

@@ -26,8 +26,11 @@ class LogProjectActivity {
 	public function handle($event)
 	{
 		$activity = Activity::log([
-			'body' => $event->message,
-			'project_id' => $event->projectId
+			'action' => $event->action,
+			'subject_type' => $event->subjectType,
+			'subject_id' => $event->subjectId,
+			'project_id' => $event->projectId,
+			'user_id' => $event->userId
 		]);
 
 		$this->activityRepository->save($activity);

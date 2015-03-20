@@ -1,8 +1,11 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Task extends Model {
+
+    use SoftDeletes;
 
     protected $fillable = ['name', 'description', 'project_id', 'user_id', 'is_complete'];
 
@@ -68,7 +71,7 @@ class Task extends Model {
      */
     public function isCompletable()
     {
-        return $this->subtasks->where('is_complete', 0)->count() === 0;
+        return $this->subtasks()->where('is_complete', 0)->count() === 0;
     }
 
     /**

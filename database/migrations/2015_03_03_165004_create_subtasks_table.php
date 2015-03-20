@@ -19,6 +19,7 @@ class CreateSubtasksTable extends Migration {
 			$table->string('name');
 			$table->boolean('is_complete');
 			$table->timestamps();
+			$table->softDeletes();
 
 			$table->foreign('task_id')
 				->references('id')

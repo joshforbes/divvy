@@ -15,10 +15,12 @@ class CompleteTaskCommand extends Command implements SelfHandling {
 	 * Create a new command instance.
 	 *
 	 * @param $taskId
+	 * @param $user
 	 */
-	public function __construct($taskId)
+	public function __construct($taskId, $user)
 	{
 		$this->taskId = $taskId;
+		$this->user = $user;
 	}
 
 	/**
@@ -31,7 +33,7 @@ class CompleteTaskCommand extends Command implements SelfHandling {
 	{
 		$task = $taskRepository->complete($this->taskId);
 
-		$event->fire(new TaskWasCompletedEvent($task));
+		$event->fire(new TaskWasCompletedEvent($task, $this->user));
 	}
 
 }

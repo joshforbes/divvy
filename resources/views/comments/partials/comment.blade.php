@@ -1,9 +1,10 @@
 <div class="comment">
     <div class="comment__sidebar">
         <span class="comment__avatar">{!! $comment->author->profile->present()->avatarHtml('60px') !!}</span>
-        <span class="comment__edit-link">edit</span>
+        <a class="comment__edit-link">edit</a>
         {!! Form::open(['class' => 'comment__delete-form', 'method' => 'DELETE', 'route' => ['comment.destroy', $project->id, $task->id, $comment->id]]) !!}
-            {!! Form::submit('delete', ['class' => 'btn btn-primary form-control']) !!}
+        <a class="comment__delete-link">delete</a>
+        {{--{!! Form::submit('delete', ['class' => 'btn btn-primary form-control']) !!}--}}
         {!! Form::close() !!}
     </div>
 

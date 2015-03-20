@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Activity extends Model {
 
-    protected $fillable = ['body', 'project_id'];
+    protected $fillable = ['action', 'subject_type', 'subject_id', 'user_id', 'project_id'];
 
     /**
      * The database table used by the model.
@@ -21,6 +21,26 @@ class Activity extends Model {
     public function project()
     {
         return $this->belongsTo('App\Project');
+    }
+
+    /**
+     * An Activity belongs to one user
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+    /**
+     * Get the subject of the activity.
+     *
+     * @return mixed
+     */
+    public function subject()
+    {
+        return $this->morphTo();
     }
 
     /**

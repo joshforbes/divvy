@@ -14,9 +14,10 @@ class RemoveTaskCommand extends Command implements SelfHandling {
 	 *
 	 * @param $taskId
 	 */
-	public function __construct($taskId)
+	public function __construct($taskId, $user)
 	{
 		$this->taskId = $taskId;
+		$this->user = $user;
 	}
 
 	/**
@@ -28,12 +29,9 @@ class RemoveTaskCommand extends Command implements SelfHandling {
 	{
 		$task = $taskRepository->findById($this->taskId);
 
-		$taskName = $task->name;
-		$projectId = $task->project_id;
-
 		$taskRepository->delete($task);
 
-		$event->fire(new TaskWasDeletedEvent($taskName, $projectId));
+		$event->fire(new TaskWasDeletedEvent($task, $this->user));
 	}
 
 }

@@ -8,23 +8,24 @@ class TaskWasDeletedEvent extends Event {
 
 	use SerializesModels;
 
-	public $message;
+	public $action;
+	public $subjectId;
+	public $subjectType;
+	public $userId;
 	public $projectId;
 
 	/**
 	 * Create a new event instance.
 	 *
-	 * @param $taskName
-	 * @param $projectId
+	 * @param $task
+	 * @param $user
 	 */
-	public function __construct($taskName, $projectId)
+	public function __construct($task, $user)
 	{
-		$this->message = $this->createMessage($taskName);
-		$this->projectId = $projectId;
-	}
-
-	public function createMessage($taskName)
-	{
-		return 'A task was deleted: <strong>' . htmlentities($taskName) . '</strong>';
+		$this->action = 'remove_task';
+		$this->subjectId = $task->id;
+		$this->subjectType = get_class($task);
+		$this->userId = $user->id;
+		$this->projectId = $task->project_id;
 	}
 }

@@ -1,8 +1,11 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Subtask extends Model {
+
+	use SoftDeletes;
 
 	/**
 	 * The attributes that can be mass assigned

@@ -15,10 +15,12 @@ class ReopenTaskCommand extends Command implements SelfHandling {
 	 * Create a new command instance.
 	 *
 	 * @param $taskId
+	 * @param $user
 	 */
-	public function __construct($taskId)
+	public function __construct($taskId, $user)
 	{
 		$this->taskId = $taskId;
+		$this->user = $user;
 	}
 
 	/**
@@ -31,7 +33,7 @@ class ReopenTaskCommand extends Command implements SelfHandling {
 	{
 		$task = $taskRepository->notComplete($this->taskId);
 
-		$event->fire(new TaskWasIncompleteEvent($task));
+		$event->fire(new TaskWasIncompleteEvent($task, $this->user));
 	}
 
 }

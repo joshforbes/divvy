@@ -9,6 +9,8 @@
 @import "pages/task-show";
 @import "pages/login";
 @import "pages/discussion-show";
+@import "pages/subtask-show";
+@import "pages/comment-layout";
 
 
 @import "components/project-overview";
@@ -23,7 +25,9 @@
 @import "components/activity-log";
 @import "components/subtask-form";
 @import "components/comment-form";
+@import "components/comment-edit-form";
 @import "components/comment";
+@import "components/subtask";
 
 
 .container-small {

@@ -20,6 +20,7 @@ class CreateTasksTable extends Migration {
 			$table->text('description')->nullable();
 			$table->boolean('is_complete');
 			$table->timestamps();
+			$table->softDeletes();
 
 			$table->foreign('project_id')
 				->references('id')

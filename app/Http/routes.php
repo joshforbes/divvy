@@ -16,6 +16,7 @@
 //	var_dump($sql);
 //});
 
+
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
 
 Route::controllers([
@@ -71,4 +72,3 @@ Route::get('/{username}/edit', [
 Route::patch('/{username}', ['as' => 'profile.update', 'uses' => 'ProfilesController@update']);
 Route::patch('/{username}/upload', ['as' => 'profile.uploadAvatar', 'uses' => 'ProfilesController@uploadAvatar']);
 Route::get('/{username}', ['as' => 'profile.show', 'uses' => 'ProfilesController@show']);
-

@@ -29,3 +29,27 @@
 
 
 @endsection
+
+@section('js')
+
+    <script>
+        $(".comment__edit-link").click(function() {
+            $(this).parent().siblings().children(".comment__body").addClass("hide");
+            $(this).parent().siblings().children(".comment-edit-form-wrapper").removeClass("hide");
+
+        });
+
+        $(".comment-form__button--cancel").click(function(e) {
+            e.preventDefault();
+            $(this).parents(".comment-edit-form-wrapper").addClass("hide");
+            $(this).closest(".comment-edit-form-wrapper").siblings(".comment__body").removeClass("hide");
+        });
+
+        $(".comment__delete-link").click(function() {
+            $(this).parent().submit();
+        });
+
+
+    </script>
+
+@endsection

@@ -10,23 +10,24 @@ class TaskWasCompletedEvent extends Event {
 
 	use SerializesModels;
 
-	public $message;
+	public $action;
+	public $subjectId;
+	public $subjectType;
+	public $userId;
 	public $projectId;
 
 	/**
 	 * Create a new event instance.
-	 * @param Task $task
+	 *
+	 * @param $task
+	 * @param $user
 	 */
-	public function __construct(Task $task)
+	public function __construct($task, $user)
 	{
-		$this->message = $this->createMessage($task->name);
+		$this->action = 'complete_task';
+		$this->subjectId = $task->id;
+		$this->subjectType = get_class($task);
+		$this->userId = $user->id;
 		$this->projectId = $task->project_id;
 	}
-
-	public function createMessage($taskName)
-	{
-		return 'A task was completed: <strong>' . htmlentities($taskName) . '</strong>';
-	}
-
-
 }
