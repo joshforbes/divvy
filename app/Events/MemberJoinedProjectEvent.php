@@ -6,9 +6,13 @@ use Illuminate\Queue\SerializesModels;
 
 class MemberJoinedProjectEvent extends Event {
 
+
 	use SerializesModels;
 
-	public $message;
+	public $action;
+	public $subjectId;
+	public $subjectType;
+	public $userId;
 	public $projectId;
 
 	/**
@@ -19,13 +23,11 @@ class MemberJoinedProjectEvent extends Event {
 	 */
 	public function __construct($user, $project)
 	{
-		$this->message = $this->createMessage($user->username);
+		$this->action = 'add_member';
+		$this->subjectId = $user->id;
+		$this->subjectType = get_class($user);
+		$this->userId = $user->id;
 		$this->projectId = $project->id;
-	}
-
-	public function createMessage($username)
-	{
-		return '<strong>' . htmlentities($username) . '</strong> has joined the project';
 	}
 
 

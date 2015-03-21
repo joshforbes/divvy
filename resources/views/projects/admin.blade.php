@@ -21,15 +21,15 @@
 
         </div>
 
-        {{--<div class="activity-log-wrapper">--}}
-            {{--<div class="activity-log">--}}
-                {{--<span class="activity-log__header">Latest Project Activity:</span>--}}
-                {{--@foreach($project->activity->take(3 ) as $activity)--}}
-                    {{--<p>{{ $activity->created_at->diffForHumans() }} - {!! $activity->body !!}</p>--}}
+        <div class="activity-log-wrapper">
+            <div class="activity-log">
+                <span class="activity-log__header">Latest Project Activity:</span>
+                @foreach($project->activity->take(3) as $activity)
 
-                {{--@endforeach--}}
-            {{--</div>--}}
-        {{--</div>--}}
+                    <p>@include("activity.types.{$activity->action}")</p>
+                @endforeach
+            </div>
+        </div>
 
         @if($project->tasks)
             <div class="tasks-header">

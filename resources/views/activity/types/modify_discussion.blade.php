@@ -1,0 +1,6 @@
+{{ $activity->created_at->diffForHumans() }} - {{ $activity->present()->username }} modified a discussion:
+@if ($activity->subject->trashed())
+    {{ $activity->subject->title }}
+@else
+    <a href="{{ route('subtask.show', [$activity->subject->task->project_id, $activity->subject->task->id, $activity->subject->id]) }}">{{ $activity->subject->title }}</a>
+@endif

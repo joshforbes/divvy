@@ -1,0 +1,1 @@
+{{ $activity->created_at->diffForHumans() }} - {{ $activity->user->username }} joined the project

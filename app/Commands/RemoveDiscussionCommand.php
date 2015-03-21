@@ -30,13 +30,9 @@ class RemoveDiscussionCommand extends Command implements SelfHandling {
 	{
 		$discussion = $discussionRepository->findById($this->discussionId);
 
-		$discussionTitle = $discussion->title;
-		$taskName = $discussion->task->name;
-		$projectId = $discussion->task->project_id;
-
 		$discussionRepository->delete($discussion);
 
-		$event->fire(new DiscussionWasDeletedEvent($discussionTitle, $taskName, $projectId, $this->user));
+		$event->fire(new DiscussionWasDeletedEvent($discussion, $this->user));
 	}
 
 }

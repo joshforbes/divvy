@@ -10,23 +10,25 @@ class DiscussionStartedInTaskEvent extends Event {
 
 	use SerializesModels;
 
-	public $message;
+	public $action;
+	public $subjectId;
+	public $subjectType;
+	public $userId;
 	public $projectId;
 
 	/**
 	 * Create a new event instance.
-	 * @param Discussion $discussion
-	 * @param User $user
+	 *
+	 * @param $discussion
+	 * @param $user
 	 */
-	public function __construct(Discussion $discussion, User $user)
+	public function __construct($discussion, $user)
 	{
-		$this->message = $this->createMessage($user->username, $discussion->title, $discussion->task->name);
+		$this->action = 'start_discussion';
+		$this->subjectId = $discussion->id;
+		$this->subjectType = get_class($discussion);
+		$this->userId = $user->id;
 		$this->projectId = $discussion->task->project_id;
-	}
-
-	public function createMessage($username, $discussionTitle, $taskName)
-	{
-		return '<strong>' . htmlentities($username) . '</strong> posted a new message <strong>' . htmlentities($discussionTitle) . '</strong> in the task <strong>' . htmlentities($taskName) . '</strong>';
 	}
 
 

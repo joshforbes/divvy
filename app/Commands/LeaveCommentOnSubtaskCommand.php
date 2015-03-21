@@ -38,12 +38,12 @@ class LeaveCommentOnSubtaskCommand extends Command implements SelfHandling {
 	{
 		$subtask = $subtaskRepository->findById($this->subtaskId);
 
-		Comment::leaveOn($subtask, [
+		$comment = Comment::leaveOn($subtask, [
 			'body' => $this->body,
 			'user_id' => $this->user->id
 		]);
 
-		$event->fire(new CommentWasLeftOnSubtaskEvent($subtask, $this->user));
+		$event->fire(new CommentWasLeftOnSubtaskEvent($comment, $this->user));
 
 	}
 

@@ -9,27 +9,24 @@ class SubtaskWasDeletedEvent extends Event {
 
 	use SerializesModels;
 
-	public $message;
+	public $action;
+	public $subjectId;
+	public $subjectType;
+	public $userId;
 	public $projectId;
 
 	/**
 	 * Create a new event instance.
-	 * @param $subtaskName
-	 * @param $taskName
-	 * @param $projectId
-	 * @param User $user
-	 * @internal param Subtask $subtask
+	 *
+	 * @param $subtask
+	 * @param $user
 	 */
-	public function __construct($subtaskName, $taskName, $projectId, User $user)
+	public function __construct($subtask, $user)
 	{
-		$this->message = $this->createMessage($user->username, $subtaskName, $taskName);
-		$this->projectId = $projectId;
+		$this->action = 'remove_subtask';
+		$this->subjectId = $subtask->id;
+		$this->subjectType = get_class($subtask);
+		$this->userId = $user->id;
+		$this->projectId = $subtask->task->project_id;
 	}
-
-	public function createMessage($username, $subtaskName, $taskName)
-	{
-		return '<strong>' . htmlentities($username) . '</strong> deleted the subtask <strong>' . htmlentities($subtaskName) . '</strong> from the task <strong>' . htmlentities($taskName) . '</strong>';
-	}
-
-
 }

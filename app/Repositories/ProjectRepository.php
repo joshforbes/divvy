@@ -48,7 +48,7 @@ class ProjectRepository {
      */
     public function findById($id)
     {
-        return Project::with('tasks.users.profile', 'users.profile', 'admins.profile', 'tasks.subtasks', 'tasks.discussions.author.profile')->whereId($id)->firstOrFail();
+        return Project::with('tasks.users.profile', 'users.profile', 'admins.profile', 'tasks.subtasks', 'tasks.discussions.author.profile', 'activity.subject', 'activity.user')->whereId($id)->firstOrFail();
     }
 
     /**

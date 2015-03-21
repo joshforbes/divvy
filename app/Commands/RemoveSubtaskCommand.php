@@ -31,13 +31,9 @@ class RemoveSubtaskCommand extends Command implements SelfHandling {
 	{
 		$subtask = $subtaskRepository->findById($this->subtaskId);
 
-		$subtaskName = $subtask->name;
-		$taskName = $subtask->task->name;
-		$projectId = $subtask->task->project_id;
-
 		$subtaskRepository->delete($subtask);
 
-		$event->fire(new SubtaskWasDeletedEvent($subtaskName, $taskName, $projectId, $this->user));
+		$event->fire(new SubtaskWasDeletedEvent($subtask, $this->user));
 	}
 
 }

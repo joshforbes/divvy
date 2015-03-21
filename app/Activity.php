@@ -1,8 +1,14 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laracasts\Presenter\PresentableTrait;
 
 class Activity extends Model {
+
+    use PresentableTrait;
+
+    protected $presenter = 'App\Presenters\ActivityPresenter';
+
 
     protected $fillable = ['action', 'subject_type', 'subject_id', 'user_id', 'project_id'];
 
@@ -40,7 +46,7 @@ class Activity extends Model {
      */
     public function subject()
     {
-        return $this->morphTo();
+        return $this->morphTo()->withTrashed();
     }
 
     /**

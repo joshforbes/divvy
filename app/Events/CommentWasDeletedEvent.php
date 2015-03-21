@@ -9,26 +9,25 @@ class CommentWasDeletedEvent extends Event {
 
 	use SerializesModels;
 
-	public $message;
+	public $action;
+	public $subjectId;
+	public $subjectType;
+	public $userId;
 	public $projectId;
 
 	/**
 	 * Create a new event instance.
-	 * @param $commentableName
-	 * @param $taskName
-	 * @param $projectId
-	 * @param User $user
-	 * @internal param Subtask $subtask
+	 *
+	 * @param $comment
+	 * @param $user
 	 */
-	public function __construct($commentableName, $taskName, $projectId, User $user)
+	public function __construct($comment, $user)
 	{
-		$this->message = $this->createMessage($user->username, $commentableName, $taskName);
-		$this->projectId = $projectId;
-	}
-
-	public function createMessage($username, $commentableName, $taskName)
-	{
-		return '<strong>' . htmlentities($username) . '</strong> deleted a comment from <strong>' . htmlentities($commentableName) . '</strong> in the task <strong>' . htmlentities($taskName) . '</strong>';
+		$this->action = 'remove_comment';
+		$this->subjectId = $comment->id;
+		$this->subjectType = get_class($comment);
+		$this->userId = $user->id;
+		$this->projectId = $comment->commentable->task->project_id;
 	}
 
 

@@ -9,26 +9,25 @@ class DiscussionWasDeletedEvent extends Event {
 
 	use SerializesModels;
 
-	public $message;
+	public $action;
+	public $subjectId;
+	public $subjectType;
+	public $userId;
 	public $projectId;
 
 	/**
 	 * Create a new event instance.
-	 * @param $discussionTitle
-	 * @param $taskName
-	 * @param $projectId
-	 * @param User $user
-	 * @internal param Subtask $subtask
+	 *
+	 * @param $discussion
+	 * @param $user
 	 */
-	public function __construct($discussionTitle, $taskName, $projectId, User $user)
+	public function __construct($discussion, $user)
 	{
-		$this->message = $this->createMessage($user->username, $discussionTitle, $taskName);
-		$this->projectId = $projectId;
-	}
-
-	public function createMessage($username, $discussionTitle, $taskName)
-	{
-		return '<strong>' . htmlentities($username) . '</strong> deleted the discussion <strong>' . htmlentities($discussionTitle) . '</strong> from the task <strong>' . htmlentities($taskName) . '</strong>';
+		$this->action = 'remove_discussion';
+		$this->subjectId = $discussion->id;
+		$this->subjectType = get_class($discussion);
+		$this->userId = $user->id;
+		$this->projectId = $discussion->task->project_id;
 	}
 
 

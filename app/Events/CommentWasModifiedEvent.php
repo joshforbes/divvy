@@ -10,27 +10,26 @@ class CommentWasModifiedEvent extends Event {
 
 	use SerializesModels;
 
-	public $message;
+	public $action;
+	public $subjectId;
+	public $subjectType;
+	public $userId;
 	public $projectId;
 
 	/**
 	 * Create a new event instance.
-	 * @param Comment $comment
-	 * @param User $user
+	 *
+	 * @param $comment
+	 * @param $user
 	 */
-	public function __construct(Comment $comment, User $user)
+	public function __construct($comment, $user)
 	{
-		$this->message = $this->createMessage($user->username, $this->commentableName($comment), $comment->commentable->task->name);
+		$this->action = 'modify_comment';
+		$this->subjectId = $comment->id;
+		$this->subjectType = get_class($comment);
+		$this->userId = $user->id;
 		$this->projectId = $comment->commentable->task->project_id;
 	}
 
-	public function createMessage($username, $commentableName, $taskName)
-	{
-		return '<strong>' . htmlentities($username) . '</strong> modified a comment from <strong>' . htmlentities($commentableName) . '</strong> in the task <strong>' . htmlentities($taskName) . '</strong>';
-	}
 
-	public function commentableName($comment)
-	{
-		return $comment->commentable->title ? $comment->commentable->title : $comment->commentable->name;
-	}
 }

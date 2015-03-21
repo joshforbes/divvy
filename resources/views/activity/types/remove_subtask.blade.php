@@ -1,0 +1,1 @@
+{{ $activity->created_at->diffForHumans() }} - {{ $activity->present()->username }} removed a subtask: "{{ $activity->subject->name }}" from the task "{{ $activity->subject->task->name }}"

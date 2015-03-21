@@ -40,12 +40,12 @@ class LeaveCommentOnDiscussionCommand extends Command implements SelfHandling {
 	{
 		$discussion = $discussionRepository->findById($this->discussionId);
 
-		Comment::leaveOn($discussion, [
+		$comment = Comment::leaveOn($discussion, [
 			'body' => $this->body,
 			'user_id' => $this->user->id
 		]);
 
-		$event->fire(new CommentWasLeftOnDiscussionEvent($discussion, $this->user));
+		$event->fire(new CommentWasLeftOnDiscussionEvent($comment, $this->user));
 
 	}
 

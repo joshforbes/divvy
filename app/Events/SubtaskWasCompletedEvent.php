@@ -8,26 +8,28 @@ use Illuminate\Queue\SerializesModels;
 
 class SubtaskWasCompletedEvent extends Event {
 
+
 	use SerializesModels;
 
-	public $message;
+	public $action;
+	public $subjectId;
+	public $subjectType;
+	public $userId;
 	public $projectId;
 
 	/**
 	 * Create a new event instance.
-	 * @param Subtask $subtask
-	 * @param User $user
+	 *
+	 * @param $subtask
+	 * @param $user
 	 */
-	public function __construct(Subtask $subtask, User $user)
+	public function __construct($subtask, $user)
 	{
-		$this->message = $this->createMessage($user->username, $subtask->name, $subtask->task->name);
+		$this->action = 'complete_subtask';
+		$this->subjectId = $subtask->id;
+		$this->subjectType = get_class($subtask);
+		$this->userId = $user->id;
 		$this->projectId = $subtask->task->project_id;
 	}
-
-	public function createMessage($username, $subtaskName, $taskName)
-	{
-		return '<strong>' . htmlentities($username) . '</strong> completed the subtask <strong>' . htmlentities($subtaskName) . '</strong> from the task <strong>' . htmlentities($taskName) . '</strong>';
-	}
-
 
 }

@@ -9,23 +9,25 @@ class CommentWasLeftOnSubtaskEvent extends Event {
 
 	use SerializesModels;
 
-	public $message;
+	public $action;
+	public $subjectId;
+	public $subjectType;
+	public $userId;
 	public $projectId;
 
 	/**
 	 * Create a new event instance.
-	 * @param $subtask
-	 * @param User $user
+	 *
+	 * @param $comment
+	 * @param $user
 	 */
-	public function __construct($subtask, User $user)
+	public function __construct($comment, $user)
 	{
-		$this->message = $this->createMessage($user->username, $subtask->name, $subtask->task->name);
-		$this->projectId = $subtask->task->project_id;
-	}
-
-	public function createMessage($username, $subtaskName, $taskName)
-	{
-		return '<strong>' . htmlentities($username) . '</strong> left a comment on <strong>' . htmlentities($subtaskName) . '</strong> in the task <strong>' . htmlentities($taskName) . '</strong>';
+		$this->action = 'leave_comment_subtask';
+		$this->subjectId = $comment->id;
+		$this->subjectType = get_class($comment);
+		$this->userId = $user->id;
+		$this->projectId = $comment->commentable->task->project_id;
 	}
 
 

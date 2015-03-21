@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Activity;
 use App\Commands\AddMemberToProjectCommand;
 use App\Commands\StartNewProjectCommand;
 use App\Http\Requests;
@@ -80,6 +81,8 @@ class ProjectsController extends Controller {
             $users = $this->projectRepository->usersNotInProjectArray($project);
 
             $members = $this->projectRepository->usersInProjectArray($project);
+
+            //$activity = Activity::withTrashed()->where('project_id', $project->id)->get();
 
             return view('projects.admin', compact('project', 'users', 'members'));
         }

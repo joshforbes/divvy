@@ -30,14 +30,10 @@ class RemoveCommentCommand extends Command implements SelfHandling {
 	{
 		$comment = $commentRepository->findById($this->commentId);
 
-		$commentable = $comment->commentable;
-		$commentableName = $commentable->title ? $commentable->title : $commentable->name;
-		$taskName = $commentable->task->name;
-		$projectId = $commentable->task->project_id;
 
 		$commentRepository->delete($comment);
 
-		$event->fire(new CommentWasDeletedEvent($commentableName, $taskName, $projectId, $this->user));
+		$event->fire(new CommentWasDeletedEvent($comment, $this->user));
 	}
 
 }
