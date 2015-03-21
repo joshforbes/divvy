@@ -26,6 +26,17 @@ class UserRepository {
     }
 
     /**
+     * Find the specified User by ID
+     *
+     * @param $id
+     * @return \Illuminate\Support\Collection|null|static
+     */
+    public function findById($id)
+    {
+        return User::find($id);
+    }
+
+    /**
      * Find a User by username with their Profile
      *
      * @param $username

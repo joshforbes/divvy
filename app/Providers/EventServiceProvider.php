@@ -64,8 +64,10 @@ class EventServiceProvider extends ServiceProvider {
 		],
 		'App\Events\MemberJoinedProjectEvent' => [
 			'App\Handlers\Events\LogProjectActivity'
+		],
+		'App\Events\MemberRemovedFromProjectEvent' => [
+			'App\Handlers\Events\LogProjectActivity'
 		]
-		//remove member
 	];
 
 	/**

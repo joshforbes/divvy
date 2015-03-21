@@ -2,6 +2,7 @@
 
 use App\Activity;
 use App\Commands\AddMemberToProjectCommand;
+use App\Commands\RemoveMemberFromProjectCommand;
 use App\Commands\StartNewProjectCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -59,11 +60,27 @@ class ProjectsController extends Controller {
      */
     public function addUser(AddUserToProjectRequest $request, $projectId)
     {
-        $project = $this->dispatch(
-            new AddMemberToProjectCommand($request, $projectId)
+        $this->dispatch(
+            new AddMemberToProjectCommand($request, $projectId, $this->user)
         );
 
-        return redirect()->route('project.show', $project->id);
+        return redirect()->route('project.show', $projectId);
+    }
+
+    /**
+     * Remove the specified user from the project
+     *
+     * @param $projectId
+     * @param $userId
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function removeUser($projectId, $userId)
+    {
+        $this->dispatch(
+            new RemoveMemberFromProjectCommand($projectId, $userId, $this->user)
+        );
+
+        return redirect()->route('project.show', $projectId);
     }
 
     /**

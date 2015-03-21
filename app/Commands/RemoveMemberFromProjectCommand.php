@@ -2,32 +2,30 @@
 
 use App\Commands\Command;
 
-use App\Events\MemberJoinedProjectEvent;
+use App\Events\MemberRemovedFromProjectEvent;
 use App\Repositories\ProjectRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Http\Request;
 
-class AddMemberToProjectCommand extends Command implements SelfHandling {
+class RemoveMemberFromProjectCommand extends Command implements SelfHandling {
 
-	protected $userEmail;
-	protected $projectId;
-	protected $request;
+	private $projectId;
+	private $userId;
+	private $currentUser;
 
 	/**
 	 * Create a new command instance.
 	 *
-	 * @param Request $request
 	 * @param $projectId
+	 * @param $userId
 	 * @param $currentUser
 	 */
-	public function __construct(Request $request, $projectId, $currentUser)
+	public function __construct($projectId, $userId, $currentUser)
 	{
-		$this->userEmail = $request->input('user');
 		$this->projectId = $projectId;
+		$this->userId = $userId;
 		$this->currentUser = $currentUser;
-		$this->request = $request;
 	}
 
 	/**
@@ -36,22 +34,17 @@ class AddMemberToProjectCommand extends Command implements SelfHandling {
 	 * @param ProjectRepository $projectRepository
 	 * @param UserRepository $userRepository
 	 * @param Dispatcher $event
-	 * @return mixed
 	 */
 	public function handle(ProjectRepository $projectRepository, UserRepository $userRepository, Dispatcher $event)
 	{
 		$project = $projectRepository->findById($this->projectId);
 
-		$user = $userRepository->findByEmail($this->userEmail);
+		$user = $userRepository->findById($this->userId);
 
-		if (!$user)
-		{
-			dd('invite email');
-		}
+		$projectRepository->removeUser($user, $project);
 
-		$projectRepository->addUser($user, $project);
+		$event->fire(new MemberRemovedFromProjectEvent($user, $project, $this->currentUser));
 
-		$event->fire(new MemberJoinedProjectEvent($user, $project, $this->currentUser));
 	}
 
 }

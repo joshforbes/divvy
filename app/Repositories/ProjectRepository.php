@@ -41,12 +41,37 @@ class ProjectRepository {
 
 
     /**
+     * Removes a user from the specified project
+     *
+     * @param User $user
+     * @param Project $project
+     */
+    public function removeUser(User $user, Project $project)
+    {
+        $project->users()->detach([$user->id]);
+    }
+
+
+    /**
      * Find a project by the specified id
+     *
+     * @param $id
+     * @return \Illuminate\Support\Collection|null|static
+     */
+    public function findById($id)
+    {
+        return Project::find($id);
+    }
+
+
+    /**
+     * Find a project by the specified id with eager loads needed
+     * for admin view
      *
      * @param $id
      * @return mixed
      */
-    public function findById($id)
+    public function findByIdForAdmin($id)
     {
         return Project::with('tasks.users.profile', 'users.profile', 'admins.profile', 'tasks.subtasks', 'tasks.discussions.author.profile', 'activity.subject', 'activity.user')->whereId($id)->firstOrFail();
     }
