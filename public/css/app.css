@@ -5107,6 +5107,29 @@ button.close {
   .comment-edit-form-wrapper:after {
     clear: both; }
 
+.activities {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 50px; }
+  .activities:before, .activities:after {
+    content: " ";
+    display: table; }
+  .activities:after {
+    clear: both; }
+
+.activities-wrapper {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .activities-wrapper {
+      margin-left: 16.66667%; } }
+  @media (min-width: 992px) {
+    .activities-wrapper {
+      float: left;
+      width: 66.66667%; } }
+
 .project-overview {
   padding: 10px;
   height: 250px;

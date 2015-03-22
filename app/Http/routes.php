@@ -64,6 +64,9 @@ Route::delete('/p/{projectId}/task/{taskId}/comment/{commentId}', ['as' => 'comm
 Route::patch('/p/{projectId}/task/{taskId}/comment/{commentId}', ['as' => 'comment.update', 'uses' => 'CommentsController@update']);
 
 
+#Activity
+Route::get('/p/{projectId}/activity', ['as' => 'activity.index', 'uses' => 'ActivityController@index']);
+
 #Profiles
 Route::get('/{username}/edit', [
 	'as' => 'profile.edit',
