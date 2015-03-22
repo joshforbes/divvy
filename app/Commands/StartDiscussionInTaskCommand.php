@@ -16,7 +16,7 @@ class StartDiscussionInTaskCommand extends Command implements SelfHandling {
      *
      * @param Request $request
      * @param $taskId
-     * @param $userId
+     * @param $user
      */
     public function __construct(Request $request, $taskId, $user)
     {

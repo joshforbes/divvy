@@ -48,6 +48,17 @@ class UserRepository {
     }
 
     /**
+     * Find a User by username with their Profile
+     *
+     * @param $username
+     * @return mixed
+     */
+    public function findByUsernameWithNotifications($username)
+    {
+        return User::with('notifications')->whereUsername($username)->firstOrFail();
+    }
+
+    /**
      * Find a User by email
      *
      * @param $email

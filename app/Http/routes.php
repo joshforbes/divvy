@@ -67,6 +67,9 @@ Route::patch('/p/{projectId}/task/{taskId}/comment/{commentId}', ['as' => 'comme
 #Activity
 Route::get('/p/{projectId}/activity', ['as' => 'activity.index', 'uses' => 'ActivityController@index']);
 
+#Notifications
+Route::get('/{username}/notifications', ['as' => 'notification.index', 'uses' => 'NotificationsController@index']);
+
 #Profiles
 Route::get('/{username}/edit', [
 	'as' => 'profile.edit',

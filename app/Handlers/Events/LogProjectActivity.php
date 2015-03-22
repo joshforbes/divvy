@@ -20,8 +20,7 @@ class LogProjectActivity {
 
 	/**
 	 * Handle the event.
-	 *
-	 * @param  TaskAddedToProjectEvent $event
+	 * @param $event
 	 */
 	public function handle($event)
 	{

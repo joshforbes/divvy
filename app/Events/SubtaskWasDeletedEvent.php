@@ -14,6 +14,7 @@ class SubtaskWasDeletedEvent extends Event {
 	public $subjectType;
 	public $userId;
 	public $projectId;
+	public $notifiable;
 
 	/**
 	 * Create a new event instance.
@@ -28,5 +29,6 @@ class SubtaskWasDeletedEvent extends Event {
 		$this->subjectType = get_class($subtask);
 		$this->userId = $user->id;
 		$this->projectId = $subtask->task->project_id;
+		$this->notifiable = $subtask->task->users;
 	}
 }

@@ -8,7 +8,6 @@ use Illuminate\Queue\SerializesModels;
 
 class DiscussionWasModifiedEvent extends Event {
 
-
 	use SerializesModels;
 
 	public $action;
@@ -16,6 +15,8 @@ class DiscussionWasModifiedEvent extends Event {
 	public $subjectType;
 	public $userId;
 	public $projectId;
+	public $notifiable;
+
 
 	/**
 	 * Create a new event instance.
@@ -30,6 +31,7 @@ class DiscussionWasModifiedEvent extends Event {
 		$this->subjectType = get_class($discussion);
 		$this->userId = $user->id;
 		$this->projectId = $discussion->task->project_id;
+		$this->notifiable = $discussion->task->users;
 	}
 
 

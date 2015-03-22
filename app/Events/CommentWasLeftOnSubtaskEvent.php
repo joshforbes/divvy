@@ -14,6 +14,7 @@ class CommentWasLeftOnSubtaskEvent extends Event {
 	public $subjectType;
 	public $userId;
 	public $projectId;
+	public $notifiable;
 
 	/**
 	 * Create a new event instance.
@@ -28,6 +29,7 @@ class CommentWasLeftOnSubtaskEvent extends Event {
 		$this->subjectType = get_class($comment);
 		$this->userId = $user->id;
 		$this->projectId = $comment->commentable->task->project_id;
+		$this->notifiable = $comment->commentable->task->users;
 	}
 
 

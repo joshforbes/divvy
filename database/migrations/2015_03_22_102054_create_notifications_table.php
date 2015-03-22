@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActivityTable extends Migration {
+class CreateNotificationsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,21 +12,23 @@ class CreateActivityTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('activity', function(Blueprint $table)
+		Schema::create('notifications', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('action');
+			$table->boolean('read');
 
 			$table->string('subject_type');
 			$table->integer('subject_id');
 
+			$table->integer('actor_id')->unsigned();
 			$table->integer('user_id')->unsigned();
-			$table->integer('project_id')->unsigned();
+
 			$table->timestamps();
 
-			$table->foreign('project_id')
+			$table->foreign('user_id')
 				->references('id')
-				->on('projects')
+				->on('users')
 				->onDelete('cascade');
 		});
 	}
@@ -38,7 +40,7 @@ class CreateActivityTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('activity');
+		Schema::drop('notifications');
 	}
 
 }

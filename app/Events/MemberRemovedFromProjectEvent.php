@@ -14,6 +14,7 @@ class MemberRemovedFromProjectEvent extends Event {
 	public $subjectType;
 	public $userId;
 	public $projectId;
+	public $notifiable;
 
 	/**
 	 * Create a new event instance.
@@ -28,6 +29,7 @@ class MemberRemovedFromProjectEvent extends Event {
 		$this->subjectType = get_class($user);
 		$this->userId = $currentUser->id;
 		$this->projectId = $project->id;
+		$this->notifiable = [$user];
 	}
 
 

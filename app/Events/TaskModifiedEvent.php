@@ -13,6 +13,7 @@ class TaskModifiedEvent extends Event {
 	public $subjectType;
 	public $userId;
 	public $projectId;
+	public $notifiable;
 
 	/**
 	 * Create a new event instance.
@@ -27,6 +28,7 @@ class TaskModifiedEvent extends Event {
 		$this->subjectType = get_class($task);
 		$this->userId = $user->id;
 		$this->projectId = $task->project_id;
+		$this->notifiable = $task->users;
 	}
 
 }
