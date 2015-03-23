@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Notification extends Model {
 
-    protected $fillable = ['action', 'subject_type', 'subject_id', 'user_id', 'actor_id'];
+    protected $fillable = ['action', 'read', 'subject_type', 'subject_id', 'user_id', 'actor_id', 'project_id'];
 
     /**
      * An Notification belongs to one user
@@ -24,6 +24,16 @@ class Notification extends Model {
     public function actor()
     {
         return $this->belongsTo('App\User', 'actor_id');
+    }
+
+    /**
+     * An Notification is associated with one project
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function project()
+    {
+        return $this->belongsTo('App\Project', 'project_id');
     }
 
     /**

@@ -3,7 +3,7 @@
 @section('content')
 
     @foreach($user->notifications as $notification)
-        {{ $notification->action }}
+        <p>@include("notifications.types.{$notification->action}")</p>
     @endforeach
 
     <br/>

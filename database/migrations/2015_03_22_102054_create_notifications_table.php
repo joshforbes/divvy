@@ -21,6 +21,7 @@ class CreateNotificationsTable extends Migration {
 			$table->string('subject_type');
 			$table->integer('subject_id');
 
+			$table->integer('project_id')->unsigned();
 			$table->integer('actor_id')->unsigned();
 			$table->integer('user_id')->unsigned();
 
