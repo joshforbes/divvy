@@ -86,6 +86,9 @@ class EventServiceProvider extends ServiceProvider {
 		'App\Events\MemberRemovedFromProjectEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers'
+		],
+		'App\Events\ProjectWasRemovedEvent' => [
+			'App\Handlers\Events\NotifyUsers'
 		]
 	];
 

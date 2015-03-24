@@ -33,7 +33,7 @@ class Notification extends Model {
      */
     public function project()
     {
-        return $this->belongsTo('App\Project', 'project_id');
+        return $this->belongsTo('App\Project', 'project_id')->withTrashed();
     }
 
     /**

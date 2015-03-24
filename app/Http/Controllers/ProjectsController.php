@@ -3,6 +3,7 @@
 use App\Activity;
 use App\Commands\AddMemberToProjectCommand;
 use App\Commands\RemoveMemberFromProjectCommand;
+use App\Commands\RemoveProjectCommand;
 use App\Commands\StartNewProjectCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -99,8 +100,6 @@ class ProjectsController extends Controller {
 
             $members = $this->projectRepository->usersInProjectArray($project);
 
-            //$activity = Activity::withTrashed()->where('project_id', $project->id)->get();
-
             return view('projects.admin', compact('project', 'users', 'members'));
         }
 
@@ -142,7 +141,12 @@ class ProjectsController extends Controller {
      */
     public function destroy($id)
     {
-        //
+        $this->dispatch(
+            new RemoveProjectCommand($id, $this->user)
+        );
+
+        return redirect()->route('home');
     }
+
 
 }

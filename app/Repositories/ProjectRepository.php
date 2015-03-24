@@ -126,5 +126,28 @@ class ProjectRepository {
             })->get();
     }
 
+    /**
+     * Delete a Project by Id
+     *
+     * @param $id
+     * @return bool|null
+     * @throws \Exception
+     */
+    public function deleteById($id)
+    {
+        return Project::find($id)->delete();
+    }
+
+    /**
+     * Delete by model
+     *
+     * @return bool|null
+     * @throws \Exception
+     */
+    public function delete(Project $project)
+    {
+        return $project->delete();
+    }
+
 
 }
