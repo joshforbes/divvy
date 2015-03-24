@@ -89,6 +89,9 @@ class EventServiceProvider extends ServiceProvider {
 		],
 		'App\Events\ProjectWasRemovedEvent' => [
 			'App\Handlers\Events\NotifyUsers'
+		],
+		'App\Events\ProjectWasModifiedEvent' => [
+			'App\Handlers\Events\NotifyUsers'
 		]
 	];
 

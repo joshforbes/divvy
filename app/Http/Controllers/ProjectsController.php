@@ -2,6 +2,7 @@
 
 use App\Activity;
 use App\Commands\AddMemberToProjectCommand;
+use App\Commands\ModifyProjectCommand;
 use App\Commands\RemoveMemberFromProjectCommand;
 use App\Commands\RemoveProjectCommand;
 use App\Commands\StartNewProjectCommand;
@@ -9,7 +10,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\AddUserToProjectRequest;
-use App\Http\Requests\CreateProjectRequest;
+use App\Http\Requests\ProjectRequest;
 use App\Repositories\ProjectRepository;
 
 class ProjectsController extends Controller {
@@ -39,10 +40,10 @@ class ProjectsController extends Controller {
     /**
      * Store a newly created resource in storage.
      *
-     * @param CreateProjectRequest $request
+     * @param ProjectRequest $request
      * @return Response
      */
-    public function store(CreateProjectRequest $request)
+    public function store(ProjectRequest $request)
     {
         $project = $this->dispatch(
             new StartNewProjectCommand($request, $this->user)
@@ -114,23 +115,31 @@ class ProjectsController extends Controller {
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param $projectId
      * @return Response
      */
-    public function edit($id)
+    public function edit($projectId)
     {
-        //
+        $project = $this->projectRepository->findById($projectId);
+
+        return view('projects.edit', compact('project'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  int $id
+     * @param ProjectRequest $request
+     * @param $projectId
      * @return Response
      */
-    public function update($id)
+    public function update(ProjectRequest $request, $projectId)
     {
-        //
+        $this->dispatch(
+            new ModifyProjectCommand($request, $projectId, $this->user)
+        );
+
+        //Flash::message('Profile updated');
+        return redirect()->route('project.show', [$projectId]);
     }
 
     /**

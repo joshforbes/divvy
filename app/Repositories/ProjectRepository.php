@@ -127,6 +127,20 @@ class ProjectRepository {
     }
 
     /**
+     * Updates the Project with the given id
+     *
+     * @param $projectId
+     * @param $updatedData
+     * @return mixed
+     */
+    public function updateProject($projectId, $updatedData)
+    {
+        $projectId = Project::findOrFail($projectId);
+        $projectId->fill($updatedData)->save();
+        return $projectId;
+    }
+
+    /**
      * Delete a Project by Id
      *
      * @param $id

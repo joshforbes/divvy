@@ -27,6 +27,8 @@ Route::controllers([
 #Projects
 Route::post('/p', ['as' => 'project.store', 'uses' => 'ProjectsController@store']);
 Route::get('/p/create', ['as' => 'project.create', 'uses' => 'ProjectsController@create']);
+Route::get('/p/{id}/edit', ['as' => 'project.edit', 'uses' => 'ProjectsController@edit']);
+Route::patch('p/{id}', ['as' => 'project.update', 'uses' => 'ProjectsController@update']);
 Route::post('/p/{id}/addUser', ['as' => 'project.addUser', 'uses' => 'ProjectsController@addUser']);
 //CHANGE to Route::delete
 Route::get('/p/{id}/removeUser/{userId}', ['as' => 'project.removeUser', 'uses' => 'ProjectsController@removeUser']);
