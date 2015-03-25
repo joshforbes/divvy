@@ -22,8 +22,8 @@ $I->amOnPage('/p/' . $project->id);
 $I->click('A test subtask');
 $I->seeCurrentUrlEquals('/p/' . $project->id . '/task/' . $task->id . '/subtask/' . $subtask->id);
 
-$I->fillField('input[name="body"]', 'A test comment');
-$I->click('input[value="Add this comment"]');
+$I->fillField('textarea[name="body"]', 'A test comment');
+$I->click('input[value="Add"]');
 
 $I->seeRecord('comments', [
     'body' => 'A test comment',

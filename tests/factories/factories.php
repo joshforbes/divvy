@@ -36,8 +36,15 @@ $factory('App\Subtask', [
 ]);
 
 $factory('App\Discussion', [
-    'title' =>  $faker->sentence(),
-    'body' => $faker->paragraph(),
+    'title'   => $faker->sentence(),
+    'body'    => $faker->paragraph(),
     'task_id' => 'factory:App\Task',
     'user_id' => 'factory:App\User'
+]);
+
+$factory('App\Comment', [
+    'body'             => $faker->sentence(),
+    'user_id'          => 'factory:App\User',
+    'commentable_id'   => 'factory:App\Discussion',
+    'commentable_type' => 'App\Discussion'
 ]);

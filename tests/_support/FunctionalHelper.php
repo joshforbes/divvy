@@ -100,4 +100,16 @@ class FunctionalHelper extends Module {
         return $discussion;
     }
 
+    public function haveACommentOn($commentable, $overrides)
+    {
+        $overrides = array_merge($overrides, [
+            'commentable_id' => $commentable->id,
+            'commentable_type' => get_class($commentable)
+        ]);
+
+        $comment = Testdummy::create('App\Comment', $overrides);
+
+        return $comment;
+    }
+
 }
