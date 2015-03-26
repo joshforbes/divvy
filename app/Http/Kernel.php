@@ -28,6 +28,11 @@ class Kernel extends HttpKernel {
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
 		'profile.owner' => 'App\Http\Middleware\RedirectIfNotProfileOwner',
+		'project.member' => 'App\Http\Middleware\ErrorIfNotProjectMember',
+		'project.admin' => 'App\Http\Middleware\ErrorIfNotProjectAdmin',
+		'task.assigned' => 'App\Http\Middleware\ErrorIfNotTaskMember',
+		'discussion.author' => 'App\Http\Middleware\DiscussionAuthor',
+		'comment.author' => 'App\Http\Middleware\CommentAuthor'
 	];
 
 }

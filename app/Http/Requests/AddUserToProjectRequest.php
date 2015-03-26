@@ -12,7 +12,7 @@ class AddUserToProjectRequest extends Request {
 	 */
 	public function authorize()
 	{
-		$projectId = $this->route('id');
+		$projectId = $this->route('projectId');
 		return Auth::user()->isAdmin($projectId);
 	}
 

@@ -1,17 +1,26 @@
 <?php namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
+use Illuminate\Contracts\Auth\Guard;
 
-class ProjectRequest extends Request {
+class EditProjectRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
 	 *
+	 * @param Guard $auth
 	 * @return bool
 	 */
-	public function authorize()
+	public function authorize(Guard $auth)
 	{
-		return \Auth::check();
+		$projectId = $this->route('projectId');
+
+		if ($auth->user()->isAdmin($projectId))
+		{
+			return true;
+		}
+
+		return false;
 	}
 
 	/**

@@ -48,4 +48,43 @@
 @endsection
 
 @section('js')
+    <script>
+
+        $(".task__header__delete-link").click(function() {
+            $(this).parent(".task__header__delete-form").submit();
+        });
+
+        $(".task__header__complete-link").click(function() {
+            $(this).parent(".task__header__complete-form").submit();
+        });
+
+        $(".task__subtask__complete-form").on("change", "input:checkbox", function() {
+            $(this).parent(".task__subtask__complete-form").submit();
+        });
+
+        $(".task__add-button").click(function() {
+            $(this).siblings(".task__discussion-form").removeClass("hide");
+        });
+
+        $(".task__discussion__edit-button").click(function() {
+            $(this).siblings(".task__discussion-edit-form").removeClass("hide");
+        });
+
+        $(".discussion-form__button--cancel").click(function() {
+            $(this).closest(".task__discussion-form").addClass("hide");
+            $(this).closest(".task__discussion-edit-form").addClass("hide");
+        });
+
+        $(".task__subtask__edit-button").click(function() {
+            $(this).closest(".task__subtask__controls-wrapper").addClass("hide");
+            $(this).parent().siblings().removeClass("hide");
+        });
+
+        $(".subtask-form__button--cancel").click(function(e) {
+            e.preventDefault();
+            $(".task__subtask__controls-wrapper").removeClass("hide");
+            $(".subtask-form").addClass("hide");
+        });
+
+    </script>
 @endsection

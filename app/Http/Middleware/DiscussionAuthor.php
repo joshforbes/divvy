@@ -3,14 +3,7 @@
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class RedirectIfNotProfileOwner {
-
-	/**
-	 * The Guard implementation.
-	 *
-	 * @var Guard
-	 */
-	protected $auth;
+class DiscussionAuthor {
 
 	/**
 	 * Create a new filter instance.
@@ -22,7 +15,6 @@ class RedirectIfNotProfileOwner {
 		$this->auth = $auth;
 	}
 
-
 	/**
 	 * Handle an incoming request.
 	 *
@@ -32,10 +24,12 @@ class RedirectIfNotProfileOwner {
 	 */
 	public function handle($request, Closure $next)
 	{
-		if ($request->route('username') !== $this->auth->user()->username)
+
+		if (!$this->auth->user()->isDiscussionAuthor($request->route('discussionId')) && !$this->auth->user()->isAdmin($request->route('projectId')))
 		{
 			abort(401);
 		}
+
 		return $next($request);
 	}
 

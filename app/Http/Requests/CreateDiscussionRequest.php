@@ -3,7 +3,7 @@
 use App\Http\Requests\Request;
 use Illuminate\Contracts\Auth\Guard;
 
-class SubtaskRequest extends Request {
+class CreateDiscussionRequest extends Request {
 
     /**
      * Determine if the user is authorized to make this request.
@@ -38,8 +38,7 @@ class SubtaskRequest extends Request {
     public function rules()
     {
         return [
-            'name' => 'required'
-
+            'title' => 'required'
         ];
     }
 

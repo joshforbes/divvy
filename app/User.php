@@ -157,5 +157,20 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->projects->contains($projectId);
     }
 
+    public function isAssignedToTask($taskId)
+    {
+        return $this->tasks->contains($taskId);
+    }
+
+    public function isCommentAuthor($commentId)
+    {
+        return $this->comments->contains($commentId);
+    }
+
+    public function isDiscussionAuthor($discussionId)
+    {
+        return $this->discussions->contains($discussionId);
+    }
+
 
 }

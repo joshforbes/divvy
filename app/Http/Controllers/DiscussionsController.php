@@ -7,7 +7,8 @@ use App\Commands\StartDiscussionInTaskCommand;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Http\Requests\DiscussionRequest;
+use App\Http\Requests\CreateDiscussionRequest;
+use App\Http\Requests\EditDiscussionRequest;
 use App\Http\Requests\LeaveCommentRequest;
 use App\Repositories\DiscussionRepository;
 use Illuminate\Http\Request;
@@ -42,12 +43,12 @@ class DiscussionsController extends Controller {
 	/**
 	 * Store a newly created resource in storage.
 	 *
-	 * @param DiscussionRequest $request
+	 * @param CreateDiscussionRequest|DiscussionRequest $request
 	 * @param $projectId
 	 * @param $taskId
 	 * @return Response
 	 */
-	public function store(DiscussionRequest $request, $projectId, $taskId)
+	public function store(CreateDiscussionRequest $request, $projectId, $taskId)
 	{
 		$this->dispatch(
 			new StartDiscussionInTaskCommand($request, $taskId, $this->user)
@@ -60,10 +61,12 @@ class DiscussionsController extends Controller {
 	/**
 	 * Store a comment in storage and attach it to the discussion
 	 * @param LeaveCommentRequest $request
+	 * @param $projectId
+	 * @param $taskId
 	 * @param $discussionId
 	 * @return \Illuminate\Http\RedirectResponse
 	 */
-	public function storeComment(LeaveCommentRequest $request, $discussionId)
+	public function storeComment(LeaveCommentRequest $request, $projectId, $taskId, $discussionId)
 	{
 
 		$this->dispatch(
@@ -105,13 +108,13 @@ class DiscussionsController extends Controller {
 
 	/**
 	 * Update the specified resource in storage.
-	 * @param DiscussionRequest $request
+	 * @param EditDiscussionRequest $request
 	 * @param $projectId
 	 * @param $taskId
 	 * @param $discussionId
 	 * @return \Illuminate\Http\RedirectResponse
 	 */
-	public function update(DiscussionRequest $request, $projectId, $taskId, $discussionId)
+	public function update(EditDiscussionRequest $request, $projectId, $taskId, $discussionId)
 	{
 		$this->dispatch(
 			new ModifyDiscussionCommand($request, $discussionId, $this->user)

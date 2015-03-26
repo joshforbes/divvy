@@ -42,6 +42,8 @@ class FunctionalHelper extends Module {
         $I->fillField('password', $password);
         $I->click('input[type=submit]');
 
+        Auth::loginUsingId($user->id);
+
         return $user;
     }
 

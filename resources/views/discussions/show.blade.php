@@ -13,7 +13,7 @@
         </div>
 
         <div class="comment-form-wrapper">
-            {!! Form::open(['route' => ['comment.storeDiscussion', $discussion->id], 'class' => 'comment-form']) !!}
+            {!! Form::open(['route' => ['comment.storeDiscussion', $project->id, $task->id, $discussion->id], 'class' => 'comment-form']) !!}
                 {!! Form::textarea('body', null, ['class' => 'comment-form__input', 'placeholder' => 'Add a comment']) !!}
                 {!! Form::submit('Add', ['class' => 'comment-form__button']) !!}
             {!! Form::close() !!}

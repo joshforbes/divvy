@@ -53,10 +53,12 @@ class SubtasksController extends Controller {
      * Store a comment in storage and attach it to the subtask
      *
      * @param LeaveCommentRequest $request
+     * @param $projectId
+     * @param $taskId
      * @param $subtaskId
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function storeComment(LeaveCommentRequest $request, $subtaskId)
+    public function storeComment(LeaveCommentRequest $request, $projectId, $taskId, $subtaskId)
     {
 
         $this->dispatch(

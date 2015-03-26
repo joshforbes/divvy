@@ -3,7 +3,7 @@
 use App\Http\Requests\Request;
 use Illuminate\Contracts\Auth\Guard;
 
-class LeaveCommentRequest extends Request {
+class CreateProjectRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -13,21 +13,7 @@ class LeaveCommentRequest extends Request {
 	 */
 	public function authorize(Guard $auth)
 	{
-		$projectId = $this->route('projectId');
-		$taskId = $this->route('taskId');
-
-		if ($auth->user()->isAdmin($projectId))
-		{
-			return true;
-		}
-
-		if ($auth->user()->isAssignedTotask($taskId))
-		{
-			return true;
-		}
-
-		return false;
-
+		return $auth->check();
 	}
 
 	/**
@@ -38,7 +24,7 @@ class LeaveCommentRequest extends Request {
 	public function rules()
 	{
 		return [
-			'body' => 'required'
+			'name' => 'required'
 		];
 	}
 

@@ -4,6 +4,7 @@ $I->am('a Divvy user');
 $I->wantTo('I want to edit my profile');
 
 $I->signIn();
+$I->amOnPage('');
 
 $I->click('Profile');
 $I->seeCurrentUrlEquals('/johndoe');

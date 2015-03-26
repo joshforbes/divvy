@@ -10,7 +10,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\AddUserToProjectRequest;
-use App\Http\Requests\ProjectRequest;
+use App\Http\Requests\CreateProjectRequest;
+use App\Http\Requests\EditProjectRequest;
 use App\Repositories\ProjectRepository;
 
 class ProjectsController extends Controller {
@@ -40,10 +41,10 @@ class ProjectsController extends Controller {
     /**
      * Store a newly created resource in storage.
      *
-     * @param ProjectRequest $request
+     * @param CreateProjectRequest $request
      * @return Response
      */
-    public function store(ProjectRequest $request)
+    public function store(CreateProjectRequest $request)
     {
         $project = $this->dispatch(
             new StartNewProjectCommand($request, $this->user)
@@ -128,11 +129,11 @@ class ProjectsController extends Controller {
     /**
      * Update the specified resource in storage.
      *
-     * @param ProjectRequest $request
+     * @param EditProjectRequest $request
      * @param $projectId
      * @return Response
      */
-    public function update(ProjectRequest $request, $projectId)
+    public function update(EditProjectRequest $request, $projectId)
     {
         $this->dispatch(
             new ModifyProjectCommand($request, $projectId, $this->user)

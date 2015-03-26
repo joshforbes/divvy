@@ -3,7 +3,7 @@
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class RedirectIfNotProfileOwner {
+class ErrorIfNotProjectMember {
 
 	/**
 	 * The Guard implementation.
@@ -22,7 +22,6 @@ class RedirectIfNotProfileOwner {
 		$this->auth = $auth;
 	}
 
-
 	/**
 	 * Handle an incoming request.
 	 *
@@ -32,10 +31,12 @@ class RedirectIfNotProfileOwner {
 	 */
 	public function handle($request, Closure $next)
 	{
-		if ($request->route('username') !== $this->auth->user()->username)
+
+		if (!$this->auth->user()->isMember($request->route('projectId')))
 		{
 			abort(401);
 		}
+
 		return $next($request);
 	}
 
