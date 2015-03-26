@@ -24,6 +24,11 @@ class Subtask extends Model {
 		return $this->belongsTo('App\Task');
 	}
 
+	public function trashedTask()
+	{
+		return $this->belongsTo('App\Task')->withTrashed();
+	}
+
 	/**
 	 * A subtask can have many comments
 	 *

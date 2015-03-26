@@ -19,6 +19,11 @@ class Discussion extends Model {
 		return $this->belongsTo('App\Task');
 	}
 
+	public function trashedTask()
+	{
+		return $this->belongsTo('App\Task')->withTrashed();
+	}
+
 	/**
 	 * A Discussion belongs to one user
 	 *

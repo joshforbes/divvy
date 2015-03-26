@@ -96,7 +96,7 @@ class ProjectsController extends Controller {
     {
         if ($this->user->isAdmin($projectId))
         {
-            $project = $this->projectRepository->findById($projectId);
+            $project = $this->projectRepository->findByIdForAdmin($projectId);
 
             $users = $this->projectRepository->usersNotInProjectArray($project);
 
