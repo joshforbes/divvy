@@ -46,6 +46,7 @@ class Notification extends Model {
         return $this->morphTo()->withTrashed();
     }
 
+
     /**
      * Create a new instance of Notification
      *

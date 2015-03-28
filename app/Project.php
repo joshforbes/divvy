@@ -10,6 +10,32 @@ class Project extends Model {
 	protected $fillable = ['name', 'description'];
 
 	/**
+	 * On soft delete cascade to tasks, subtasks, discussions, and comments
+	 */
+	public static function boot()
+	{
+		parent::boot();
+
+		static::deleted(function ($project)
+		{
+			foreach ($project->tasks as $task)
+			{
+				foreach ($task->subtasks as $subtask)
+				{
+					$subtask->comments()->delete();
+					$subtask->delete();
+				}
+
+				foreach ($task->discussions as $discussion)
+				{
+					$discussion->comments()->delete();
+					$discussion->delete();
+				}
+			}
+		});
+	}
+
+	/**
 	 * A Project has many Users
 	 *
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany

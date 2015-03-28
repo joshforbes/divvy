@@ -14,6 +14,23 @@ class Subtask extends Model {
      */
 	protected $fillable = ['name', 'is_complete', 'task_id'];
 
+
+	/**
+	 * On soft delete cascade to comments
+	 */
+	public static function boot()
+	{
+		parent::boot();
+
+		static::deleted(function($subtask)
+		{
+			foreach($subtask->comments() as $comment)
+			{
+				$comment->delete();
+			}
+		});
+	}
+
 	/**
 	 * A Subtask belongs to one task
 	 *
@@ -24,9 +41,14 @@ class Subtask extends Model {
 		return $this->belongsTo('App\Task');
 	}
 
-	public function trashedTask()
+	/**
+	 * Subtask to Task relationship with soft deleted models
+	 *
+	 * @return mixed
+     */
+	public function taskWithTrashed()
 	{
-		return $this->belongsTo('App\Task')->withTrashed();
+		return $this->belongsTo('App\Task', 'task_id')->withTrashed();
 	}
 
 	/**

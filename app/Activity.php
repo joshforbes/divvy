@@ -49,16 +49,6 @@ class Activity extends Model {
         return $this->morphTo()->withTrashed();
     }
 
-    public function task()
-    {
-        return $this->subject->task()->withTrashed()->first();
-    }
-
-    public function commentable()
-    {
-        return $this->subject->commentable()->withTrashed()->first();
-    }
-
     /**
      * Create a new instance of Activity
      *

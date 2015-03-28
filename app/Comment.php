@@ -25,6 +25,16 @@ class Comment extends Model {
         return $this->morphTo();
     }
 
+    /**
+     * polymorphic relationship with soft deleted models included
+     *
+     * @return $this
+     */
+    public function commentableWithTrashed()
+    {
+        return $this->morphTo('commentable')->withTrashed();
+    }
+
 
     /**
      * A comment belongs to one author

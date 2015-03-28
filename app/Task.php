@@ -9,6 +9,28 @@ class Task extends Model {
 
     protected $fillable = ['name', 'description', 'project_id', 'user_id', 'is_complete'];
 
+    /**
+     * On soft delete cascade to subtasks, discussions, and comments
+     */
+    public static function boot()
+    {
+        parent::boot();
+
+        static::deleted(function($task)
+        {
+            foreach ($task->subtasks as $subtask)
+            {
+                $subtask->comments()->delete();
+                $subtask->delete();
+            }
+            foreach ($task->discussions as $discussion)
+            {
+                $discussion->comments()->delete();
+                $discussion->delete();
+            }
+        });
+    }
+
     public static function assign(array $attributes)
     {
         return new static($attributes);

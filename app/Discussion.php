@@ -10,6 +10,22 @@ class Discussion extends Model {
 	protected $fillable = ['title', 'body', 'task_id', 'user_id'];
 
 	/**
+	 * On soft delete cascade to comments
+     */
+	public static function boot()
+	{
+		parent::boot();
+
+		static::deleted(function($discussion)
+		{
+			foreach($discussion->comments() as $comment)
+			{
+				$comment->delete();
+			}
+		});
+	}
+
+	/**
 	 * A Discussion belongs to one task
 	 *
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
@@ -19,9 +35,14 @@ class Discussion extends Model {
 		return $this->belongsTo('App\Task');
 	}
 
-	public function trashedTask()
+	/**
+	 * Discussion to task relationship with soft deleted models included
+	 *
+	 * @return mixed
+     */
+	public function taskWithTrashed()
 	{
-		return $this->belongsTo('App\Task')->withTrashed();
+		return $this->belongsTo('App\Task', 'task_id')->withTrashed();
 	}
 
 	/**
