@@ -4,6 +4,7 @@
     "bootstrap-sass": "~3.3.3",
     "font-awesome": "~4.3.0",
     "handlebars": "~2.0.0",
-    "select2": "~4"
+    "select2": "~4",
+    "sass-initials-avatar": "*"
   }
 }

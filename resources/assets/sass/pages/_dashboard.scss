@@ -5,6 +5,6 @@
 
 .project-overview-wrapper {
     @include make-sm-column(6);
-    @include make-md-column(3);
-
+    @include make-md-column(4);
+    margin-bottom: 50px;
 }

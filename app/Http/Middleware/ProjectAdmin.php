@@ -3,7 +3,8 @@
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class ErrorIfNotProjectMember {
+class ProjectAdmin {
+
 
 	/**
 	 * The Guard implementation.
@@ -32,7 +33,7 @@ class ErrorIfNotProjectMember {
 	public function handle($request, Closure $next)
 	{
 
-		if (!$this->auth->user()->isMember($request->route('projectId')))
+		if (!$this->auth->user()->isAdmin($request->route('projectId')))
 		{
 			abort(401);
 		}

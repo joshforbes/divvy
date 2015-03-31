@@ -94,15 +94,16 @@ Route::group(['middleware' => 'project.member'], function ()
 
 });
 
-#Notifications
-Route::get('/{username}/notifications', ['as' => 'notification.index', 'uses' => 'NotificationsController@index']);
+Route::group(['middleware' => 'owner'], function()
+{
+    #Notifications
+    Route::get('/{username}/notifications', ['as' => 'notification.index', 'uses' => 'NotificationsController@index']);
+
+    #Profiles
+    Route::get('/{username}/edit', ['as' => 'profile.edit', 'uses' => 'ProfilesController@edit']);
+    Route::patch('/{username}', ['as' => 'profile.update', 'uses' => 'ProfilesController@update']);
+    Route::patch('/{username}/upload', ['as' => 'profile.uploadAvatar', 'uses' => 'ProfilesController@uploadAvatar']);
+});
 
 #Profiles
-Route::get('/{username}/edit', [
-    'as'         => 'profile.edit',
-    'uses'       => 'ProfilesController@edit',
-    'middleware' => 'profile.owner'
-]);
-Route::patch('/{username}', ['as' => 'profile.update', 'uses' => 'ProfilesController@update']);
-Route::patch('/{username}/upload', ['as' => 'profile.uploadAvatar', 'uses' => 'ProfilesController@uploadAvatar']);
 Route::get('/{username}', ['as' => 'profile.show', 'uses' => 'ProfilesController@show']);

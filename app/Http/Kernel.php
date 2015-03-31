@@ -27,12 +27,12 @@ class Kernel extends HttpKernel {
 		'auth' => 'App\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
-		'profile.owner' => 'App\Http\Middleware\RedirectIfNotProfileOwner',
-		'project.member' => 'App\Http\Middleware\ErrorIfNotProjectMember',
-		'project.admin' => 'App\Http\Middleware\ErrorIfNotProjectAdmin',
-		'task.assigned' => 'App\Http\Middleware\ErrorIfNotTaskMember',
+		'owner' => 'App\Http\Middleware\CheckOwnership',
+		'project.member' => 'App\Http\Middleware\ProjectMember',
+		'project.admin' => 'App\Http\Middleware\ProjectAdmin',
+		'task.assigned' => 'App\Http\Middleware\TaskMember',
 		'discussion.author' => 'App\Http\Middleware\DiscussionAuthor',
-		'comment.author' => 'App\Http\Middleware\CommentAuthor'
+		'comment.author' => 'App\Http\Middleware\CommentAuthor',
 	];
 
 }

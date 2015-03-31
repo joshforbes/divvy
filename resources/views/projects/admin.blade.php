@@ -6,7 +6,6 @@
 
 @section('content')
     <div class="container">
-
         <div class="project-header">
 
             <div class="project-header__title">

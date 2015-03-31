@@ -3,8 +3,7 @@
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class ErrorIfNotProjectAdmin {
-
+class TaskMember {
 
 	/**
 	 * The Guard implementation.
@@ -33,12 +32,14 @@ class ErrorIfNotProjectAdmin {
 	public function handle($request, Closure $next)
 	{
 
-		if (!$this->auth->user()->isAdmin($request->route('projectId')))
+		if (!$this->auth->user()->isAssignedToTask($request->route('taskId')) && !$this->auth->user()->isAdmin($request->route('projectId')))
 		{
 			abort(401);
 		}
 
 		return $next($request);
 	}
+
+
 
 }

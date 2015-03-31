@@ -1,6 +1,5 @@
 @import "variables";
 @import "bootstrap";
-@import "components";
 
 @import "pages/dashboard";
 @import "pages/create-project";
@@ -13,7 +12,8 @@
 @import "pages/comment-layout";
 @import "pages/activity-index";
 
-
+@import "components/buttons";
+@import "components/header";
 @import "components/project-overview";
 @import "components/create-project";
 @import "components/task-form";
@@ -30,7 +30,6 @@
 @import "components/comment";
 @import "components/subtask";
 
-
 .container-small {
     @extend .container;
     width: 980px;
@@ -39,11 +38,16 @@
 /** NAV **/
 
 .navbar {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+
 
     .navbar-brand {
-        font-family: 'Leckerli One', cursive;
+        font-family: $font-family-logo;
         font-size: 2.5em;
+    }
+
+    ul {
+        font-size: 15px;
     }
 }
 

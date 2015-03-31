@@ -1,15 +1,18 @@
 <a href="{{ route('project.show', $project->id) }}">
     <div class="project-overview">
         <div class="project-overview__header">
-            {{$project->name}}
+            <div class="project-overview__title">{{$project->name}}</div>
         </div>
         <p class="project-overview__description">{{$project->description}}</p>
-        <div class="project-overview__summary">
-            <div class="project-overview__members">{{count($project->users)}} Members</div>
-            <div class="project-overview__tasks">{{count($project->tasks)}} Tasks</div>
-        </div>
-        @if(Auth::user()->isAdmin($project->id))
-            <div class="project-overview__footer">Admin</div>
+
+
+        @if($project->users)
+            <div class="project-overview__members">
+                @foreach($project->users as $user)
+                    <span class="project-overview__member">{!! $user->profile->present()->avatarHtml('40px') !!}</span>
+                @endforeach
+            </div>
         @endif
+
     </div>
 </a>

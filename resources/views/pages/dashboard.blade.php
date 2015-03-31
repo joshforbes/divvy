@@ -1,20 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="header">
+        <div class="container">
+            <h3 class="header__title">Dashboard</h3>
 
-        <section class="projects">
-
-            <article class="project-overview-wrapper">
+            <div class="header__controls">
                 <a href="{{ route('project.create') }}">
-                    <div class="project-overview">
-                        <div class="project-overview__new-project">
-                            +<br/>
-                            Create New Project
-                        </div>
-                    </div>
+                    <button class="header__button">+ Project</button>
                 </a>
-            </article>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <section class="projects">
 
             @if($projects)
                 @foreach($projects as $project)

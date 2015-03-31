@@ -4,7 +4,7 @@ $I->am('a Divvy user');
 $I->wantTo('I want to create a new project');
 
 $I->signIn();
-$I->click('Create New Project');
+$I->click('+ Project');
 
 $I->fillField('name', 'Test project');
 $I->click('Create Project');

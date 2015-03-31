@@ -3,7 +3,7 @@
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class ErrorIfNotTaskMember {
+class CheckOwnership {
 
 	/**
 	 * The Guard implementation.
@@ -22,6 +22,7 @@ class ErrorIfNotTaskMember {
 		$this->auth = $auth;
 	}
 
+
 	/**
 	 * Handle an incoming request.
 	 *
@@ -31,15 +32,11 @@ class ErrorIfNotTaskMember {
 	 */
 	public function handle($request, Closure $next)
 	{
-
-		if (!$this->auth->user()->isAssignedToTask($request->route('taskId')) && !$this->auth->user()->isAdmin($request->route('projectId')))
+		if ($request->route('username') !== $this->auth->user()->username)
 		{
 			abort(401);
 		}
-
 		return $next($request);
 	}
-
-
 
 }
