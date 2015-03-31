@@ -5,36 +5,40 @@
 @endsection
 
 @section('content')
-    <div class="container">
-        <div class="project-header">
+    <div class="header">
+        <div class="container">
+            <h3 class="header__title">{{ $project->name }}</h3>
 
-            <div class="project-header__title">
-                <h1 class="project-header__name">{{ $project->name }}</h1>
-
-                <p class="project-header__description">{{ $project->description }}</p>
+            <div class="header__controls">
+                <a class="tasks-header__add-task" href="{{ route('task.create', $project->id) }}">
+                    <button class="header__button">+ Task</button>
+                </a>
             </div>
-
-            <div class="project-header__summary">
-                <span class="project-header__member-count">{{ count($project->users) }}<br/>Members</span>
-            </div>
-
         </div>
 
-        <div class="activity-log-wrapper">
-            <div class="activity-log">
-                <span class="activity-log__header">Latest Project Activity:</span>
-                @foreach($project->activity->take(3) as $activity)
+    </div>
 
-                    <p>@include("activity.types.{$activity->action}")</p>
-                @endforeach
+    <div class="container">
+
+        <div class="information-wrapper">
+
+            <div class="activity-log-wrapper">
+                <div class="activity-log">
+                    <div class="activity-log__header">
+                        <div class="activity-log__title">Latest Project Activity</div>
+                    </div>
+                    <div class="activity-log__body">
+                    @foreach($project->activity->take(3) as $activity)
+                        <p>@include("activity.types.{$activity->action}")</p>
+                    @endforeach
+                    </div>
+                </div>
             </div>
+
+
         </div>
 
         @if($project->tasks)
-            <div class="tasks-header">
-                <span class="tasks-header__task-count">{{ count($project->tasks) }} Tasks</span>
-                <a class="tasks-header__add-task" href="{{ route('task.create', $project->id) }}">+ Task</a>
-            </div>
 
             <div class="tasks">
                 @foreach($project->tasks as $task)

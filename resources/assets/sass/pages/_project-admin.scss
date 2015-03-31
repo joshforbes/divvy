@@ -1,4 +1,10 @@
+.information-wrapper {
+    @include make-row();
+    margin-bottom: 50px;
+}
+
 .activity-log-wrapper {
+    @include make-md-column(6);
 }
 
 .tasks {

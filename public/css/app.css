@@ -4820,8 +4820,7 @@ button.close {
 
 .projects {
   margin-left: -15px;
-  margin-right: -15px;
-  margin-top: 50px; }
+  margin-right: -15px; }
   .projects:before, .projects:after {
     content: " ";
     display: table; }
@@ -4890,6 +4889,26 @@ button.close {
   @media (min-width: 992px) {
     .task-form-wrapper .task-form {
       margin-left: 25%; } }
+
+.information-wrapper {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 50px; }
+  .information-wrapper:before, .information-wrapper:after {
+    content: " ";
+    display: table; }
+  .information-wrapper:after {
+    clear: both; }
+
+.activity-log-wrapper {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .activity-log-wrapper {
+      float: left;
+      width: 50%; } }
 
 .tasks {
   margin-left: -15px;
@@ -5144,6 +5163,7 @@ input[type="submit"] {
 .header {
   background-color: white;
   margin-top: 0;
+  margin-bottom: 50px;
   height: 100px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07); }
@@ -5310,79 +5330,6 @@ input[type="submit"] {
     .task-form__button .badge {
       color: #184D59;
       background-color: white; }
-
-.project-header {
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-bottom: 50px;
-  margin-top: 30px; }
-  .project-header:before, .project-header:after {
-    content: " ";
-    display: table; }
-  .project-header:after {
-    clear: both; }
-  .project-header__title {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px; }
-    @media (min-width: 992px) {
-      .project-header__title {
-        float: left;
-        width: 58.33333%; } }
-  .project-header__name {
-    font-size: 2em;
-    margin-bottom: 5px; }
-  .project-header__summary {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-top: 30px; }
-    @media (min-width: 992px) {
-      .project-header__summary {
-        margin-left: 16.66667%; } }
-    @media (min-width: 992px) {
-      .project-header__summary {
-        float: left;
-        width: 25%; } }
-  .project-header__member-count {
-    float: right;
-    text-align: right; }
-
-.tasks-header {
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-bottom: 20px; }
-  .tasks-header:before, .tasks-header:after {
-    content: " ";
-    display: table; }
-  .tasks-header:after {
-    clear: both; }
-  .tasks-header__task-count {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 1.2em; }
-    @media (min-width: 992px) {
-      .tasks-header__task-count {
-        float: left;
-        width: 58.33333%; } }
-  .tasks-header__add-task {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 1.2em;
-    text-align: right; }
-    @media (min-width: 992px) {
-      .tasks-header__add-task {
-        margin-left: 16.66667%; } }
-    @media (min-width: 992px) {
-      .tasks-header__add-task {
-        float: left;
-        width: 25%; } }
 
 .task {
   height: 600px;
@@ -5657,13 +5604,21 @@ input[type="submit"] {
     color: #184D59; }
 
 .activity-log {
-  width: 70%;
-  margin-bottom: 30px; }
+  height: 300px;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: white; }
   .activity-log__header {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    font-weight: 600; }
+    color: #184D59;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 15px 15px;
+    margin-bottom: 10px; }
+  .activity-log__title {
+    font-size: 18px; }
+  .activity-log__body {
+    padding: 0 15px; }
 
 .subtask-form {
   width: 100%;
@@ -5743,12 +5698,6 @@ input[type="submit"] {
   padding: 30px;
   background-color: white;
   box-shadow: 0 0 3px #184D59; }
-
-.default-avatar {
-  display: inline-block;
-  text-align: center;
-  color: white;
-  background-color: #F23030; }
 
 .container-small {
   width: 980px; }

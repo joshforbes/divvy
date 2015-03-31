@@ -5,7 +5,6 @@
         </div>
         <p class="project-overview__description">{{$project->description}}</p>
 
-
         @if($project->users)
             <div class="project-overview__members">
                 @foreach($project->users as $user)
