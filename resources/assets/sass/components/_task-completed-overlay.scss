@@ -1,0 +1,26 @@
+.task-completed-overlay {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    background-color:$gray-lighter;
+    opacity: .3;
+    z-index: 1000;
+
+    &__button {
+        position: absolute;
+        right: 30px;
+        top: 15px;
+        opacity: .75;
+        background-color: $gray-light;
+        z-index: 1001;
+        color: white;
+        padding: 2px 14px;
+
+        .fa {
+            margin-right: 5px;
+        }
+
+    }
+}

@@ -2,10 +2,15 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laracasts\Presenter\PresentableTrait;
 
 class Project extends Model {
 
 	use SoftDeletes;
+	use PresentableTrait;
+
+	protected $presenter = 'App\Presenters\ProjectPresenter';
+
 
 	protected $fillable = ['name', 'description'];
 
@@ -90,6 +95,16 @@ class Project extends Model {
 		]);
 
 		return $project;
+	}
+
+	/**
+	 * returns completed tasks
+	 *
+	 * @return mixed
+     */
+	public function completedTasks()
+	{
+		return $this->tasks()->where('is_complete', 1);
 	}
 
 }

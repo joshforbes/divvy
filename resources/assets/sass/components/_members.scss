@@ -1,4 +1,4 @@
-.project-overview {
+.members {
     height: 300px;
     position: relative;
     border: 1px solid transparent;
@@ -10,22 +10,15 @@
         color: $accent-color;
         border-bottom: 2px solid rgba(0, 0, 0, 0.1);
         padding: 15px 15px;
+        margin-bottom: 10px;
     }
 
     &__title {
         font-size: 18px;
     }
 
-    &__description {
-        color: $gray-light;
-        margin: 10px 15px;
 
-    }
-
-    &__members {
-        position: absolute;
-        bottom: 10px;
-        left: 0;
+    &__body {
         padding: 0 15px;
     }
 
@@ -38,5 +31,4 @@
         margin: 1px;
         margin-bottom: 3px;
     }
-
 }

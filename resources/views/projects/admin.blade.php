@@ -23,18 +23,16 @@
         <div class="information-wrapper">
 
             <div class="activity-log-wrapper">
-                <div class="activity-log">
-                    <div class="activity-log__header">
-                        <div class="activity-log__title">Latest Project Activity</div>
-                    </div>
-                    <div class="activity-log__body">
-                    @foreach($project->activity->take(3) as $activity)
-                        <p>@include("activity.types.{$activity->action}")</p>
-                    @endforeach
-                    </div>
-                </div>
+                @include('activity.partials.activity-log')
             </div>
 
+            <div class="members-wrapper">
+                @include('users.partials.members')
+            </div>
+
+            <div class="task-progress-wrapper">
+                @include('tasks.partials.task-progress')
+            </div>
 
         </div>
 
@@ -45,19 +43,20 @@
                     @if(!$task->isCompleted())
                         <div class="task-wrapper">
 
-                            @include('tasks.partials.task')
-
+                            {{--@include('tasks.partials.task')--}}
+                            @include('tasks.partials.task-overview')
                         </div>
                     @endif
                 @endforeach
-            </div>
-            <div class="tasks">
-                <h2>Completed Tasks:</h2>
+
                 @foreach($project->tasks as $task)
                     @if($task->isCompleted())
                         <div class="task-wrapper">
+                            <div class="task-completed-overlay"></div>
+                            <button class="task-completed-overlay__button"><i class="fa fa-file-o"></i>Reopen</button>
 
-                            @include('tasks.partials.task')
+                            @include('tasks.partials.task-overview')
+
 
                         </div>
                     @endif
@@ -65,30 +64,21 @@
             </div>
         @endif
 
-        <div class="row">
-            {!! Form::open(['route' => ['project.addUser', $project->id]]) !!}
+        {{--<div class="row">--}}
+            {{--{!! Form::open(['route' => ['project.addUser', $project->id]]) !!}--}}
 
-            <div class="input-group">
-                <select name="user" class="js-user-list" id="usersList" data-placeholder="Add a User to Project">
-                    <option></option>
-                    @foreach ( $users as $email => $username )
-                        <option value="{{$email}}">{{$username}}</option>
-                    @endforeach
-                </select>
-                {!! Form::submit('Add', ['class' => 'btn btn-info']) !!}
-            </div>
-            {!! Form::close() !!}
-        </div>
+            {{--<div class="input-group">--}}
+                {{--<select name="user" class="js-user-list" id="usersList" data-placeholder="Add a User to Project">--}}
+                    {{--<option></option>--}}
+                    {{--@foreach ( $users as $email => $username )--}}
+                        {{--<option value="{{$email}}">{{$username}}</option>--}}
+                    {{--@endforeach--}}
+                {{--</select>--}}
+                {{--{!! Form::submit('Add', ['class' => 'btn btn-info']) !!}--}}
+            {{--</div>--}}
+            {{--{!! Form::close() !!}--}}
+        {{--</div>--}}
 
-        <div class="members-container">
-            <p>Members:
-                @foreach($project->users as $user)
-                    <a href="{!! route('profile.show', $user->username) !!}">
-                        {!! $user->profile->present()->avatarHtml('40px') !!}
-                    </a>
-                @endforeach
-            </p>
-        </div>
     </div>
 
 

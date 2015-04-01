@@ -22,14 +22,14 @@ elixir(function(mix) {
         .copy(
         'vendor/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
         'public/js/vendor/bootstrap.js')
-        //.copy(
-        //'vendor/bower_components/font-awesome/css/font-awesome.min.css',
-        //'public/css/vendor/font-awesome.css'
-        //)
-        //.copy(
-        //'vendor/bower_components/font-awesome/fonts',
-        //'public/css/fonts'
-        //)
+        .copy(
+        'vendor/bower_components/font-awesome/css/font-awesome.min.css',
+        'public/css/vendor/font-awesome.css'
+        )
+        .copy(
+        'vendor/bower_components/font-awesome/fonts',
+        'public/fonts'
+        )
         .copy(
         'vendor/bower_components/handlebars/handlebars.min.js',
         'public/js/vendor/handlebars.js')
@@ -52,6 +52,14 @@ elixir(function(mix) {
             'app.js'
         ], 'public/js', 'resources/assets/js'
     );
+
+    mix.styles(
+        [
+        "vendor/font-awesome.css",
+        "app.css"
+        ], 'public/css', 'public/css'
+    );
+
 
     mix.codeception();
 

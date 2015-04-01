@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 @import "bootstrap";
 
 @import "pages/dashboard";
@@ -27,11 +28,10 @@
 @import "components/comment-edit-form";
 @import "components/comment";
 @import "components/subtask";
-
-.container-small {
-    @extend .container;
-    width: 980px;
-}
+@import "components/members";
+@import "components/task-progress";
+@import "components/task-overview";
+@import "components/task-completed-overlay";
 
 /** NAV **/
 

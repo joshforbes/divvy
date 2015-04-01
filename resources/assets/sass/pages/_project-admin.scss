@@ -5,6 +5,28 @@
 
 .activity-log-wrapper {
     @include make-md-column(6);
+    @include make-xs-column(12);
+    margin-bottom: 50px;
+}
+
+.members-wrapper {
+    @include make-md-column(3);
+    @include make-xs-column(6);
+    margin-bottom: 50px;
+
+    @media (max-width: 468px) {
+        @include make-xs-column(12);
+    }
+}
+
+.task-progress-wrapper {
+    @include make-md-column(3);
+    @include make-xs-column(6);
+    margin-bottom: 50px;
+
+    @media (max-width: 468px) {
+        @include make-xs-column(12);
+    }
 }
 
 .tasks {
@@ -12,5 +34,7 @@
  }
 
 .task-wrapper {
-    @include make-md-column(6);
+    @include make-md-column(4);
+    position: relative;
 }
+
