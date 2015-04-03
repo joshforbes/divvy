@@ -1,12 +1,15 @@
-.task-completed-overlay {
+.overview-overlay {
     position: absolute;
     top: 0;
     left: 15px;
     right: 15px;
     bottom: 0;
+    z-index: 1000;
+}
+
+.overview-overlay--completed {
     background-color:$gray-lighter;
     opacity: .3;
-    z-index: 1000;
 
     &__button {
         position: absolute;
@@ -14,7 +17,7 @@
         top: 15px;
         opacity: .75;
         background-color: $gray-light;
-        z-index: 1001;
+        z-index: 2000;
         color: white;
         padding: 2px 14px;
 

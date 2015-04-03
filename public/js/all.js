@@ -15,8 +15,8 @@
             type: method,
             url: form.prop('action'),
             data: form.serialize(),
-            success: function() {
-                $.publish('ajax.request.success', form);
+            success: function(successData) {
+                $.publish('ajax.request.success', [form, successData]);
             }
         });
 
@@ -37,8 +37,8 @@
 
     // Handle success callbacks. To trigger Task.foo(), do:
     // 'data-model' => 'Task', 'data-remote-on-success' => 'foo'
-    $.subscribe('ajax.request.success', function(e, form) {
-        triggerClickCallback.apply(form, [e, $(form).data('remote-on-success')]);
+    $.subscribe('ajax.request.success', function(e, form, data) {
+        triggerClickCallback.apply(form, [e, $(form).data('remote-on-success'), data]);
     });
 
 
@@ -58,7 +58,7 @@
 
 
     // Trigger the registered callback for a click or form submission.
-    var triggerClickCallback = function(e, method) {
+    var triggerClickCallback = function(e, method, data) {
         var that = $(this);
 
         // What's the name of the parent model/scope/object.
@@ -69,7 +69,7 @@
 
         // As long as the object and method exist, trigger it and pass through the form.
         if (typeof window[model] == 'object' && typeof window[model][method] == 'function') {
-            window[model][method](that);
+            window[model][method](that, data);
         } else {
             console.error('Could not call method ' + method + ' on object ' + model);
         }
@@ -131,10 +131,46 @@ var projectModule = (function() {
         s.selectBoxSelected.html('');
     }
 
+    function bindUIactions() {
+        s.reopenTaskButton.on('click', function() {
+
+        });
+    }
+
     return {
         settings: {
+            tasks: $('.tasks'),
+            reopenTaskButton: $('.js-reopen-task-button'),
             selectBoxSelected: $('.select2-selection__rendered'),
             selectBoxOption: $('.js-user-list option')
+        },
+
+        test: function(form, data) {
+            var currentTask = $(form).parents(".task-overview");
+
+            //$('form').prop('action').contains(' + data + ').filter(function() {
+            //    return $(this).text() == "findthis";
+            //});
+
+            //console.log($(".tasks:contains('Work')"));
+
+            var task = $('form').filter(function() {
+                if ( $(this).prop('action').indexOf('/task/' + data + '/incomplete') >= 0) {
+                    console.log($(this).parents('.task-wrapper'));
+                }
+            });
+
+            //'attr('action').contains(data);
+            //console.log($("form"));
+
+
+            //var replacementTask = tasks.filter(function() {
+            //    return $(this).html() === currentTask.html());
+            //});
+            //console.log(replacementTask);
+            //var tasks = parsedData.find(".tasks");
+
+            //this.settings.reopenTaskButton.parents('.tasks').replaceWith(tasks);
         },
 
         addUser: function() {
@@ -143,6 +179,7 @@ var projectModule = (function() {
 
         init: function() {
             s = this.settings;
+            bindUIactions();
         }
     }
 })();

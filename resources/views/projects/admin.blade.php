@@ -42,42 +42,48 @@
                 @foreach($project->tasks as $task)
                     @if(!$task->isCompleted())
                         <div class="task-wrapper">
-
-                            {{--@include('tasks.partials.task')--}}
                             @include('tasks.partials.task-overview')
                         </div>
                     @endif
                 @endforeach
 
-                @foreach($project->tasks as $task)
-                    @if($task->isCompleted())
-                        <div class="task-wrapper">
-                            <div class="task-completed-overlay"></div>
-                            <button class="task-completed-overlay__button"><i class="fa fa-file-o"></i>Reopen</button>
+                <div class="tasks--completed">
+                    @foreach($project->tasks as $task)
+                        @if($task->isCompleted())
+                            <div class="task-wrapper">
+                                <div class="overview-overlay-wrapper">
+                                    <div class="overview-overlay overview-overlay--completed"></div>
+                                    {!! Form::open(['data-remote', 'data-model' => 'projectModule', 'data-remote-on-success' => 'test', 'route' => ['task.incomplete', $project->id, $task->id]]) !!}
+                                    <button class="overview-overlay--completed__button js-reopen-task-button">
+                                        <i class="fa fa-file-o"></i>Reopen
+                                    </button>
+                                    {!! Form::close() !!}
+                                </div>
 
-                            @include('tasks.partials.task-overview')
+                                @include('tasks.partials.task-overview')
 
 
-                        </div>
-                    @endif
-                @endforeach
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
             </div>
         @endif
 
-        {{--<div class="row">--}}
-            {{--{!! Form::open(['route' => ['project.addUser', $project->id]]) !!}--}}
+        <div class="row">
+            {!! Form::open(['route' => ['project.addUser', $project->id]]) !!}
 
-            {{--<div class="input-group">--}}
-                {{--<select name="user" class="js-user-list" id="usersList" data-placeholder="Add a User to Project">--}}
-                    {{--<option></option>--}}
-                    {{--@foreach ( $users as $email => $username )--}}
-                        {{--<option value="{{$email}}">{{$username}}</option>--}}
-                    {{--@endforeach--}}
-                {{--</select>--}}
-                {{--{!! Form::submit('Add', ['class' => 'btn btn-info']) !!}--}}
-            {{--</div>--}}
-            {{--{!! Form::close() !!}--}}
-        {{--</div>--}}
+            <div class="input-group">
+                <select name="user" class="js-user-list" id="usersList" data-placeholder="Add a User to Project">
+                    <option></option>
+                    @foreach ( $users as $email => $username )
+                        <option value="{{$email}}">{{$username}}</option>
+                    @endforeach
+                </select>
+                {!! Form::submit('Add', ['class' => 'btn btn-info']) !!}
+            </div>
+            {!! Form::close() !!}
+        </div>
 
     </div>
 
