@@ -10,49 +10,39 @@ var projectModule = (function() {
     }
 
     function bindUIactions() {
-        s.reopenTaskButton.on('click', function() {
-
-        });
     }
+
+    function bindPusherEvents() {
+        var pusher = new Pusher('bf3b73f9a228dfef0913');
+        var channel = pusher.subscribe('p7');
+
+        channel.bind('taskWasIncomplete', taskWasIncomplete);
+        channel.bind('projectCompletionChanged', projectProgressChanged);
+        channel.bind('updateActivityLog', updateActivityLog);
+    }
+
+    function taskWasIncomplete(data) {
+        var task = $("form[action*='task/" + data.taskId + "/incomplete']").parents('.task-wrapper');
+
+        task.html(data.partial);
+    }
+
+    function projectProgressChanged(data) {
+        s.completionContainer.html(data.partial);
+    }
+
+    function updateActivityLog(data) {
+        s.activityLog.html(data.partial);
+    }
+
 
     return {
         settings: {
             tasks: $('.tasks'),
-            reopenTaskButton: $('.js-reopen-task-button'),
+            completionContainer: $('.task-progress'),
+            activityLog: $('.activity-log'),
             selectBoxSelected: $('.select2-selection__rendered'),
             selectBoxOption: $('.js-user-list option')
-        },
-
-        taskWasIncomplete: function() {
-
-        },
-
-        test: function(form, data) {
-            var currentTask = $(form).parents(".task-overview");
-
-            //$('form').prop('action').contains(' + data + ').filter(function() {
-            //    return $(this).text() == "findthis";
-            //});
-
-            //console.log($(".tasks:contains('Work')"));
-
-            var task = $('form').filter(function() {
-                if ( $(this).prop('action').indexOf('/task/' + data + '/incomplete') >= 0) {
-                    console.log($(this).parents('.task-wrapper'));
-                }
-            });
-
-            //'attr('action').contains(data);
-            //console.log($("form"));
-
-
-            //var replacementTask = tasks.filter(function() {
-            //    return $(this).html() === currentTask.html());
-            //});
-            //console.log(replacementTask);
-            //var tasks = parsedData.find(".tasks");
-
-            //this.settings.reopenTaskButton.parents('.tasks').replaceWith(tasks);
         },
 
         addUser: function() {
@@ -62,6 +52,7 @@ var projectModule = (function() {
         init: function() {
             s = this.settings;
             bindUIactions();
+            bindPusherEvents();
         }
     }
 })();

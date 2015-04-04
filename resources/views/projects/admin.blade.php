@@ -53,7 +53,7 @@
                             <div class="task-wrapper">
                                 <div class="overview-overlay-wrapper">
                                     <div class="overview-overlay overview-overlay--completed"></div>
-                                    {!! Form::open(['data-remote', 'data-model' => 'projectModule', 'data-remote-on-success' => 'test', 'route' => ['task.incomplete', $project->id, $task->id]]) !!}
+                                    {!! Form::open(['data-remote', 'route' => ['task.incomplete', $project->id, $task->id]]) !!}
                                     <button class="overview-overlay--completed__button js-reopen-task-button">
                                         <i class="fa fa-file-o"></i>Reopen
                                     </button>

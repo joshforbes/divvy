@@ -36,7 +36,7 @@ class TaskWasIncomplete {
 
         $this->pusher->trigger($channel, 'taskWasIncomplete', [
             'taskId' => $task->id,
-            'partial' => $partial,
+            'partial' => (String) $partial,
         ]);
 
     }
