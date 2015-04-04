@@ -15,6 +15,7 @@ class TaskWasIncompleteEvent extends Event {
 	public $userId;
 	public $projectId;
 	public $notifiable;
+	public $task;
 
 	/**
 	 * Create a new event instance.
@@ -30,6 +31,7 @@ class TaskWasIncompleteEvent extends Event {
 		$this->userId = $user->id;
 		$this->projectId = $task->project_id;
 		$this->notifiable = $task->users;
+		$this->task = $task;
 	}
 
 }

@@ -15,8 +15,8 @@
             type: method,
             url: form.prop('action'),
             data: form.serialize(),
-            success: function(successData) {
-                $.publish('ajax.request.success', [form, successData]);
+            success: function() {
+                $.publish('ajax.request.success', [form]);
             }
         });
 
@@ -37,8 +37,8 @@
 
     // Handle success callbacks. To trigger Task.foo(), do:
     // 'data-model' => 'Task', 'data-remote-on-success' => 'foo'
-    $.subscribe('ajax.request.success', function(e, form, data) {
-        triggerClickCallback.apply(form, [e, $(form).data('remote-on-success'), data]);
+    $.subscribe('ajax.request.success', function(e, form) {
+        triggerClickCallback.apply(form, [e, $(form).data('remote-on-success')]);
     });
 
 
@@ -69,7 +69,7 @@
 
         // As long as the object and method exist, trigger it and pass through the form.
         if (typeof window[model] == 'object' && typeof window[model][method] == 'function') {
-            window[model][method](that, data);
+            window[model][method](that);
         } else {
             console.error('Could not call method ' + method + ' on object ' + model);
         }

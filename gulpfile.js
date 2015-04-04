@@ -23,6 +23,9 @@ elixir(function(mix) {
         'vendor/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
         'public/js/vendor/bootstrap.js')
         .copy(
+        'vendor/bower_components/pusher/dist/pusher.js',
+        'public/js/vendor/pusher.js')
+        .copy(
         'vendor/bower_components/font-awesome/css/font-awesome.min.css',
         'public/css/vendor/font-awesome.css'
         )

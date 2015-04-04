@@ -157,13 +157,8 @@ class TasksController extends Controller {
      * @param $taskId
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function incomplete(Request $request, $projectId, $taskId)
+    public function incomplete($projectId, $taskId)
     {
-        if ($request->ajax())
-        {
-            return $taskId;
-        }
-
         $this->dispatch(
             new ReopenTaskCommand($taskId, $this->user)
         );

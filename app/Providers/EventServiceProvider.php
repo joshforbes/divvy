@@ -25,7 +25,8 @@ class EventServiceProvider extends ServiceProvider {
 		],
 		'App\Events\TaskWasIncompleteEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\TaskWasIncomplete'
 		],
 		'App\Events\TaskWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',

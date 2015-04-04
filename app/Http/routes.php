@@ -16,7 +16,6 @@
 //	var_dump($sql);
 //});
 
-
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
 
 Route::controllers([

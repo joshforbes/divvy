@@ -29,6 +29,7 @@
 <!-- Scripts -->
 <script src="/js/vendor/jquery.js"></script>
 <script src="/js/vendor/bootstrap.js"></script>
+<script src="/js/vendor/pusher.js"></script>
 <script src="/js/vendor/handlebars.js"></script>
 @yield('js')
 <script src="/js/all.js"></script>

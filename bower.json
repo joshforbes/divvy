@@ -5,6 +5,7 @@
     "font-awesome": "~4.3.0",
     "handlebars": "~2.0.0",
     "select2": "~4",
-    "sass-initials-avatar": "*"
+    "sass-initials-avatar": "*",
+    "pusher": "~2.2.4"
   }
 }

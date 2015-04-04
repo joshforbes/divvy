@@ -34,4 +34,10 @@ return [
 		'secret' => '',
 	],
 
+	'pusher' => [
+		'public' => env('PUSHER_PUBLIC'),
+		'secret' => env('PUSHER_SECRET'),
+		'app_id' => env('PUSHER_APP_ID')
+	],
+
 ];

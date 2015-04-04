@@ -23,6 +23,10 @@ var projectModule = (function() {
             selectBoxOption: $('.js-user-list option')
         },
 
+        taskWasIncomplete: function() {
+
+        },
+
         test: function(form, data) {
             var currentTask = $(form).parents(".task-overview");
 
