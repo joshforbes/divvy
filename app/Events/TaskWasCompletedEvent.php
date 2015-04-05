@@ -16,6 +16,7 @@ class TaskWasCompletedEvent extends Event {
 	public $userId;
 	public $projectId;
 	public $notifiable;
+	public $task;
 
 	/**
 	 * Create a new event instance.
@@ -31,5 +32,6 @@ class TaskWasCompletedEvent extends Event {
 		$this->userId = $user->id;
 		$this->projectId = $task->project_id;
 		$this->notifiable = $task->users;
+		$this->task = $task;
 	}
 }

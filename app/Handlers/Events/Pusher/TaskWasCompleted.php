@@ -1,12 +1,12 @@
 <?php namespace App\Handlers\Events\Pusher;
 
-use App\Events\TaskWasIncompleteEvent;
+use App\Events\TaskWasCompletedEvent;
 
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldBeQueued;
 use Pusher;
 
-class ProjectCompletionChanged {
+class TaskWasCompleted {
 
 	/**
 	 * @var Pusher
@@ -26,17 +26,19 @@ class ProjectCompletionChanged {
 	 * Handle the event.
 	 *
 	 * @param $event
-	 * @return void
 	 */
 	public function handle($event)
 	{
+		$task = $event->task;
 		$project = $event->task->project;
 		$channel = 'p'.$project->id;
-		$partial = view('tasks.partials.task-progress', compact('project'));
+		$partial = view('tasks.partials.task-overview', compact('task', 'project'));
 
-		$this->pusher->trigger($channel, 'projectCompletionChanged', [
-			'partial' => (String) $partial
+		$this->pusher->trigger($channel, 'taskWasCompleted', [
+			'taskId' => $task->id,
+			'partial' => (String) $partial,
 		]);
+
 	}
 
 }

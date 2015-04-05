@@ -78,7 +78,7 @@
     }
 
     // Dom bindings.
-    $('form[data-remote]').on('submit', submitLaravelRequest);
+    $('body').on('submit', 'form[data-remote]', submitLaravelRequest);
     $('input[data-confirm], button[data-confirm]').on('click', confirmAction);
     $('*[data-click]').on('click', function(e) {
         triggerClickCallback.apply(this, [e, $(this).data('click')]);

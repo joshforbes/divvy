@@ -1,8 +1,30 @@
+@if($task->isCompleted())
+    @include('tasks.partials.task-complete')
+@endif
+
 <div class="task-overview">
     <div class="task-overview__header">
         <div class="task-overview__title">
             <a href="{{ route('task.show', [$project->id, $task->id]) }}">{{$task->name}}</a>
         </div>
+
+        @if(!$task->isCompleted())
+            <button class="task-overview__settings-button"><i class="fa fa-gear"></i></button>
+        @endif
+
+        <div class="task-overview__settings-overlay hide">
+            <button class="task-overview__settings-close"><i class="fa fa-times"></i></button>
+            <div class="task-overview__settings">
+                @if($task->isCompletable() && !$task->isCompleted())
+                    {!! Form::open(['data-remote', 'route' => ['task.complete', $project->id, $task->id]])!!}
+                    <button class="task-overview__setting">
+                        <i class="fa fa-file-o"></i>Complete
+                    </button>
+                    {!! Form::close() !!}
+                @endif
+            </div>
+        </div>
+
     </div>
 
     <div class="task-overview__body">

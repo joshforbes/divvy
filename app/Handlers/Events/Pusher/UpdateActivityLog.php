@@ -25,10 +25,10 @@ class UpdateActivityLog {
 	/**
 	 * Handle the event.
 	 *
-	 * @param  TaskWasIncompleteEvent  $event
+	 * @param $event
 	 * @return void
 	 */
-	public function handle(TaskWasIncompleteEvent $event)
+	public function handle($event)
 	{
 		$project = $event->task->project;
 		$channel = 'p'.$project->id;

@@ -40,33 +40,10 @@
 
             <div class="tasks">
                 @foreach($project->tasks as $task)
-                    @if(!$task->isCompleted())
-                        <div class="task-wrapper">
-                            @include('tasks.partials.task-overview')
-                        </div>
-                    @endif
+                    <div class="task-wrapper">
+                        @include('tasks.partials.task-overview')
+                    </div>
                 @endforeach
-
-                <div class="tasks--completed">
-                    @foreach($project->tasks as $task)
-                        @if($task->isCompleted())
-                            <div class="task-wrapper">
-                                <div class="overview-overlay-wrapper">
-                                    <div class="overview-overlay overview-overlay--completed"></div>
-                                    {!! Form::open(['data-remote', 'route' => ['task.incomplete', $project->id, $task->id]]) !!}
-                                    <button class="overview-overlay--completed__button js-reopen-task-button">
-                                        <i class="fa fa-file-o"></i>Reopen
-                                    </button>
-                                    {!! Form::close() !!}
-                                </div>
-
-                                @include('tasks.partials.task-overview')
-
-
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
             </div>
         @endif
 

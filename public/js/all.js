@@ -78,7 +78,7 @@
     }
 
     // Dom bindings.
-    $('form[data-remote]').on('submit', submitLaravelRequest);
+    $('body').on('submit', 'form[data-remote]', submitLaravelRequest);
     $('input[data-confirm], button[data-confirm]').on('click', confirmAction);
     $('*[data-click]').on('click', function(e) {
         triggerClickCallback.apply(this, [e, $(this).data('click')]);
@@ -132,6 +132,20 @@ var projectModule = (function() {
     }
 
     function bindUIactions() {
+        $('body').on('click', '.task-overview__settings-button', function() {
+            showSettings(this);
+        });
+        $('body').on('click', '.task-overview__settings-close', function() {
+            hideSettings(this);
+        })
+    }
+
+    function showSettings(that) {
+        $(that).siblings(s.settingsOverlay).removeClass('hide');
+    }
+
+    function hideSettings(that) {
+        $(that).parent(s.settingsOverlay).addClass('hide');
     }
 
     function bindPusherEvents() {
@@ -141,6 +155,7 @@ var projectModule = (function() {
         channel.bind('taskWasIncomplete', taskWasIncomplete);
         channel.bind('projectCompletionChanged', projectProgressChanged);
         channel.bind('updateActivityLog', updateActivityLog);
+        channel.bind('taskWasCompleted', taskWasCompleted);
     }
 
     function taskWasIncomplete(data) {
@@ -157,12 +172,19 @@ var projectModule = (function() {
         s.activityLog.html(data.partial);
     }
 
+    function taskWasCompleted(data) {
+        var task = $("form[action*='task/" + data.taskId + "/complete']").parents('.task-wrapper');
+
+        task.html(data.partial);
+    }
 
     return {
         settings: {
             tasks: $('.tasks'),
             completionContainer: $('.task-progress'),
             activityLog: $('.activity-log'),
+            settingsButton: $('.task-overview__settings-button'),
+            settingsOverlay: $('.task-overview__settings-overlay'),
             selectBoxSelected: $('.select2-selection__rendered'),
             selectBoxOption: $('.js-user-list option')
         },
