@@ -22,6 +22,18 @@
                     </button>
                     {!! Form::close() !!}
                 @endif
+
+                {!! Form::open(['data-remote', 'route' => ['task.complete', $project->id, $task->id]])!!}
+                <button class="task-overview__setting">
+                    <i class="fa fa-file-o"></i>Edit
+                </button>
+                {!! Form::close() !!}
+
+                {!! Form::open(['data-remote', 'method' => 'DELETE', 'route' => ['task.destroy', $project->id, $task->id]])!!}
+                <button class="task-overview__setting">
+                    <i class="fa fa-trash"></i>Delete
+                </button>
+                {!! Form::close() !!}
             </div>
         </div>
 

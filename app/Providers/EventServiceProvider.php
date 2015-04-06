@@ -35,7 +35,10 @@ class EventServiceProvider extends ServiceProvider {
 		],
 		'App\Events\TaskWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\TaskWasDeleted',
+			'App\Handlers\Events\Pusher\ProjectCompletionChanged',
+			'App\Handlers\Events\Pusher\UpdateActivityLog'
 		],
 		'App\Events\SubtaskAddedToTaskEvent' => [
 			'App\Handlers\Events\LogProjectActivity',

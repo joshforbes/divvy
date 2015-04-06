@@ -161,6 +161,7 @@ var projectModule = (function() {
         channel.bind('taskWasCompleted', taskWasCompleted);
         channel.bind('memberJoinedProject', memberJoinedProject);
         channel.bind('memberRemovedFromProject', memberRemovedFromProject);
+        channel.bind('taskWasDeleted', taskWasDeleted);
     }
 
     function taskWasIncomplete(data) {
@@ -181,6 +182,11 @@ var projectModule = (function() {
         var task = $("form[action*='task/" + data.taskId + "/complete']").parents('.task-wrapper');
 
         task.html(data.partial);
+    }
+
+    function taskWasDeleted(data) {
+        var task = $("form[action*='task/" + data.taskId + "']").parents('.task-wrapper');
+        task.remove();
     }
 
     function memberJoinedProject(data) {

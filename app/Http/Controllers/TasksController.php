@@ -5,17 +5,14 @@ use App\Commands\CompleteTaskCommand;
 use App\Commands\ModifyTaskCommand;
 use App\Commands\RemoveTaskCommand;
 use App\Commands\ReopenTaskCommand;
-use App\Events\TaskWasCompletedEvent;
-use App\Events\TaskWasIncompleteEvent;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\TaskRequest;
-use App\Project;
 use App\Repositories\ProjectRepository;
 use App\Repositories\TaskRepository;
-use App\Task;
-use Illuminate\Http\Request;
+use Request;
+use Illuminate\Http\Response;
 
 /**
  * Class TasksController
@@ -131,6 +128,10 @@ class TasksController extends Controller {
             new RemoveTaskCommand($taskId, $this->user)
         );
 
+        if (Request::ajax())
+        {
+            return response('deleted', 200);
+        }
         return redirect()->back();
     }
 
