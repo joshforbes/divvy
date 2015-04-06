@@ -27,7 +27,7 @@
             </div>
 
             <div class="members-wrapper">
-                @include('users.partials.members')
+                @include('users.partials.project-members')
             </div>
 
             <div class="task-progress-wrapper">
@@ -47,36 +47,13 @@
             </div>
         @endif
 
-        <div class="row">
-            {!! Form::open(['route' => ['project.addUser', $project->id]]) !!}
-
-            <div class="input-group">
-                <select name="user" class="js-user-list" id="usersList" data-placeholder="Add a User to Project">
-                    <option></option>
-                    @foreach ( $users as $email => $username )
-                        <option value="{{$email}}">{{$username}}</option>
-                    @endforeach
-                </select>
-                {!! Form::submit('Add', ['class' => 'btn btn-info']) !!}
-            </div>
-            {!! Form::close() !!}
-        </div>
-
     </div>
-
-
-
 
 @endsection
 
 @section('js')
     <script src="/js/vendor/select2.js"></script>
     <script>
-        $("#usersList").select2({
-            tags: true,
-            placeholder: 'Pick a User or enter an email address'
-        });
-
         $(".task__header__delete-link").click(function() {
             $(this).parent(".task__header__delete-form").submit();
         });

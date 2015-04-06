@@ -100,9 +100,7 @@ class ProjectsController extends Controller {
 
             $users = $this->projectRepository->usersNotInProjectArray($project);
 
-            $members = $this->projectRepository->usersInProjectArray($project);
-
-            return view('projects.admin', compact('project', 'users', 'members'));
+            return view('projects.admin', compact('project', 'users'));
         }
 
         $project = $this->projectRepository->findByIdForMember($projectId);

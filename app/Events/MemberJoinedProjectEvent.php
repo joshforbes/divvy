@@ -15,6 +15,7 @@ class MemberJoinedProjectEvent extends Event {
 	public $userId;
 	public $projectId;
 	public $notifiable;
+	public $project;
 
 	/**
 	 * Create a new event instance.
@@ -31,7 +32,7 @@ class MemberJoinedProjectEvent extends Event {
 		$this->userId = $currentUser->id;
 		$this->projectId = $project->id;
 		$this->notifiable = [$user];
-
+		$this->project = $project;
 	}
 
 

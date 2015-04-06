@@ -32,6 +32,7 @@
 @import "components/task-progress";
 @import "components/task-overview";
 @import "components/overview-overlay";
+@import "components/modal";
 
 /** NAV **/
 
@@ -99,8 +100,8 @@ ADD USER TO PROJECT
 **/
 
 .input-group {
-    margin: 20px auto;
-    width: 50%;
+    margin: 20px auto 40px;
+    width: 80%;
 
     input[type="text"] {
         outline: none;
@@ -136,6 +137,7 @@ ADD USER TO PROJECT
     .btn {
         width: 40%;
         height: 4em;
+        background-color: $accent-color;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }

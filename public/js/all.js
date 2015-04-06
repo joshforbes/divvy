@@ -123,29 +123,32 @@ var profileModule = (function() {
 var projectModule = (function() {
     var s;
 
-    function clearSelectBox() {
-        var selectedText = s.selectBoxSelected.text();
-        s.selectBoxOption.filter(function () {
-            return $(this).html() == selectedText;
-        }).remove();
-        s.selectBoxSelected.html('');
-    }
-
     function bindUIactions() {
-        $('body').on('click', '.task-overview__settings-button', function() {
-            showSettings(this);
-        });
-        $('body').on('click', '.task-overview__settings-close', function() {
-            hideSettings(this);
-        })
+        $('body').on('click', '.task-overview__settings-button', showSettings);
+
+        $('body').on('click', '.task-overview__settings-close', hideSettings);
+
+        $('body').on('click', '.members__settings-button', showMembersSettings);
+
+        $('body').on('click', '.members__settings-close', hideMembersSettings);
+
+        s.select2Container.select2();
     }
 
-    function showSettings(that) {
-        $(that).siblings(s.settingsOverlay).removeClass('hide');
+    function showSettings() {
+        $(this).next(s.taskSettingsOverlay).hide().removeClass('hide').slideDown(600);
     }
 
-    function hideSettings(that) {
-        $(that).parent(s.settingsOverlay).addClass('hide');
+    function hideSettings() {
+        $(this).parent(s.taskSettingsOverlay).slideUp(600);
+    }
+
+    function showMembersSettings() {
+        $(this).next(s.membersSettingsOverlay).hide().removeClass('hide').slideDown(600);
+    }
+
+    function hideMembersSettings() {
+        $(this).parent().slideUp(600);
     }
 
     function bindPusherEvents() {
@@ -156,6 +159,7 @@ var projectModule = (function() {
         channel.bind('projectCompletionChanged', projectProgressChanged);
         channel.bind('updateActivityLog', updateActivityLog);
         channel.bind('taskWasCompleted', taskWasCompleted);
+        channel.bind('memberJoinedProject', memberJoinedProject);
     }
 
     function taskWasIncomplete(data) {
@@ -178,20 +182,25 @@ var projectModule = (function() {
         task.html(data.partial);
     }
 
+    function memberJoinedProject(data) {
+        s.membersEditBody.html(data.membersEditPartial);
+        s.membersBody.html(data.membersBodyPartial);
+
+        $(".members-edit__list").select2();
+    }
+
     return {
         settings: {
             tasks: $('.tasks'),
             completionContainer: $('.task-progress'),
             activityLog: $('.activity-log'),
-            settingsButton: $('.task-overview__settings-button'),
-            settingsOverlay: $('.task-overview__settings-overlay'),
-            selectBoxSelected: $('.select2-selection__rendered'),
-            selectBoxOption: $('.js-user-list option')
+            taskSettingsOverlay: $('.task-overview__settings-overlay'),
+            membersSettingsOverlay: $('.members__settings-overlay'),
+            membersEditBody: $('.members-edit-wrapper'),
+            membersBody: $('.members__body-wrapper'),
+            select2Container: $('.members-edit__list')
         },
 
-        addUser: function() {
-            clearSelectBox();
-        },
 
         init: function() {
             s = this.settings;
@@ -204,15 +213,7 @@ var projectModule = (function() {
 
 
 (function() {
-    //var pusher = new Pusher('bf3b73f9a228dfef0913');
-    //var channel = pusher.subscribe('p7');
-    //channel.bind('taskWasIncomplete', function(data) {
-    //
-    //    var task = $("form[action*='task/" + data.taskId + "/incomplete']").parent();
-    //
-    //    task.html(data.partial);
-    //
-    //});
+    $.fn.modal.Constructor.prototype.enforceFocus = function() {};
 
     profileModule.init();
     projectModule.init();
