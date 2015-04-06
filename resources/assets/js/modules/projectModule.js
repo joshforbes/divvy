@@ -38,6 +38,7 @@ var projectModule = (function() {
         channel.bind('updateActivityLog', updateActivityLog);
         channel.bind('taskWasCompleted', taskWasCompleted);
         channel.bind('memberJoinedProject', memberJoinedProject);
+        channel.bind('memberRemovedFromProject', memberRemovedFromProject);
     }
 
     function taskWasIncomplete(data) {
@@ -61,6 +62,13 @@ var projectModule = (function() {
     }
 
     function memberJoinedProject(data) {
+        s.membersEditBody.html(data.membersEditPartial);
+        s.membersBody.html(data.membersBodyPartial);
+
+        $(".members-edit__list").select2();
+    }
+
+    function memberRemovedFromProject(data) {
         s.membersEditBody.html(data.membersEditPartial);
         s.membersBody.html(data.membersBodyPartial);
 

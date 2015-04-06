@@ -36,5 +36,6 @@
 .task-wrapper {
     @include make-md-column(4);
     position: relative;
+    margin-bottom: 100px;
 }
 

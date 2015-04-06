@@ -4985,7 +4985,8 @@ button.close {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 100px; }
   @media (min-width: 992px) {
     .task-wrapper {
       float: left;

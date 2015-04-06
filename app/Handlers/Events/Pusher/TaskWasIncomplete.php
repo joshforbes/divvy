@@ -30,7 +30,7 @@ class TaskWasIncomplete {
     public function handle($event)
     {
         $task = $event->task;
-        $project = $event->task->project;
+        $project = $event->project;
         $channel = 'p'.$project->id;
         $partial = view('tasks.partials.task-overview', compact('task', 'project'));
 

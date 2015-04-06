@@ -15,12 +15,14 @@ class MemberRemovedFromProjectEvent extends Event {
 	public $userId;
 	public $projectId;
 	public $notifiable;
+	public $project;
 
 	/**
 	 * Create a new event instance.
 	 *
 	 * @param $user
 	 * @param $project
+	 * @param $currentUser
 	 */
 	public function __construct($user, $project, $currentUser)
 	{
@@ -30,6 +32,7 @@ class MemberRemovedFromProjectEvent extends Event {
 		$this->userId = $currentUser->id;
 		$this->projectId = $project->id;
 		$this->notifiable = [$user];
+		$this->project = $project;
 	}
 
 

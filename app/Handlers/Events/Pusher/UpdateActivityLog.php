@@ -30,7 +30,7 @@ class UpdateActivityLog {
 	 */
 	public function handle($event)
 	{
-		$project = $event->task->project;
+		$project = $event->project;
 		$channel = 'p'.$project->id;
 		$partial = view('activity.partials.activity-log', compact('project'));
 
