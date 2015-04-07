@@ -10,12 +10,11 @@
             <h3 class="header__title">{{ $project->name }}</h3>
 
             <div class="header__controls">
-                <a class="tasks-header__add-task" href="{{ route('task.create', $project->id) }}">
-                    <button class="header__button">+ Task</button>
-                </a>
+                <button class="header__button" data-toggle="modal" data-target=".add-task-modal">
+                    + Task
+                </button>
             </div>
         </div>
-
     </div>
 
     <div class="container">
@@ -37,23 +36,25 @@
         </div>
 
         @if($project->tasks)
-
             <div class="tasks">
                 @foreach($project->tasks as $task)
-                    <div class="task-wrapper">
-                        @include('tasks.partials.task-overview')
-                    </div>
+                    @include('tasks.partials.task-overview-wrapper')
                 @endforeach
             </div>
         @endif
 
     </div>
 
+    @include('tasks.partials.add-task-modal')
+
+
 @endsection
 
 @section('js')
     <script src="/js/vendor/select2.js"></script>
     <script>
+        $(".task-form__member-select").select2();
+
         $(".task__header__delete-link").click(function() {
             $(this).parent(".task__header__delete-form").submit();
         });

@@ -5238,13 +5238,13 @@ input[type="submit"] {
     line-height: 100px;
     display: inline; }
   .header__controls {
-    float: right;
     display: inline; }
   .header__button {
     background-image: linear-gradient(to bottom, #F23030 0%, #f01818 100%);
     padding: 5px 14px;
     color: white;
-    margin-top: 30px; }
+    margin-top: 30px;
+    float: right; }
 
 .project-overview {
   height: 300px;
@@ -5327,18 +5327,15 @@ input[type="submit"] {
       color: #184D59;
       background-color: white; }
 
-.task-form {
-  padding: 0 !important;
-  margin-top: 50px;
+.task-modal-wrapper {
   background-color: white;
-  box-shadow: 0 0 3px #184D59; }
-  .task-form__header {
-    width: 100%;
-    background-color: #184D59;
-    color: white;
-    height: 40px;
-    line-height: 40px;
-    text-align: center; }
+  padding-bottom: 100px; }
+
+.task-form {
+  display: inline;
+  margin-top: 50px; }
+  .task-form .fa {
+    margin-right: 5px; }
   .task-form__input {
     display: block;
     width: 100%;
@@ -5347,23 +5344,16 @@ input[type="submit"] {
     background-color: #eeeeee;
     color: #184D59;
     border: 0;
-    margin-bottom: 1px; }
+    margin-bottom: 15px; }
     .task-form__input::-moz-placeholder {
-      color: #184D59;
+      color: #777777;
       opacity: 1; }
     .task-form__input:-ms-input-placeholder {
-      color: #184D59; }
+      color: #777777; }
     .task-form__input::-webkit-input-placeholder {
-      color: #184D59; }
-  .task-form__member-select {
-    width: 100%; }
-  .task-form .select2-search__field::-moz-placeholder {
-    color: #184D59;
-    opacity: 1; }
-  .task-form .select2-search__field:-ms-input-placeholder {
-    color: #184D59; }
-  .task-form .select2-search__field::-webkit-input-placeholder {
-    color: #184D59; }
+      color: #777777; }
+  .task-form .select2-container {
+    width: 100% !important; }
   .task-form .select2-selection {
     background-color: #eeeeee;
     height: 40px;

@@ -14,6 +14,8 @@ class TaskModifiedEvent extends Event {
 	public $userId;
 	public $projectId;
 	public $notifiable;
+	public $task;
+	public $project;
 
 	/**
 	 * Create a new event instance.
@@ -29,6 +31,8 @@ class TaskModifiedEvent extends Event {
 		$this->userId = $user->id;
 		$this->projectId = $task->project_id;
 		$this->notifiable = $task->users;
+		$this->task = $task;
+		$this->project = $task->project;
 	}
 
 }

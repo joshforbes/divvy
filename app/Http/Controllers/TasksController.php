@@ -59,7 +59,7 @@ class TasksController extends Controller {
             new AddTaskToProjectCommand($request, $projectId, $this->user)
         );
 
-        return redirect()->route('project.show', [$projectId]);
+        return redirect()->back();
     }
 
     /**
@@ -110,8 +110,12 @@ class TasksController extends Controller {
             new ModifyTaskCommand($request, $taskId, $this->user)
         );
 
-        //Flash::message('Profile updated');
-        return redirect()->route('task.show', [$projectId, $taskId]);
+        if (Request::ajax())
+        {
+            return response('edited', 200);
+        }
+
+        return redirect()->back();
     }
 
     /**

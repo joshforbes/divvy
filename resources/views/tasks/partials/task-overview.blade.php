@@ -23,11 +23,9 @@
                     {!! Form::close() !!}
                 @endif
 
-                {!! Form::open(['data-remote', 'route' => ['task.complete', $project->id, $task->id]])!!}
-                <button class="task-overview__setting">
-                    <i class="fa fa-file-o"></i>Edit
+                <button class="task-overview__setting" data-toggle="modal" data-target={{"#" . $task->id . "-modal"}}>
+                    <i class="fa fa-edit"></i>Edit
                 </button>
-                {!! Form::close() !!}
 
                 {!! Form::open(['data-remote', 'method' => 'DELETE', 'route' => ['task.destroy', $project->id, $task->id]])!!}
                 <button class="task-overview__setting">
@@ -70,3 +68,5 @@
     @endif
 
 </div>
+
+

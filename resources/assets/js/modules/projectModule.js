@@ -31,15 +31,24 @@ var projectModule = (function() {
 
     function bindPusherEvents() {
         var pusher = new Pusher('bf3b73f9a228dfef0913');
-        var channel = pusher.subscribe('p7');
+        var channel = pusher.subscribe('p11');
 
         channel.bind('taskWasIncomplete', taskWasIncomplete);
         channel.bind('projectCompletionChanged', projectProgressChanged);
         channel.bind('updateActivityLog', updateActivityLog);
         channel.bind('taskWasCompleted', taskWasCompleted);
+        channel.bind('taskModified', taskModified);
         channel.bind('memberJoinedProject', memberJoinedProject);
         channel.bind('memberRemovedFromProject', memberRemovedFromProject);
         channel.bind('taskWasDeleted', taskWasDeleted);
+        channel.bind('taskAddedToProject', taskAddedToProject);
+    }
+
+    function taskAddedToProject(data) {
+        s.tasks.prepend(data.partial);
+        $('.add-task-modal').modal('hide');
+
+        $(".task-form__member-select").select2();
     }
 
     function taskWasIncomplete(data) {
@@ -58,6 +67,13 @@ var projectModule = (function() {
 
     function taskWasCompleted(data) {
         var task = $("form[action*='task/" + data.taskId + "/complete']").parents('.task-wrapper');
+
+        task.html(data.partial);
+    }
+
+    function taskModified(data) {
+        var task = $("form[action*='task/" + data.taskId + "']").parents('.task-wrapper');
+        $("#" + data.taskId + "-modal").modal('hide');
 
         task.html(data.partial);
     }

@@ -1,13 +1,13 @@
 <?php namespace App\Handlers\Events\Pusher;
 
-use App\Events\TaskWasCompletedEvent;
+use App\Events\TaskModifiedEvent;
 
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldBeQueued;
 use Pusher;
 
-class TaskWasCompleted {
-	
+class TaskModified {
+
 	private $pusher;
 
 	/**
@@ -31,7 +31,7 @@ class TaskWasCompleted {
 		$channel = 'p'.$project->id;
 		$partial = view('tasks.partials.task-overview', compact('task', 'project'));
 
-		$this->pusher->trigger($channel, 'taskWasCompleted', [
+		$this->pusher->trigger($channel, 'taskModified', [
 			'taskId' => $task->id,
 			'partial' => (String) $partial,
 		]);

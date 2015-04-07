@@ -13,7 +13,6 @@
     }
 
     &__controls {
-        float: right;
         display: inline;
     }
 
@@ -22,6 +21,7 @@
         padding: 5px 14px;
         color: white;
         margin-top: 30px;
+        float: right;
     }
 
 }

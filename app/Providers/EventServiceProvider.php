@@ -13,11 +13,16 @@ class EventServiceProvider extends ServiceProvider {
 	protected $listen = [
 		'App\Events\TaskAddedToProjectEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\TaskAddedToProject',
+			'App\Handlers\Events\Pusher\ProjectCompletionChanged',
+			'App\Handlers\Events\Pusher\UpdateActivityLog'
 		],
 		'App\Events\TaskModifiedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\TaskModified',
+			'App\Handlers\Events\Pusher\UpdateActivityLog'
 		],
 		'App\Events\TaskWasCompletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
