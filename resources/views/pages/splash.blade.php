@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="splash-signup-section">
-        <div class="container-small">
+        <div class="container">
             <div class="signup-wrapper">
 
                 <div class="text-wrapper">
