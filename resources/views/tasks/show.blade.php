@@ -9,7 +9,7 @@
                 <button class="header__button" data-toggle="modal" data-target=".add-subtask-modal">
                     + Subtask
                 </button>
-                <button class="header__button" data-toggle="modal" data-target=".add-subtask-modal">
+                <button class="header__button" data-toggle="modal" data-target=".add-discussion-modal">
                     + Discussion
                 </button>
             </div>
@@ -19,6 +19,8 @@
         </div>
     </div>
 
+    @include('discussions.partials.add-discussion-modal')
+    @include('subtasks.partials.add-subtask-modal')
 
 
     <div class="container">
@@ -33,7 +35,11 @@
                         </div>
                     </div>
                     <div class="discussions__body">
-
+                        @foreach($task->discussions as $discussion)
+                            <div class="discussion-wrapper">
+                                {{ $discussion->title }}
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -55,14 +61,48 @@
                     Subtasks
                 </div>
             </div>
-        </div>
+            <div class="subtasks__body">
+                <table class="subtasks__table">
+                    <tbody>
+                    @foreach($subtasks as $subtask)
+                        <tr class="subtasks__row">
+                            <td class="subtasks__name"><a href="{{ route('subtask.show', [$project->id, $task->id, $subtask->id]) }}">{{$subtask->name}}</a></td>
+                            <td class="subtasks__controls-wrapper">
+                                <div class="subtasks__controls">
+                                <i class="fa fa-comments-o"></i>
+                                <button class="subtasks__controls__icon" data-toggle="modal" data-target={{"#" . $subtask->id . "-modal"}}>
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </button>
+
+                                {!! Form::open(['method' => 'DELETE', 'route' => ['subtask.destroy', $project->id, $task->id, $subtask->id]]) !!}
+                                    <button class="subtasks__controls__icon"><i class="fa fa-trash-o"></i></button>
+                                {!! Form::close() !!}
 
 
-        <div class="task-show-wrapper">
-            <div class="task-show">
-                @include('tasks.partials.task', ['showDescription' => 'true'])
+                                @if(!$subtask->isCompleted())
+                                    {!! Form::open(['route' => ['subtask.complete', $project->id, $task->id, $subtask->id]])!!}
+                                        <button class="subtasks__controls__button">
+                                            <i class="fa fa-file-o"></i>Complete
+                                        </button>
+                                    {!! Form::close() !!}
+                                @else
+                                    {!! Form::open(['route' => ['subtask.incomplete', $project->id, $task->id, $subtask->id]])!!}
+                                        <button class="subtasks__controls__button">
+                                        <i class="fa fa-file-o"></i>Reopen
+                                    </button>
+                                    {!! Form::close() !!}
+                                @endif
+
+                                </div>
+                            </td>
+                        </tr>
+                        @include('subtasks.partials.edit-subtask-modal')
+                    @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
+
     </div>
 
 @endsection

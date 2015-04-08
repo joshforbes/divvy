@@ -1,53 +1,96 @@
-.discussion-form {
-    width: 95%;
-    height: 95%;
-    z-index: 100;
-    background-color: $gray-lighter;
-    position: absolute;
-    top: 2.5%;
-    left: 2.5%;
-    border-radius: 5px;
-    box-shadow: 0 0 3px $accent-color;
+.discussion-modal-wrapper {
+    background-color: white;
+    padding-bottom: 100px;
+}
 
+.discussion-form {
+    display: inline;
+    margin-top: 50px;
+
+    label {
+        //font-size: 16px;
+    }
+
+    .fa {
+        margin-right: 5px;
+    }
 
     &__input {
         display: block;
         width: 100%;
-        height: 70px;
+        height: 40px;
         padding: 10px;
-        font-size: 1.5em;
-        font-weight: 600em;
-        background-color: white;
+        background-color: $gray-lighter;
         color: $accent-color;
         border: 0;
-        margin-bottom: 40px;
-        @include placeholder($accent-color);
+        margin-bottom: 15px;
+        @include placeholder($gray-light);
     }
 
     &__input--textarea {
-        height: 350px;
-        font-size: 1em;
-        font-weight: 400;
-        margin-bottom: 20px;
+        height: 160px;
     }
 
     &__button {
         @include button-variant(white, $accent-color, black);
-        @include button-size(20px,100px,1em,1em,5px);
+        @include button-size(10px,15px,1em,1em,5px);
         border: 0px;
         box-shadow: 0px 1px black;
         float: right;
         margin: 20px;
     }
-
-    &__button--cancel {
-        @include button-size(20px,30px,1em,1em,5px);
-        border: 1px solid $gray-light;
-        background-color: $gray-lighter;
-        color: $accent-color;
-
-    }
-
-
-
 }
+
+//.discussion-form {
+//    width: 95%;
+//    height: 95%;
+//    z-index: 100;
+//    background-color: $gray-lighter;
+//    position: absolute;
+//    top: 2.5%;
+//    left: 2.5%;
+//    border-radius: 5px;
+//    box-shadow: 0 0 3px $accent-color;
+//
+//
+//    &__input {
+//        display: block;
+//        width: 100%;
+//        height: 70px;
+//        padding: 10px;
+//        font-size: 1.5em;
+//        font-weight: 600em;
+//        background-color: white;
+//        color: $accent-color;
+//        border: 0;
+//        margin-bottom: 40px;
+//        @include placeholder($accent-color);
+//    }
+//
+//    &__input--textarea {
+//        height: 350px;
+//        font-size: 1em;
+//        font-weight: 400;
+//        margin-bottom: 20px;
+//    }
+//
+//    &__button {
+//        @include button-variant(white, $accent-color, black);
+//        @include button-size(20px,100px,1em,1em,5px);
+//        border: 0px;
+//        box-shadow: 0px 1px black;
+//        float: right;
+//        margin: 20px;
+//    }
+//
+//    &__button--cancel {
+//        @include button-size(20px,30px,1em,1em,5px);
+//        border: 1px solid $gray-light;
+//        background-color: $gray-lighter;
+//        color: $accent-color;
+//
+//    }
+//
+//
+//
+//}

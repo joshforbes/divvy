@@ -16,4 +16,69 @@
         font-size: 18px;
 
     }
+
+    &__body {
+        padding: 15px;
+    }
+
+    &__table {
+        @extend .table;
+        @extend .table-striped;
+
+
+        border-bottom: 1px solid $gray-lighter;
+    }
+
+    &__row {
+        @include make-row();
+    }
+
+    &__name {
+        @include make-md-column(8);
+        padding: 30px 20px 20px !important;
+
+        a {
+            text-decoration: none;
+            color: $accent-color;
+        }
+    }
+
+    &__controls-wrapper {
+        @include make-md-column(4);
+        padding: 20px !important;
+    }
+
+
+    &__controls {
+        font-size: 18px;
+        float: right;
+
+        form {
+            display: inline;
+        }
+
+        .fa {
+            font-size: 18px;
+            margin-right: 15px;
+        }
+
+        &__icon {
+            padding: 0;
+            background-color: inherit;
+            box-shadow: none;
+        }
+
+        &__button {
+            @include button-primary;
+            padding: 5px 14px;
+            width: 125px;
+            color: white;
+            opacity: .7;
+
+            .fa {
+                margin-right: 5px;
+            }
+        }
+    }
+
 }

@@ -31,7 +31,7 @@ var projectModule = (function() {
 
     function bindPusherEvents() {
         var pusher = new Pusher('bf3b73f9a228dfef0913');
-        var channel = pusher.subscribe('p11');
+        var channel = pusher.subscribe(divvy.channel);
 
         channel.bind('taskWasIncomplete', taskWasIncomplete);
         channel.bind('projectCompletionChanged', projectProgressChanged);

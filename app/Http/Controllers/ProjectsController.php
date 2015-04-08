@@ -106,7 +106,8 @@ class ProjectsController extends Controller {
 
             JavaScript::put([
                 'currentUser' => $this->user->username,
-                'admins' => $project->admins
+                'admins' => $project->admins,
+                'channel' => 'p' . $project->id
             ]);
 
             return view('projects.admin', compact('project', 'users', 'members'));
@@ -118,7 +119,8 @@ class ProjectsController extends Controller {
 
         JavaScript::put([
             'currentUser' => $this->user->username,
-            'admins' => $project->admins
+            'admins' => $project->admins,
+            'channel' => 'p' . $project->id
         ]);
 
         return view('projects.member', compact('project', 'currentUserTasks'));
