@@ -4992,6 +4992,23 @@ button.close {
       float: left;
       width: 33.33333%; } }
 
+.discussions-wrapper {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 50px; }
+  @media (min-width: 992px) {
+    .discussions-wrapper {
+      float: left;
+      width: 50%; } }
+
 .task-show-wrapper {
   margin-left: -15px;
   margin-right: -15px; }
@@ -5244,6 +5261,7 @@ input[type="submit"] {
     padding: 5px 14px;
     color: white;
     margin-top: 30px;
+    margin-right: 10px;
     float: right; }
 
 .project-overview {
@@ -6039,12 +6057,49 @@ input[type="submit"] {
   .modal__body {
     margin: 10px 15px; }
 
+.notification-dropdown__menu {
+  width: 500px; }
+
+.subtasks {
+  min-height: 200px;
+  margin-bottom: 50px;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: white; }
+  .subtasks__header {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 15px 15px; }
+  .subtasks__title {
+    font-size: 18px; }
+
+.discussions {
+  height: 300px;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: white; }
+  .discussions__header {
+    color: #184D59;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 15px 15px;
+    margin-bottom: 10px; }
+  .discussions__title {
+    font-size: 18px; }
+  .discussions__body {
+    padding: 0 15px; }
+
 /** NAV **/
 .navbar {
   margin-bottom: 0px; }
   .navbar .navbar-brand {
     font-family: 'Leckerli One', cursive;
     font-size: 2.5em; }
+  .navbar .navbar-link {
+    margin-top: 2px;
+    margin-left: 20px; }
   .navbar ul {
     font-size: 15px; }
 

@@ -7,37 +7,6 @@
         <div class="task-overview__title">
             <a href="{{ route('task.show', [$project->id, $task->id]) }}">{{$task->name}}</a>
         </div>
-
-        @if(Auth::user()->isAdmin($project->id))
-
-        @if(!$task->isCompleted())
-            <button class="task-overview__settings-button"><i class="fa fa-gear"></i></button>
-        @endif
-
-        <div class="task-overview__settings-overlay hide">
-            <button class="task-overview__settings-close"><i class="fa fa-times"></i></button>
-            <div class="task-overview__settings">
-                @if($task->isCompletable() && !$task->isCompleted())
-                    {!! Form::open(['data-remote', 'route' => ['task.complete', $project->id, $task->id]])!!}
-                    <button class="task-overview__setting">
-                        <i class="fa fa-file-o"></i>Complete
-                    </button>
-                    {!! Form::close() !!}
-                @endif
-
-                <button class="task-overview__setting" data-toggle="modal" data-target={{"#" . $task->id . "-modal"}}>
-                    <i class="fa fa-edit"></i>Edit
-                </button>
-
-                {!! Form::open(['data-remote', 'method' => 'DELETE', 'route' => ['task.destroy', $project->id, $task->id]])!!}
-                <button class="task-overview__setting">
-                    <i class="fa fa-trash"></i>Delete
-                </button>
-                {!! Form::close() !!}
-            </div>
-        </div>
-        @endif
-
     </div>
 
     <div class="task-overview__body">
@@ -59,8 +28,6 @@
         </div>
 
     </div>
-
-
 
     @if($task->users)
         <div class="task-overview__members">

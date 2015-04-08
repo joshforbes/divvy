@@ -33,6 +33,9 @@
 @import "components/task-overview";
 @import "components/overview-overlay";
 @import "components/modal";
+@import "components/notification-dropdown";
+@import "components/subtasks";
+@import "components/discussions";
 
 /** NAV **/
 
@@ -43,6 +46,11 @@
     .navbar-brand {
         font-family: $font-family-logo;
         font-size: 2.5em;
+    }
+
+    .navbar-link {
+        margin-top: 2px;
+        margin-left: 20px;
     }
 
     ul {

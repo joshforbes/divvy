@@ -34,6 +34,7 @@ class TaskModified {
 		$this->pusher->trigger($channel, 'taskModified', [
 			'taskId' => $task->id,
 			'partial' => (String) $partial,
+			'members' => $task->users
 		]);
 
 	}

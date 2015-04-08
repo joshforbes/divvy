@@ -2,10 +2,14 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laracasts\Presenter\PresentableTrait;
 
 class Task extends Model {
 
     use SoftDeletes;
+    use PresentableTrait;
+
+    protected $presenter = 'App\Presenters\TaskPresenter';
 
     protected $fillable = ['name', 'description', 'project_id', 'user_id', 'is_complete'];
 
@@ -77,6 +81,16 @@ class Task extends Model {
     }
 
     /**
+     * A task can have many activities
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function activity()
+    {
+        return $this->morphMany('App\Activity', 'subject');
+    }
+
+    /**
      * Get a list of user ids associated with the current task
      *
      * @return array
@@ -104,5 +118,15 @@ class Task extends Model {
     public function isCompleted()
     {
         return $this->is_complete;
+    }
+
+    /**
+     * returns completed subtasks
+     *
+     * @return mixed
+     */
+    public function completedSubtasks()
+    {
+        return $this->subtasks()->where('is_complete', 1);
     }
 }

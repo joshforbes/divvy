@@ -169,6 +169,17 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     /**
+     * Returns the tasks this user is assigned to in a given project
+     *
+     * @param $projectId
+     * @return mixed
+     */
+    public function assignedTasks($projectId)
+    {
+        return $this->tasks->where('project_id', $projectId);
+    }
+
+    /**
      * Determine if the current user is the author of a given comment
      *
      * @param $commentId

@@ -167,14 +167,22 @@ var projectModule = (function() {
     }
 
     function taskAddedToProject(data) {
-        s.tasks.prepend(data.partial);
+
+        if ( isTaskMember(data) ) {
+            s.tasks.prepend(data.partial);
+        }
+
+        if ( isProjectAdmin() ) {
+            s.tasks.prepend(data.partial);
+        }
+
         $('.add-task-modal').modal('hide');
 
         $(".task-form__member-select").select2();
     }
 
     function taskWasIncomplete(data) {
-        var task = $("form[action*='task/" + data.taskId + "/incomplete']").parents('.task-wrapper');
+        var task = $(".task-wrapper[data-task='" + data.taskId + "']");
 
         task.html(data.partial);
     }
@@ -188,20 +196,29 @@ var projectModule = (function() {
     }
 
     function taskWasCompleted(data) {
-        var task = $("form[action*='task/" + data.taskId + "/complete']").parents('.task-wrapper');
+        var task = $(".task-wrapper[data-task='" + data.taskId + "']");
 
         task.html(data.partial);
     }
 
     function taskModified(data) {
-        var task = $("form[action*='task/" + data.taskId + "']").parents('.task-wrapper');
+        var task = $(".task-wrapper[data-task='" + data.taskId + "']");
+
+        if ( isTaskMember(data) && task.length == 0) {
+            s.tasks.prepend(data.partial);
+        }
+
+        if ( !isTaskMember(data) && task.length == 1) {
+            task.remove();
+        }
+
         $("#" + data.taskId + "-modal").modal('hide');
 
         task.html(data.partial);
     }
 
     function taskWasDeleted(data) {
-        var task = $("form[action*='task/" + data.taskId + "']").parents('.task-wrapper');
+        var task = $(".task-wrapper[data-task='" + data.taskId + "']");
         task.remove();
     }
 
@@ -217,6 +234,30 @@ var projectModule = (function() {
         s.membersBody.html(data.membersBodyPartial);
 
         $(".members-edit__list").select2();
+    }
+
+    function isProjectAdmin() {
+        var found = false;
+
+        $.each(divvy.admins, function(index, value) {
+            if (divvy.currentUser == value.username) {
+                found = true;
+            }
+        });
+
+        return found;
+    }
+
+    function isTaskMember(data) {
+        var found = false;
+
+        $.each(data.members, function(index, value) {
+            if (divvy.currentUser == value.username) {
+                found = true;
+            }
+        });
+
+        return found;
     }
 
     return {

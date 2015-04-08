@@ -25,6 +25,7 @@
 
 @yield('content')
 
+@include('layouts.partials.footer')
 
 <!-- Scripts -->
 <script src="/js/vendor/jquery.js"></script>
@@ -33,5 +34,6 @@
 <script src="/js/vendor/handlebars.js"></script>
 @yield('js')
 <script src="/js/all.js"></script>
+
 </body>
 </html>

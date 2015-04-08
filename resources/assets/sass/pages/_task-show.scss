@@ -1,3 +1,9 @@
+.discussions-wrapper {
+    @include make-md-column(6);
+    @include make-xs-column(12);
+    margin-bottom: 50px;
+}
+
 .task-show-wrapper {
     @include make-row();
 }

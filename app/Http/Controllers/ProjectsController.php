@@ -13,6 +13,7 @@ use App\Http\Requests\AddUserToProjectRequest;
 use App\Http\Requests\CreateProjectRequest;
 use App\Http\Requests\EditProjectRequest;
 use App\Repositories\ProjectRepository;
+use JavaScript;
 
 class ProjectsController extends Controller {
 
@@ -94,6 +95,7 @@ class ProjectsController extends Controller {
      */
     public function show($projectId)
     {
+
         if ($this->user->isAdmin($projectId))
         {
             $project = $this->projectRepository->findByIdForAdmin($projectId);
@@ -102,12 +104,22 @@ class ProjectsController extends Controller {
 
             $members = $this->projectRepository->usersInProjectArray($project);
 
+            JavaScript::put([
+                'currentUser' => $this->user->username,
+                'admins' => $project->admins
+            ]);
+
             return view('projects.admin', compact('project', 'users', 'members'));
         }
 
         $project = $this->projectRepository->findByIdForMember($projectId);
 
         $currentUserTasks = $this->projectRepository->tasksForUserInProject($this->user->id, $project);
+
+        JavaScript::put([
+            'currentUser' => $this->user->username,
+            'admins' => $project->admins
+        ]);
 
         return view('projects.member', compact('project', 'currentUserTasks'));
 
@@ -139,7 +151,6 @@ class ProjectsController extends Controller {
             new ModifyProjectCommand($request, $projectId, $this->user)
         );
 
-        //Flash::message('Profile updated');
         return redirect()->route('project.show', [$projectId]);
     }
 
@@ -157,6 +168,5 @@ class ProjectsController extends Controller {
 
         return redirect()->route('home');
     }
-
 
 }

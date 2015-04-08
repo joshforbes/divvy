@@ -43,6 +43,8 @@ class TaskAddedToProject {
 		$this->pusher->trigger($channel, 'taskAddedToProject', [
 			'taskId' => $task->id,
 			'partial' => (String) $partial,
+			'members' => $task->users,
+			'admins' => $project->admins
 		]);
 
 	}

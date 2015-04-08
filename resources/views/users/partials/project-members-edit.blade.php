@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal__header">
-                <div class="modal__title">Edit</div>
+                <div class="modal__title">Edit Members</div>
                 <button class="modal__close" data-dismiss="modal"><i class="fa fa-times"></i></button>
             </div>
             <div class="modal__body">

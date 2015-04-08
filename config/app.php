@@ -138,6 +138,7 @@ return [
 		'Illuminate\Html\HtmlServiceProvider',
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
+		'Laracasts\Utilities\JavaScript\JavascriptServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -148,7 +149,6 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 		'App\Providers\PusherServiceProvider',
-
 	],
 
 	/*
@@ -198,7 +198,6 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Html'		=> 'Illuminate\Html\HtmlFacade',
 		'Form'		=> 'Illuminate\Html\FormFacade',
-
 	],
 
 ];

@@ -1,0 +1,23 @@
+.discussions {
+    height: 300px;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+
+    &__header {
+        color: $accent-color;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        padding: 15px 15px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 18px;
+    }
+
+    &__body {
+        padding: 0 15px;
+    }
+}
