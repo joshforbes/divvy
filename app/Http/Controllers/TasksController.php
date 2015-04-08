@@ -59,6 +59,11 @@ class TasksController extends Controller {
             new AddTaskToProjectCommand($request, $projectId, $this->user)
         );
 
+        if (Request::ajax())
+        {
+            return response('added', 200);
+        }
+
         return redirect()->back();
     }
 

@@ -31,8 +31,9 @@ class ProjectCompletionChanged {
 	public function handle($event)
 	{
 		$project = $event->project;
+		$task = $event->task;
 		$channel = 'p'.$project->id;
-		$partial = view('tasks.partials.task-progress', compact('project'));
+		$partial = view('tasks.partials.task-progress', compact('task'));
 
 		$this->pusher->trigger($channel, 'projectCompletionChanged', [
 			'partial' => (String) $partial
