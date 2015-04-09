@@ -86,7 +86,7 @@ var projectModule = (function() {
             s.tasks.prepend(data.partial);
         }
 
-        if ( !isTaskMember(data) && task.length == 1) {
+        if ( !isTaskMember(data) && !isProjectAdmin() && task.length == 1) {
             task.remove();
         }
 

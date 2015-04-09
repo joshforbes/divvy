@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42cdb1d5-8b6e-4047-bd25-3a856df9e117" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectCompletionChanged.php" afterPath="$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectCompletionChanged.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/all.js" afterPath="$PROJECT_DIR$/public/js/all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" afterPath="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" />
     </list>
     <ignored path="divvy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProjectCompletionChanged.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectCompletionChanged.php">
+      <file leaf-file-name="projectModule.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/projectModule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8111111" vertical-offset="45" max-vertical-offset="1125">
-              <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.41666666" vertical-offset="1825" max-vertical-offset="4175">
+              <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -76,7 +76,6 @@
         <option value="$PROJECT_DIR$/resources/assets/sass/app.scss" />
         <option value="$PROJECT_DIR$/resources/assets/sass/components/_discussions.scss" />
         <option value="$PROJECT_DIR$/resources/assets/sass/pages/_task-show.scss" />
-        <option value="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" />
         <option value="$PROJECT_DIR$/resources/views/discussions/partials/add-discussion-modal.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/sass/components/_discussion-form.scss" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DiscussionsController.php" />
@@ -97,6 +96,7 @@
         <option value="$PROJECT_DIR$/resources/views/projects/partials/project-progress.blade.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2015-04-09.log" />
         <option value="$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectCompletionChanged.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" />
       </list>
     </option>
   </component>
@@ -200,12 +200,22 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -223,15 +233,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -249,51 +255,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -771,43 +741,6 @@
           <folding>
             <marker date="1428442983000" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1428442983000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/projectModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3611111" vertical-offset="500" max-vertical-offset="4175">
-          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-          <folding>
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428510751000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1599,6 +1532,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8111111" vertical-offset="45" max-vertical-offset="1125">
           <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+          <folding>
+            <marker date="1428549921000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428549921000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428549921000" expanded="true" signature="-1:-1" placeholder=" @var Pusher ..." />
+            <marker date="1428549921000" expanded="true" signature="-1:-1" placeholder=" Create the event handler. ..." />
+            <marker date="1428549921000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428549921000" expanded="true" signature="-1:-1" placeholder=" Handle the event. ..." />
+            <marker date="1428549921000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428549921000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428549921000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/projectModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41666666" vertical-offset="1825" max-vertical-offset="4175">
+          <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
           <folding />
         </state>
       </provider>
