@@ -92,7 +92,10 @@ var projectModule = (function() {
 
         $("#" + data.taskId + "-modal").modal('hide');
 
-        task.html(data.partial);
+        task.replaceWith(data.partial);
+
+        $(".task-form__member-select").select2();
+
     }
 
     function taskWasDeleted(data) {
