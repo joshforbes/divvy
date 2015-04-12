@@ -1,5 +1,7 @@
 {!! Form::model($task, ['data-remote', 'class' => 'task-form', 'method' => 'PATCH', 'route' => ['task.update', $project->id, $task->id]]) !!}
 
+<div class="error-container alert alert-danger hide"></div>
+
 <i class="fa fa-file"></i>{!! Form::label('name', 'Name: ') !!}
 {!! Form::text('name', null, ['placeholder' => 'Task Name', 'class' => 'task-form__input']) !!}
 

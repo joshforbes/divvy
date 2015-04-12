@@ -17,6 +17,14 @@
             data: form.serialize(),
             success: function() {
                 $.publish('ajax.request.success', [form]);
+                form[0].reset();
+            },
+            error: function(data) {
+                var errors = $.parseJSON(data.responseText);
+
+                $.each(errors, function(index, value) {
+                    $(form).find('.error-container').append(value).append('<br />').removeClass('hide');
+                });
             }
         });
 
@@ -32,8 +40,7 @@
         if (message) {
             $('.flash').html(message).fadeIn(300).delay(2500).fadeOut(300);
         }
-    })
-
+    });
 
     // Handle success callbacks. To trigger Task.foo(), do:
     // 'data-model' => 'Task', 'data-remote-on-success' => 'foo'

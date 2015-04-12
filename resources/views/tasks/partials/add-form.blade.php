@@ -1,5 +1,7 @@
 {!! Form::open(['data-remote', 'class' => 'task-form', 'route' => ['task.store', $project->id]]) !!}
 
+<div class="error-container alert alert-danger hide"></div>
+
 <i class="fa fa-file"></i>{!! Form::label('name', 'Name: ') !!}
 {!! Form::text('name', null, ['placeholder' => 'Task Name', 'class' => 'task-form__input']) !!}
 

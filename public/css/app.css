@@ -5964,7 +5964,9 @@ input[type="submit"] {
     bottom: -1px;
     z-index: 1000;
     border-radius: 5px;
-    background-color: #184D59; }
+    background-color: #184D59;
+    white-space: nowrap;
+    overflow: hidden; }
   .task-overview__settings {
     position: relative;
     height: 100%;

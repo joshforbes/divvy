@@ -17,17 +17,17 @@
 
                     <!-- Username Form Input -->
                     <div class="form-group">
-                        {!! Form::text('username', null, ['placeholder' => 'Username', 'class' => 'form-control']) !!}
+                        {!! Form::text('username', null, ['placeholder' => 'Username', 'class' => 'form-control', 'required']) !!}
                     </div>
 
                     <!-- Email Form Input -->
                     <div class="form-group">
-                        {!! Form::text('email', null, ['placeholder' => 'Email', 'class' => 'form-control']) !!}
+                        {!! Form::text('email', null, ['placeholder' => 'Email', 'class' => 'form-control', 'required']) !!}
                     </div>
 
                     <!-- Password Form Input -->
                     <div class="form-group">
-                        {!! Form::password('password', ['placeholder' => 'Create a password', 'class' => 'form-control']) !!}
+                        {!! Form::password('password', ['placeholder' => 'Create a password', 'class' => 'form-control', 'required']) !!}
                     </div>
 
                     <div class="form-group">

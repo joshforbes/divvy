@@ -32,6 +32,7 @@
 <script src="/js/vendor/bootstrap.js"></script>
 <script src="/js/vendor/pusher.js"></script>
 <script src="/js/vendor/handlebars.js"></script>
+<script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
 @yield('js')
 <script src="/js/all.js"></script>
 

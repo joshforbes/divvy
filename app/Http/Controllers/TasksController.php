@@ -61,7 +61,7 @@ class TasksController extends Controller {
 
         if (Request::ajax())
         {
-            return response('added', 200);
+            return response('success', 200);
         }
 
         return redirect()->back();
@@ -117,7 +117,7 @@ class TasksController extends Controller {
 
         if (Request::ajax())
         {
-            return response('edited', 200);
+            return response('success', 200);
         }
 
         return redirect()->back();
@@ -139,7 +139,7 @@ class TasksController extends Controller {
 
         if (Request::ajax())
         {
-            return response('deleted', 200);
+            return response('success', 200);
         }
         return redirect()->back();
     }

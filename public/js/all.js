@@ -17,6 +17,14 @@
             data: form.serialize(),
             success: function() {
                 $.publish('ajax.request.success', [form]);
+                form[0].reset();
+            },
+            error: function(data) {
+                var errors = $.parseJSON(data.responseText);
+
+                $.each(errors, function(index, value) {
+                    $(form).find('.error-container').append(value).append('<br />').removeClass('hide');
+                });
             }
         });
 
@@ -32,8 +40,7 @@
         if (message) {
             $('.flash').html(message).fadeIn(300).delay(2500).fadeOut(300);
         }
-    })
-
+    });
 
     // Handle success callbacks. To trigger Task.foo(), do:
     // 'data-model' => 'Task', 'data-remote-on-success' => 'foo'
@@ -125,11 +132,8 @@ var projectModule = (function() {
 
     function bindUIactions() {
         $('body').on('click', '.task-overview__settings-button', showSettings);
-
         $('body').on('click', '.task-overview__settings-close', hideSettings);
-
         $('body').on('click', '.members__settings-button', showMembersSettings);
-
         $('body').on('click', '.members__settings-close', hideMembersSettings);
 
         s.select2Container.select2();
@@ -167,13 +171,16 @@ var projectModule = (function() {
     }
 
     function taskAddedToProject(data) {
+        var newTask = $(data.partial).hide();
 
         if ( isTaskMember(data) ) {
-            s.tasks.prepend(data.partial);
+            newTask.prependTo(s.tasks);
+            newTask.first().show(500);
         }
 
         if ( isProjectAdmin() ) {
-            s.tasks.prepend(data.partial);
+            newTask.prependTo(s.tasks);
+            newTask.first().show(500);
         }
 
         $('.add-task-modal').modal('hide');
@@ -222,7 +229,17 @@ var projectModule = (function() {
 
     function taskWasDeleted(data) {
         var task = $(".task-wrapper[data-task='" + data.taskId + "']");
-        task.remove();
+
+        task.animate({
+            height: 0,
+            width: 0,
+            opacity: 0,
+            padding: 0,
+            margin: 0
+        }, 500, function() {
+            task.remove();
+        })
+
     }
 
     function memberJoinedProject(data) {
