@@ -35,9 +35,6 @@ class TaskModified {
 		$members = $this->projectRepository->usersInProjectArray($project);
 		$partial = view('tasks.partials.task-overview-wrapper', compact('task', 'project', 'members'));
 
-
-		//$partial = view('tasks.partials.task-overview', compact('task', 'project'));
-
 		$this->pusher->trigger($channel, 'taskModified', [
 			'taskId' => $task->id,
 			'partial' => (String) $partial,

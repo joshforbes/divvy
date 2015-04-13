@@ -33,10 +33,10 @@ class NotifyUsers {
                 $notification = Notification::notify([
                     'action'       => $event->action,
                     'read'         => false,
-                    'subject_type' => $event->subjectType,
-                    'subject_id'   => $event->subjectId,
-                    'project_id'   => $event->projectId,
-                    'actor_id'     => $event->userId,
+                    'subject_type' => get_class($event->subject),
+                    'subject_id'   => $event->subject->id,
+                    'project_id'   => $event->project->id,
+                    'actor_id'     => $event->user->id,
                     'user_id'      => $user->id
                 ]);
 

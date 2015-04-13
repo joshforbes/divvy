@@ -31,7 +31,6 @@ class ProjectCompletionChanged {
 	public function handle($event)
 	{
 		$project = $event->project;
-		$task = $event->task;
 		$channel = 'p'.$project->id;
 		$partial = view('projects.partials.project-progress', compact('project'));
 

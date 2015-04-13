@@ -10,11 +10,11 @@ class CommentWasLeftOnSubtaskEvent extends Event {
 	use SerializesModels;
 
 	public $action;
-	public $subjectId;
-	public $subjectType;
-	public $userId;
-	public $projectId;
+	public $subject;
+	public $user;
+	public $project;
 	public $notifiable;
+	public $task;
 
 	/**
 	 * Create a new event instance.
@@ -25,11 +25,12 @@ class CommentWasLeftOnSubtaskEvent extends Event {
 	public function __construct($comment, $user)
 	{
 		$this->action = 'leave_comment_subtask';
-		$this->subjectId = $comment->id;
-		$this->subjectType = get_class($comment);
-		$this->userId = $user->id;
-		$this->projectId = $comment->commentable->task->project_id;
+		$this->subject = $comment;
 		$this->notifiable = $comment->commentable->task->users;
+		$this->user = $user;
+		$this->task = $comment->commentable->task;
+		$this->project = $comment->commentable->task->project;
+
 	}
 
 

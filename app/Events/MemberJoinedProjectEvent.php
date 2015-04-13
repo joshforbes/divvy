@@ -6,16 +6,14 @@ use Illuminate\Queue\SerializesModels;
 
 class MemberJoinedProjectEvent extends Event {
 
-
 	use SerializesModels;
 
 	public $action;
-	public $subjectId;
-	public $subjectType;
-	public $userId;
-	public $projectId;
-	public $notifiable;
+	public $subject;
+	public $user;
 	public $project;
+	public $notifiable;
+
 
 	/**
 	 * Create a new event instance.
@@ -27,12 +25,10 @@ class MemberJoinedProjectEvent extends Event {
 	public function __construct($user, $project, $currentUser)
 	{
 		$this->action = 'add_member';
-		$this->subjectId = $user->id;
-		$this->subjectType = get_class($user);
-		$this->userId = $currentUser->id;
-		$this->projectId = $project->id;
+		$this->subject = $user;
 		$this->notifiable = [$user];
 		$this->project = $project;
+		$this->user = $currentUser;
 	}
 
 

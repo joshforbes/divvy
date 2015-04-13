@@ -9,10 +9,9 @@ class ProjectWasModifiedEvent extends Event {
 	use SerializesModels;
 
 	public $action;
-	public $subjectId;
-	public $subjectType;
-	public $userId;
-	public $projectId;
+	public $subject;
+	public $user;
+	public $project;
 	public $notifiable;
 
 	/**
@@ -24,11 +23,10 @@ class ProjectWasModifiedEvent extends Event {
 	public function __construct($project, $currentUser)
 	{
 		$this->action = 'modify_project';
-		$this->subjectId = $project->id;
-		$this->subjectType = get_class($project);
-		$this->userId = $currentUser->id;
-		$this->projectId = $project->id;
+		$this->subject = $project;
 		$this->notifiable = $project->users;
+		$this->project = $project;
+		$this->user = $currentUser;
 	}
 
 

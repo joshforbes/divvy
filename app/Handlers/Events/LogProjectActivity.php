@@ -26,10 +26,10 @@ class LogProjectActivity {
 	{
 		$activity = Activity::log([
 			'action' => $event->action,
-			'subject_type' => $event->subjectType,
-			'subject_id' => $event->subjectId,
-			'project_id' => $event->projectId,
-			'user_id' => $event->userId
+			'subject_type' => get_class($event->subject),
+			'subject_id' => $event->subject->id,
+			'project_id' => $event->project->id,
+			'user_id' => $event->user->id
 		]);
 
 		$this->activityRepository->save($activity);

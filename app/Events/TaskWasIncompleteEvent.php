@@ -10,13 +10,11 @@ class TaskWasIncompleteEvent extends Event {
 	use SerializesModels;
 
 	public $action;
-	public $subjectId;
-	public $subjectType;
-	public $userId;
-	public $projectId;
+	public $subject;
+	public $user;
+	public $project;
 	public $notifiable;
 	public $task;
-	public $project;
 
 	/**
 	 * Create a new event instance.
@@ -27,11 +25,9 @@ class TaskWasIncompleteEvent extends Event {
 	public function __construct($task, $user)
 	{
 		$this->action = 'reopen_task';
-		$this->subjectId = $task->id;
-		$this->subjectType = get_class($task);
-		$this->userId = $user->id;
-		$this->projectId = $task->project_id;
+		$this->subject = $task;
 		$this->notifiable = $task->users;
+		$this->user = $user;
 		$this->task = $task;
 		$this->project = $task->project;
 	}

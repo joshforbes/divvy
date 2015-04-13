@@ -11,12 +11,11 @@ class DiscussionWasModifiedEvent extends Event {
 	use SerializesModels;
 
 	public $action;
-	public $subjectId;
-	public $subjectType;
-	public $userId;
-	public $projectId;
+	public $subject;
+	public $user;
+	public $project;
 	public $notifiable;
-
+	public $task;
 
 	/**
 	 * Create a new event instance.
@@ -27,11 +26,11 @@ class DiscussionWasModifiedEvent extends Event {
 	public function __construct($discussion, $user)
 	{
 		$this->action = 'modify_discussion';
-		$this->subjectId = $discussion->id;
-		$this->subjectType = get_class($discussion);
-		$this->userId = $user->id;
-		$this->projectId = $discussion->task->project_id;
+		$this->subject = $discussion;
 		$this->notifiable = $discussion->task->users;
+		$this->user = $user;
+		$this->task = $discussion->task;
+		$this->project = $discussion->task->project;
 	}
 
 
