@@ -2,10 +2,15 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laracasts\Presenter\PresentableTrait;
 
 class Discussion extends Model {
 
 	use SoftDeletes;
+	use PresentableTrait;
+
+	protected $presenter = 'App\Presenters\DiscussionPresenter';
+
 
 	protected $fillable = ['title', 'body', 'task_id', 'user_id'];
 

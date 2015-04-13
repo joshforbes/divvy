@@ -3,12 +3,3 @@
     @include make-xs-column(12);
     margin-bottom: 50px;
 }
-
-.task-show-wrapper {
-    @include make-row();
-}
-
-.task-show {
-    @include make-md-column-offset(2);
-    @include make-md-column(8);
-}
