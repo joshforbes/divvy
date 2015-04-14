@@ -10,7 +10,7 @@ class Activity extends Model {
     protected $presenter = 'App\Presenters\ActivityPresenter';
 
 
-    protected $fillable = ['action', 'subject_type', 'subject_id', 'user_id', 'project_id'];
+    protected $fillable = ['action', 'subject_type', 'subject_id', 'user_id', 'project_id', 'task_id'];
 
     /**
      * The database table used by the model.

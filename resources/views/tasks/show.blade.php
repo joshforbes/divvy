@@ -27,8 +27,8 @@
 
         <div class="information-wrapper">
 
-            <div class="discussions-wrapper">
-                @include('discussions.partials.discussions')
+            <div class="activity-log-wrapper">
+                @include('activity.partials.task-activity-log')
             </div>
 
             <div class="members-wrapper">
@@ -97,6 +97,8 @@
                 </table>
             </div>
         </div>
+
+        @include('discussions.partials.discussions')
 
     </div>
 

@@ -14,6 +14,7 @@ use App\Http\Requests\CreateProjectRequest;
 use App\Http\Requests\EditProjectRequest;
 use App\Repositories\ProjectRepository;
 use JavaScript;
+use Request;
 
 class ProjectsController extends Controller {
 
@@ -83,6 +84,11 @@ class ProjectsController extends Controller {
         $this->dispatch(
             new RemoveMemberFromProjectCommand($projectId, $userId, $this->user)
         );
+
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
 
         return redirect()->route('project.show', $projectId);
     }

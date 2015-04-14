@@ -22,6 +22,8 @@ class CreateActivityTable extends Migration {
 
 			$table->integer('user_id')->unsigned();
 			$table->integer('project_id')->unsigned();
+			$table->integer('task_id')->unsigned()->nullable();
+
 			$table->timestamps();
 
 			$table->foreign('project_id')

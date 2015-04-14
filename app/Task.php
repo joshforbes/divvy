@@ -81,13 +81,13 @@ class Task extends Model {
     }
 
     /**
-     * A task can have many activities
+     * A Task can have many Activities
      *
-     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function activity()
     {
-        return $this->morphMany('App\Activity', 'subject');
+        return $this->hasMany('App\Activity')->orderBy('created_at', 'desc');
     }
 
     /**

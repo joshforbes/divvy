@@ -28,7 +28,7 @@ class NotifyUsers {
     {
         foreach ($event->notifiable as $user)
         {
-            if ($user->id !== $event->userId)
+            if ($user->id !== $event->user->id)
             {
                 $notification = Notification::notify([
                     'action'       => $event->action,

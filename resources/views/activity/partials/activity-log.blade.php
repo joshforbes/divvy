@@ -3,7 +3,7 @@
         <div class="activity-log__title">Latest Project Activity</div>
     </div>
     <div class="activity-log__body">
-        @foreach($project->activity->take(7) as $activity)
+        @foreach($project->activity->take(6) as $activity)
             <p>@include("activity.types.{$activity->action}")</p>
         @endforeach
     </div>

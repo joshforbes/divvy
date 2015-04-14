@@ -19,5 +19,19 @@
 
     &__body {
         padding: 0 15px;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    &__more-link {
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        text-align: center;
+        font-size: 14px;
+
+        a {
+            color: $gray-light;
+        }
     }
 }

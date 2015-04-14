@@ -1,5 +1,6 @@
-.discussions-overview {
-    height: 300px;
+.discussions {
+    min-height: 200px;
+    margin-bottom: 50px;
     position: relative;
     border: 1px solid transparent;
     border-radius: 5px;
@@ -58,15 +59,15 @@
     }
 }
 
-.discussion-overview {
+.discussion {
 
     &__row {
         @include make-row();
     }
 
     &__info {
-        @include make-md-column(8);
-        padding: 10px 20px !important;
+        @include make-md-column(9);
+        padding: 15px 20px !important;
     }
 
     &__title {
@@ -79,28 +80,24 @@
     }
 
     &__title--normal {
-        @media (max-width: $screen-lg) {
+        @media (max-width: $screen-md) {
             display: none;
         }
     }
 
     &__title--short {
-        @media (min-width: $screen-lg) {
-            display: none;
-        }
-
-        @media (min-width: $screen-sm) and (max-width: $screen-md) {
+        @media (min-width: 670px) {
             display: none;
         }
 
     }
 
-    &__title--long {
+    &__title--medium {
         @media (min-width: $screen-md) {
             display: none;
         }
 
-        @media (max-width: $screen-sm) {
+        @media (max-width: 669px) {
             display: none;
         }
     }
@@ -117,8 +114,8 @@
     }
 
     &__controls-wrapper {
-        @include make-md-column(4);
-        padding: 15px 20px !important;
+        @include make-md-column(3);
+        padding: 20px 20px !important;
 
     }
 
@@ -143,6 +140,10 @@
             position: relative;
             display: inline;
             margin-right: 4px;
+
+            @media (max-width: $screen-sm) {
+                margin-right: 0px;
+            }
         }
 
         &__comments-count {
