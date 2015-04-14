@@ -1,4 +1,3 @@
-{{ $notification->created_at->diffForHumans() }} -
 <a href="{{ route('profile.show', [$notification->actor->username]) }}">{{ $notification->actor->username }}</a>
 modified a comment on the {{ strtolower((new \ReflectionClass($notification->subject->commentableWithTrashed))->getShortName()) }}:
 @if ($notification->subject->commentableWithTrashed->trashed())

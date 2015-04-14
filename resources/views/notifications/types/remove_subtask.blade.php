@@ -1,4 +1,3 @@
-{{ $notification->created_at->diffForHumans() }} -
 <a href="{{ route('profile.show', [$notification->actor->username]) }}">{{ $notification->actor->username }}</a>
 removed a subtask: "{{ $notification->subject->name }}" from the task:
 

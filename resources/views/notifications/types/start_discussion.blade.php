@@ -1,4 +1,3 @@
-{{ $notification->created_at->diffForHumans() }} -
 <a href="{{ route('profile.show', [$notification->actor->username]) }}">{{ $notification->actor->username }}</a>
 started a discussion:
 @if ($notification->subject->trashed())

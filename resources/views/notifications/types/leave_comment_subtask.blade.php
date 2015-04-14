@@ -1,4 +1,3 @@
-{{ $notification->created_at->diffForHumans() }} -
 <a href="{{ route('profile.show', [$notification->actor->username]) }}">{{ $notification->actor->username }}</a>
 commented on a subtask:
 @if ($notification->subject->commentableWithTrashed->trashed())

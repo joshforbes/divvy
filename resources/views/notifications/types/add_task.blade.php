@@ -1,4 +1,3 @@
-{{ $notification->created_at->diffForHumans() }} -
 <a href="{{ route('profile.show', [$notification->actor->username]) }}">{{ $notification->actor->username }}</a>
 assigned you to a new task:
 @if ($notification->subject->trashed())

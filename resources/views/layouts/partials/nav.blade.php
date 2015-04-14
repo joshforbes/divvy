@@ -21,6 +21,8 @@
                 @else
                     <li class="notification-link">
                         <a href=""><i class="fa fa-bell"></i></a>
+                        @include('notifications.dropdown')
+
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

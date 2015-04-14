@@ -8,6 +8,6 @@
         @endforeach
     </div>
     <div class="activity-log__more-link">
-        <a href="{{ route('activity.index', [$project->id, $task->id]) }}">- See More -</a>
+        <a href="{{ route('activity.taskIndex', [$project->id, $task->id]) }}">- See More -</a>
     </div>
 </div>

@@ -165,6 +165,7 @@ var projectModule = (function() {
 
 
         init: function() {
+            $(".task-form__member-select").select2();
             s = this.settings;
             bindUIactions();
             bindPusherEvents();

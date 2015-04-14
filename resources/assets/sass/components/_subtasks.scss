@@ -40,17 +40,23 @@
         @extend .table;
         @extend .table-striped;
 
-
         border-bottom: 1px solid $gray-lighter;
     }
 
     &__row {
         @include make-row();
+
     }
 
     &__name {
         @include make-md-column(8);
-        padding: 30px 20px 20px !important;
+        @include make-xs-column(7);
+
+        @media (max-width: 750px) {
+            @include make-xs-column(12);
+        }
+
+        padding: 25px 20px !important;
 
         a {
             text-decoration: none;
@@ -60,11 +66,20 @@
 
     &__controls-wrapper {
         @include make-md-column(4);
+        @include make-xs-column(5);
         padding: 20px !important;
+        height: 70px;
+
+        @media (max-width: 750px) {
+            @include make-xs-column(12);
+            border: 0 !important;
+
+        }
     }
 
 
     &__controls {
+        @include vertical-align();
         font-size: 18px;
         float: right;
 

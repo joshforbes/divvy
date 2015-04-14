@@ -64,6 +64,9 @@ Route::group(['middleware' => 'auth'], function ()
             #Tasks
             Route::get('/p/{projectId}/task/{taskId}', ['as' => 'task.show', 'uses' => 'TasksController@show']);
 
+            #Activity
+            Route::get('/p/{projectId}/task{taskId}/activity', ['as' => 'activity.taskIndex', 'uses' => 'ActivityController@taskIndex']);
+
             #Subtasks
             Route::post('/p/{projectId}/task/{taskId}', ['as' => 'subtask.store', 'uses' => 'SubtasksController@store']);
             Route::get('/p/{projectId}/task/{taskId}/subtask/{subtaskId}', ['as' => 'subtask.show', 'uses' => 'SubtasksController@show']);

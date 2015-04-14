@@ -1,6 +1,54 @@
 .notification-dropdown {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    opacity: .9;
 
-    &__menu {
-        width: 500px;
+
+
+    &__header {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        padding: 15px 15px;
+    }
+
+    &__title {
+        font-size: 18px;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+    
+    &__notification {
+        @include make-row();
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    &__notification:last-child {
+        border-bottom: none;
+    }
+
+    &__actor-avatar {
+        @include make-md-column(2);
+        img {
+            border-radius: 50px;
+        }
+    }
+
+    &__body {
+        @include make-md-column(10);
+    }
+
+    &__timestamp {
+        font-size: 12px;
+        color: $gray-light;
+        margin-top: 5px;
     }
 }

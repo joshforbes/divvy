@@ -116,10 +116,11 @@
     &__controls-wrapper {
         @include make-md-column(3);
         padding: 20px 20px !important;
-
+        height: 70px;
     }
 
     &__controls {
+        @include vertical-align();
         font-size: 18px;
         float: right;
 
