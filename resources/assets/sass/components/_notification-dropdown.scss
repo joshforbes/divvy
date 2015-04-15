@@ -1,13 +1,13 @@
 .notification-dropdown {
     position: absolute;
-    right: 10px;
-    top: 30px;
+    right: 5px;
+    top: 15px;
     width: 400px;
     background-color: white;
     border: 1px solid transparent;
     border-radius: 5px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-    opacity: .9;
+    overflow: hidden;
 
 
 
@@ -24,6 +24,23 @@
             color: inherit;
         }
     }
+
+    &__close {
+        padding: 0;
+        border: none;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        box-shadow: none;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        font-size: 20px;
+        color: $gray-light;
+        z-index: 3000;
+    }
+
+
     
     &__notification {
         @include make-row();

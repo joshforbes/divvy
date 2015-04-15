@@ -52,6 +52,7 @@ elixir(function(mix) {
             'utilities/ajax.js',
             'modules/profileModule.js',
             'modules/projectModule.js',
+            'modules/notificationModule.js',
             'app.js'
         ], 'public/js', 'resources/assets/js'
     );

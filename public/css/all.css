@@ -6060,14 +6060,14 @@ input[type="submit"] {
 
 .notification-dropdown {
   position: absolute;
-  right: 10px;
-  top: 30px;
+  right: 5px;
+  top: 15px;
   width: 400px;
   background-color: white;
   border: 1px solid transparent;
   border-radius: 5px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-  opacity: .9; }
+  overflow: hidden; }
   .notification-dropdown__header {
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     padding: 15px 15px; }
@@ -6076,6 +6076,19 @@ input[type="submit"] {
     .notification-dropdown__title a {
       text-decoration: none;
       color: inherit; }
+  .notification-dropdown__close {
+    padding: 0;
+    border: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    box-shadow: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    color: #777777;
+    z-index: 3000; }
   .notification-dropdown__notification {
     margin-left: -15px;
     margin-right: -15px;
@@ -6396,6 +6409,8 @@ input[type="submit"] {
     margin-left: 20px; }
   .navbar ul {
     font-size: 15px; }
+  .navbar .notification-link {
+    text-decoration: none; }
 
 /**
 SPLASH

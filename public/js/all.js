@@ -136,7 +136,6 @@ var projectModule = (function() {
         $('body').on('click', '.members__settings-button', showMembersSettings);
         $('body').on('click', '.members__settings-close', hideMembersSettings);
 
-        s.select2Container.select2();
     }
 
     function showSettings() {
@@ -294,10 +293,47 @@ var projectModule = (function() {
 
 
         init: function() {
-            $(".task-form__member-select").select2();
             s = this.settings;
             bindUIactions();
             bindPusherEvents();
+        }
+    }
+})();
+
+
+var notificationModule = (function() {
+    var s;
+
+    function showNotificationDropdown() {
+        s.notificationDropdown.css({'display': 'none'}).removeClass('hide').velocity("slideDown", { duration: 500 });
+    }
+
+    function closeNotificationDropdown() {
+        s.notificationDropdown.velocity("slideUp", { duration: 500 });
+    }
+
+    function bindUIactions() {
+        s.notificationLink.on('click', function(e) {
+            e.preventDefault();
+            showNotificationDropdown();
+        });
+
+        s.notificationClose.on('click', function() {
+            closeNotificationDropdown();
+        });
+
+    }
+
+    return {
+        settings: {
+            notificationLink: $('.notification-link'),
+            notificationClose: $('.notification-dropdown__close'),
+            notificationDropdown: $('.notification-dropdown')
+        },
+
+        init: function() {
+            s = this.settings;
+            bindUIactions();
         }
     }
 })();
@@ -308,5 +344,5 @@ var projectModule = (function() {
     $.fn.modal.Constructor.prototype.enforceFocus = function() {};
 
     profileModule.init();
-    projectModule.init();
+    notificationModule.init();
 }());

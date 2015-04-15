@@ -3,5 +3,5 @@
     $.fn.modal.Constructor.prototype.enforceFocus = function() {};
 
     profileModule.init();
-    projectModule.init();
+    notificationModule.init();
 }());

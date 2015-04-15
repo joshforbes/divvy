@@ -7,7 +7,6 @@ var projectModule = (function() {
         $('body').on('click', '.members__settings-button', showMembersSettings);
         $('body').on('click', '.members__settings-close', hideMembersSettings);
 
-        s.select2Container.select2();
     }
 
     function showSettings() {
@@ -165,7 +164,6 @@ var projectModule = (function() {
 
 
         init: function() {
-            $(".task-form__member-select").select2();
             s = this.settings;
             bindUIactions();
             bindPusherEvents();
