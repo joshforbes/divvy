@@ -16,34 +16,39 @@ class EventServiceProvider extends ServiceProvider {
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\TaskAddedToProject',
 			'App\Handlers\Events\Pusher\ProjectCompletionChanged',
-			'App\Handlers\Events\Pusher\UpdateActivityLog'
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\TaskModifiedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\TaskModified',
-			'App\Handlers\Events\Pusher\UpdateActivityLog'
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\TaskWasCompletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\TaskWasCompleted',
 			'App\Handlers\Events\Pusher\ProjectCompletionChanged',
-			'App\Handlers\Events\Pusher\UpdateActivityLog'
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\TaskWasIncompleteEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\TaskWasIncomplete',
 			'App\Handlers\Events\Pusher\ProjectCompletionChanged',
-			'App\Handlers\Events\Pusher\UpdateActivityLog'
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\TaskWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\TaskWasDeleted',
 			'App\Handlers\Events\Pusher\ProjectCompletionChanged',
-			'App\Handlers\Events\Pusher\UpdateActivityLog'
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\SubtaskAddedToTaskEvent' => [
 			'App\Handlers\Events\LogProjectActivity',

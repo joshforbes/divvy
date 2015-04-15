@@ -36,6 +36,11 @@ class NotificationRepository {
         return Notification::where('user_id', $userId)->where('read', 0)->orderBy('created_at', 'DESC')->get();
     }
 
+    public function findNewestNotification($userId)
+    {
+        return Notification::where('user_id', $userId)->where('read', 0)->orderBy('created_at', 'DESC')->firstOrFail();
+    }
+
     /**
      * Find notifications by id. Eager load relationships
      *
@@ -59,5 +64,6 @@ class NotificationRepository {
         $notification->save();
         return $notification;
     }
+
 
 }

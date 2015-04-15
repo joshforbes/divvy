@@ -6109,6 +6109,9 @@ input[type="submit"] {
       clear: both; }
   .notification-dropdown__notification:last-child {
     border-bottom: none; }
+  .notification-dropdown__empty {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px; }
   .notification-dropdown__actor-avatar {
     position: relative;
     min-height: 1px;

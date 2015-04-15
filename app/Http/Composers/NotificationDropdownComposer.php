@@ -3,6 +3,7 @@
 use App\Repositories\NotificationRepository;
 use Auth;
 use Illuminate\Contracts\View\View;
+use JavaScript;
 
 class NotificationDropdownComposer {
 
@@ -32,6 +33,10 @@ class NotificationDropdownComposer {
         $unreadNotifications = $notifications->filter(function($notification) {
             if ($notification->read == 0) return $notification;
         });
+
+        JavaScript::put([
+            'userChannel' => 'u' . Auth::user()->id
+        ]);
 
         $view->with('unreadNotifications', $unreadNotifications)->with('notifications', $notifications);
     }
