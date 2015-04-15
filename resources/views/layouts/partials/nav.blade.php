@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href=""><i class="fa fa-gear">Projects</i></a>
+                    <a href=""><i class="fa fa-gear"></i>Projects</a>
                 </li>
             </ul>
 

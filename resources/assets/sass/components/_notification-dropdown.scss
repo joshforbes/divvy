@@ -65,6 +65,7 @@
 
     &__actor-avatar {
         @include make-md-column(2);
+        @include make-sm-column(2);
         img {
             border-radius: 50px;
         }
@@ -72,6 +73,7 @@
 
     &__body {
         @include make-md-column(10);
+        @include make-sm-column(10);
     }
 
     &__timestamp {

@@ -6116,8 +6116,16 @@ input[type="submit"] {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
     padding-right: 15px; }
     @media (min-width: 992px) {
+      .notification-dropdown__actor-avatar {
+        float: left;
+        width: 16.66667%; } }
+    @media (min-width: 768px) {
       .notification-dropdown__actor-avatar {
         float: left;
         width: 16.66667%; } }
@@ -6127,8 +6135,16 @@ input[type="submit"] {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
     padding-right: 15px; }
     @media (min-width: 992px) {
+      .notification-dropdown__body {
+        float: left;
+        width: 83.33333%; } }
+    @media (min-width: 768px) {
       .notification-dropdown__body {
         float: left;
         width: 83.33333%; } }

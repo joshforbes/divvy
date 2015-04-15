@@ -55,6 +55,8 @@ var projectModule = (function() {
 
         $('.add-task-modal').modal('hide');
 
+        $(".task-form__member-select").val('');
+
         $(".task-form__member-select").select2();
     }
 
