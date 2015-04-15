@@ -100,6 +100,7 @@ Route::group(['middleware' => 'owner'], function ()
 {
     #Notifications
     Route::get('/{username}/notifications', ['as' => 'notification.index', 'uses' => 'NotificationsController@index']);
+    Route::get('/{username}/notifications/read', ['as' => 'notification.markAsRead', 'uses' => 'NotificationsController@markAsRead']);
 
     #Profiles
     Route::get('/{username}/edit', ['as' => 'profile.edit', 'uses' => 'ProfilesController@edit']);

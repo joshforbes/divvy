@@ -56,8 +56,26 @@
         font-size: 15px;
     }
 
-    .notification-link {
-        text-decoration: none;
+    .notification-nav {
+        position: relative;
+
+        &__link {
+            text-decoration: none;
+        }
+
+        &__count {
+            position: absolute;
+            top: 15px;
+            left: 24px;
+            font-size: 10px;
+            width: 15px;
+            height: 15px;
+            background-color: $gray-light;
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            opacity: .7;
+        }
     }
 }
 

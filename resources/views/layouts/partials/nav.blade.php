@@ -19,8 +19,8 @@
                     <li><a href="/auth/login">Login</a></li>
                     <li><a href="/auth/register">Register</a></li>
                 @else
-                    <li>
-                        <a href="" class="notification-link"><i class="fa fa-bell"></i></a>
+                    <li class="notification-nav">
+                        <a href="{{ route('notification.markAsRead', [Auth::user()->username]) }}" class="notification-nav__link"><i class="fa fa-bell"></i></a>
                         @include('notifications.dropdown')
                     </li>
                     <li class="dropdown">

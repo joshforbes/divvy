@@ -14,4 +14,50 @@ class NotificationRepository {
         $notification->save();
     }
 
+    /**
+     * Find unread notifications by user id. Eager load relationships
+     *
+     * @param $userId
+     * @return mixed
+     */
+    public function findUnreadNotificationsFor($userId)
+    {
+        return Notification::with('user', 'project', 'actor.profile', 'subject.commentable')->where('user_id', $userId)->where('read', 0)->orderBy('created_at', 'DESC')->get();
+    }
+
+    /**
+     * Find notifications by user id without eager loading relationships
+     *
+     * @param $userId
+     * @return mixed
+     */
+    public function findUnreadNotificationsPlain($userId)
+    {
+        return Notification::where('user_id', $userId)->where('read', 0)->orderBy('created_at', 'DESC')->get();
+    }
+
+    /**
+     * Find notifications by id. Eager load relationships
+     *
+     * @param $userId
+     * @return mixed
+     */
+    public function findNotificationsFor($userId)
+    {
+        return Notification::with('user', 'project', 'actor.profile', 'subject.commentable')->where('user_id', $userId)->orderBy('created_at', 'DESC')->get();
+    }
+
+    /**
+     * Mark the specified notification as read
+     *
+     * @param Notification $notification
+     * @return mixed
+     */
+    public function markAsRead(Notification $notification)
+    {
+        $notification->read = 1;
+        $notification->save();
+        return $notification;
+    }
+
 }

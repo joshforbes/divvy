@@ -4,8 +4,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Notification;
+use App\Repositories\NotificationRepository;
 use App\Repositories\UserRepository;
-use Illuminate\Http\Request;
+use Request;
 
 class NotificationsController extends Controller {
 
@@ -21,6 +22,23 @@ class NotificationsController extends Controller {
 		$user = $userRepository->findByUsernameWithNotifications($username);
 
 		return view('notifications.index', compact('user'));
+	}
+
+	public function markAsRead(NotificationRepository $notificationRepository, $username)
+	{
+		$unreadNotifications = $notificationRepository->findUnreadNotificationsPlain($this->user->id);
+
+		foreach($unreadNotifications as $notification)
+		{
+			$notificationRepository->markAsRead($notification);
+		}
+
+		if (Request::ajax())
+		{
+			return response('success', 200);
+		}
+
+		return redirect()->back();
 	}
 
 	/**
