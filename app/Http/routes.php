@@ -37,8 +37,7 @@ Route::group(['middleware' => 'auth'], function ()
         Route::patch('p/{projectId}', ['as' => 'project.update', 'uses' => 'ProjectsController@update']);
         Route::post('/p/{projectId}/addUser', ['as' => 'project.addUser', 'uses' => 'ProjectsController@addUser']);
         Route::delete('/p/{projectId}/removeUser/{userId}', ['as' => 'project.removeUser', 'uses' => 'ProjectsController@removeUser']);
-        //CHANGE TO Route::delete
-        Route::get('/p/{projectId}/destroy', ['as' => 'project.destroy', 'uses' => 'ProjectsController@destroy']);
+        Route::delete('/p/{projectId}/destroy', ['as' => 'project.destroy', 'uses' => 'ProjectsController@destroy']);
 
         #Activity
         Route::get('/p/{projectId}/activity', ['as' => 'activity.index', 'uses' => 'ActivityController@index']);

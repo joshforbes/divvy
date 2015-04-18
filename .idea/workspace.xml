@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42cdb1d5-8b6e-4047-bd25-3a856df9e117" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/components/_notification-dropdown.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/components/_notification-dropdown.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/components/_project-overview.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/components/_project-overview.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/components/_task-overview.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/components/_task-overview.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/all.css" afterPath="$PROJECT_DIR$/public/css/all.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/all.js" afterPath="$PROJECT_DIR$/public/js/all.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/app.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/partials/nav.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/nav.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" afterPath="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/projects/partials/project-overview.blade.php" afterPath="$PROJECT_DIR$/resources/views/projects/partials/project-overview.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="divvy.iws" />
@@ -34,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="projectModule.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/projectModule.js">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75" vertical-offset="750" max-vertical-offset="4525">
-              <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.4722222" vertical-offset="75" max-vertical-offset="2700">
+              <caret line="29" column="90" selection-start-line="29" selection-start-column="90" selection-end-line="29" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -52,14 +56,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Repositories/TaskRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/ActivityRepository.php" />
-        <option value="$PROJECT_DIR$/resources/views/notifications/types/add_member.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/notifications/types/add_subtask.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/notifications/types/add_task.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/notifications/types/complete_subtask.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/notifications/types/complete_task.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/notifications/types/leave_comment_discussion.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/notifications/types/leave_comment_subtask.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/notifications/types/modify_comment.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/notifications/types/modify_discussion.blade.php" />
@@ -76,15 +72,12 @@
         <option value="$PROJECT_DIR$/resources/views/notifications/types/reopen_task.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/notifications/types/start_discussion.blade.php" />
         <option value="$PROJECT_DIR$/app/Presenters/ProfilePresenter.php" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/public/js/all.js" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/projects/member.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/projects/admin.blade.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Providers/ViewComposerServiceProvider.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/NotificationsController.php" />
         <option value="$PROJECT_DIR$/resources/assets/sass/components/_activity-log.scss" />
         <option value="$PROJECT_DIR$/app/Handlers/Events/Pusher/UpdateNotification.php" />
@@ -95,7 +88,6 @@
         <option value="$PROJECT_DIR$/resources/views/notifications/count.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/notifications/dropdown.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/modules/notificationModule.js" />
-        <option value="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Events/TaskWasIncompleteEvent.php" />
         <option value="$PROJECT_DIR$/resources/assets/sass/app.scss" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2015-04-15.log" />
@@ -103,6 +95,18 @@
         <option value="$PROJECT_DIR$/resources/assets/sass/components/_notification-dropdown.scss" />
         <option value="$PROJECT_DIR$/resources/views/layouts/partials/nav.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" />
+        <option value="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/components/_task-overview.scss" />
+        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/resources/assets/sass/components/_project-overview.scss" />
+        <option value="$PROJECT_DIR$/resources/assets/js/modules/dashboardModule.js" />
+        <option value="$PROJECT_DIR$/resources/views/projects/partials/project-overview.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/projects/partials/add-form.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/projects/partials/add-project-modal.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
       </list>
     </option>
   </component>
@@ -229,7 +233,103 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -542,7 +642,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="_task&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_task-form.scss&#10;nav&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/layouts/partials/nav.blade.php&#10;TaskControl&#9;null&#9;null&#10;routes&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/routes.php&#10;currentUser&#9;null&#9;null&#10;_no&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_notification-dropdown.scss&#10;activity&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_activity-log.scss&#10;NotificationCon&#9;null&#9;null&#10;route&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/routes.php&#10;dropd&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/notifications/dropdown.blade.php&#10;notificationDrop&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_notification-dropdown.scss&#10;config&#9;null&#9;null&#10;app.js&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/app.js&#10;_task-over&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_task-overview.scss&#10;member.blade&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/projects/member.blade.php&#10;admin&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/projects/admin.blade.php&#10;_task-&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_task-overview.scss&#10;projectMo&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;taskcon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/TasksController.php&#10;activityCon&#9;null&#9;null&#10;projectModul&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;ProjectCon&#9;null&#9;null&#10;TaskContr&#9;null&#9;null&#10;create_task&#9;FILE&#9;file:///Users/josh/code/divvy/database/migrations/2015_02_16_002917_create_tasks_table.php&#10;subtasks&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_subtasks.scss&#10;ajax&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/utilities/ajax.js&#10;app&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/layouts/app.blade.php&#10;splash&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/pages/splash.blade.php&#10;overview&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_task-overview.scss&#10;TaskAdded&#9;FILE&#9;file:///Users/josh/code/divvy/app/Handlers/Events/Pusher/TaskAddedToProject.php&#10;TasksContro&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/TasksController.php&#10;ProjectsCon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;larave&#9;FILE&#9;file:///Users/josh/code/divvy/storage/logs/laravel-2015-04-09.log&#10;proje&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;projectmo&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;ProjectPrese&#9;null&#9;null&#10;Project&#9;null&#9;null&#10;project&#9;null&#9;null&#10;projectCom&#9;null&#9;null&#10;TaskCon&#9;null&#9;null&#10;Proje&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;DiscussionCon&#9;null&#9;null&#10;task&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/tasks/partials/task.blade.php&#10;Subtas&#9;null&#9;null&#10;PagesCo&#9;null&#9;null&#10;_header&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_header.scss&#10;ProjectsCo&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;taskCon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/TasksController.php&#10;projectContro&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;basecont&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="ProjectsCon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;routes&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/routes.php&#10;pro&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;_project-over&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_project-overview.scss&#10;_task&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_task-overview.scss&#10;nav&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/layouts/partials/nav.blade.php&#10;TaskControl&#9;null&#9;null&#10;currentUser&#9;null&#9;null&#10;_no&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_notification-dropdown.scss&#10;activity&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_activity-log.scss&#10;NotificationCon&#9;null&#9;null&#10;route&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/routes.php&#10;dropd&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/notifications/dropdown.blade.php&#10;notificationDrop&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_notification-dropdown.scss&#10;config&#9;null&#9;null&#10;app.js&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/app.js&#10;_task-over&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_task-overview.scss&#10;member.blade&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/projects/member.blade.php&#10;admin&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/projects/admin.blade.php&#10;_task-&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_task-overview.scss&#10;projectMo&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;taskcon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/TasksController.php&#10;activityCon&#9;null&#9;null&#10;projectModul&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;ProjectCon&#9;null&#9;null&#10;TaskContr&#9;null&#9;null&#10;create_task&#9;FILE&#9;file:///Users/josh/code/divvy/database/migrations/2015_02_16_002917_create_tasks_table.php&#10;subtasks&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_subtasks.scss&#10;ajax&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/utilities/ajax.js&#10;app&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/layouts/app.blade.php&#10;splash&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/pages/splash.blade.php&#10;overview&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_task-overview.scss&#10;TaskAdded&#9;FILE&#9;file:///Users/josh/code/divvy/app/Handlers/Events/Pusher/TaskAddedToProject.php&#10;TasksContro&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/TasksController.php&#10;larave&#9;FILE&#9;file:///Users/josh/code/divvy/storage/logs/laravel-2015-04-09.log&#10;proje&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;projectmo&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;ProjectPrese&#9;null&#9;null&#10;Project&#9;null&#9;null&#10;project&#9;null&#9;null&#10;projectCom&#9;null&#9;null&#10;TaskCon&#9;null&#9;null&#10;Proje&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;DiscussionCon&#9;null&#9;null&#10;task&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/tasks/partials/task.blade.php&#10;Subtas&#9;null&#9;null&#10;PagesCo&#9;null&#9;null&#10;_header&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_header.scss&#10;ProjectsCo&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;taskCon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/TasksController.php" />
     <property name="options.lastSelected" value="Laravel.SettingsForm" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -661,139 +761,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Events/SubtaskWasCompletedEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="950">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/CommentWasDeletedEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/CommentWasLeftOnDiscussionEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/CommentWasLeftOnSubtaskEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/TaskWasDeletedEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/TaskModifiedEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="950">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/SubtaskWasIncompleteEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="925">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/NotifyUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="275" max-vertical-offset="1225">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="44" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/NotificationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6944444" vertical-offset="375" max-vertical-offset="1850">
-          <caret line="40" column="116" selection-start-line="40" selection-start-column="116" selection-end-line="40" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/MemberJoinedProject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.2777778" vertical-offset="250" max-vertical-offset="1150">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/MemberRemovedFromProject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.2777778" vertical-offset="250" max-vertical-offset="1175">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/TaskModified.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.19444445" vertical-offset="175" max-vertical-offset="1175">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/UpdateActivityLog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667" vertical-offset="100" max-vertical-offset="1100">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/TaskWasIncomplete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.30555555" vertical-offset="275" max-vertical-offset="1175">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/TaskWasDeleted.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1025">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/TaskWasCompleted.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1075">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Commands/RemoveMemberFromProjectCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41777778" vertical-offset="224" max-vertical-offset="1250">
-          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/projects/admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.4604811" vertical-offset="777" max-vertical-offset="1650">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3611111" vertical-offset="2500" max-vertical-offset="4650">
-          <caret line="113" column="22" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Events/TaskAddedToProjectEvent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
@@ -840,13 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7777778" vertical-offset="525" max-vertical-offset="3475">
-          <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -924,6 +884,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6944444" vertical-offset="1125" max-vertical-offset="5150">
           <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -931,13 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11111111" vertical-offset="0" max-vertical-offset="1225">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0555556" vertical-offset="950" max-vertical-offset="2725">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1057,10 +1011,433 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Events/MemberJoinedProjectEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="950">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1428926510000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428926510000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428926510000" expanded="true" signature="-1:-1" placeholder=" Create a new event instance. ..." />
+            <marker date="1428926510000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3611111" vertical-offset="2275" max-vertical-offset="3525">
+          <caret line="105" column="52" selection-start-line="105" selection-start-column="52" selection-end-line="105" selection-end-column="52" />
+          <folding>
+            <marker date="1429143049000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder=" The event handler mappings for the application. ..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder=" Register any other events for your application. ..." />
+            <marker date="1429143049000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2850">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1428194127000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder=" On soft delete cascade to tasks, subtasks, discussions, and comments ..." />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder=" A Project has many Users ..." />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder=" A Project can have many Admins ..." />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder=" A Project has many tasks ..." />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder=" A Project has many Activities ..." />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder=" Start a new Project ..." />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder=" returns completed tasks ..." />
+            <marker date="1428194127000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/profileModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1424715003000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.083333336" vertical-offset="0" max-vertical-offset="900">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <marker date="1429144543000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667" vertical-offset="700" max-vertical-offset="2000">
+          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+          <folding>
+            <marker date="1429144563000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
+            <marker date="1429144563000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144563000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1429144563000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1429144563000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1429144563000" expanded="true" signature="-1:-1" placeholder="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/components/_project-overview.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25" vertical-offset="0" max-vertical-offset="2775">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429144762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/components/_task-overview.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19444445" vertical-offset="0" max-vertical-offset="3425">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429143937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/projectModule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75" vertical-offset="750" max-vertical-offset="4525">
-          <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.11111111" vertical-offset="0" max-vertical-offset="4525">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="5" selection-end-column="78" />
+          <folding>
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{&quot;height&quot;: 0...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429141359000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/dashboardModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3611111" vertical-offset="0" max-vertical-offset="900">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <marker date="1429145321000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429145321000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429145321000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429145321000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429145321000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429145321000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/projects/partials/project-overview.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="1100">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <marker date="1429183661000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429183661000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429183661000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429183661000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429183661000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429183661000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429183661000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429183661000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tasks/partials/add-form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/projects/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1427191895000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427191895000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427191895000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427191895000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/projects/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1426089917000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426089917000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426089917000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426089917000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/projects/partials/add-form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2777778" vertical-offset="0" max-vertical-offset="900">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tasks/partials/task-overview.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19444445" vertical-offset="0" max-vertical-offset="2025">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428451240000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tasks/partials/add-task-modal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <marker date="1428372014000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428372014000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428372014000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428372014000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428372014000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428372014000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/projects/admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="1650">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429057187000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8055556" vertical-offset="50" max-vertical-offset="1200">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <folding>
+            <marker date="1429369975000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369975000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369975000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369975000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369975000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369975000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369975000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369975000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369975000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369975000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/projects/partials/add-project-modal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding>
+            <marker date="1429369997000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369997000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369997000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369997000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369997000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429369997000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1944444" vertical-offset="0" max-vertical-offset="4550">
+          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+          <folding>
+            <marker date="1429370203000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder=" @var ProjectRepository ..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder=" Add a user to the project. If the user doesn't exist, ..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder=" Remove the specified user from the project ..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder=" Display the specified resource. ..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder=" Show the form for editing the specified resource. ..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429370203000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4722222" vertical-offset="75" max-vertical-offset="2700">
+          <caret line="29" column="90" selection-start-line="29" selection-start-column="90" selection-end-line="29" selection-end-column="90" />
           <folding />
         </state>
       </provider>

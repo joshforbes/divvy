@@ -52,6 +52,11 @@ class ProjectsController extends Controller {
             new StartNewProjectCommand($request, $this->user)
         );
 
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
+
         return redirect()->route('project.show', $project->id);
     }
 
@@ -68,6 +73,11 @@ class ProjectsController extends Controller {
         $this->dispatch(
             new AddMemberToProjectCommand($request, $projectId, $this->user)
         );
+
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
 
         return redirect()->route('project.show', $projectId);
     }

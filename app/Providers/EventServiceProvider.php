@@ -102,13 +102,15 @@ class EventServiceProvider extends ServiceProvider {
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\MemberJoinedProject',
-			'App\Handlers\Events\Pusher\UpdateActivityLog'
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\MemberRemovedFromProjectEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\MemberRemovedFromProject',
-			'App\Handlers\Events\Pusher\UpdateActivityLog'
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\ProjectWasRemovedEvent' => [
 			'App\Handlers\Events\NotifyUsers'

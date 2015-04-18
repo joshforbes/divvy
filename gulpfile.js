@@ -50,6 +50,7 @@ elixir(function(mix) {
     mix.scripts(
         [
             'utilities/ajax.js',
+            'modules/dashboardModule.js',
             'modules/profileModule.js',
             'modules/projectModule.js',
             'modules/notificationModule.js',

@@ -6,9 +6,9 @@
             <h3 class="header__title">Dashboard</h3>
 
             <div class="header__controls">
-                <a href="{{ route('project.create') }}">
-                    <button class="header__button">+ Project</button>
-                </a>
+                <button class="header__button" data-toggle="modal" data-target=".add-project-modal">
+                    + Project
+                </button>
             </div>
         </div>
 
@@ -27,7 +27,16 @@
 
         </section>
 
-
     </div>
 
+    @include('projects.partials.add-project-modal')
+
+
+@endsection
+
+@section('js')
+    <script src="/js/vendor/select2.js"></script>
+    <script>
+        dashboardModule.init();
+    </script>
 @endsection
