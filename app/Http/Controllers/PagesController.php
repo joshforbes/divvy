@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Auth;
 use Illuminate\Http\Request;
+use JavaScript;
 
 class PagesController extends Controller {
 
@@ -23,6 +24,12 @@ class PagesController extends Controller {
         }
 
         $projects = $this->user->projects;
+
+        JavaScript::put([
+            'currentUser' => $this->user->username,
+            'channel' => 'u' . $this->user->id
+        ]);
+
         return view('pages.dashboard', compact('projects'));
 
     }

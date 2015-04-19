@@ -189,6 +189,11 @@ class ProjectsController extends Controller {
             new RemoveProjectCommand($id, $this->user)
         );
 
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
+
         return redirect()->route('home');
     }
 

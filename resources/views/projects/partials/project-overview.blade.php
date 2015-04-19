@@ -16,7 +16,7 @@
                     <i class="fa fa-edit"></i>Edit
                 </button>
 
-                {!! Form::open(['method' => 'DELETE', 'route' => ['project.destroy', $project->id]])!!}
+                {!! Form::open(['data-remote', 'method' => 'DELETE', 'route' => ['project.destroy', $project->id]])!!}
                 <button class="project-overview__setting">
                     <i class="fa fa-trash"></i>Delete
                 </button>

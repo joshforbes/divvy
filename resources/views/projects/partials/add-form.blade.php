@@ -1,4 +1,4 @@
-{!! Form::open(['class' => 'task-form', 'route' => ['project.store', $project->id]]) !!}
+{!! Form::open(['class' => 'task-form', 'route' => ['project.store']]) !!}
 
 <div class="error-container alert alert-danger hide"></div>
 
