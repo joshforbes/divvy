@@ -81,6 +81,7 @@
 
     &__member {
         padding-bottom: 20px;
+        position: relative;
     }
 
     &__member img{
@@ -134,4 +135,9 @@
         border-radius: 20px;
         margin-right: 8px;
     }
+}
+
+.members__member:hover .member-tooltip {
+    visibility: visible;
+    opacity: 1
 }

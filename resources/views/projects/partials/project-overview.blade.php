@@ -25,12 +25,17 @@
         </div>
     @endif
 
-    <p class="project-overview__description">{{$project->description}}</p>
+    <p class="project-overview__description">
+        <a href="{{ route('project.show', [$project->id]) }}">{{$project->description}}</a>
+    </p>
 
     @if($project->users)
         <div class="project-overview__members">
             @foreach($project->users as $user)
-                <span class="project-overview__member">{!! $user->profile->present()->avatarHtml('40px') !!}</span>
+                <span class="project-overview__member">
+                    {!! $user->profile->present()->avatarHtml('30px') !!}
+                    <span class="member-tooltip">{{ $user->username }}</span>
+                </span>
             @endforeach
         </div>
     @endif

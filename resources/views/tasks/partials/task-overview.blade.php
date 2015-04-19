@@ -41,6 +41,8 @@
     </div>
 
     <div class="task-overview__body">
+        <a href="{{ route('task.show', [$project->id, $task->id]) }}">
+
         <p class="task-overview__description">{{$task->description}}</p>
 
         <div class="task-overview__information-wrapper">
@@ -58,6 +60,7 @@
             <span class="task-overview__information">{{$task->users->count()}}</span>
         </div>
 
+        </a>
     </div>
 
 
@@ -65,7 +68,10 @@
     @if($task->users)
         <div class="task-overview__members">
             @foreach($task->users as $user)
-                <span class="task-overview__member">{!! $user->profile->present()->avatarHtml('30px') !!}</span>
+                <span class="task-overview__member">
+                    {!! $user->profile->present()->avatarHtml('40px') !!}
+                    <span class="member-tooltip">{{ $user->username }}</span>
+                </span>
             @endforeach
         </div>
     @endif

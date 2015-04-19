@@ -5249,14 +5249,14 @@ input[type="submit"] {
   border-radius: 5px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   background-color: white; }
+  .project-overview a {
+    text-decoration: none;
+    color: inherit; }
   .project-overview__header {
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     padding: 15px 15px; }
   .project-overview__title {
     font-size: 18px; }
-    .project-overview__title a {
-      text-decoration: none;
-      color: inherit; }
   .project-overview__settings-button {
     padding: 0;
     background-color: white;
@@ -5313,11 +5313,15 @@ input[type="submit"] {
     left: 0;
     padding: 0 15px; }
   .project-overview__member {
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    position: relative; }
   .project-overview__member img {
     border-radius: 20px;
-    margin: 1px;
-    margin-bottom: 3px; }
+    margin: 1px 1px 3px; }
+
+.project-overview__member:hover .member-tooltip {
+  visibility: visible;
+  opacity: 1; }
 
 .create-project {
   padding: 0 !important;
@@ -5887,7 +5891,8 @@ input[type="submit"] {
   .members__body {
     padding: 0 15px; }
   .members__member {
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    position: relative; }
   .members__member img {
     border-radius: 20px;
     margin: 1px;
@@ -5938,6 +5943,10 @@ input[type="submit"] {
   border-radius: 20px;
   margin-right: 8px; }
 
+.members__member:hover .member-tooltip {
+  visibility: visible;
+  opacity: 1; }
+
 .task-progress {
   height: 300px;
   position: relative;
@@ -5976,14 +5985,14 @@ input[type="submit"] {
   border-radius: 5px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   background-color: white; }
+  .task-overview a {
+    text-decoration: none;
+    color: inherit; }
   .task-overview__header {
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     padding: 15px 15px; }
   .task-overview__title {
     font-size: 18px; }
-    .task-overview__title a {
-      text-decoration: none;
-      color: inherit; }
   .task-overview__settings-overlay {
     position: absolute;
     top: -1px;
@@ -6053,11 +6062,15 @@ input[type="submit"] {
     left: 0;
     padding: 0 15px; }
   .task-overview__member {
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    position: relative; }
   .task-overview__member img {
     border-radius: 20px;
-    margin: 1px;
-    margin-bottom: 3px; }
+    margin: 1px 1px 3px; }
+
+.task-overview__member:hover .member-tooltip {
+  visibility: visible;
+  opacity: 1; }
 
 .overview-overlay {
   position: absolute;
@@ -6476,6 +6489,23 @@ input[type="submit"] {
     margin: 0;
     border: 0;
     text-align: center; }
+
+.member-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+  position: absolute;
+  top: -47px;
+  left: 10px;
+  padding: 5px 10px;
+  background-color: #eeeeee;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+  z-index: 500; }
+
+.member-tooltip--bottom {
+  top: 33px; }
 
 /** NAV **/
 .navbar {
