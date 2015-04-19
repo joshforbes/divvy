@@ -153,6 +153,11 @@ class ProjectsController extends Controller {
     {
         $project = $this->projectRepository->findById($projectId);
 
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
+
         return view('projects.edit', compact('project'));
     }
 

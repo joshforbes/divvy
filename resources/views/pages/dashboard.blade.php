@@ -20,7 +20,7 @@
             @if($projects)
                 @foreach($projects as $project)
                     <article class="project-overview-wrapper">
-                        @include('projects.partials.project-overview')
+                        @include('projects.partials.project-overview-wrapper')
                     </article>
                 @endforeach
             @endif
