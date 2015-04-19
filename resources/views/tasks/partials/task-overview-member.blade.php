@@ -32,7 +32,10 @@
     @if($task->users)
         <div class="task-overview__members">
             @foreach($task->users as $user)
-                <span class="task-overview__member">{!! $user->profile->present()->avatarHtml('30px') !!}</span>
+                <span class="task-overview__member">
+                    {!! $user->profile->present()->avatarHtml('30px') !!}
+                    <span class="member-tooltip">{{ $user->username }}</span>
+                </span>
             @endforeach
         </div>
     @endif
