@@ -15,5 +15,5 @@ input[type="submit"] {
 }
 
 @mixin button-primary() {
-    background-image: linear-gradient(to bottom, $nav-bar-color 0%, darken($nav-bar-color, 5%) 100%);
+    background-image: linear-gradient(to bottom, $primary-color 0%, darken($primary-color, 5%) 100%);
 }

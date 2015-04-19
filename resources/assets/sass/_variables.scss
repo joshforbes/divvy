@@ -21,13 +21,10 @@ $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
-//$background-color:         #3f9ca3;
 $background-color:         #F2F2F2;
 
 $accent-color:              #184D59;
-//$nav-bar-color:             #0c2224;
-$nav-bar-color:             #F23030;
-//$nav-bar-color:             #f1494c;
+$primary-color:             #F23030;
 
 
 //== Scaffolding
@@ -371,7 +368,7 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             #777 !default;
-$navbar-default-bg:                $nav-bar-color !default;
+$navbar-default-bg:                $primary-color !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
