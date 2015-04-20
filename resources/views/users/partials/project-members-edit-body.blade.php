@@ -15,7 +15,11 @@
 <div class="members-edit__body">
     @foreach($project->users as $user)
         <div class="members-edit__member">
-            <span class="members-edit__member-avatar">{!! $user->profile->present()->avatarHtml('40px') !!}</span>
+            <span class="members-edit__member-avatar">
+                <a href="{{ route('activity.showProject', [$project->id, $user->username]) }}">
+                    {!! $user->profile->present()->avatarHtml('40px') !!}
+                </a>
+            </span>
             <span class="members-edit__member-name">{{ $user->username }}</span>
             {!! Form::open(['data-remote', 'method' => 'DELETE', 'route' => ['project.removeUser', $project->id, $user->id]]) !!}
             <button class="members-edit__member-delete"><i class="fa fa-trash"></i></button>

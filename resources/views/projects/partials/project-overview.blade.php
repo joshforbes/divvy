@@ -33,7 +33,7 @@
         <div class="project-overview__members">
             @foreach($project->users as $user)
                 <span class="project-overview__member">
-                    {!! $user->profile->present()->avatarHtml('30px') !!}
+                    <a href="{{ route('activity.showProject', [$project->id, $user->username]) }}">{!! $user->profile->present()->avatarHtml('30px') !!}</a>
                     <span class="member-tooltip">{{ $user->username }}</span>
                 </span>
             @endforeach

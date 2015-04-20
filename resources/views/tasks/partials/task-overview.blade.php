@@ -69,7 +69,7 @@
         <div class="task-overview__members">
             @foreach($task->users as $user)
                 <span class="task-overview__member">
-                    {!! $user->profile->present()->avatarHtml('40px') !!}
+                    <a href="{{ route('activity.showTask', [$project->id, $task->id, $user->username]) }}">{!! $user->profile->present()->avatarHtml('40px') !!}</a>
                     <span class="member-tooltip">{{ $user->username }}</span>
                 </span>
             @endforeach
