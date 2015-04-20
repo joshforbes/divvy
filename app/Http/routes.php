@@ -58,6 +58,9 @@ Route::group(['middleware' => 'auth'], function ()
         #Projects
         Route::get('/p/{projectId}', ['as' => 'project.show', 'uses' => 'ProjectsController@show']);
 
+        #User Activity
+        Route::get('/p/{projectId}/activity/{username}', ['as' => 'activity.showProject', 'uses' => 'ActivityController@showProject']);
+
         Route::group(['middleware' => 'task.assigned'], function ()
         {
             #Tasks
@@ -65,6 +68,7 @@ Route::group(['middleware' => 'auth'], function ()
 
             #Activity
             Route::get('/p/{projectId}/task/{taskId}/activity', ['as' => 'activity.taskIndex', 'uses' => 'ActivityController@taskIndex']);
+            Route::get('/p/{projectId}/task/{taskId}/activity/{username}', ['as' => 'activity.showTask', 'uses' => 'ActivityController@showTask']);
 
             #Subtasks
             Route::post('/p/{projectId}/task/{taskId}', ['as' => 'subtask.store', 'uses' => 'SubtasksController@store']);
@@ -92,6 +96,7 @@ Route::group(['middleware' => 'auth'], function ()
                 Route::patch('/p/{projectId}/task/{taskId}/comment/{commentId}', ['as' => 'comment.update', 'uses' => 'CommentsController@update']);
             });
         });
+
     });
 });
 

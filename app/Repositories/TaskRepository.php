@@ -2,6 +2,7 @@
 
 use App\Project;
 use App\Task;
+use App\User;
 
 class TaskRepository {
 
@@ -124,6 +125,17 @@ class TaskRepository {
         $task->save();
 
         return $task;
+    }
+
+    /**
+     * Removes a user from the specified task
+     *
+     * @param User $user
+     * @param Task $task
+     */
+    public function removeUser(User $user, Task $task)
+    {
+        $task->users()->detach([$user->id]);
     }
 
 }

@@ -362,6 +362,8 @@ var projectModule = (function() {
         s.membersEditBody.html(data.membersEditPartial);
         s.membersBody.html(data.membersBodyPartial);
         $('.task-form__member-select option[value="' + data.memberId + '"]').remove();
+        $(".select2-selection__choice:contains('" + data.memberUsername + "')").remove();
+        $(".task-overview__member:contains('" + data.memberUsername + "')").remove();
 
         $(".members-edit__list").select2();
     }

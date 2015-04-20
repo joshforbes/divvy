@@ -40,7 +40,8 @@ class MemberRemovedFromProject {
 		$this->pusher->trigger($channel, 'memberRemovedFromProject', [
 			'membersEditPartial' => (String)$membersEditPartial,
 			'membersBodyPartial' => (String)$membersBodyPartial,
-			'memberId' => $member->id
+			'memberId' => $member->id,
+			'memberUsername' => $member->username
 		]);
 
 	}

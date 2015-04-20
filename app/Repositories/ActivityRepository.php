@@ -17,6 +17,18 @@ class ActivityRepository {
     }
 
     /**
+     * find activity by project id for specified user
+     *
+     * @param $user
+     * @param $projectId
+     * @return mixed
+     */
+    public function findByProjectIdForUser($user, $projectId)
+    {
+        return Activity::with('subject', 'user')->where('project_id', $projectId)->where('user_id', $user->id)->orderBy('created_at', 'desc')->get();
+    }
+
+    /**
      * Find activity by task id
      *
      * @param $taskId
@@ -25,6 +37,18 @@ class ActivityRepository {
     public function findByTaskId($taskId)
     {
         return Activity::with('subject', 'user')->where('task_id', $taskId)->orderBy('created_at', 'desc')->get();
+    }
+
+    /**
+     * Find activity by task id for a specified user
+     *
+     * @param $user
+     * @param $taskId
+     * @return mixed
+     */
+    public function findByTaskIdForUser($user, $taskId)
+    {
+        return Activity::with('subject', 'user')->where('task_id', $taskId)->where('user_id', $user->id)->orderBy('created_at', 'desc')->get();
     }
 
     /**
