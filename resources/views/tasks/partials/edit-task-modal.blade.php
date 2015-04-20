@@ -7,7 +7,7 @@
             </div>
             <div class="modal__body">
 
-                <div class="task-modal-wrapper">
+                <div class="edit-task-modal-wrapper">
 
                     @include('tasks.partials.edit-form')
 

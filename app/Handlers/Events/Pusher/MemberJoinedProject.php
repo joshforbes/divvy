@@ -32,13 +32,16 @@ class MemberJoinedProject {
 	{
 		$project = $event->project;
 		$users = $this->projectRepository->usersNotInProjectArray($project);
+		$member = $event->subject;
 		$channel = 'p' . $project->id;
 		$membersEditPartial = view('users.partials.project-members-edit-body', compact('project', 'users'));
 		$membersBodyPartial = view('users.partials.project-members-body', compact('project'));
 
 		$this->pusher->trigger($channel, 'memberJoinedProject', [
 			'membersEditPartial' => (String)$membersEditPartial,
-			'membersBodyPartial' => (String)$membersBodyPartial
+			'membersBodyPartial' => (String)$membersBodyPartial,
+			'memberId' => $member->id,
+			'memberUsername' => $member->username
 		]);
 
 	}

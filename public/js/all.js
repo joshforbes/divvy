@@ -344,13 +344,16 @@ var projectModule = (function() {
     }
 
     function projectWasModified(data) {
-        console.log('yes');
         $('.header__title').html(data.partial);
     }
 
     function memberJoinedProject(data) {
         s.membersEditBody.html(data.membersEditPartial);
         s.membersBody.html(data.membersBodyPartial);
+        $('.task-form__member-select').append($('<option>', {
+            value: data.memberId,
+            text: data.memberUsername
+        }));
 
         $(".members-edit__list").select2();
     }
@@ -358,6 +361,7 @@ var projectModule = (function() {
     function memberRemovedFromProject(data) {
         s.membersEditBody.html(data.membersEditPartial);
         s.membersBody.html(data.membersBodyPartial);
+        $('.task-form__member-select option[value="' + data.memberId + '"]').remove();
 
         $(".members-edit__list").select2();
     }

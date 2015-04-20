@@ -5376,7 +5376,11 @@ input[type="submit"] {
       color: #184D59;
       background-color: white; }
 
-.task-modal-wrapper {
+.edit-task-modal-wrapper {
+  background-color: white;
+  padding-bottom: 100px; }
+
+.add-task-modal-wrapper {
   background-color: white;
   padding-bottom: 100px; }
 
