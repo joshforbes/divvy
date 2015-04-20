@@ -26,6 +26,19 @@ class ProjectWasModified {
      */
     public function handle($event)
     {
+        $this->dashboardHandler($event);
+
+        $this->projectHandler($event);
+    }
+
+    /**
+     * Handles events related to the dashboard
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    public function dashboardHandler($event)
+    {
         foreach ($event->notifiable as $user)
         {
             $channel = 'u' . $user->id;
@@ -34,12 +47,29 @@ class ProjectWasModified {
 
             $this->pusher->trigger($channel, 'projectWasModified', [
                 'projectId' => $project->id,
-                'partial' => (String) $partial,
-                'members' => $project->users,
-                'admins' => $project->admins
+                'partial'   => (String)$partial,
+                'members'   => $project->users,
+                'admins'    => $project->admins
             ]);
         }
+    }
 
+    /**
+     * Handles events related to the Project page
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    public function projectHandler($event)
+    {
+        $project = $event->project;
+        $channel = 'p' . $project->id;
+        $partial = $project->name;
+
+
+        $this->pusher->trigger($channel, 'projectWasModified', [
+            'partial' => (String)$partial
+        ]);
     }
 
 }

@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42cdb1d5-8b6e-4047-bd25-3a856df9e117" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasModified.php" afterPath="$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasModified.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasRemoved.php" afterPath="$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasRemoved.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/all.css" afterPath="$PROJECT_DIR$/public/css/all.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/all.js" afterPath="$PROJECT_DIR$/public/js/all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/app.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/app.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" afterPath="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" />
     </list>
     <ignored path="divvy.iws" />
@@ -32,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MemberRemovedFromProject.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/MemberRemovedFromProject.php">
+      <file leaf-file-name="ProjectWasModified.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasModified.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.22222222" vertical-offset="200" max-vertical-offset="1175">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.11111111" vertical-offset="650" max-vertical-offset="1925">
+              <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -91,16 +89,16 @@
         <option value="$PROJECT_DIR$/resources/views/projects/partials/edit-form.blade.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2015-04-19.log" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
-        <option value="$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasModified.php" />
         <option value="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/sass/pages/_dashboard.scss" />
         <option value="$PROJECT_DIR$/resources/assets/js/modules/dashboardModule.js" />
-        <option value="$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasRemoved.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" />
         <option value="$PROJECT_DIR$/resources/assets/sass/app.scss" />
         <option value="$PROJECT_DIR$/resources/views/projects/partials/project-removed.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/sass/components/_removed.scss" />
+        <option value="$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasRemoved.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/modules/projectModule.js" />
+        <option value="$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasModified.php" />
       </list>
     </option>
   </component>
@@ -1392,86 +1390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasModified.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5822222" vertical-offset="176" max-vertical-offset="1175">
-          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
-          <folding>
-            <marker date="1429471848000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1429471848000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429471848000" expanded="true" signature="-1:-1" placeholder=" Create the event handler. ..." />
-            <marker date="1429471848000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429471848000" expanded="true" signature="-1:-1" placeholder=" Handle the event. ..." />
-            <marker date="1429471848000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429471848000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429471848000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429471848000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasRemoved.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8333333" vertical-offset="525" max-vertical-offset="1575">
-          <caret line="55" column="59" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
-          <folding>
-            <marker date="1429489554000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder=" Create the event handler. ..." />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder=" Handle the event. ..." />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429489554000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/projectModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41666666" vertical-offset="2525" max-vertical-offset="4625">
-          <caret line="116" column="38" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
-          <folding>
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{&quot;height&quot;: 0...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1429489946000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/sass/pages/_create-project.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
@@ -1693,6 +1611,88 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.22222222" vertical-offset="200" max-vertical-offset="1175">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1428291960000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428291960000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428291960000" expanded="true" signature="-1:-1" placeholder=" Create the event handler. ..." />
+            <marker date="1428291960000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428291960000" expanded="true" signature="-1:-1" placeholder=" Handle the event. ..." />
+            <marker date="1428291960000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428291960000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428291960000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/modules/projectModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667" vertical-offset="2450" max-vertical-offset="4775">
+          <caret line="122" column="27" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
+          <folding>
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{&quot;height&quot;: 0...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491601000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasRemoved.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="975" max-vertical-offset="1875">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <marker date="1429491459000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder=" Create the event handler. ..." />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder=" Handle the event. ..." />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder=" Handles events related to the dashboard ..." />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder=" Handles events related to the Project page ..." />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429491459000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Handlers/Events/Pusher/ProjectWasModified.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11111111" vertical-offset="650" max-vertical-offset="1925">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
           <folding />
         </state>
       </provider>

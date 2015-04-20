@@ -33,6 +33,12 @@ class ProjectWasRemoved {
 
     }
 
+    /**
+     * Handles events related to the dashboard
+     *
+     * @param $event
+     * @throws \PusherException
+     */
     public function dashboardHandler($event)
     {
         foreach ($event->notifiable as $user)
@@ -46,6 +52,12 @@ class ProjectWasRemoved {
         }
     }
 
+    /**
+     * Handles events related to the Project page
+     *
+     * @param $event
+     * @throws \PusherException
+     */
     public function projectHandler($event)
     {
         $project = $event->project;
