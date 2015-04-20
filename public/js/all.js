@@ -262,6 +262,7 @@ var projectModule = (function() {
         channel.bind('memberRemovedFromProject', memberRemovedFromProject);
         channel.bind('taskWasDeleted', taskWasDeleted);
         channel.bind('taskAddedToProject', taskAddedToProject);
+        channel.bind('projectWasRemoved', projectWasRemoved);
     }
 
     function taskAddedToProject(data) {
@@ -335,7 +336,10 @@ var projectModule = (function() {
         }, 500, function() {
             task.remove();
         })
+    }
 
+    function projectWasRemoved(data) {
+        $('.header').next().html(data.partial);
     }
 
     function memberJoinedProject(data) {

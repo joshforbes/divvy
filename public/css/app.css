@@ -6503,6 +6503,12 @@ input[type="submit"] {
 .member-tooltip--bottom {
   top: 33px; }
 
+.removed {
+  text-align: center; }
+  .removed a {
+    color: #F23030;
+    text-decoration: underline; }
+
 /** NAV **/
 .navbar {
   margin-bottom: 0px; }

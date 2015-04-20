@@ -27,6 +27,14 @@ class ProjectWasRemoved {
     public function handle($event)
     {
 
+        $this->dashboardHandler($event);
+
+        $this->projectHandler($event);
+
+    }
+
+    public function dashboardHandler($event)
+    {
         foreach ($event->notifiable as $user)
         {
             $channel = 'u' . $user->id;
@@ -36,7 +44,18 @@ class ProjectWasRemoved {
                 'projectId' => $project->id,
             ]);
         }
+    }
 
+    public function projectHandler($event)
+    {
+        $project = $event->project;
+        $channel = 'p'.$project->id;
+        $partial = view('projects.partials.project-removed');
+
+
+        $this->pusher->trigger($channel, 'projectWasRemoved', [
+            'partial' => (String) $partial
+        ]);
     }
 
 }
