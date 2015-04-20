@@ -2,7 +2,7 @@
     @include make-row();
 }
 
-.project-overview-wrapper {
+.project-wrapper {
     @include make-sm-column(6);
     @include make-md-column(4);
     margin-bottom: 50px;

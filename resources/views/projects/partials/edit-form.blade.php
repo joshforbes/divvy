@@ -1,4 +1,4 @@
-{!! Form::model($project, ['class' => 'task-form', 'method' => 'PATCH', 'route' => ['project.update', $project->id]]) !!}
+{!! Form::model($project, ['data-remote', 'class' => 'task-form', 'method' => 'PATCH', 'route' => ['project.update', $project->id]]) !!}
 
 <div class="error-container alert alert-danger hide"></div>
 

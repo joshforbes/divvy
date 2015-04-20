@@ -4831,7 +4831,7 @@ button.close {
   .projects:after {
     clear: both; }
 
-.project-overview-wrapper {
+.project-wrapper {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -4842,11 +4842,11 @@ button.close {
   padding-right: 15px;
   margin-bottom: 50px; }
   @media (min-width: 768px) {
-    .project-overview-wrapper {
+    .project-wrapper {
       float: left;
       width: 50%; } }
   @media (min-width: 992px) {
-    .project-overview-wrapper {
+    .project-wrapper {
       float: left;
       width: 33.33333%; } }
 

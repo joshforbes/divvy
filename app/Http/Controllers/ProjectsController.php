@@ -153,10 +153,6 @@ class ProjectsController extends Controller {
     {
         $project = $this->projectRepository->findById($projectId);
 
-        if (Request::ajax())
-        {
-            return response('success', 200);
-        }
 
         return view('projects.edit', compact('project'));
     }
@@ -173,6 +169,11 @@ class ProjectsController extends Controller {
         $this->dispatch(
             new ModifyProjectCommand($request, $projectId, $this->user)
         );
+
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
 
         return redirect()->route('project.show', [$projectId]);
     }
