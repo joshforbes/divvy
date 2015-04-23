@@ -16,6 +16,9 @@ var taskModule = (function() {
         channel.bind('subtaskAddedToTask', subtaskAddedToTask);
         channel.bind('subtaskWasDeleted', subtaskWasDeleted);
         channel.bind('subtaskWasModified', subtaskWasModified);
+        channel.bind('discussionStartedInTask', discussionStartedInTask);
+        channel.bind('discussionWasDeleted', discussionWasDeleted);
+        channel.bind('discussionWasModified', discussionWasModified);
 
     }
 
@@ -73,14 +76,58 @@ var taskModule = (function() {
         subtask.replaceWith(data.partial);
 
         editForm.parent().html(data.editPartial);
+    }
 
+    // Pusher event listener that adds a new discussion to the discussion
+    // container. Because the discussion container is a bootstrap table
+    // we have to append the edit modal separately
+    function discussionStartedInTask(data) {
+        var newDiscussion = $(data.partial).hide();
+        s.discussions.parent().append($(data.editPartial));
+
+        newDiscussion.prependTo(s.discussions.children('tbody'));
+        newDiscussion.first().show(500);
+
+        $('.add-discussion-modal').modal('hide');
+    }
+
+    // Pusher event listener that removes the specified discussion from the
+    // discussion container
+    function discussionWasDeleted(data) {
+        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+
+        discussion.animate({
+            height: 0,
+            width: 0,
+            opacity: 0,
+            padding: 0,
+            margin: 0
+        }, 500, function() {
+            discussion.remove();
+        })
+    }
+
+    // Pusher event listener that replaces the specified discussion with an
+    // updated version from the server. Because the discussion is contained in a
+    // bootstrap table the edit modal has to be replaced separately.
+    function discussionWasModified(data) {
+        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+        var editModal = $("#" + data.discussionId + "-modal");
+        var editForm = editModal.find('.discussion-form');
+
+        editModal.modal('hide');
+
+        discussion.replaceWith(data.partial);
+
+        editForm.parent().html(data.editPartial);
     }
 
     return {
         settings: {
             completionContainer: $('.task-progress'),
             activityLog: $('.activity-log'),
-            subtasks: $('.subtasks__table')
+            subtasks: $('.subtasks__table'),
+            discussions: $('.discussions__table')
         },
 
 

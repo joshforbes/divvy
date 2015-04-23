@@ -54,57 +54,83 @@ class EventServiceProvider extends ServiceProvider {
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\TaskCompletionChanged',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
-			'App\Handlers\Events\Pusher\SubtaskAddedToTask'
+			'App\Handlers\Events\Pusher\SubtaskAddedToTask',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\SubtaskWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\TaskCompletionChanged',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
-			'App\Handlers\Events\Pusher\SubtaskWasDeleted'
+			'App\Handlers\Events\Pusher\SubtaskWasDeleted',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\SubtaskWasCompletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\SubtaskWasIncompleteEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\SubtaskWasModifiedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
-			'App\Handlers\Events\Pusher\SubtaskWasModified'
+			'App\Handlers\Events\Pusher\SubtaskWasModified',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\DiscussionStartedInTaskEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
+			'App\Handlers\Events\Pusher\DiscussionStartedInTask',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\DiscussionWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
+			'App\Handlers\Events\Pusher\DiscussionWasDeleted',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\DiscussionWasModifiedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
+			'App\Handlers\Events\Pusher\DiscussionWasModified',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\CommentWasLeftOnDiscussionEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
 		],
 		'App\Events\CommentWasLeftOnSubtaskEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
 		],
 		'App\Events\CommentWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
 		],
 		'App\Events\CommentWasModifiedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
-			'App\Handlers\Events\NotifyUsers'
+			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\UpdateActivityLog',
 		],
 		'App\Events\MemberJoinedProjectEvent' => [
 			'App\Handlers\Events\LogProjectActivity',

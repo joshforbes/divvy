@@ -11,7 +11,7 @@ use App\Http\Requests\CreateDiscussionRequest;
 use App\Http\Requests\EditDiscussionRequest;
 use App\Http\Requests\LeaveCommentRequest;
 use App\Repositories\DiscussionRepository;
-use Illuminate\Http\Request;
+use Request;
 
 class DiscussionsController extends Controller {
 
@@ -54,7 +54,11 @@ class DiscussionsController extends Controller {
 			new StartDiscussionInTaskCommand($request, $taskId, $this->user)
 		);
 
-		//return redirect()->route('task.show', [$projectId, $taskId]);
+		if (Request::ajax())
+		{
+			return response('success', 200);
+		}
+
 		return redirect()->back();
 	}
 
@@ -120,6 +124,11 @@ class DiscussionsController extends Controller {
 			new ModifyDiscussionCommand($request, $discussionId, $this->user)
 		);
 
+		if (Request::ajax())
+		{
+			return response('success', 200);
+		}
+
 		return redirect()->back();
 	}
 
@@ -136,6 +145,11 @@ class DiscussionsController extends Controller {
 		$this->dispatch(
 			new RemoveDiscussionCommand($discussionId, $this->user)
 		);
+
+		if (Request::ajax())
+		{
+			return response('success', 200);
+		}
 
 		return redirect()->back();
 	}

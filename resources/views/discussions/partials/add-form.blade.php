@@ -1,4 +1,4 @@
-{!! Form::open(['class' => 'discussion-form', 'route' => ['discussion.store', $project->id, $task->id]]) !!}
+{!! Form::open(['data-remote', 'class' => 'discussion-form', 'route' => ['discussion.store', $project->id, $task->id]]) !!}
 
 <i class="fa fa-file"></i>{!! Form::label('title', 'Title: ') !!}
 {!! Form::text('title', null, ['placeholder' => 'Discussion Topic Name', 'class' => 'discussion-form__input']) !!}
