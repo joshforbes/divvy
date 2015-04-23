@@ -15,11 +15,20 @@
             type: method,
             url: form.prop('action'),
             data: form.serialize(),
+
             success: function() {
                 $.publish('ajax.request.success', [form]);
                 form[0].reset();
             },
             error: function(data) {
+                if (data.status === 500) {
+                    document.location.reload(true);
+                }
+
+                if (data.status === 401) {
+                    document.location.reload(true);
+                }
+
                 var errors = $.parseJSON(data.responseText);
 
                 $.each(errors, function(index, value) {
