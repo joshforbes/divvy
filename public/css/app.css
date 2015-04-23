@@ -5380,6 +5380,10 @@ input[type="submit"] {
   background-color: white;
   padding-bottom: 100px; }
 
+.task-modal-wrapper {
+  background-color: white;
+  padding-bottom: 100px; }
+
 .task-form {
   display: inline;
   margin-top: 50px; }
@@ -6317,7 +6321,8 @@ input[type="submit"] {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     font-size: 18px;
-    float: right; }
+    float: right;
+    display: inline !important; }
     .subtasks__controls form {
       display: inline; }
     .subtasks__controls .fa {

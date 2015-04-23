@@ -53,6 +53,7 @@ elixir(function(mix) {
             'modules/dashboardModule.js',
             'modules/profileModule.js',
             'modules/projectModule.js',
+            'modules/taskModule.js',
             'modules/notificationModule.js',
             'app.js'
         ], 'public/js', 'resources/assets/js'

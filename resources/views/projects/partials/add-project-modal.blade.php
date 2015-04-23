@@ -7,7 +7,7 @@
             </div>
             <div class="modal__body">
 
-                <div class="task-modal-wrapper">
+                <div class="add-task-modal-wrapper">
 
                     @include('projects.partials.add-form')
 

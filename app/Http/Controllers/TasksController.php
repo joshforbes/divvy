@@ -13,6 +13,7 @@ use App\Repositories\ProjectRepository;
 use App\Repositories\TaskRepository;
 use Request;
 use Illuminate\Http\Response;
+use JavaScript;
 
 /**
  * Class TasksController
@@ -79,6 +80,12 @@ class TasksController extends Controller {
         $task = $this->taskRepository->findByIdInProject($projectId, $taskId);
         $project = $task->project;
         $subtasks = $task->subtasks;
+
+        JavaScript::put([
+            'currentUser' => $this->user->username,
+            'admins' => $project->admins,
+            'channel' => 't' . $task->id
+        ]);
 
         return view('tasks.show', compact('task', 'project', 'subtasks'));
     }

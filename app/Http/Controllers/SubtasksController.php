@@ -13,6 +13,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LeaveCommentRequest;
 use App\Http\Requests\SubtaskRequest;
 use App\Repositories\SubtaskRepository;
+use Request;
 
 class SubtasksController extends Controller {
 
@@ -45,7 +46,11 @@ class SubtasksController extends Controller {
             new AddSubtaskToTaskCommand($request, $taskId, $this->user)
         );
 
-        //return redirect()->route('task.show', [$projectId, $taskId]);
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
+
         return redirect()->back();
     }
 
@@ -100,6 +105,11 @@ class SubtasksController extends Controller {
             new ModifySubtaskCommand($request, $subtaskId, $this->user)
         );
 
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
+
         return redirect()->back();
     }
 
@@ -153,6 +163,11 @@ class SubtasksController extends Controller {
         $this->dispatch(
             new RemoveSubtaskCommand($subtaskId, $this->user)
         );
+
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
 
         return redirect()->back();
     }

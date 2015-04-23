@@ -1,4 +1,4 @@
-{!! Form::open(['class' => 'subtask-form', 'route' => ['subtask.store', $project->id, $task->id]]) !!}
+{!! Form::open(['data-remote', 'class' => 'subtask-form', 'route' => ['subtask.store', $project->id, $task->id]]) !!}
 
 <i class="fa fa-file"></i>{!! Form::label('name', 'Name: ') !!}
 {!! Form::text('name', null, ['placeholder' => 'Subtask Name', 'class' => 'subtask-form__input']) !!}
