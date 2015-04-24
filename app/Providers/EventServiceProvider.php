@@ -53,6 +53,7 @@ class EventServiceProvider extends ServiceProvider {
 		'App\Events\SubtaskAddedToTaskEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\TaskModified',
 			'App\Handlers\Events\Pusher\TaskCompletionChanged',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
@@ -62,6 +63,7 @@ class EventServiceProvider extends ServiceProvider {
 		'App\Events\SubtaskWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\TaskModified',
 			'App\Handlers\Events\Pusher\TaskCompletionChanged',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
@@ -95,6 +97,7 @@ class EventServiceProvider extends ServiceProvider {
 		'App\Events\DiscussionStartedInTaskEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\TaskModified',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
 			'App\Handlers\Events\Pusher\DiscussionStartedInTask',
@@ -103,6 +106,7 @@ class EventServiceProvider extends ServiceProvider {
 		'App\Events\DiscussionWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\TaskModified',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
 			'App\Handlers\Events\Pusher\DiscussionWasDeleted',

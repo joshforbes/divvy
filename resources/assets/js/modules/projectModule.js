@@ -121,11 +121,6 @@ var projectModule = (function() {
             $('.no-assigned-tasks-message').remove();
         }
 
-        //remove the settings button if not a project admin
-        if ( !isProjectAdmin() ) {
-            newTask.find('.task-overview__settings-button').remove();
-        }
-
         //remove the task if the user is no longer assigned to the task
         if ( !isTaskMember(data) && !isProjectAdmin() && task.length == 1) {
             task.remove();
@@ -133,7 +128,12 @@ var projectModule = (function() {
 
         $("#" + data.taskId + "-modal").modal('hide');
 
-        task.replaceWith(data.partial);
+        task.replaceWith(newTask);
+
+        //remove the settings button if not a project admin
+        if ( !isProjectAdmin() ) {
+            newTask.find('.task-overview__settings-button').remove();
+        }
 
         $(".task-form__member-select").select2();
 

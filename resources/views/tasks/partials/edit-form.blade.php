@@ -9,7 +9,7 @@
 {!! Form::text('description', null, ['placeholder' => 'Description', 'class' => 'task-form__input']) !!}
 
 <i class="fa fa-users"></i>{!! Form::label('memberList', 'Assigned Members: ') !!}
-{!! Form::select('memberList[]', $members, null, ['multiple' => true, 'class' => 'task-form__member-select', 'data-placeholder' => 'Assign the task?']) !!}
+{!! Form::select('memberList[]', $members, null, ['multiple' => true, 'class' => 'task-form__member-select', 'data-placeholder' => 'Assign the task?', 'auto-complete' => 'off']) !!}
 
 {!! Form::submit('Save Changes', ['class' => 'task-form__button']) !!}
 
