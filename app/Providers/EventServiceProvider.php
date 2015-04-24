@@ -71,13 +71,17 @@ class EventServiceProvider extends ServiceProvider {
 		'App\Events\SubtaskWasCompletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\TaskCompletionChanged',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
 			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\SubtaskWasIncompleteEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
+			'App\Handlers\Events\Pusher\TaskCompletionChanged',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
 			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\SubtaskWasModifiedEvent' => [
@@ -116,21 +120,25 @@ class EventServiceProvider extends ServiceProvider {
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
 		],
 		'App\Events\CommentWasLeftOnSubtaskEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
 		],
 		'App\Events\CommentWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
 		],
 		'App\Events\CommentWasModifiedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
+			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
 		],
 		'App\Events\MemberJoinedProjectEvent' => [
 			'App\Handlers\Events\LogProjectActivity',

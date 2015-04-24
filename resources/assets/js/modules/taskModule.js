@@ -19,6 +19,8 @@ var taskModule = (function() {
         channel.bind('discussionStartedInTask', discussionStartedInTask);
         channel.bind('discussionWasDeleted', discussionWasDeleted);
         channel.bind('discussionWasModified', discussionWasModified);
+        channel.bind('taskModified', taskModified);
+        channel.bind('tasWasDeleted', taskWasDeleted);
 
     }
 
@@ -122,12 +124,60 @@ var taskModule = (function() {
         editForm.parent().html(data.editPartial);
     }
 
+    // Pusher event listener that updates the members list as well as the
+    // task title if an admin changes them.
+    function taskModified(data) {
+
+        if ( !isTaskMember(data) && !isProjectAdmin() ) {
+            $('.header').siblings('.container').html(data.removedPartial);
+        }
+
+        s.membersBody.html(data.partial);
+
+        $('.header__title').html(data.taskName);
+
+    }
+
+    // Pusher event listener that responds to the Task being deleted.
+    // Replaces the whole task page with data from the server, which
+    // provides a link back to the project page
+    function taskWasDeleted(data) {
+        $('.header').siblings('.container').html(data.partial);
+    }
+
+    // Checks to see if the current user is an admin of the project
+    function isProjectAdmin() {
+        var found = false;
+
+        $.each(divvy.admins, function(index, value) {
+            if (divvy.currentUser == value.username) {
+                found = true;
+            }
+        });
+
+        return found;
+    }
+
+    // Checks to see if the current user is a member of the specified task
+    function isTaskMember(data) {
+        var found = false;
+
+        $.each(data.members, function(index, value) {
+            if (divvy.currentUser == value.username) {
+                found = true;
+            }
+        });
+
+        return found;
+    }
+
     return {
         settings: {
             completionContainer: $('.task-progress'),
             activityLog: $('.activity-log'),
             subtasks: $('.subtasks__table'),
-            discussions: $('.discussions__table')
+            discussions: $('.discussions__table'),
+            membersBody: $('.members__body-wrapper')
         },
 
 

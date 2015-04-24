@@ -58,6 +58,12 @@ var projectModule = (function() {
         if ( isTaskMember(data) ) {
             newTask.prependTo(s.tasks);
             newTask.first().show(500);
+            $('.no-assigned-tasks-message').remove();
+        }
+
+        //remove the settings button if not a project admin
+        if ( !isProjectAdmin() ) {
+            newTask.find('.task-overview__settings-button').remove();
         }
 
         if ( isProjectAdmin() ) {
@@ -108,11 +114,19 @@ var projectModule = (function() {
     // to their tasks container.
     function taskModified(data) {
         var task = $(".task-wrapper[data-task='" + data.taskId + "']");
+        var newTask = $(data.partial);
 
         if ( isTaskMember(data) && task.length == 0) {
-            s.tasks.prepend(data.partial);
+            s.tasks.prepend(newTask);
+            $('.no-assigned-tasks-message').remove();
         }
 
+        //remove the settings button if not a project admin
+        if ( !isProjectAdmin() ) {
+            newTask.find('.task-overview__settings-button').remove();
+        }
+
+        //remove the task if the user is no longer assigned to the task
         if ( !isTaskMember(data) && !isProjectAdmin() && task.length == 1) {
             task.remove();
         }

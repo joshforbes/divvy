@@ -26,6 +26,18 @@ class TaskWasDeleted {
 	 */
 	public function handle($event)
 	{
+		$this->projectHandler($event);
+
+		$this->taskHandler($event);
+	}
+
+	/**
+	 * Handles events related to the projects page
+	 * @param $event
+	 * @throws \PusherException
+	 */
+	protected function projectHandler($event)
+	{
 		$task = $event->task;
 		$project = $event->project;
 		$channel = 'p'.$project->id;
@@ -33,7 +45,24 @@ class TaskWasDeleted {
 		$this->pusher->trigger($channel, 'taskWasDeleted', [
 			'taskId' => $task->id,
 		]);
+	}
 
+	/**
+	 * Handles events related to the task page
+	 * @param $event
+	 * @throws \PusherException
+	 */
+	protected function taskHandler($event)
+	{
+		$project = $event->project;
+		$task = $event->task;
+		$channel = 't'.$task->id;
+		$partial = view('tasks.partials.task-removed', compact('project'));
+
+
+		$this->pusher->trigger($channel, 'taskWasDeleted', [
+			'partial' => (String) $partial
+		]);
 	}
 
 }
