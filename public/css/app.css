@@ -6255,12 +6255,16 @@ input[type="submit"] {
     border-bottom: 1px solid #eeeeee; }
   .subtasks__row {
     margin-left: -15px;
-    margin-right: -15px; }
+    margin-right: -15px;
+    position: relative; }
     .subtasks__row:before, .subtasks__row:after {
       content: " ";
       display: table; }
     .subtasks__row:after {
       clear: both; }
+  .subtasks__row--completed {
+    opacity: .5;
+    background-color: rgba(238, 238, 238, 0.5); }
   .subtasks__name {
     position: relative;
     min-height: 1px;
@@ -6356,6 +6360,14 @@ input[type="submit"] {
       opacity: .7; }
       .subtasks__controls__button .fa {
         margin-right: 5px; }
+  .subtasks__more-link {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    font-size: 14px; }
+    .subtasks__more-link a {
+      color: #777777; }
 
 .discussions {
   min-height: 200px;

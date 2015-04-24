@@ -480,7 +480,18 @@ var taskModule = (function() {
     var s;
 
     function bindUIactions() {
+        s.completedSubtasksButton.on('click', showCompletedSubtasks);
+    }
 
+    function showCompletedSubtasks(e) {
+        e.preventDefault();
+        if (s.completedSubtasks.hasClass('hide')) {
+            s.completedSubtasks.removeClass('hide');
+            s.completedSubtasksButton.children('a').html('- Hide Completed Subtasks -');
+        } else {
+            s.completedSubtasks.addClass('hide');
+            s.completedSubtasksButton.children('a').html('- See Completed Subtasks -');
+        }
     }
 
 
@@ -499,7 +510,6 @@ var taskModule = (function() {
         channel.bind('discussionWasModified', discussionWasModified);
         channel.bind('taskModified', taskModified);
         channel.bind('tasWasDeleted', taskWasDeleted);
-
     }
 
     // Pusher event listener that replaces the task activity
@@ -655,7 +665,9 @@ var taskModule = (function() {
             activityLog: $('.activity-log'),
             subtasks: $('.subtasks__table'),
             discussions: $('.discussions__table'),
-            membersBody: $('.members__body-wrapper')
+            membersBody: $('.members__body-wrapper'),
+            completedSubtasksButton: $('.subtasks__more-link'),
+            completedSubtasks: $('.subtasks__row--completed')
         },
 
 

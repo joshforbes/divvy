@@ -67,7 +67,7 @@ class Task extends Model {
      */
     public function subtasks()
     {
-        return $this->hasMany('App\Subtask');
+        return $this->hasMany('App\Subtask')->orderBy('is_complete', 'asc')->orderBy('created_at', 'desc');
     }
 
     /**

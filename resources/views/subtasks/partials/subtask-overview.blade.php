@@ -1,4 +1,5 @@
 <td class="subtasks__name"><a href="{{ route('subtask.show', [$project->id, $task->id, $subtask->id]) }}">{{$subtask->name}}</a></td>
+
 <td class="subtasks__controls-wrapper">
     <div class="subtasks__controls">
         @if($subtask->comments->count() > 0)

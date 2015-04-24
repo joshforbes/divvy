@@ -45,7 +45,12 @@
 
     &__row {
         @include make-row();
+        position: relative;
+    }
 
+    &__row--completed {
+        opacity: .5;
+        background-color: transparentize($gray-lighter, .5);
     }
 
     &__name {
@@ -129,6 +134,18 @@
             .fa {
                 margin-right: 5px;
             }
+        }
+    }
+
+    &__more-link {
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        text-align: center;
+        font-size: 14px;
+
+        a {
+            color: $gray-light;
         }
     }
 
