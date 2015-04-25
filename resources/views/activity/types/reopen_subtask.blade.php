@@ -1,4 +1,4 @@
-{{ $activity->created_at->diffForHumans() }} - {{ $activity->present()->username }} re-opened a subtask:
+re-opened a subtask:
 @if ( $activity->subject->trashed() )
     {{ $activity->subject->name }}
 @else

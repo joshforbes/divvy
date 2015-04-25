@@ -1,5 +1,4 @@
-{{ $activity->created_at->diffForHumans() }} - {{ $activity->present()->username }} modified a comment on:
-
+modified a comment on:
 @if ( $activity->subject->commentableWithTrashed->trashed() )
     {{ $activity->subject->commentableWithTrashed->title ? $activity->subject->commentableWithTrashed->title : $activity->subject->commentableWithTrashed->name }}
 @else

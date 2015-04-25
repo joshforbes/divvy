@@ -1,4 +1,4 @@
-{{ $activity->created_at->diffForHumans() }} - {{ $activity->present()->username }} added a discussion:
+added a discussion:
 @if ($activity->subject->trashed() )
     {{ $activity->subject->title }}
 @else

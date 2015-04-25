@@ -1,4 +1,4 @@
-{{ $activity->created_at->diffForHumans() }} - {{ $activity->present()->username }} added a task:
+added a task:
 @if ($activity->subject->trashed())
     {{ $activity->subject->name }}
 @else

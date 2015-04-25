@@ -1,2 +1,5 @@
-{{ $activity->created_at->diffForHumans() }} - {{ $activity->present()->username }} removed
-<a href="{{ route('profile.show', [$activity->subject->username]) }}">{{ $activity->subject->username }}</a> from the project
+removed
+<a href="{{ route('profile.show', [$activity->subject->username]) }}">
+    {{ $activity->subject->username }}
+</a>
+from the project

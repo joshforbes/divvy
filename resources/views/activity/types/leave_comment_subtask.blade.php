@@ -1,4 +1,4 @@
-{{ $activity->created_at->diffForHumans() }} - {{ $activity->present()->username }} commented on the subtask:
+commented on the subtask:
 @if ($activity->subject->commentableWithTrashed->trashed())
     {{ $activity->subject->commentableWithTrashed->name }}
 @else

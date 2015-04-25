@@ -3,7 +3,10 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Project;
 use App\Repositories\ActivityRepository;
+use App\Repositories\ProjectRepository;
+use App\Repositories\TaskRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 
@@ -20,43 +23,52 @@ class ActivityController extends Controller {
 	/**
 	 * Display a listing of the resource.
 	 *
+	 * @param ProjectRepository $projectRepository
 	 * @param $projectId
 	 * @return Response
 	 */
-	public function index($projectId)
+	public function index(ProjectRepository $projectRepository, $projectId)
 	{
-		$activity = $this->activityRepository->findByProjectId($projectId);
+		$project = $projectRepository->findByIdForAdmin($projectId);
 
-		return view('activity.index', compact('activity'));
+		$activities = $this->activityRepository->findByProjectIdWithPagination($projectId, 15);
+
+		return view('activity.index', compact('project', 'activities'));
 	}
 
 	/**
 	 * Display a listing of the resource.
 	 *
+	 * @param TaskRepository $taskRepository
+	 * @param $projectId
 	 * @param $taskId
 	 * @return Response
 	 */
-	public function taskIndex($taskId)
+	public function taskIndex(TaskRepository $taskRepository, $projectId, $taskId)
 	{
-		$activity = $this->activityRepository->findByTaskId($taskId);
+		$task = $taskRepository->findById($taskId);
 
-		return view('activity.index', compact('activity'));
+		$activities = $this->activityRepository->findByTaskIdWithPagination($taskId, 15);
+
+		return view('activity.taskIndex', compact('task', 'activities'));
 	}
 
 	/**
 	 * Display the activity for the specified user within a Project
 	 *
+	 * @param ProjectRepository $projectRepository
 	 * @param UserRepository $userRepository
 	 * @param $projectId
 	 * @param $username
 	 * @return mixed
-     */
-	public function showProject(UserRepository $userRepository, $projectId, $username)
+	 */
+	public function showProject(ProjectRepository $projectRepository, UserRepository $userRepository, $projectId, $username)
 	{
+		$project = $projectRepository->findByIdForAdmin($projectId);
 		$user = $userRepository->findByUsername($username);
-		$activity = $this->activityRepository->findByProjectIdForUser($user, $projectId);
+		$activities = $this->activityRepository->findByProjectIdForUserWithPagination($user, $projectId, 15);
 
-		return view('activity.showProject', compact('activity', 'user'));
+		return view('activity.showProject', compact('project', 'activities', 'user'));
 	}
 
 	/**

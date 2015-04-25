@@ -1,4 +1,4 @@
-{{ $activity->created_at->diffForHumans() }} - {{ $activity->present()->username }} removed a comment from the {{strtolower((new \ReflectionClass($activity->subject->commentableWithTrashed))->getShortName())}}:
+removed a comment from the {{strtolower((new \ReflectionClass($activity->subject->commentableWithTrashed))->getShortName())}}:
 
 @if ($activity->subject->commentableWithTrashed->trashed())
     {{ $activity->subject->commentableWithTrashed->title ? $activity->subject->commentableWithTrashed->title : $activity->subject->commentableWithTrashed->name }}

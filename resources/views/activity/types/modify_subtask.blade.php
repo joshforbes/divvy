@@ -1,4 +1,4 @@
-{{ $activity->created_at->diffForHumans() }} - {{ $activity->present()->username }} modified a subtask:
+modified a subtask:
 @if ( $activity->subject->trashed() )
     {{ $activity->subject->name }}
 @else

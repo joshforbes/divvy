@@ -5185,26 +5185,31 @@ button.close {
   .comment-edit-form-wrapper:after {
     clear: both; }
 
-.activities {
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-top: 50px; }
-  .activities:before, .activities:after {
-    content: " ";
-    display: table; }
-  .activities:after {
-    clear: both; }
-
-.activities-wrapper {
+.activity-wrapper {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  margin-bottom: 100px; }
   @media (min-width: 992px) {
-    .activities-wrapper {
+    .activity-wrapper {
       margin-left: 16.66667%; } }
   @media (min-width: 992px) {
-    .activities-wrapper {
+    .activity-wrapper {
+      float: left;
+      width: 66.66667%; } }
+
+.notification-wrapper {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 100px; }
+  @media (min-width: 992px) {
+    .notification-wrapper {
+      margin-left: 16.66667%; } }
+  @media (min-width: 992px) {
+    .notification-wrapper {
       float: left;
       width: 66.66667%; } }
 
@@ -5699,14 +5704,70 @@ input[type="submit"] {
   .activity-log__header {
     color: #184D59;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    padding: 15px 15px;
-    margin-bottom: 10px; }
+    padding: 15px 15px; }
   .activity-log__title {
     font-size: 18px; }
   .activity-log__body {
     padding: 0 15px;
-    height: 200px;
+    height: 210px;
     overflow: hidden; }
+  .activity-log__body--full {
+    height: inherit;
+    overflow: inherit; }
+  .activity-log__activity {
+    margin-left: -15px;
+    margin-right: -15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px; }
+    .activity-log__activity:before, .activity-log__activity:after {
+      content: " ";
+      display: table; }
+    .activity-log__activity:after {
+      clear: both; }
+  .activity-log__activity--full {
+    padding: 25px; }
+  .activity-log__activity:last-child {
+    border-bottom: none; }
+  .activity-log__actor-avatar {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+    width: 16.66667%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .activity-log__actor-avatar {
+        float: left;
+        width: 8.33333%; } }
+    .activity-log__actor-avatar img {
+      border-radius: 50px; }
+  .activity-log__info {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+    width: 83.33333%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 25px; }
+    @media (min-width: 768px) {
+      .activity-log__info {
+        float: left;
+        width: 91.66667%; } }
+    @media (max-width: 767px) {
+      .activity-log__info {
+        padding-left: 5px; } }
+  .activity-log__timestamp {
+    font-size: 12px;
+    color: #777777;
+    margin-top: 2px; }
   .activity-log__more-link {
     width: 100%;
     position: absolute;
@@ -5715,6 +5776,18 @@ input[type="submit"] {
     font-size: 14px; }
     .activity-log__more-link a {
       color: #777777; }
+  .activity-log__pagination {
+    text-align: center; }
+    .activity-log__pagination .pagination li a {
+      color: #555555 !important; }
+    .activity-log__pagination .pagination .active span {
+      background-color: #F23030 !important;
+      border-color: #F23030 !important;
+      color: white !important;
+      opacity: .8; }
+
+.activity-log--full {
+  height: inherit; }
 
 .subtask-modal-wrapper {
   background-color: white;
@@ -6533,6 +6606,89 @@ input[type="submit"] {
   .removed a {
     color: #F23030;
     text-decoration: underline; }
+
+.notifications {
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: white; }
+  .notifications a {
+    color: #F23030;
+    opacity: .8;
+    text-decoration: none; }
+  .notifications__header {
+    color: #184D59;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 15px 15px; }
+  .notifications__title {
+    font-size: 18px; }
+  .notifications__body {
+    padding: 0 15px; }
+  .notifications__none {
+    margin: 20px 0; }
+  .notifications__pagination {
+    text-align: center; }
+    .notifications__pagination .pagination li a {
+      color: #555555 !important; }
+    .notifications__pagination .pagination .active span {
+      background-color: #F23030 !important;
+      border-color: #F23030 !important;
+      color: white !important;
+      opacity: .8; }
+
+.notification {
+  margin-left: -15px;
+  margin-right: -15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 25px; }
+  .notification:before, .notification:after {
+    content: " ";
+    display: table; }
+  .notification:after {
+    clear: both; }
+  .notification__activity:last-child {
+    border-bottom: none; }
+  .notification__actor-avatar {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+    width: 16.66667%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .notification__actor-avatar {
+        float: left;
+        width: 8.33333%; } }
+    .notification__actor-avatar img {
+      border-radius: 50px; }
+  .notification__info {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+    width: 83.33333%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 25px; }
+    @media (min-width: 768px) {
+      .notification__info {
+        float: left;
+        width: 91.66667%; } }
+    @media (max-width: 767px) {
+      .notification__info {
+        padding-left: 5px; } }
+  .notification__timestamp {
+    font-size: 12px;
+    color: #777777;
+    margin-top: 2px; }
 
 /** NAV **/
 .navbar {

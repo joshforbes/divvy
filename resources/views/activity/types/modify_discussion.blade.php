@@ -1,4 +1,4 @@
-{{ $activity->created_at->diffForHumans() }} - {{ $activity->present()->username }} modified a discussion:
+modified a discussion:
 @if ( $activity->subject->trashed() )
     {{ $activity->subject->title }}
 @else

@@ -53,6 +53,17 @@ class NotificationRepository {
     }
 
     /**
+     * Find notifications by id. Eager load relationships. Paginate
+     *
+     * @param $userId
+     * @return mixed
+     */
+    public function findNotificationsForUserWithPagination($userId, $numberPerPage)
+    {
+        return Notification::with('user', 'project', 'actor.profile', 'subject.commentable')->where('user_id', $userId)->orderBy('created_at', 'DESC')->paginate($numberPerPage);
+    }
+
+    /**
      * Mark the specified notification as read
      *
      * @param Notification $notification

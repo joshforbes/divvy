@@ -13,17 +13,27 @@ class NotificationsController extends Controller {
 	/**
 	 * Display a listing of the resource.
 	 *
+	 * @param NotificationRepository $notificationRepository
 	 * @param UserRepository $userRepository
 	 * @param $username
 	 * @return Response
 	 */
-	public function index(UserRepository $userRepository, $username)
+	public function index(NotificationRepository $notificationRepository, UserRepository $userRepository, $username)
 	{
 		$user = $userRepository->findByUsernameWithNotifications($username);
+		$notifications = $notificationRepository->findNotificationsForUserWithPagination($user->id, 15);
 
-		return view('notifications.index', compact('user'));
+		return view('notifications.index', compact('user', 'notifications'));
 	}
 
+
+	/**
+	 * Marks all unread notifications as read
+	 *
+	 * @param NotificationRepository $notificationRepository
+	 * @param $username
+	 * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
 	public function markAsRead(NotificationRepository $notificationRepository, $username)
 	{
 		$unreadNotifications = $notificationRepository->findUnreadNotificationsPlain($this->user->id);
