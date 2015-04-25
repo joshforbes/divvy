@@ -18,13 +18,13 @@
 
 
         @if(!$subtask->isCompleted())
-            {!! Form::open(['route' => ['subtask.complete', $project->id, $task->id, $subtask->id]])!!}
+            {!! Form::open(['data-remote', 'route' => ['subtask.complete', $project->id, $task->id, $subtask->id]])!!}
             <button class="subtasks__controls__button">
                 <i class="fa fa-file-o"></i>Complete
             </button>
             {!! Form::close() !!}
         @else
-            {!! Form::open(['route' => ['subtask.incomplete', $project->id, $task->id, $subtask->id]])!!}
+            {!! Form::open(['data-remote', 'route' => ['subtask.incomplete', $project->id, $task->id, $subtask->id]])!!}
             <button class="subtasks__controls__button">
                 <i class="fa fa-file-o"></i>Reopen
             </button>

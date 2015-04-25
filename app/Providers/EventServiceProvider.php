@@ -76,6 +76,7 @@ class EventServiceProvider extends ServiceProvider {
 			'App\Handlers\Events\Pusher\TaskCompletionChanged',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
+			'App\Handlers\Events\Pusher\SubtaskWasCompleted',
 			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\SubtaskWasIncompleteEvent' => [
@@ -84,6 +85,7 @@ class EventServiceProvider extends ServiceProvider {
 			'App\Handlers\Events\Pusher\TaskCompletionChanged',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
+			'App\Handlers\Events\Pusher\SubtaskWasIncomplete',
 			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\SubtaskWasModifiedEvent' => [

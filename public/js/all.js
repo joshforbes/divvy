@@ -478,19 +478,24 @@ var projectModule = (function() {
 
 var taskModule = (function() {
     var s;
+    var showingCompleted = 0;
 
     function bindUIactions() {
-        s.completedSubtasksButton.on('click', showCompletedSubtasks);
+        $('body').on('click', '.subtasks__more-link', showCompletedSubtasks);
     }
 
     function showCompletedSubtasks(e) {
+        var completedSubtasks = $('.subtasks__row--completed');
+
         e.preventDefault();
-        if (s.completedSubtasks.hasClass('hide')) {
-            s.completedSubtasks.removeClass('hide');
-            s.completedSubtasksButton.children('a').html('- Hide Completed Subtasks -');
+        if ( completedSubtasks.hasClass('hide') ) {
+            completedSubtasks.removeClass('hide');
+            showingCompleted = 1;
+            s.completedSubtasksButton.children('a').html('- Hide Completed -');
         } else {
-            s.completedSubtasks.addClass('hide');
-            s.completedSubtasksButton.children('a').html('- See Completed Subtasks -');
+            completedSubtasks.addClass('hide').appendTo($('.subtasks__table'));
+            showingCompleted = 0;
+            s.completedSubtasksButton.children('a').html('- See Completed -');
         }
     }
 
@@ -505,11 +510,13 @@ var taskModule = (function() {
         channel.bind('subtaskAddedToTask', subtaskAddedToTask);
         channel.bind('subtaskWasDeleted', subtaskWasDeleted);
         channel.bind('subtaskWasModified', subtaskWasModified);
+        channel.bind('subtaskWasCompleted', subtaskWasCompleted);
+        channel.bind('subtaskWasIncomplete', subtaskWasIncomplete)
         channel.bind('discussionStartedInTask', discussionStartedInTask);
         channel.bind('discussionWasDeleted', discussionWasDeleted);
         channel.bind('discussionWasModified', discussionWasModified);
         channel.bind('taskModified', taskModified);
-        channel.bind('tasWasDeleted', taskWasDeleted);
+        channel.bind('taskWasDeleted', taskWasDeleted);
     }
 
     // Pusher event listener that replaces the task activity
@@ -566,6 +573,49 @@ var taskModule = (function() {
         subtask.replaceWith(data.partial);
 
         editForm.parent().html(data.editPartial);
+    }
+
+    // Pusher event listener that replaces a subtask overview with the
+    // completed version
+    function subtaskWasCompleted(data) {
+        var subtask = $(".subtasks__row[data-subtask='" + data.subtaskId + "']");
+        var completedSubtask = $(data.partial);
+
+        completedSubtask.removeClass('hide');
+
+        subtask.replaceWith(completedSubtask);
+
+        // if the subtask container is not showing completed subtasks
+        // then we want to show the subtask as complete and then slowly
+        // fade it out.  Once faded it will be appended to the bottom of
+        // the completed subtasks for viewing when the user is showing
+        // completed.  We perform one final check at the end of the animation
+        // just to make sure the user didn't decide to show complete during the
+        // process. If they have we will make sure the completed subtask isn't hidden
+        if (showingCompleted === 0) {
+            completedSubtask.delay(4000).fadeOut(2000, function() {
+                s.completedSubtasksButton.removeClass('hide');
+                completedSubtask
+                    .addClass('hide')
+                    .appendTo($('.subtasks__table'))
+                    .show();
+                if (showingCompleted === 1 ) {
+                    completedSubtask.removeClass('hide');
+                }
+            });
+        } else {
+            s.completedSubtasksButton.removeClass('hide');
+        }
+
+    }
+
+    // Pusher event listener that replaces a completed subtask with
+    // a regular open task partial
+    function subtaskWasIncomplete(data) {
+        var subtask = $(".subtasks__row[data-subtask='" + data.subtaskId + "']");
+        var incompleteSubtask = $(data.partial);
+
+        subtask.replaceWith(incompleteSubtask);
     }
 
     // Pusher event listener that adds a new discussion to the discussion
@@ -630,6 +680,7 @@ var taskModule = (function() {
     // Replaces the whole task page with data from the server, which
     // provides a link back to the project page
     function taskWasDeleted(data) {
+        console.log('yes');
         $('.header').siblings('.container').html(data.partial);
     }
 

@@ -17,9 +17,12 @@
         </table>
     </div>
 
-    @if(in_array('1', $subtasks->lists('is_complete')))
+    @if(hasCompleted($subtasks))
         <div class="subtasks__more-link">
-            <a href="#">- See Completed Subtasks -</a>
-        </div>
+    @else
+        <div class="subtasks__more-link hide">
     @endif
+            <a href="#">- See Completed -</a>
+        </div>
+
 </div>
