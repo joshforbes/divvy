@@ -89,6 +89,18 @@ class ActivityRepository {
     }
 
     /**
+     * Find activity by task id for a specified user with pagination
+     *
+     * @param $user
+     * @param $taskId
+     * @return mixed
+     */
+    public function findByTaskIdForUserWithPagination($user, $taskId, $numberPerPage)
+    {
+        return Activity::with('subject', 'user')->where('task_id', $taskId)->where('user_id', $user->id)->orderBy('created_at', 'desc')->paginate($numberPerPage);
+    }
+
+    /**
      * Persist an Activity
      *
      * @param Activity $activity

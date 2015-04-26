@@ -1,0 +1,23 @@
+.profile-activity-wrapper {
+    width: 300px;
+    margin: 0 auto 50px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 20px;
+    @include make-sm-column(4);
+    @include make-md-column-offset(1);
+    @include make-md-column(3);
+
+    @media(max-width: 350px){
+        @include make-xs-column(12);
+    }
+}
+
+.activity-wrapper--profile {
+    @include make-xs-column(12);
+    @include make-sm-column(8);
+    @include make-md-column(7);
+    margin-bottom: 100px;
+}

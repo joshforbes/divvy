@@ -33,6 +33,10 @@
         overflow: inherit;
     }
 
+    &__none {
+        margin: 20px 0;
+    }
+
     &__activity {
         @include make-row();
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -48,21 +52,29 @@
     }
 
     &__actor-avatar {
-        @include make-sm-column(1);
         @include make-xs-column(2);
+        @include make-sm-column(1);
         img {
             border-radius: 50px;
         }
     }
 
     &__info {
-        @include make-sm-column(11);
         @include make-xs-column(10);
+        @include make-sm-column(11);
         padding-left: 25px;
 
         @media(max-width: 767px){
             padding-left: 5px;
         }
+
+        @media(max-width: 400px){
+            padding-left: 30px;
+        }
+    }
+
+    &__info--condensed {
+        padding-left: 0px;
     }
 
     &__timestamp {

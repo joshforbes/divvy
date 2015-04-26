@@ -19,6 +19,7 @@
         </div>
     </div>
 
+
     <div class="activity-wrapper">
         <div class="activity-log activity-log--full">
             <div class="activity-log__header">
