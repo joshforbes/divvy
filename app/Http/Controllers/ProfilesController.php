@@ -10,6 +10,7 @@ use App\Http\Requests\UploadAvatarRequest;
 use App\Repositories\AvatarRepository;
 use App\Repositories\ProfileRepository;
 use App\Repositories\UserRepository;
+use Request;
 
 class ProfilesController extends Controller {
 
@@ -70,7 +71,6 @@ class ProfilesController extends Controller {
     {
         $this->profileRepository->updateProfileFor($username, $request->all());
 
-        //Flash::message('Profile updated');
         return redirect()->route('profile.show', $username);
     }
 
@@ -90,7 +90,7 @@ class ProfilesController extends Controller {
             new ProcessAvatarUploadCommand($request->file('avatar-input'), $username)
         );
 
-        return redirect()->route('profile.edit', $username);
+        return redirect()->back();
     }
 
 }

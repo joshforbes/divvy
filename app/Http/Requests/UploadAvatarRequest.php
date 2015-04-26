@@ -28,7 +28,7 @@ class UploadAvatarRequest extends Request {
 	public function rules()
 	{
 		return [
-			'avatar-input' => 'required|image'
+			'avatar-input' => 'image|max:2000'
 		];
 	}
 

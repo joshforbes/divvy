@@ -13,15 +13,20 @@
                     + Discussion
                 </button>
             </div>
-            <ol class="breadcrumb">
-                <li><a href="{{ route('project.show', $project->id) }}">{{ $project->name }}</a></li>
-            </ol>
+
+            <div class="crumbs">
+                <span class="crumb">
+                    <a href="{{ route('project.show', $project->id) }}">Project</a>
+                </span>
+                <span class="crumb crumb--active">
+                    <span class="crumb--active__text">Task</span>
+                </span>
+            </div>
         </div>
     </div>
 
     @include('discussions.partials.add-discussion-modal')
     @include('subtasks.partials.add-subtask-modal')
-
 
     <div class="container">
 

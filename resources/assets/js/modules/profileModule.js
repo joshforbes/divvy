@@ -15,12 +15,13 @@ var profileModule = (function() {
         });
         s.avatarInput.on('change', function() {
             submitAvatarUpload();
+            $('body').css({'cursor' : 'wait'});
         });
     }
 
     return {
         settings: {
-            avatarUploadButton: $('.avatar-upload-button'),
+            avatarUploadButton: $('.profile-form__avatar-upload'),
             avatarInput: $('#avatar-input'),
             avatarSubmit: $('#avatar-submit')
         },

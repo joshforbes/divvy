@@ -32,7 +32,7 @@
                 var errors = $.parseJSON(data.responseText);
 
                 $.each(errors, function(index, value) {
-                    $(form).find('.error-container').append(value).append('<br />').removeClass('hide');
+                    $(form).find('.error-container').html('').append(value).append('<br />').removeClass('hide');
                 });
             }
         });

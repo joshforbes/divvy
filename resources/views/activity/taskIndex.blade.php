@@ -4,6 +4,18 @@
     <div class="header">
         <div class="container">
             <h3 class="header__title">{{$task->name}}</h3>
+
+            <div class="crumbs">
+                <span class="crumb">
+                    <a href="{{ route('project.show', $task->project->id) }}">Project</a>
+                </span>
+                <span class="crumb">
+                    <a href="{{ route('task.show', [$task->project->id, $task->id]) }}">Task</a>
+                </span>
+                <span class="crumb crumb--active">
+                    <span class="crumb--active__text">Activity</span>
+                </span>
+            </div>
         </div>
     </div>
 

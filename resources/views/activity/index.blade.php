@@ -4,6 +4,15 @@
     <div class="header">
         <div class="container">
             <h3 class="header__title">{{$project->name}}</h3>
+
+            <div class="crumbs">
+                <span class="crumb">
+                    <a href="{{ route('project.show', $project->id) }}">Project</a>
+                </span>
+                <span class="crumb crumb--active">
+                    <span class="crumb--active__text">Activity</span>
+                </span>
+            </div>
         </div>
     </div>
 

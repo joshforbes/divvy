@@ -1,0 +1,37 @@
+.crumbs {
+    color: $gray;
+    opacity: .5;
+    margin-top: 10px;
+
+}
+
+.crumb {
+    padding: 2px 10px 2px 0;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.crumb:first-child {
+    padding-left: 0;
+}
+
+.crumb:after {
+    content: '/';
+    padding-left: 10px;
+}
+
+.crumb:last-child:after {
+    content: '';
+    padding-left: 0;
+}
+
+.crumb--active {
+
+    &__text {
+        border-bottom: 1px solid rgba($gray, .5)
+    }
+
+}

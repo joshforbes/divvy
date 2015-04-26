@@ -13,6 +13,7 @@
 @import "pages/comment-layout";
 @import "pages/activity-index";
 @import "pages/notification-index";
+@import "pages/profile-show";
 
 @import "components/buttons";
 @import "components/header";
@@ -39,6 +40,10 @@
 @import "components/member-tooltip";
 @import "components/removed";
 @import "components/notification";
+@import "components/crumbs";
+@import "components/profile";
+@import "components/profile-form";
+@import "components/error-container";
 
 /** NAV **/
 
