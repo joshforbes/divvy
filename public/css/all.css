@@ -6295,7 +6295,8 @@ input[type="submit"] {
   border: 1px solid transparent;
   border-radius: 5px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-  overflow: hidden; }
+  overflow: hidden;
+  line-height: 20px; }
   .notification-dropdown a {
     text-decoration: none;
     color: #F23030;
@@ -6331,8 +6332,6 @@ input[type="submit"] {
       display: table; }
     .notification-dropdown__notification:after {
       clear: both; }
-  .notification-dropdown__notification:last-child {
-    border-bottom: none; }
   .notification-dropdown__empty {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 20px; }
@@ -6855,17 +6854,55 @@ input[type="submit"] {
 .project-error-container {
   margin-top: -30px; }
 
-/** NAV **/
 .navbar {
-  margin-bottom: 0px; }
+  max-height: 62px !important;
+  margin-bottom: 0; }
+  .navbar__collapsed {
+    float: right;
+    line-height: 60px;
+    padding: 0 15px;
+    list-style: none;
+    color: white !important;
+    height: 60px; }
+    @media (min-width: 768px) {
+      .navbar__collapsed {
+        display: none; } }
+    .navbar__collapsed li {
+      display: inline;
+      float: left;
+      padding: 0 15px; }
+    .navbar__collapsed li:last-child {
+      padding-right: 0; }
+    .navbar__collapsed a {
+      text-decoration: none;
+      color: white; }
+    .navbar__collapsed .fa {
+      font-size: 18px; }
+    .navbar__collapsed .dropdown-toggle {
+      padding: 0 15px 0 0 !important; }
+  .navbar .dropdown {
+    height: 62px !important; }
+  .navbar .dropdown-toggle {
+    padding: 0 15px;
+    line-height: 62px; }
+  .navbar__avatar img {
+    border-radius: 40px; }
+  .navbar .fa {
+    line-height: 25px; }
+  .navbar a:hover {
+    color: white !important; }
   .navbar .navbar-brand {
     font-family: 'Leckerli One', cursive;
-    font-size: 2.5em; }
+    font-size: 2.5em;
+    padding: 0 15px;
+    line-height: 60px; }
   .navbar .navbar-link {
-    margin-top: 2px;
+    margin-top: 0px;
     margin-left: 20px; }
   .navbar ul {
-    font-size: 15px; }
+    font-size: 15px;
+    height: 62px;
+    line-height: 62px; }
   .navbar .notification-nav {
     position: relative; }
     .navbar .notification-nav__link {
@@ -6881,7 +6918,8 @@ input[type="submit"] {
       color: white;
       text-align: center;
       border-radius: 15px;
-      opacity: .7; }
+      opacity: .7;
+      line-height: 14px; }
 
 /**
 SPLASH

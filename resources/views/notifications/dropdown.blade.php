@@ -12,11 +12,10 @@
             @include('notifications.dropdown-notification')
         @endforeach
     </div>
-    <div class="notification-dropdown__empty">
-        @if ($unreadNotifications->count() == 0)
-            No new notifications
-        @endif
-    </div>
+    @if ($unreadNotifications->count() == 0)
+        <div class="notification-dropdown__empty">No new notifications</div>
+    @endif
+
     <div class="notification-dropdown__more">
         <a href="{{ route('notification.index', [Auth::user()->username]) }}">See All</a>
     </div>

@@ -8,6 +8,7 @@
     border-radius: 5px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    line-height: 20px;
 
     a {
         text-decoration: none;
@@ -54,9 +55,9 @@
         padding: 20px;
     }
 
-    &__notification:last-child {
-        border-bottom: none;
-    }
+//    &__notification:last-child {
+//        border-bottom: none;
+//    }
 
     &__empty {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
