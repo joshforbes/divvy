@@ -518,6 +518,12 @@ var taskModule = (function() {
         channel.bind('discussionWasModified', discussionWasModified);
         channel.bind('taskModified', taskModified);
         channel.bind('taskWasDeleted', taskWasDeleted);
+        channel.bind('commentWasLeftOnSubtask', commentWasLeftOnSubtask);
+        channel.bind('commentWasLeftOnDiscussion', commentWasLeftOnDiscussion);
+        channel.bind('commentWasDeletedOnSubtask', commentWasDeletedOnSubtask);
+        channel.bind('commentWasDeletedOnDiscussion', commentWasDeletedOnDiscussion);
+
+
     }
 
     // Pusher event listener that replaces the task activity
@@ -681,9 +687,61 @@ var taskModule = (function() {
     // Replaces the whole task page with data from the server, which
     // provides a link back to the project page
     function taskWasDeleted(data) {
-        console.log('yes');
         $('.header').siblings('.container').html(data.partial);
     }
+
+    // Pusher event listener that responds to a Comment being left on
+    // a subtask. Replaces the comments overview indicator
+    function commentWasLeftOnSubtask(data) {
+        var subtask = $(".subtasks__row[data-subtask='" + data.subtaskId + "']");
+
+        if (subtask.find('.subtasks__controls__comments').length > 0) {
+            subtask.find('.subtasks__controls__comments').replaceWith(data.partial);
+        } else {
+            subtask.find('.subtasks__controls').prepend(data.partial);
+        }
+    }
+
+    // Pusher event listener that responds to a Comment being left on
+    // a discussion. Replaces the comments overview indicator
+    function commentWasLeftOnDiscussion(data) {
+        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+
+        if (discussion.find('.discussion__controls__comments').length > 0) {
+            discussion.find('.discussion__controls__comments').replaceWith(data.partial);
+        } else {
+            discussion.find('.discussion__controls').prepend(data.partial);
+        }
+    }
+
+    // Pusher event listener that responds to a Comment being deleted on
+    // a subtask. Replaces the comments overview indicator or removes it
+    function commentWasDeletedOnSubtask(data) {
+        var subtask = $(".subtasks__row[data-subtask='" + data.subtaskId + "']");
+
+        if (subtask.find('.subtasks__controls__comments-count').html() > 1) {
+            subtask.find('.subtasks__controls__comments').replaceWith(data.partial);
+        } else {
+            subtask.find('.subtasks__controls__comments').remove();
+        }
+    }
+
+    // Pusher event listener that responds to a Comment being deleted on
+    // a discussion. Replaces the comments overview indicator or removes it
+    function commentWasDeletedOnDiscussion(data) {
+        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+
+        console.log(discussion.find('.discussion__controls__comments-count').html());
+
+        if (discussion.find('.discussion__controls__comments-count').html() > 1) {
+            discussion.find('.discussion__controls__comments').replaceWith(data.partial);
+        } else {
+            discussion.find('.discussion__controls__comments').remove();
+        }
+    }
+
+
+
 
     // Checks to see if the current user is an admin of the project
     function isProjectAdmin() {

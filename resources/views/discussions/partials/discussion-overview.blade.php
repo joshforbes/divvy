@@ -14,10 +14,7 @@
     <td class="discussion__controls-wrapper">
         <div class="discussion__controls">
             @if($discussion->comments->count() > 0)
-                <div class="discussion__controls__comments">
-                    <i class="fa fa-comments-o"></i>
-                    <span class="discussion__controls__comments-count">{{ $discussion->comments->count() }}</span>
-                </div>
+                @include('discussions.partials.comments-overview')
             @endif
             @if (Auth::user()->isDiscussionAuthor($discussion->id) || Auth::user()->isAdmin($project->id))
                 <button class="discussion__controls__icon" data-toggle="modal" data-target={{"#" . $discussion->id . "-modal"}}>

@@ -127,18 +127,24 @@ class EventServiceProvider extends ServiceProvider {
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
+			'App\Handlers\Events\Pusher\CommentWasLeftOnDiscussion',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\CommentWasLeftOnSubtaskEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
+			'App\Handlers\Events\Pusher\CommentWasLeftOnSubtask',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\CommentWasDeletedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
+			'App\Handlers\Events\Pusher\CommentWasDeleted',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\CommentWasModifiedEvent' => [
 			'App\Handlers\Events\LogProjectActivity',

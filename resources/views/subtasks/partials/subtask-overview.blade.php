@@ -3,10 +3,7 @@
 <td class="subtasks__controls-wrapper">
     <div class="subtasks__controls">
         @if($subtask->comments->count() > 0)
-            <div class="subtasks__controls__comments">
-                <i class="fa fa-comments-o"></i>
-                <span class="subtasks__controls__comments-count">{{ $subtask->comments->count() }}</span>
-            </div>
+            @include('subtasks.partials.comments-overview')
         @endif
         <button class="subtasks__controls__icon" data-toggle="modal" data-target={{"#" . $subtask->id . "-modal"}}>
             <i class="fa fa-pencil-square-o"></i>
