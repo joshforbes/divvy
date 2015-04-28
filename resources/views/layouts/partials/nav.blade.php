@@ -11,7 +11,7 @@
                 </li>
                 <li class="notification-nav">
                     <a href="{{ route('notification.markAsRead', [Auth::user()->username]) }}" class="notification-nav__link"><i class="fa fa-bell"></i></a>
-                    @include('notifications.dropdown')
+                    @include('notifications.count')
                 </li>
 
                 <li class="dropdown">
@@ -46,7 +46,8 @@
                 @else
                     <li class="notification-nav">
                         <a href="{{ route('notification.markAsRead', [Auth::user()->username]) }}" class="notification-nav__link"><i class="fa fa-bell"></i></a>
-                        @include('notifications.dropdown')
+                        @include('notifications.count')
+                        {{--@include('notifications.dropdown')--}}
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -61,4 +62,6 @@
             </ul>
         </div>
     </div>
+    @include('notifications.dropdown')
 </nav>
+

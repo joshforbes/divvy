@@ -12,7 +12,7 @@ class ViewComposerServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		View::composer('notifications.dropdown', 'App\Http\Composers\NotificationDropdownComposer');
+		View::composer('layouts.partials.nav', 'App\Http\Composers\NotificationDropdownComposer');
 	}
 
 	/**

@@ -1,4 +1,3 @@
-@include('notifications.count')
 
 <div class="notification-dropdown hide">
     <div class="notification-dropdown__header">

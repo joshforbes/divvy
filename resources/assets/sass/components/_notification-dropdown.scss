@@ -1,6 +1,6 @@
 .notification-dropdown {
     position: absolute;
-    right: 5px;
+    right: 10%;
     top: 15px;
     width: 400px;
     background-color: white;
@@ -10,17 +10,23 @@
     overflow: hidden;
     line-height: 20px;
 
+    @media(max-width: 500px){
+        right: 5%;
+        width: 90%;
+    }
+
+
+
     a {
         text-decoration: none;
         color: $primary-color;
         opacity: .8;
     }
 
-
-
     &__header {
         border-bottom: 2px solid rgba(0, 0, 0, 0.1);
         padding: 15px 15px;
+
     }
 
     &__title {
@@ -28,8 +34,9 @@
 
         a {
             text-decoration: none;
-            color: inherit;
+            color: $accent-color !important;
         }
+
     }
 
     &__close {
@@ -55,9 +62,6 @@
         padding: 20px;
     }
 
-//    &__notification:last-child {
-//        border-bottom: none;
-//    }
 
     &__empty {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -65,16 +69,20 @@
     }
 
     &__actor-avatar {
-        @include make-md-column(2);
-        @include make-sm-column(2);
+        @include make-xs-column(2);
+
         img {
             border-radius: 50px;
         }
+
     }
 
     &__body {
-        @include make-md-column(10);
-        @include make-sm-column(10);
+        @include make-xs-column(10);
+
+        @media(max-width: 380px){
+            padding-left: 25px;
+        }
     }
 
     &__timestamp {
