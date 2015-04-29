@@ -53,6 +53,8 @@ var projectModule = (function() {
     // only if the current user is a member of the task or is a project admin
     // also hides the add task modal, and resets the select2 field.
     function taskAddedToProject(data) {
+        $(".modal-form__member-select").val('');
+
         var newTask = $(data.partial).hide();
 
         if ( isTaskMember(data) ) {
@@ -73,9 +75,7 @@ var projectModule = (function() {
 
         $('.add-task-modal').modal('hide');
 
-        $(".task-form__member-select").val('');
-
-        $(".task-form__member-select").select2();
+        $(".modal-form__member-select").select2();
     }
 
     // Pusher event listener that replaces a completed task with
@@ -135,7 +135,7 @@ var projectModule = (function() {
             newTask.find('.task-overview__settings-button').remove();
         }
 
-        $(".task-form__member-select").select2();
+        $(".modal-form__member-select").select2();
 
     }
 
@@ -174,7 +174,7 @@ var projectModule = (function() {
     function memberJoinedProject(data) {
         s.membersEditBody.html(data.membersEditPartial);
         s.membersBody.html(data.membersBodyPartial);
-        $('.task-form__member-select').append($('<option>', {
+        $('.modal-form__member-select').append($('<option>', {
             value: data.memberId,
             text: data.memberUsername
         }));
@@ -188,7 +188,7 @@ var projectModule = (function() {
     function memberRemovedFromProject(data) {
         s.membersEditBody.html(data.membersEditPartial);
         s.membersBody.html(data.membersBodyPartial);
-        $('.task-form__member-select option[value="' + data.memberId + '"]').remove();
+        $('.modal-form__member-select option[value="' + data.memberId + '"]').remove();
         $(".select2-selection__choice:contains('" + data.memberUsername + "')").remove();
         $(".task-overview__member:contains('" + data.memberUsername + "')").remove();
 

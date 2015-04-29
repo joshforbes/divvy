@@ -54,7 +54,7 @@
 @section('js')
     <script src="/js/vendor/select2.js"></script>
     <script>
-        $(".task-form__member-select").select2();
+        $(".modal-form__member-select").select2();
         $('.members-edit__list').select2();
         projectModule.init();
 

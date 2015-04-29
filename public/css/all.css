@@ -5424,6 +5424,13 @@ input[type="submit"] {
   background-color: white;
   padding-bottom: 100px; }
 
+.subtask-modal-wrapper {
+  padding-bottom: 100px; }
+
+.discussion-modal-wrapper {
+  background-color: white;
+  padding-bottom: 100px; }
+
 .modal-form {
   display: inline;
   margin-top: 50px; }
@@ -5445,6 +5452,8 @@ input[type="submit"] {
       color: #777777; }
     .modal-form__input::-webkit-input-placeholder {
       color: #777777; }
+  .modal-form__input--textarea {
+    height: 160px; }
   .modal-form .select2-container {
     width: 100% !important; }
   .modal-form .select2-selection {
@@ -5669,58 +5678,6 @@ input[type="submit"] {
     border-radius: 3px;
     font-size: 1em; }
 
-.discussion-modal-wrapper {
-  background-color: white;
-  padding-bottom: 100px; }
-
-.discussion-form {
-  display: inline;
-  margin-top: 50px; }
-  .discussion-form .fa {
-    margin-right: 5px; }
-  .discussion-form__input {
-    display: block;
-    width: 100%;
-    height: 40px;
-    padding: 10px;
-    background-color: #eeeeee;
-    color: #184D59;
-    border: 0;
-    margin-bottom: 15px; }
-    .discussion-form__input::-moz-placeholder {
-      color: #777777;
-      opacity: 1; }
-    .discussion-form__input:-ms-input-placeholder {
-      color: #777777; }
-    .discussion-form__input::-webkit-input-placeholder {
-      color: #777777; }
-  .discussion-form__input--textarea {
-    height: 160px; }
-  .discussion-form__button {
-    color: white;
-    background-color: #184D59;
-    border-color: black;
-    padding: 10px 15px;
-    font-size: 1em;
-    line-height: 1em;
-    border-radius: 5px;
-    border: 0px;
-    box-shadow: 0px 1px black;
-    float: right;
-    margin: 20px; }
-    .discussion-form__button:hover, .discussion-form__button:focus, .discussion-form__button.focus, .discussion-form__button:active, .discussion-form__button.active, .open > .discussion-form__button.dropdown-toggle {
-      color: white;
-      background-color: #0d2a31;
-      border-color: black; }
-    .discussion-form__button:active, .discussion-form__button.active, .open > .discussion-form__button.dropdown-toggle {
-      background-image: none; }
-    .discussion-form__button.disabled, .discussion-form__button.disabled:hover, .discussion-form__button.disabled:focus, .discussion-form__button.disabled.focus, .discussion-form__button.disabled:active, .discussion-form__button.disabled.active, .discussion-form__button[disabled], .discussion-form__button[disabled]:hover, .discussion-form__button[disabled]:focus, .discussion-form__button[disabled].focus, .discussion-form__button[disabled]:active, .discussion-form__button[disabled].active, fieldset[disabled] .discussion-form__button, fieldset[disabled] .discussion-form__button:hover, fieldset[disabled] .discussion-form__button:focus, fieldset[disabled] .discussion-form__button.focus, fieldset[disabled] .discussion-form__button:active, fieldset[disabled] .discussion-form__button.active {
-      background-color: #184D59;
-      border-color: black; }
-    .discussion-form__button .badge {
-      color: #184D59;
-      background-color: white; }
-
 .activity-log {
   height: 300px;
   position: relative;
@@ -5826,19 +5783,6 @@ input[type="submit"] {
 
 .activity-log--full {
   height: inherit; }
-
-.comment-edit-form {
-  padding: 0 10px;
-  background-color: white; }
-  .comment-edit-form__input {
-    border: 0;
-    height: 100px;
-    width: 100%;
-    background-color: #eeeeee;
-    padding: 20px; }
-  .comment-edit-form__button {
-    float: right;
-    margin-bottom: 30px; }
 
 .comments {
   position: relative; }

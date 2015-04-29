@@ -13,6 +13,15 @@
     padding-bottom: 100px;
 }
 
+.subtask-modal-wrapper {
+    padding-bottom: 100px;
+}
+
+.discussion-modal-wrapper {
+    background-color: white;
+    padding-bottom: 100px;
+}
+
 .modal-form {
     display: inline;
     margin-top: 50px;
@@ -35,6 +44,10 @@
         border: 0;
         margin-bottom: 15px;
         @include placeholder($gray-light);
+    }
+
+    &__input--textarea {
+        height: 160px;
     }
 
     .select2-container {

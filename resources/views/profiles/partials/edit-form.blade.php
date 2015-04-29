@@ -9,19 +9,19 @@
     {!! Form::close() !!}
 </div>
 
-{!! Form::model($user->profile, ['method' => 'PATCH', 'class' => 'profile-form', 'route' => ['profile.update', $user->username]]) !!}
+{!! Form::model($user->profile, ['method' => 'PATCH', 'class' => 'modal-form', 'route' => ['profile.update', $user->username]]) !!}
 
 {!! Form::label('name', 'Name: ') !!}
-{!! Form::text('name', null, ['placeholder' => 'Name', 'class' => 'task-form__input']) !!}
+{!! Form::text('name', null, ['placeholder' => 'Name', 'class' => 'modal-form__input']) !!}
 
 {!! Form::label('company', 'Company: ') !!}
-{!! Form::text('company', null, ['placeholder' => 'Company', 'class' => 'task-form__input']) !!}
+{!! Form::text('company', null, ['placeholder' => 'Company', 'class' => 'modal-form__input']) !!}
 
 {!! Form::label('location', 'Location: ') !!}
-{!! Form::text('location', null, ['Location' => 'Location', 'class' => 'task-form__input']) !!}
+{!! Form::text('location', null, ['Location' => 'Location', 'class' => 'modal-form__input']) !!}
 
 
-{!! Form::submit('Save Changes', ['class' => 'task-form__button']) !!}
+{!! Form::submit('Save Changes', ['class' => 'modal-form__button']) !!}
 
 {!! Form::close() !!}
 
