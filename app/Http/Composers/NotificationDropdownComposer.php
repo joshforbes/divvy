@@ -28,17 +28,21 @@ class NotificationDropdownComposer {
      */
     public function compose(View $view)
     {
-        $notifications = $this->notificationRepository->findNotificationsFor(Auth::user()->id);
+        if (Auth::user())
+        {
+            $notifications = $this->notificationRepository->findNotificationsFor(Auth::user()->id);
 
-        $unreadNotifications = $notifications->filter(function($notification) {
-            if ($notification->read == 0) return $notification;
-        });
+            $unreadNotifications = $notifications->filter(function($notification) {
+                if ($notification->read == 0) return $notification;
+            });
 
-        JavaScript::put([
-            'userChannel' => 'u' . Auth::user()->id
-        ]);
+            JavaScript::put([
+                'userChannel' => 'u' . Auth::user()->id
+            ]);
 
-        $view->with('unreadNotifications', $unreadNotifications)->with('notifications', $notifications);
+            $view->with('unreadNotifications', $unreadNotifications)->with('notifications', $notifications);
+        }
+
     }
 
 }

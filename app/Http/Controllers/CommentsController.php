@@ -6,7 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\ModifyCommentRequest;
-use Illuminate\Http\Request;
+use Request;
 
 class CommentsController extends Controller {
 
@@ -25,6 +25,11 @@ class CommentsController extends Controller {
             new ModifyCommentCommand($request, $commentId, $this->user)
         );
 
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
+
         return redirect()->back();
     }
 
@@ -40,6 +45,11 @@ class CommentsController extends Controller {
         $this->dispatch(
             new RemoveCommentCommand($commentId, $this->user)
         );
+
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
 
         return redirect()->back();
     }

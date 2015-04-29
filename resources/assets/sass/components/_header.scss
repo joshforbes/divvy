@@ -31,6 +31,10 @@
 
     &__controls {
         display: inline;
+        
+        form {
+            display: inline;
+        }
 
         @media(max-width: 768px) {
             display: block;
@@ -55,8 +59,37 @@
         margin-right: 10px;
         float: right;
 
+        .fa {
+            margin-right: 5px;
+        }
+
         @media(max-width: 450px) {
             padding: 5px 10px;
+        }
+    }
+
+    &__icon-wrapper {
+        display: inline;
+
+        @media(max-width: 550px) {
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: -40px;
+        }
+    }
+
+    &__icon {
+        float: right;
+        padding: 0;
+        background-color: inherit;
+        box-shadow: none;
+        margin-top: 31px;
+        margin-right: 25px;
+        font-size: 20px;
+
+        .fa-pencil-square-o {
+            margin-top: 6px;
         }
     }
 

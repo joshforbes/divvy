@@ -21,26 +21,6 @@ class DiscussionsController extends Controller {
 	}
 
 	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		//
-	}
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @param CreateDiscussionRequest|DiscussionRequest $request
@@ -77,6 +57,11 @@ class DiscussionsController extends Controller {
 			new LeaveCommentOnDiscussionCommand($request, $discussionId, $this->user)
 		);
 
+		if (Request::ajax())
+		{
+			return response('success', 200);
+		}
+
 		return redirect()->back();
 	}
 
@@ -99,16 +84,6 @@ class DiscussionsController extends Controller {
 		return view('discussions.show', compact('discussion', 'task', 'project', 'comments'));
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
 
 	/**
 	 * Update the specified resource in storage.

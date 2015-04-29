@@ -81,7 +81,6 @@ var dashboardModule = (function() {
         settings: {
             projectSettingsOverlay: $('.project-overview__settings-overlay'),
             projects: $('.projects')
-
         },
 
         init: function() {

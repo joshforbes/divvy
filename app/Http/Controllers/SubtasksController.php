@@ -70,6 +70,11 @@ class SubtasksController extends Controller {
             new LeaveCommentOnSubtaskCommand($request, $subtaskId, $this->user)
         );
 
+        if (Request::ajax())
+        {
+            return response('success', 200);
+        }
+
         return redirect()->back();
     }
 

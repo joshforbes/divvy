@@ -62,6 +62,8 @@
             </ul>
         </div>
     </div>
-    @include('notifications.dropdown')
+    @if (Auth::user())
+        @include('notifications.dropdown')
+    @endif
 </nav>
 
