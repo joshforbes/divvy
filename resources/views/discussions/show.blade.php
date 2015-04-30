@@ -128,6 +128,7 @@
 @section('js')
     <script>
         discussionModule.init();
+        commentModule.init();
     </script>
 @endsection
 

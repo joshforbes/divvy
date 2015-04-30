@@ -1,4 +1,4 @@
-var subtaskModule = (function() {
+var commentModule = (function() {
     var s;
 
     function showSettings() {

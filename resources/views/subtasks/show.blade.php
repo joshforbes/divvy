@@ -129,6 +129,7 @@
 @section('js')
     <script>
         subtaskModule.init();
+        commentModule.init();
     </script>
 @endsection
 

@@ -51,6 +51,7 @@ elixir(function(mix) {
             'modules/notificationModule.js',
             'modules/subtaskModule.js',
             'modules/discussionModule.js',
+            'modules/commentModule.js',
             'app.js'
         ], 'public/js', 'resources/assets/js'
     );
