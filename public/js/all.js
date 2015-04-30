@@ -640,7 +640,7 @@ var taskModule = (function() {
     // Pusher event listener that removes the specified discussion from the
     // discussion container
     function discussionWasDeleted(data) {
-        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+        var discussion = $(".discussions__row[data-discussion='" + data.discussionId + "']");
 
         discussion.animate({
             height: 0,
@@ -657,7 +657,7 @@ var taskModule = (function() {
     // updated version from the server. Because the discussion is contained in a
     // bootstrap table the edit modal has to be replaced separately.
     function discussionWasModified(data) {
-        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+        var discussion = $(".discussions__row[data-discussion='" + data.discussionId + "']");
         var editModal = $("#" + data.discussionId + "-modal");
         var editForm = editModal.find('.discussion-form');
 
@@ -704,12 +704,12 @@ var taskModule = (function() {
     // Pusher event listener that responds to a Comment being left on
     // a discussion. Replaces the comments overview indicator
     function commentWasLeftOnDiscussion(data) {
-        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+        var discussion = $(".discussions__row[data-discussion='" + data.discussionId + "']");
 
-        if (discussion.find('.discussion__controls__comments').length > 0) {
-            discussion.find('.discussion__controls__comments').replaceWith(data.partial);
+        if (discussion.find('.discussions__controls__comments').length > 0) {
+            discussion.find('.discussions__controls__comments').replaceWith(data.partial);
         } else {
-            discussion.find('.discussion__controls').prepend(data.partial);
+            discussion.find('.discussions__controls').prepend(data.partial);
         }
     }
 
@@ -728,14 +728,14 @@ var taskModule = (function() {
     // Pusher event listener that responds to a Comment being deleted on
     // a discussion. Replaces the comments overview indicator or removes it
     function commentWasDeletedOnDiscussion(data) {
-        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+        var discussion = $(".discussions__row[data-discussion='" + data.discussionId + "']");
 
-        console.log(discussion.find('.discussion__controls__comments-count').html());
+        console.log(discussion.find('.discussions__controls__comments-count').html());
 
-        if (discussion.find('.discussion__controls__comments-count').html() > 1) {
-            discussion.find('.discussion__controls__comments').replaceWith(data.partial);
+        if (discussion.find('.discussions__controls__comments-count').html() > 1) {
+            discussion.find('.discussions__controls__comments').replaceWith(data.partial);
         } else {
-            discussion.find('.discussion__controls__comments').remove();
+            discussion.find('.discussions__controls__comments').remove();
         }
     }
 
@@ -856,6 +856,52 @@ var notificationModule = (function() {
 
 
 var subtaskModule = (function() {
+    var s;
+
+    function showSettings() {
+        $(this).next(s.projectSettingsOverlay).hide().removeClass('hide').slideDown(600);
+    }
+
+    function hideSettings() {
+        $(this).parent(s.projectSettingsOverlay).slideUp(600);
+    }
+
+    function showCommentForm() {
+        s.commentForm.hide().removeClass('hide').slideDown(600);
+        s.newCommentButton.slideUp(600);
+    }
+
+    function hideCommentForm() {
+        $(s.commentForm).slideUp(600);
+        s.newCommentButton.slideDown(600);
+
+    }
+
+    function bindUIactions() {
+        $('body').on('click', '.comment__settings-button', showSettings);
+        $('body').on('click', '.comment__settings-close', hideSettings);
+        s.newCommentButton.on('click', showCommentForm);
+    }
+
+    function bindPusherEvents() {
+
+    }
+
+    return {
+        settings: {
+            commentSettingsOverlay: $('.comment__settings-overlay'),
+            commentForm: $('.comments__form-wrapper'),
+            newCommentButton: $('.comments__new-link')
+        },
+
+        init: function() {
+            s = this.settings;
+            bindUIactions();
+            bindPusherEvents();
+        }
+    }
+})();
+var discussionModule = (function() {
     var s;
 
     function showSettings() {

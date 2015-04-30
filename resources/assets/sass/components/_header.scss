@@ -51,6 +51,17 @@
         }
     }
 
+    &__controls--discussion {
+
+        @media(max-width: 550px) {
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 62px;
+        }
+
+    }
+
     &__button {
         @include button-primary;
         padding: 5px 14px;
@@ -76,6 +87,16 @@
             position: absolute;
             right: 15px;
             top: -40px;
+        }
+    }
+
+    &__icon-wrapper--discussion {
+
+        @media(max-width: 550px) {
+            position: relative;
+            display: inline;
+            top: 0;
+            right: 0;
         }
     }
 

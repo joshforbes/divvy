@@ -57,9 +57,6 @@
 
         }
     }
-}
-
-.discussion {
 
     &__row {
         @include make-row();
@@ -70,7 +67,7 @@
         padding: 15px 20px !important;
     }
 
-    &__title {
+    &__overview-title {
         font-size: 15px;
 
         a {
@@ -79,20 +76,20 @@
         }
     }
 
-    &__title--normal {
+    &__overview-title--normal {
         @media (max-width: $screen-md) {
             display: none;
         }
     }
 
-    &__title--short {
+    &__overview-title--short {
         @media (min-width: 670px) {
             display: none;
         }
 
     }
 
-    &__title--medium {
+    &__overview-title--medium {
         @media (min-width: $screen-md) {
             display: none;
         }

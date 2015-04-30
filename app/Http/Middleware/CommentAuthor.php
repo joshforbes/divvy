@@ -31,6 +31,7 @@ class CommentAuthor {
 		}
 
 		return $next($request);
+
 	}
 
 }

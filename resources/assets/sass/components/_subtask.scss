@@ -13,10 +13,18 @@
         color: $accent-color;
         border-bottom: 2px solid rgba(0, 0, 0, 0.1);
         padding: 50px 50px 50px 160px;
+
+        @media(max-width: 630px){
+            padding: 50px 30px 50px 110px;
+        }
+
+        @media(max-width: 420px){
+            padding: 50px 30px 50px 30px;
+        }
     }
 
     &__title {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     &__timestamp {

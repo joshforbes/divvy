@@ -1,4 +1,4 @@
-{!! Form::model($subtask, ['data-remote', 'class' => 'modal-form', 'method' => 'PATCH', 'route' => ['subtask.update', $project->id, $task->id, $subtask->id]]) !!}
+{!! Form::model($subtask, ['data-remote', 'class' => 'modal-form subtask-form', 'method' => 'PATCH', 'route' => ['subtask.update', $project->id, $task->id, $subtask->id]]) !!}
 
 <div class="error-container alert alert-danger hide"></div>
 

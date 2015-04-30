@@ -1,0 +1,76 @@
+.discussion-wrapper {
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+.discussion {
+    &__header {
+        color: $accent-color;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        padding: 50px;
+
+        @media(max-width: 630px){
+            padding: 50px 20px;
+        }
+    }
+
+    &__avatar {
+        float: left;
+        margin-top: -5px;
+        padding-left: 5px;
+        img {
+            border-radius: 50px;
+        }
+    }
+
+    &__main-content {
+        padding-left: 110px;
+        padding-right: 50px;
+
+        @media(max-width: 630px){
+            padding-left: 90px;
+            padding-right: 30px;
+        }
+
+        @media(max-width: 420px){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+
+        @media(max-width: 420px){
+            padding-left: 50px;
+        }
+    }
+
+    &__author {
+        a {
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+
+    &__meta {
+        margin-bottom: 10px;
+
+        @media(max-width: 420px){
+            padding-left: 50px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__timestamp {
+        font-size: 14px;
+        color: $gray-light;
+    }
+
+
+}

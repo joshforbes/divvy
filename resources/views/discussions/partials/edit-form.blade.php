@@ -1,4 +1,4 @@
-{!! Form::model($discussion, ['data-remote', 'class' => 'modal-form', 'method' => 'PATCH', 'route' => ['discussion.update', $project->id, $task->id, $discussion->id]]) !!}
+{!! Form::model($discussion, ['data-remote', 'class' => 'modal-form discussion-form', 'method' => 'PATCH', 'route' => ['discussion.update', $project->id, $task->id, $discussion->id]]) !!}
 
 <div class="error-container alert alert-danger hide"></div>
 

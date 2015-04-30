@@ -162,7 +162,7 @@ var taskModule = (function() {
     // Pusher event listener that removes the specified discussion from the
     // discussion container
     function discussionWasDeleted(data) {
-        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+        var discussion = $(".discussions__row[data-discussion='" + data.discussionId + "']");
 
         discussion.animate({
             height: 0,
@@ -179,7 +179,7 @@ var taskModule = (function() {
     // updated version from the server. Because the discussion is contained in a
     // bootstrap table the edit modal has to be replaced separately.
     function discussionWasModified(data) {
-        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+        var discussion = $(".discussions__row[data-discussion='" + data.discussionId + "']");
         var editModal = $("#" + data.discussionId + "-modal");
         var editForm = editModal.find('.discussion-form');
 
@@ -226,12 +226,12 @@ var taskModule = (function() {
     // Pusher event listener that responds to a Comment being left on
     // a discussion. Replaces the comments overview indicator
     function commentWasLeftOnDiscussion(data) {
-        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+        var discussion = $(".discussions__row[data-discussion='" + data.discussionId + "']");
 
-        if (discussion.find('.discussion__controls__comments').length > 0) {
-            discussion.find('.discussion__controls__comments').replaceWith(data.partial);
+        if (discussion.find('.discussions__controls__comments').length > 0) {
+            discussion.find('.discussions__controls__comments').replaceWith(data.partial);
         } else {
-            discussion.find('.discussion__controls').prepend(data.partial);
+            discussion.find('.discussions__controls').prepend(data.partial);
         }
     }
 
@@ -250,14 +250,14 @@ var taskModule = (function() {
     // Pusher event listener that responds to a Comment being deleted on
     // a discussion. Replaces the comments overview indicator or removes it
     function commentWasDeletedOnDiscussion(data) {
-        var discussion = $(".discussion__row[data-discussion='" + data.discussionId + "']");
+        var discussion = $(".discussions__row[data-discussion='" + data.discussionId + "']");
 
-        console.log(discussion.find('.discussion__controls__comments-count').html());
+        console.log(discussion.find('.discussions__controls__comments-count').html());
 
-        if (discussion.find('.discussion__controls__comments-count').html() > 1) {
-            discussion.find('.discussion__controls__comments').replaceWith(data.partial);
+        if (discussion.find('.discussions__controls__comments-count').html() > 1) {
+            discussion.find('.discussions__controls__comments').replaceWith(data.partial);
         } else {
-            discussion.find('.discussion__controls__comments').remove();
+            discussion.find('.discussions__controls__comments').remove();
         }
     }
 
