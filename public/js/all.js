@@ -521,8 +521,6 @@ var taskModule = (function() {
         channel.bind('commentWasLeftOnDiscussion', commentWasLeftOnDiscussion);
         channel.bind('commentWasDeletedOnSubtask', commentWasDeletedOnSubtask);
         channel.bind('commentWasDeletedOnDiscussion', commentWasDeletedOnDiscussion);
-
-
     }
 
     // Pusher event listener that replaces the task activity
@@ -739,7 +737,20 @@ var taskModule = (function() {
         }
     }
 
+    //bind Pusher events that are fired at the project level
+    function bindPusherProjectEvents() {
+        var pusher = new Pusher('bf3b73f9a228dfef0913');
+        var channel = pusher.subscribe(divvy.projectChannel);
 
+        channel.bind('projectWasRemoved', projectWasRemoved);
+    }
+
+    // Pusher event listener that responds to the Project being deleted.
+    // Replaces the whole project page with data from the server, which
+    // provides a link back to the dashboard page
+    function projectWasRemoved(data) {
+        $('.header').siblings('.container').html(data.partial);
+    }
 
 
     // Checks to see if the current user is an admin of the project
@@ -784,6 +795,7 @@ var taskModule = (function() {
             s = this.settings;
             bindUIactions();
             bindPusherEvents();
+            bindPusherProjectEvents();
         }
     }
 })();
@@ -855,7 +867,7 @@ var notificationModule = (function() {
 })();
 
 
-var discussionModule = (function() {
+var subtaskModule = (function() {
     var s;
 
     function bindUIactions() {
@@ -863,11 +875,68 @@ var discussionModule = (function() {
     }
 
     function bindPusherEvents() {
+        var pusher = new Pusher('bf3b73f9a228dfef0913');
+        var channel = pusher.subscribe(divvy.channel);
 
+        channel.bind('subtaskWasModified', subtaskWasModified);
+        channel.bind('subtaskWasDeleted', subtaskWasDeleted);
+    }
+
+    // Pusher event listener that replaces the specified discussion with an
+    // updated version from the server.
+    function subtaskWasModified(data) {
+        var subtask = s.subtask;
+        var editModal = s.editModal;
+        var editForm = editModal.find('.modal-form');
+
+        editModal.modal('hide');
+
+        subtask.replaceWith(data.partial);
+
+        editForm.parent().html(data.editPartial);
+    }
+
+    // Pusher event listener that responds to the Discussion being deleted.
+    // Replaces the whole discussion page with data from the server, which
+    // provides a link back to the task page
+    function subtaskWasDeleted(data) {
+        $('.header').siblings('.container').html(data.partial);
+    }
+
+    //bind Pusher events that are fired at the project level
+    function bindPusherProjectEvents() {
+        var pusher = new Pusher('bf3b73f9a228dfef0913');
+        var channel = pusher.subscribe(divvy.projectChannel);
+
+        channel.bind('projectWasRemoved', projectWasRemoved);
+    }
+
+    // Pusher event listener that responds to the Project being deleted.
+    // Replaces the whole project page with data from the server, which
+    // provides a link back to the dashboard page
+    function projectWasRemoved(data) {
+        $('.header').siblings('.container').html(data.partial);
+    }
+
+    //bind Pusher events that are fired at the task level
+    function bindPusherTaskEvents() {
+        var pusher = new Pusher('bf3b73f9a228dfef0913');
+        var channel = pusher.subscribe(divvy.taskChannel);
+
+        channel.bind('taskWasDeleted', taskWasDeleted);
+    }
+
+    // Pusher event listener that responds to the Task being deleted.
+    // Replaces the whole task page with data from the server, which
+    // provides a link back to the project page
+    function taskWasDeleted(data) {
+        $('.header').siblings('.container').html(data.partial);
     }
 
     return {
         settings: {
+            subtask: $('.subtask'),
+            editModal: $('.edit-subtask-modal')
 
         },
 
@@ -875,6 +944,8 @@ var discussionModule = (function() {
             s = this.settings;
             bindUIactions();
             bindPusherEvents();
+            bindPusherProjectEvents();
+            bindPusherTaskEvents();
         }
     }
 })();
@@ -886,11 +957,68 @@ var discussionModule = (function() {
     }
 
     function bindPusherEvents() {
-        
+        var pusher = new Pusher('bf3b73f9a228dfef0913');
+        var channel = pusher.subscribe(divvy.channel);
+
+        channel.bind('discussionWasModified', discussionWasModified);
+        channel.bind('discussionWasDeleted', discussionWasDeleted);
+    }
+
+    // Pusher event listener that replaces the specified discussion with an
+    // updated version from the server.
+    function discussionWasModified(data) {
+        var discussion = s.discussion;
+        var editModal = s.editModal;
+        var editForm = editModal.find('.modal-form');
+
+        editModal.modal('hide');
+
+        discussion.replaceWith(data.partial);
+
+        editForm.parent().html(data.editPartial);
+    }
+
+    // Pusher event listener that responds to the Discussion being deleted.
+    // Replaces the whole discussion page with data from the server, which
+    // provides a link back to the task page
+    function discussionWasDeleted(data) {
+        $('.header').siblings('.container').html(data.partial);
+    }
+
+    //bind Pusher events that are fired at the project level
+    function bindPusherProjectEvents() {
+        var pusher = new Pusher('bf3b73f9a228dfef0913');
+        var channel = pusher.subscribe(divvy.projectChannel);
+
+        channel.bind('projectWasRemoved', projectWasRemoved);
+    }
+
+    // Pusher event listener that responds to the Project being deleted.
+    // Replaces the whole project page with data from the server, which
+    // provides a link back to the dashboard page
+    function projectWasRemoved(data) {
+        $('.header').siblings('.container').html(data.partial);
+    }
+
+    //bind Pusher events that are fired at the task level
+    function bindPusherTaskEvents() {
+        var pusher = new Pusher('bf3b73f9a228dfef0913');
+        var channel = pusher.subscribe(divvy.taskChannel);
+
+        channel.bind('taskWasDeleted', taskWasDeleted);
+    }
+
+    // Pusher event listener that responds to the Task being deleted.
+    // Replaces the whole task page with data from the server, which
+    // provides a link back to the project page
+    function taskWasDeleted(data) {
+        $('.header').siblings('.container').html(data.partial);
     }
 
     return {
         settings: {
+            discussion: $('.discussion'),
+            editModal: $('.edit-discussion-modal')
 
         },
 
@@ -898,6 +1026,8 @@ var discussionModule = (function() {
             s = this.settings;
             bindUIactions();
             bindPusherEvents();
+            bindPusherProjectEvents();
+            bindPusherTaskEvents();
         }
     }
 })();
@@ -920,7 +1050,6 @@ var commentModule = (function() {
     function hideCommentForm() {
         $(s.commentForm).slideUp(600);
         s.newCommentButton.slideDown(600);
-
     }
 
     function bindUIactions() {
@@ -930,11 +1059,53 @@ var commentModule = (function() {
     }
 
     function bindPusherEvents() {
+        var pusher = new Pusher('bf3b73f9a228dfef0913');
+        var channel = pusher.subscribe(divvy.channel);
 
+        channel.bind('commentWasDeleted', commentWasDeleted);
+        channel.bind('commentWasLeft', commentWasLeft);
+        channel.bind('commentWasModified', commentWasModified);
+    }
+
+    function commentWasDeleted(data) {
+        var comment = $(".comment[data-comment='" + data.commentId + "']");
+
+        comment.animate({
+            height: 0,
+            opacity: 0,
+            padding: 0,
+            margin: 0
+        }, 500, function() {
+            comment.remove();
+        })
+    }
+
+    // Pusher event listener that adds a new comment
+    // to the comments container.
+    function commentWasLeft(data) {
+        var newComment = $(data.partial).hide();
+
+        newComment.appendTo(s.comments);
+        newComment.last().slideDown(500);
+
+        hideCommentForm();
+    }
+
+    // Pusher event listener that replaces the specified comment with an
+    // updated version from the server.
+    function commentWasModified(data) {
+        console.log('yes');
+        var comment = $(".comment[data-comment='" + data.commentId + "']");
+        var newComment = $(data.partial);
+
+        $("#" + data.commentId + "-modal").modal('hide');
+
+        comment.replaceWith(newComment);
     }
 
     return {
         settings: {
+            comments: $('.comments'),
             commentSettingsOverlay: $('.comment__settings-overlay'),
             commentForm: $('.comments__form-wrapper'),
             newCommentButton: $('.comments__new-link')

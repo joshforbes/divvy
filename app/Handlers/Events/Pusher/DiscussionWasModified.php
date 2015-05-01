@@ -29,17 +29,53 @@ class DiscussionWasModified {
      */
     public function handle($event)
     {
+        $this->handleTask($event);
+
+        $this->handleDiscussion($event);
+
+    }
+
+    /**
+     * Handles events related to the task page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    private function handleTask($event)
+    {
         $task = $event->task;
         $discussion = $event->subject;
         $project = $event->project;
-        $channel = 't'.$task->id;
+        $channel = 't' . $task->id;
         $partial = view('discussions.partials.discussion-overview', compact('task', 'project', 'discussion'));
         $editPartial = view('discussions.partials.edit-form', compact('task', 'project', 'discussion'));
 
         $this->pusher->trigger($channel, 'discussionWasModified', [
             'discussionId' => $discussion->id,
-            'partial' => (String) $partial,
-            'editPartial' => (String) $editPartial
+            'partial'      => (String)$partial,
+            'editPartial'  => (String)$editPartial
+        ]);
+    }
+
+    /**
+     * Handles events related to the discussion page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    private function handleDiscussion($event)
+    {
+        $task = $event->task;
+        $discussion = $event->subject;
+        $project = $event->project;
+        $channel = 'd' . $discussion->id;
+        $partial = view('discussions.partials.discussion', compact('task', 'project', 'discussion'));
+        $editPartial = view('discussions.partials.edit-form', compact('task', 'project', 'discussion'));
+
+        $this->pusher->trigger($channel, 'discussionWasModified', [
+            'discussionId' => $discussion->id,
+            'partial'      => (String)$partial,
+            'editPartial'  => (String)$editPartial
         ]);
 
     }

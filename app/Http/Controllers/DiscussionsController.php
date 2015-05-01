@@ -12,6 +12,7 @@ use App\Http\Requests\EditDiscussionRequest;
 use App\Http\Requests\LeaveCommentRequest;
 use App\Repositories\DiscussionRepository;
 use Request;
+use JavaScript;
 
 class DiscussionsController extends Controller {
 
@@ -80,6 +81,14 @@ class DiscussionsController extends Controller {
 		$task = $discussion->task;
 		$project = $task->project;
 		$comments = $discussion->comments;
+
+		JavaScript::put([
+			'currentUser' => $this->user->username,
+			'admins' => $project->admins,
+			'channel' => 'd' . $discussion->id,
+			'projectChannel' => 'p' . $project->id,
+			'taskChannel' => 't' . $task->id
+		]);
 
 		return view('discussions.show', compact('discussion', 'task', 'project', 'comments'));
 	}

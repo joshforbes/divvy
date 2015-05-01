@@ -84,7 +84,8 @@ class TasksController extends Controller {
         JavaScript::put([
             'currentUser' => $this->user->username,
             'admins' => $project->admins,
-            'channel' => 't' . $task->id
+            'channel' => 't' . $task->id,
+            'projectChannel' => 'p' . $project->id
         ]);
 
         return view('tasks.show', compact('task', 'project', 'subtasks'));

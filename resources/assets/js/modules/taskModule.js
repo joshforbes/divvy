@@ -43,8 +43,6 @@ var taskModule = (function() {
         channel.bind('commentWasLeftOnDiscussion', commentWasLeftOnDiscussion);
         channel.bind('commentWasDeletedOnSubtask', commentWasDeletedOnSubtask);
         channel.bind('commentWasDeletedOnDiscussion', commentWasDeletedOnDiscussion);
-
-
     }
 
     // Pusher event listener that replaces the task activity
@@ -261,7 +259,20 @@ var taskModule = (function() {
         }
     }
 
+    //bind Pusher events that are fired at the project level
+    function bindPusherProjectEvents() {
+        var pusher = new Pusher('bf3b73f9a228dfef0913');
+        var channel = pusher.subscribe(divvy.projectChannel);
 
+        channel.bind('projectWasRemoved', projectWasRemoved);
+    }
+
+    // Pusher event listener that responds to the Project being deleted.
+    // Replaces the whole project page with data from the server, which
+    // provides a link back to the dashboard page
+    function projectWasRemoved(data) {
+        $('.header').siblings('.container').html(data.partial);
+    }
 
 
     // Checks to see if the current user is an admin of the project
@@ -306,6 +317,7 @@ var taskModule = (function() {
             s = this.settings;
             bindUIactions();
             bindPusherEvents();
+            bindPusherProjectEvents();
         }
     }
 })();

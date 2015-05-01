@@ -151,6 +151,8 @@ class EventServiceProvider extends ServiceProvider {
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\UpdateActivityLog',
 			'App\Handlers\Events\Pusher\UpdateTaskActivityLog',
+			'App\Handlers\Events\Pusher\CommentWasModified',
+			'App\Handlers\Events\Pusher\NotifyUsers'
 		],
 		'App\Events\MemberJoinedProjectEvent' => [
 			'App\Handlers\Events\LogProjectActivity',

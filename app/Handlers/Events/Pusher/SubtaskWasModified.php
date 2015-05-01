@@ -29,19 +29,53 @@ class SubtaskWasModified {
      */
     public function handle($event)
     {
+        $this->handleTask($event);
+
+        $this->handleSubtask($event);
+    }
+
+    /**
+     * Handles events related to the task page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    private function handleTask($event)
+    {
         $task = $event->task;
         $subtask = $event->subject;
         $project = $event->project;
-        $channel = 't'.$task->id;
+        $channel = 't' . $task->id;
         $partial = view('subtasks.partials.subtask-overview-wrapper', compact('task', 'project', 'subtask'));
         $editPartial = view('subtasks.partials.edit-form', compact('task', 'project', 'subtask'));
 
         $this->pusher->trigger($channel, 'subtaskWasModified', [
-            'subtaskId' => $subtask->id,
-            'partial' => (String) $partial,
-            'editPartial' => (String) $editPartial
+            'subtaskId'   => $subtask->id,
+            'partial'     => (String)$partial,
+            'editPartial' => (String)$editPartial
         ]);
+    }
 
+    /**
+     * handles events related to the Subtask page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    private function handleSubtask($event)
+    {
+        $task = $event->task;
+        $subtask = $event->subject;
+        $project = $event->project;
+        $channel = 's' . $subtask->id;
+        $partial = view('subtasks.partials.subtask', compact('task', 'project', 'subtask'));
+        $editPartial = view('subtasks.partials.edit-form', compact('task', 'project', 'subtask'));
+
+        $this->pusher->trigger($channel, 'subtaskWasModified', [
+            'subtaskId'   => $subtask->id,
+            'partial'     => (String)$partial,
+            'editPartial' => (String)$editPartial
+        ]);
     }
 
 }

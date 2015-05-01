@@ -26,14 +26,48 @@ class DiscussionWasDeleted {
      */
     public function handle($event)
     {
+        $this->handleTask($event);
+
+        $this->handleDiscussion($event);
+    }
+
+    /**
+     * Handles events related to the Task page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    private function handleTask($event)
+    {
         $task = $event->task;
         $discussion = $event->subject;
-        $channel = 't'.$task->id;
+        $channel = 't' . $task->id;
 
         $this->pusher->trigger($channel, 'discussionWasDeleted', [
             'discussionId' => $discussion->id,
         ]);
-
     }
+
+    /**
+     * Handles events related to the Discussion page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    private function handleDiscussion($event)
+    {
+        $project = $event->project;
+        $task = $event->task;
+        $discussion = $event->subject;
+        $channel = 'd' . $discussion->id;
+
+        $partial = view('discussions.partials.discussion-removed', compact('project', 'task'));
+
+        $this->pusher->trigger($channel, 'discussionWasDeleted', [
+            'partial' => (String) $partial
+        ]);
+    }
+
+
 
 }

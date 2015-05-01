@@ -1,4 +1,4 @@
-var discussionModule = (function() {
+var subtaskModule = (function() {
     var s;
 
     function bindUIactions() {
@@ -9,20 +9,20 @@ var discussionModule = (function() {
         var pusher = new Pusher('bf3b73f9a228dfef0913');
         var channel = pusher.subscribe(divvy.channel);
 
-        channel.bind('discussionWasModified', discussionWasModified);
-        channel.bind('discussionWasDeleted', discussionWasDeleted);
+        channel.bind('subtaskWasModified', subtaskWasModified);
+        channel.bind('subtaskWasDeleted', subtaskWasDeleted);
     }
 
     // Pusher event listener that replaces the specified discussion with an
     // updated version from the server.
-    function discussionWasModified(data) {
-        var discussion = s.discussion;
+    function subtaskWasModified(data) {
+        var subtask = s.subtask;
         var editModal = s.editModal;
         var editForm = editModal.find('.modal-form');
 
         editModal.modal('hide');
 
-        discussion.replaceWith(data.partial);
+        subtask.replaceWith(data.partial);
 
         editForm.parent().html(data.editPartial);
     }
@@ -30,7 +30,7 @@ var discussionModule = (function() {
     // Pusher event listener that responds to the Discussion being deleted.
     // Replaces the whole discussion page with data from the server, which
     // provides a link back to the task page
-    function discussionWasDeleted(data) {
+    function subtaskWasDeleted(data) {
         $('.header').siblings('.container').html(data.partial);
     }
 
@@ -66,8 +66,8 @@ var discussionModule = (function() {
 
     return {
         settings: {
-            discussion: $('.discussion'),
-            editModal: $('.edit-discussion-modal')
+            subtask: $('.subtask'),
+            editModal: $('.edit-subtask-modal')
 
         },
 

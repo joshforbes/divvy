@@ -14,6 +14,7 @@ use App\Http\Requests\LeaveCommentRequest;
 use App\Http\Requests\SubtaskRequest;
 use App\Repositories\SubtaskRepository;
 use Request;
+use JavaScript;
 
 class SubtasksController extends Controller {
 
@@ -92,6 +93,14 @@ class SubtasksController extends Controller {
         $task = $subtask->task;
         $project = $task->project;
         $comments = $subtask->comments;
+
+        JavaScript::put([
+            'currentUser' => $this->user->username,
+            'admins' => $project->admins,
+            'channel' => 's' . $subtask->id,
+            'projectChannel' => 'p' . $project->id,
+            'taskChannel' => 't' . $task->id
+        ]);
 
         return view('subtasks.show', compact('subtask', 'task', 'project', 'comments'));
     }

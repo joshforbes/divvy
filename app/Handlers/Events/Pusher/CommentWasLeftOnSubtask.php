@@ -28,6 +28,19 @@ class CommentWasLeftOnSubtask {
      */
     public function handle($event)
     {
+        $this->handleTask($event);
+
+        $this->handleSubtask($event);
+    }
+
+    /**
+     * handle events related to the Task page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    private function handleTask($event)
+    {
         $task = $event->task;
         $subtask = $event->subject->commentable;
         $channel = 't'.$task->id;
@@ -38,7 +51,30 @@ class CommentWasLeftOnSubtask {
             'partial' => (String) $partial,
             'subtaskId' => $subtask->id
         ]);
+    }
 
+
+    /**
+     * handle events related to the Subtask page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    private function handleSubtask($event)
+    {
+        $task = $event->task;
+        $subtask = $event->subject->commentable;
+        $comment = $event->subject;
+        $project = $event->project;
+        $channel = 's'.$subtask->id;
+
+        $partial = view('comments.partials.comment', compact('task', 'project', 'subtask', 'comment'));
+        $editPartial = view('comments.partials.edit-comment-modal', compact('task', 'project', 'subtask', 'comment'));
+
+        $this->pusher->trigger($channel, 'commentWasLeft', [
+            'partial' => (String) $partial,
+            'editPartial' => (String) $editPartial
+        ]);
     }
 
 }
