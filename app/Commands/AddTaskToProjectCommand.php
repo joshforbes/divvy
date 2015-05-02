@@ -13,21 +13,25 @@ class AddTaskToProjectCommand extends Command implements SelfHandling {
 
 	protected $name;
 	protected $description;
+	protected $memberList;
 	protected $projectId;
 	protected $members;
 
 	/**
 	 * Create a new command instance.
 	 *
-	 * @param Request $request
+	 * @param $name
+	 * @param $description
+	 * @param $memberList
 	 * @param $projectId
+	 * @param $user
 	 */
-	public function __construct(Request $request, $projectId, $user)
+	public function __construct($name, $description, $memberList, $projectId, $user)
 	{
-		$this->name = $request->name;
-		$this->description = $request->description;
+		$this->name = $name;
+		$this->description = $description;
+		$this->memberList = $memberList;
 		$this->projectId = $projectId;
-		$this->memberList = $request->memberList;
 		$this->user = $user;
 	}
 
@@ -52,6 +56,8 @@ class AddTaskToProjectCommand extends Command implements SelfHandling {
 		$taskRepository->assignTo($this->memberList, $task);
 
 		$event->fire(new TaskAddedToProjectEvent($task, $this->user));
+
+		return $task;
 	}
 
 }

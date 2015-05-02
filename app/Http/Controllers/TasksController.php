@@ -57,7 +57,7 @@ class TasksController extends Controller {
     public function store(TaskRequest $request, $projectId)
     {
         $this->dispatch(
-            new AddTaskToProjectCommand($request, $projectId, $this->user)
+            new AddTaskToProjectCommand($request->name, $request->description, $request->memberList, $projectId, $this->user)
         );
 
         if (Request::ajax())

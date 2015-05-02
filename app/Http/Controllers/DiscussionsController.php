@@ -32,7 +32,7 @@ class DiscussionsController extends Controller {
 	public function store(CreateDiscussionRequest $request, $projectId, $taskId)
 	{
 		$this->dispatch(
-			new StartDiscussionInTaskCommand($request, $taskId, $this->user)
+			new StartDiscussionInTaskCommand($request->title, $request->body, $taskId, $this->user)
 		);
 
 		if (Request::ajax())
@@ -55,7 +55,7 @@ class DiscussionsController extends Controller {
 	{
 
 		$this->dispatch(
-			new LeaveCommentOnDiscussionCommand($request, $discussionId, $this->user)
+			new LeaveCommentOnDiscussionCommand($request->body, $discussionId, $this->user)
 		);
 
 		if (Request::ajax())

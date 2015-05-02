@@ -44,7 +44,7 @@ class SubtasksController extends Controller {
     public function store(SubtaskRequest $request, $projectId, $taskId)
     {
         $this->dispatch(
-            new AddSubtaskToTaskCommand($request, $taskId, $this->user)
+            new AddSubtaskToTaskCommand($request->name, $taskId, $this->user)
         );
 
         if (Request::ajax())
@@ -68,7 +68,7 @@ class SubtasksController extends Controller {
     {
 
         $this->dispatch(
-            new LeaveCommentOnSubtaskCommand($request, $subtaskId, $this->user)
+            new LeaveCommentOnSubtaskCommand($request->body, $subtaskId, $this->user)
         );
 
         if (Request::ajax())

@@ -15,13 +15,14 @@ class StartNewProjectCommand extends Command implements SelfHandling {
 	/**
 	 * Create a new command instance.
 	 *
-	 * @param Request $request
+	 * @param $name
+	 * @param $description
 	 * @param $admin
 	 */
-	public function __construct(Request $request, $admin)
+	public function __construct($name, $description, $admin)
 	{
-		$this->projectName = $request->name;
-		$this->description = $request->description;
+		$this->projectName = $name;
+		$this->description = $description;
 		$this->admin = $admin;
 	}
 

@@ -2,10 +2,13 @@
 
 use App\Commands\Command;
 
+use App\Events\BootstrapNewUserEvent;
+
 use App\Http\Requests\Request;
 use App\Profile;
 use App\Repositories\UserRepository;
 use App\User;
+use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Bus\SelfHandling;
 
 class RegisterUserCommand extends Command implements SelfHandling {
@@ -31,9 +34,10 @@ class RegisterUserCommand extends Command implements SelfHandling {
 	 *
 	 *
 	 * @param UserRepository $userRepository
-	 * @return \App\User
+	 * @param Dispatcher $event
+	 * @return User
 	 */
-	public function handle(UserRepository $userRepository)
+	public function handle(UserRepository $userRepository, Dispatcher $event)
 	{
 		$user = User::register($this->username, $this->email, $this->password);
 
@@ -41,6 +45,8 @@ class RegisterUserCommand extends Command implements SelfHandling {
 
 		$userRepository->saveProfile(Profile::forNewUser(), $user);
 		//email the user
+
+		$event->fire(new BootstrapNewUserEvent($user));
 
 		return $user;
 	}

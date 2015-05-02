@@ -18,16 +18,15 @@ class AddMemberToProjectCommand extends Command implements SelfHandling {
 	/**
 	 * Create a new command instance.
 	 *
-	 * @param Request $request
+	 * @param $user
 	 * @param $projectId
 	 * @param $currentUser
 	 */
-	public function __construct(Request $request, $projectId, $currentUser)
+	public function __construct($user, $projectId, $currentUser)
 	{
-		$this->userEmail = $request->input('user');
+		$this->userEmail = $user;
 		$this->projectId = $projectId;
 		$this->currentUser = $currentUser;
-		$this->request = $request;
 	}
 
 	/**

@@ -18,13 +18,13 @@ class LeaveCommentOnSubtaskCommand extends Command implements SelfHandling {
 	/**
 	 * Create a new command instance.
 	 *
-	 * @param Request $request
+	 * @param $body
 	 * @param $subtaskId
 	 * @param $user
 	 */
-	public function __construct(Request $request, $subtaskId, $user)
+	public function __construct($body, $subtaskId, $user)
 	{
-		$this->body = $request->body;
+		$this->body = $body;
 		$this->subtaskId = $subtaskId;
 		$this->user = $user;
 	}

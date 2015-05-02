@@ -49,7 +49,7 @@ class ProjectsController extends Controller {
     public function store(CreateProjectRequest $request)
     {
         $project = $this->dispatch(
-            new StartNewProjectCommand($request, $this->user)
+            new StartNewProjectCommand($request->name, $request->description, $this->user)
         );
 
         if (Request::ajax())
@@ -71,7 +71,7 @@ class ProjectsController extends Controller {
     public function addUser(AddUserToProjectRequest $request, $projectId)
     {
         $this->dispatch(
-            new AddMemberToProjectCommand($request, $projectId, $this->user)
+            new AddMemberToProjectCommand($request->only('user'), $projectId, $this->user)
         );
 
         if (Request::ajax())

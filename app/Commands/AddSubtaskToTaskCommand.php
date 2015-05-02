@@ -15,12 +15,13 @@ class AddSubtaskToTaskCommand extends Command implements SelfHandling {
     /**
      * Create a new command instance.
      *
-     * @param Request $request
+     * @param $name
      * @param $taskId
+     * @param $user
      */
-    public function __construct(Request $request, $taskId, $user)
+    public function __construct($name, $taskId, $user)
     {
-        $this->name = $request->name;
+        $this->name = $name;
         $this->taskId = $taskId;
         $this->user = $user;
     }

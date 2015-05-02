@@ -19,13 +19,13 @@ class LeaveCommentOnDiscussionCommand extends Command implements SelfHandling {
 	/**
 	 * Create a new command instance.
 	 *
-	 * @param Request $request
+	 * @param $body
 	 * @param $discussionId
 	 * @param $user
 	 */
-	public function __construct(Request $request, $discussionId, $user)
+	public function __construct($body, $discussionId, $user)
 	{
-		$this->body = $request->body;
+		$this->body = $body;
 		$this->discussionId = $discussionId;
 		$this->user = $user;
 	}
