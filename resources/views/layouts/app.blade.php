@@ -29,12 +29,6 @@
 
 @include('layouts.partials.footer')
 
-<!-- Scripts -->
-<script src="/js/vendor/jquery.js"></script>
-<script src="/js/vendor/bootstrap.js"></script>
-<script src="/js/vendor/pusher.js"></script>
-<script src="/js/vendor/handlebars.js"></script>
-<script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
 <script src="/js/all.js"></script>
 @yield('js')
 

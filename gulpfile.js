@@ -17,13 +17,13 @@ elixir(function(mix) {
     mix.sass('app.scss')
         .copy(
         'vendor/bower_components/jquery/dist/jquery.min.js',
-        'public/js/vendor/jquery.js')
+        'resources/assets/js/vendor/jquery.js')
         .copy(
         'vendor/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-        'public/js/vendor/bootstrap.js')
+        'resources/assets/js/vendor/bootstrap.js')
         .copy(
         'vendor/bower_components/pusher/dist/pusher.js',
-        'public/js/vendor/pusher.js')
+        'resources/assets/js/vendor/pusher.js')
         .copy(
         'vendor/bower_components/font-awesome/css/font-awesome.min.css',
         'public/css/vendor/font-awesome.css')
@@ -32,17 +32,25 @@ elixir(function(mix) {
         'public/fonts')
         .copy(
         'vendor/bower_components/handlebars/handlebars.min.js',
-        'public/js/vendor/handlebars.js')
+        'resources/assets/js/vendor/handlebars.js')
         .copy(
         'vendor/bower_components/select2/dist/js/select2.min.js',
-        'public/js/vendor/select2.js')
+        'resources/assets/js/vendor/select2.js')
+        .copy(
+        'vendor/bower_components/velocity/velocity.min.js',
+        'resources/assets/js/vendor/velocity.js')
         .copy(
         'vendor/bower_components/select2/dist/css/select2.min.css',
         'public/css/vendor/select2.css');
 
     mix.scripts(
         [
-
+            'vendor/jquery.js',
+            'vendor/bootstrap.js',
+            'vendor/pusher.js',
+            'vendor/handlebars.js',
+            'vendor/select2.js',
+            'vendor/velocity.js',
 
             'utilities/ajax.js',
             'modules/dashboardModule.js',
@@ -67,7 +75,4 @@ elixir(function(mix) {
 
     mix.codeception();
 
-    //mix.scripts([
-    //    "app.js"
-    //]);
 });
