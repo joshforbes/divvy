@@ -12,14 +12,14 @@
 		"intervention/image": "~2.1",
 		"laracasts/presenter": "0.2.*",
 		"pusher/pusher-php-server": "~2.2",
-	  	"laracasts/utilities": "~2.0"
+	  	"laracasts/utilities": "~2.0",
+	  	"laracasts/testdummy": "~2.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
 		"phpspec/phpspec": "~2.1",
 	  	"codeception/codeception": "*",
 	  	"janhenkgerritsen/codeception-laravel5": "*",
-	  	"laracasts/testdummy": "~2.0"
 	},
 	"autoload": {
 		"classmap": [
