@@ -3,7 +3,7 @@
 $factory('App\User', [
     'username'   => $faker->word,
     'email'      => $faker->email,
-    'password'   => $faker->randomNumber(6),
+    'password'   => bcrypt(rand(100000, 99999)),
     'created_at' => $faker->date(),
     'updated_at' => $faker->date()
 ]);
