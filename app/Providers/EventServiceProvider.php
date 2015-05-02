@@ -179,6 +179,9 @@ class EventServiceProvider extends ServiceProvider {
 			'App\Handlers\Events\NotifyUsers',
 			'App\Handlers\Events\Pusher\ProjectWasModified',
 			'App\Handlers\Events\Pusher\NotifyUsers'
+		],
+		'App\Events\BootstrapNewUserEvent' => [
+			'App\Handlers\Events\BootstrapNewUser'
 		]
 	];
 
