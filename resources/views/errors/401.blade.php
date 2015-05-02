@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato|Leckerli+One' rel='stylesheet' type='text/css'>
 
     <style>
         body {
@@ -11,7 +11,7 @@
             color: #B0BEC5;
             display: table;
             font-weight: 100;
-            font-family: 'Lato';
+            font-family: 'Leckerli One';
         }
 
         .container {
@@ -27,14 +27,20 @@
 
         .title {
             font-size: 72px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            font-family: 'Lato';
+            font-size: 21px;
+            color: inherit;
         }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="content">
-        <div class="title">Not Authorized.</div>
+        <div class="title">not authorized.</div>
         <a href="{{ URL::previous() }}">Go Back</a>
     </div>
 </div>
