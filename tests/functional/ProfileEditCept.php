@@ -8,23 +8,21 @@ $I->amOnPage('');
 
 $I->click('Profile');
 $I->seeCurrentUrlEquals('/johndoe');
-$I->see('johndoe Profile');
-$I->see('Name: John Doe');
+$I->see('johndoe', '.profile__username');
+$I->see('John Doe', '.profile__info-item');
 
-$I->click('Edit Profile');
-$I->seeCurrentUrlEquals('/johndoe/edit');
+$I->click('.header__button');
 
 $data = [
     'name' => 'Johnny Doe',
     'location' => 'Anytown USA',
     'company' => 'IniTECH',
-    'bio' => 'The life of Johnny Doe'
 ];
 
 $I->editProfile($data);
 
 $I->seeCurrentUrlEquals('/johndoe');
-$I->see('johndoe Profile');
-$I->see('Name: ' . $data['name']);
+$I->see('johndoe', '.profile__username');
+$I->see($data['name'], '.profile__info-item');
 $I->seeRecord('profiles', $data);
 

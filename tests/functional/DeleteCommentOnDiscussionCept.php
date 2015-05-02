@@ -13,17 +13,18 @@ $task = $I->haveATask([
     'description' => 'Just a test',
 ], []);
 
-$subtask = $I->haveASubTask([
+$discussion = $I->haveADiscussion([
+    'title' => 'A test discussion',
     'task_id' => $task->id,
-    'name'    => 'A subtask'
+    'user_id' => $user->id
 ]);
 
-$comment = $I->haveACommentOn($subtask, [
+$comment = $I->haveACommentOn($discussion, [
     'body' => 'A test comment',
     'user_id' => $user->id
 ]);
 
-$I->amOnPage('/p/' . $project->id . '/task/' . $task->id . '/subtask/' . $subtask->id);
+$I->amOnPage('/p/' . $project->id . '/task/' . $task->id . '/discussion/' . $discussion->id);
 
 $I->see('A test comment');
 $I->seeRecord('comments', [
@@ -31,8 +32,7 @@ $I->seeRecord('comments', [
     'deleted_at' => null
 ]);
 
-$I->submitForm('.comment__delete-form', []);
-$I->seeCurrentUrlEquals('/p/' . $project->id . '/task/' . $task->id . '/subtask/' . $subtask->id);
+$I->submitForm('.comment__settings form', []);
 $I->dontSee('A test comment', '.comment__body');
 
 $I->dontSeeRecord('comments', [

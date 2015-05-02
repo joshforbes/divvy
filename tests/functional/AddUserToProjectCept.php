@@ -7,17 +7,20 @@ $user = $I->signIn();
 
 $secondUser = $I->haveAnAccount([
     'username' => 'janedoe',
-    'email' => 'jane@test.com'
+    'email' => 'jane@test.com',
+    'password' => '123456',
+    'name' => 'Jane Doe'
 ]);
 
 $thirdUser = $I->haveAnAccount([
     'username' => 'testuser',
-    'email' => 'test@test.com'
+    'email' => 'test@test.com',
+    'password' => '123456',
+    'name' => 'Test User'
 ]);
 
 
 $project = $I->amAProjectAdmin($user);
-
 
 $I->amOnPage('/p/' . $project->id);
 

@@ -7,17 +7,23 @@ $user = $I->signIn();
 
 $secondUser = $I->haveAnAccount([
     'username' => 'janedoe',
-    'email' => 'jane@test.com'
+    'email' => 'jane@test.com',
+    'password' => '123456',
+    'name' => 'Jane Doe'
 ]);
 
 $thirdUser = $I->haveAnAccount([
     'username' => 'testuser',
-    'email' => 'test@test.com'
+    'email' => 'test@test.com',
+    'password' => '123456',
+    'name' => 'Test User'
 ]);
 
 $fourthUser = $I->haveAnAccount([
     'username' => 'reagano',
-    'email' => 'reagan@test.com'
+    'email' => 'reagan@test.com',
+    'password' => '123456',
+    'name' => 'Reagano'
 ]);
 
 $project = $I->amAProjectAdmin($user);
@@ -34,19 +40,15 @@ $task = $I->haveATask([
 
 $I->amOnPage('/p/' . $project->id);
 
-$I->click('edit');
-$I->seeCurrentUrlEquals('/p/' . $project->id . '/task/' . $task->id . '/edit');
-
-
+$I->click('.task-overview__setting');
 
 $I->fillField('name', 'Updating name');
 $I->fillField('description', 'Updating description');
 
 $I->selectOption('memberList[]', ['testuser', 'reagano']);
 
-$I->click('input[type="submit"]');
+$I->click('Save Changes');
 
-$I->seeCurrentUrlEquals('/p/' . $project->id . '/task/' . $task->id);
 $I->see('Updating name');
 $I->see('Updating description');
 

@@ -17,8 +17,7 @@ class FunctionalHelper extends Module {
         $I->fillField('name', $data['name']);
         $I->fillField('location', $data['location']);
         $I->fillField('company', $data['company']);
-        $I->fillField('bio', $data['bio']);
-        $I->click('Submit');
+        $I->click('Save Changes');
     }
 
     public function signIn()
@@ -68,8 +67,16 @@ class FunctionalHelper extends Module {
 
     public function haveAnAccount($overrides)
     {
-        $user = TestDummy::create('App\User', $overrides);
-        Testdummy::create('App\Profile', ['user_id' => $user->id] + $overrides);
+        $user = TestDummy::create('App\User', [
+            'username' => $overrides['username'],
+            'password' => $overrides['password'],
+            'email' => $overrides['email']
+        ]);
+
+        Testdummy::create('App\Profile', [
+            'user_id' => $user->id,
+            'name' => $overrides['name']
+        ]);
 
         return $user;
     }

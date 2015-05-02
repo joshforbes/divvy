@@ -18,7 +18,7 @@ $subTask = $I->haveASubTask([
     'name'    => 'A subtask'
 ]);
 
-$I->amOnPage('/p/' . $project->id);
+$I->amOnPage('/p/' . $project->id . '/task/' . $task->id);
 
 $I->see('A subtask');
 $I->seeRecord('subtasks', [
@@ -26,9 +26,7 @@ $I->seeRecord('subtasks', [
     'deleted_at' => null
 ]);
 
-$I->click(['class' => 'task__subtask__delete']);
-$I->seeCurrentUrlEquals('/p/' . $project->id);
-$I->dontSee('A subtask', '.task__subtask__link');
+$I->submitForm('.subtasks__controls form:nth-of-type(1)', []);
 
 $I->dontSeeRecord('subtasks', [
     'name' => 'A subtask',

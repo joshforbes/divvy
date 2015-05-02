@@ -19,18 +19,17 @@ $subTask = $I->haveASubTask([
     'is_complete' => 1
 ]);
 
-$I->amOnPage('/p/' . $project->id);
+$I->amOnPage('/p/' . $project->id . '/task/' . $task->id);
 
-$I->see('A subtask', '.task__subtask--completed');
+$I->see('Reopen');
 $I->seeRecord('subtasks', [
     'name' => 'A subtask',
     'is_complete' => 1
 ]);
 
-$I->click('.task__subtask__checkbox');
-$I->submitForm('.task__subtask__complete-form', []);
+$I->submitForm('.subtasks__controls form:nth-of-type(2)', []);
 
-$I->dontSee('A subtask', '.task__subtask--completed');
+$I->dontSee('Reopen');
 $I->see('A subtask');
 $I->seeRecord('subtasks', [
     'name' => 'A subtask',

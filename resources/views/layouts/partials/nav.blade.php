@@ -34,9 +34,11 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                @if (Auth::user())
                 <li>
                     <a class="navbar__projects-link" href=" {{ route('home') }}"><i class="fa fa-home"></i>Projects</a>
                 </li>
+                @endif
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

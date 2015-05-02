@@ -31,11 +31,10 @@ $I->seeRecord('comments', [
     'body' => 'A test comment',
 ]);
 
-$I->click('.comment__edit-link');
+$I->click('.comment__setting');
 $I->fillField('textarea[name="body"]', 'A test comment edit');
 $I->click('input[type="submit"]');
 
-$I->seeCurrentUrlEquals('/p/' . $project->id . '/task/' . $task->id . '/discussion/' . $discussion->id);
 $I->see('A test comment edit', '.comment__body');
 
 $I->seeRecord('comments', [

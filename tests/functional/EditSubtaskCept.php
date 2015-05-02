@@ -18,8 +18,7 @@ $subTask = $I->haveASubTask([
     'name'    => 'A subtask'
 ]);
 
-
-$I->amOnPage('/p/' . $project->id);
+$I->amOnPage('/p/' . $project->id . '/task/' . $task->id);
 
 $I->see('A subtask');
 $I->seeRecord('subtasks', [
@@ -27,14 +26,11 @@ $I->seeRecord('subtasks', [
     'deleted_at' => null
 ]);
 
-$I->click(['class' => 'task__subtask__edit-button']);
-$I->fillField('input[name="name"]', 'A subtask edit');
-$I->click('input[type="submit"]');
+$I->click('.subtasks__controls__icon');
+$I->submitForm('.subtask-form', [
+    'name' => 'A subtask edit'
+]);
 
-$I->seeCurrentUrlEquals('/p/' . $project->id);
-$I->see('A subtask edit');
-
-$I->click('A subtask edit', '.task__subtask__link');
 $I->see('A subtask edit');
 
 $I->seeRecord('subtasks', [

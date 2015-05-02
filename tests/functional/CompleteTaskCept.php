@@ -22,10 +22,10 @@ $I->seeRecord('tasks', [
     'is_complete' => 0
 ]);
 
-$I->submitForm('.task__header__complete-form', []);
+$I->submitForm('.task-overview__settings form', []);
 
 $I->see('A test task');
-$I->see('re-open', '.task__header');
+$I->see('Reopen');
 $I->seeRecord('tasks', [
     'name' => 'A test task',
     'is_complete' => 1

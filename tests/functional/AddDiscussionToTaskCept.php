@@ -13,20 +13,14 @@ $task = $I->haveATask([
     'description' => 'Just a test',
 ], []);
 
-$I->amOnPage('/p/' . $project->id);
+$I->amOnPage('/p/' . $project->id . '/task/' . $task->id);
 
-$I->click('button[class="task__add-button"]');
+$I->click('.header__button:nth-of-type(1)');
 $I->fillField('input[name="title"]', 'A discussion title');
 $I->fillField('textarea[name="body"]', 'A discussion body');
-$I->click('input[class="discussion-form__button"]');
+$I->click('Save Discussion');
 
-$I->seeCurrentUrlEquals('/p/' . $project->id);
 $I->see('A discussion title');
-
-$I->click('A discussion title');
-$I->see('A discussion title');
-$I->see($user->username);
-$I->see('A discussion body');
 
 $I->seeRecord('discussions', [
     'title' => 'A discussion title',

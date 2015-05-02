@@ -7,18 +7,18 @@ $user = $I->signIn();
 
 $I->click('Profile');
 $I->seeCurrentUrlEquals('/johndoe');
-$I->click('Edit Profile');
-$I->seeCurrentUrlEquals('/johndoe/edit');
+$I->click('.header__button');
 $I->seeRecord('profiles', [
     'avatar_path' => null
 ]);
-$I->seeElement('//img[@src="/images/avatars/default.jpg"]');
-
+//$I->seeCurrentUrlEquals('dfasdf');
+//$I->seeElement('//img[@src="/images/avatars/default.jpg"]');
+//
 
 $I->attachFile('#avatar-input', 'avatar.jpg');
 $I->click('Upload Avatar');
 
-$I->seeCurrentUrlEquals('/johndoe/edit');
+$I->seeCurrentUrlEquals('/johndoe');
 $I->seeElement('//img[@src="/images/avatars/' . $user->profile->avatar_path . '"]');
 $I->seeRecord('profiles', [
     'user_id' => $user->id,

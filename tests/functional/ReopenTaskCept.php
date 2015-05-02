@@ -1,4 +1,4 @@
-<?php
+T<?php
 $I = new FunctionalTester($scenario);
 $I->am('a Divvy user that is assigned to a Task');
 $I->wantTo('I want to reopen a completed task in a project');
@@ -22,11 +22,11 @@ $I->seeRecord('tasks', [
     'is_complete' => 1
 ]);
 
-$I->submitForm('.task__header__complete-form', []);
+$I->submitForm('.overview-overlay-wrapper form', []);
 
 $I->see('A test task');
-$I->dontSee('re-open', '.task__header');
-$I->see('complete', '.task__header');
+$I->dontSee('Reopen');
+$I->see('Complete');
 $I->seeRecord('tasks', [
     'name' => 'A test task',
     'is_complete' => 0

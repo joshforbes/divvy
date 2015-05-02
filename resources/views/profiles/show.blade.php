@@ -17,7 +17,6 @@
 
     @include('profiles.partials.edit-profile-modal')
 
-
     @if ($errors->any())
         <div class="profile-error-container alert alert-danger">
         <ul>

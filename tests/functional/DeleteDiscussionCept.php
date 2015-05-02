@@ -19,7 +19,7 @@ $discussion = $I->haveADiscussion([
     'user_id' => $user->id
 ]);
 
-$I->amOnPage('/p/' . $project->id);
+$I->amOnPage('/p/' . $project->id . '/task/' . $task->id);
 
 $I->see('A test discussion');
 $I->seeRecord('discussions', [
@@ -27,12 +27,11 @@ $I->seeRecord('discussions', [
     'deleted_at' => null
 ]);
 
-$I->click(['class' => 'task__discussion__delete']);
-$I->seeCurrentUrlEquals('/p/' . $project->id);
+$I->submitForm('.discussions__controls form', []);
+
 $I->dontSee('A test discussion', '.task__discussion__title');
 
 $I->dontSeeRecord('discussions', [
     'title' => 'A test discussion',
     'deleted_at' => null
-
 ]);

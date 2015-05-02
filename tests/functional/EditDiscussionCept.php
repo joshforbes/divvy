@@ -19,7 +19,7 @@ $discussion = $I->haveADiscussion([
     'user_id' => $user->id
 ]);
 
-$I->amOnPage('/p/' . $project->id);
+$I->amOnPage('/p/' . $project->id . '/task/' . $task->id);
 
 $I->see('A test discussion');
 $I->seeRecord('discussions', [
@@ -27,17 +27,13 @@ $I->seeRecord('discussions', [
     'deleted_at' => null
 ]);
 
-$I->click(['class' => 'task__discussion__edit-button']);
-$I->fillField('input[name="title"]', 'A discussion title');
-$I->fillField('textarea[name="body"]', 'A discussion body');
-$I->click('input[class="discussion-form__button"]');
+$I->click('.discussions__controls__icon');
+$I->submitForm('.discussion-form', [
+    'title' => 'A discussion title',
+    'body' => 'A discussion body',
+]);
 
-$I->seeCurrentUrlEquals('/p/' . $project->id);
 $I->see('A discussion title');
-
-$I->click('A discussion title');
-$I->see('A discussion title');
-$I->see('A discussion body');
 
 $I->seeRecord('discussions', [
     'title' => 'A discussion title',

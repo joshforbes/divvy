@@ -18,12 +18,10 @@ $subtask = $I->haveASubtask([
     'task_id' => $task->id,
 ]);
 
-$I->amOnPage('/p/' . $project->id);
-$I->click('A test subtask');
-$I->seeCurrentUrlEquals('/p/' . $project->id . '/task/' . $task->id . '/subtask/' . $subtask->id);
+$I->amOnPage('/p/' . $project->id .'/task/' . $task->id . '/subtask/' . $subtask->id);
 
-$I->fillField('textarea[name="body"]', 'A test comment');
-$I->click('input[value="Add"]');
+$I->fillField('.comments__form__input', 'A test comment');
+$I->click('Submit');
 
 $I->seeRecord('comments', [
     'body' => 'A test comment',

@@ -31,8 +31,7 @@ $I->seeRecord('comments', [
     'deleted_at' => null
 ]);
 
-$I->submitForm('.comment__delete-form', []);
-$I->seeCurrentUrlEquals('/p/' . $project->id . '/task/' . $task->id . '/subtask/' . $subtask->id);
+$I->submitForm('.comment__settings form', []);
 $I->dontSee('A test comment', '.comment__body');
 
 $I->dontSeeRecord('comments', [

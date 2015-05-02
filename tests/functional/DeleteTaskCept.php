@@ -21,7 +21,7 @@ $I->seeRecord('tasks', [
     'deleted_at' => null
 ]);
 
-$I->submitForm('.task__header__delete-form', []);
+$I->submitForm('.task-overview__settings form:last-child', []);
 $I->seeCurrentUrlEquals('/p/' . $project->id);
 $I->dontSee('A test task', '.task__header');
 

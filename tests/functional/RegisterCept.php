@@ -18,4 +18,4 @@ $I->seeRecord('users', [
 $I->seeAuthentication();
 
 $I->amOnPage('/johndoe');
-$I->see('johndoe Profile');
+$I->see('johndoe', '.profile__username');

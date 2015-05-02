@@ -19,12 +19,10 @@ $discussion = $I->haveADiscussion([
     'user_id' => $user->id
 ]);
 
-$I->amOnPage('/p/' . $project->id);
-$I->click('A test discussion');
-$I->seeCurrentUrlEquals('/p/' . $project->id . '/task/' . $task->id . '/discussion/' . $discussion->id);
+$I->amOnPage('/p/' . $project->id .'/task/' . $task->id . '/discussion/' . $discussion->id);
 
-$I->fillField('textarea[name="body"]', 'A test comment');
-$I->click('input[value="Add"]');
+$I->fillField('.comments__form__input', 'A test comment');
+$I->click('Submit');
 
 $I->seeRecord('comments', [
     'body' => 'A test comment',

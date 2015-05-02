@@ -13,12 +13,12 @@ $task = $I->haveATask([
     'description' => 'Just a test',
 ], []);
 
-$I->amOnPage('/p/' . $project->id);
+$I->amOnPage('/p/' . $project->id . '/task/' . $task->id);
 
+$I->click('.header__button:nth-of-type(2)');
 $I->fillField('input[name="name"]', 'A subtask');
-$I->click('input[type="submit"]');
+$I->click('Save Subtask');
 
-$I->seeCurrentUrlEquals('/p/' . $project->id);
 $I->see('A subtask');
 
 $I->seeRecord('subtasks', [
