@@ -7,9 +7,9 @@ $I->signIn();
 $I->amOnPage('');
 
 $I->click('Profile');
-$I->seeCurrentUrlEquals('/johndoe');
-$I->see('johndoe', '.profile__username');
-$I->see('John Doe', '.profile__info-item');
+$I->seeCurrentUrlEquals('/testuser');
+$I->see('testuser', '.profile__username');
+$I->see('Test User', '.profile__info-item');
 
 $I->click('.header__button');
 
@@ -21,8 +21,8 @@ $data = [
 
 $I->editProfile($data);
 
-$I->seeCurrentUrlEquals('/johndoe');
-$I->see('johndoe', '.profile__username');
+$I->seeCurrentUrlEquals('/testuser');
+$I->see('testuser', '.profile__username');
 $I->see($data['name'], '.profile__info-item');
 $I->seeRecord('profiles', $data);
 

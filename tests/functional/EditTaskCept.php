@@ -6,17 +6,17 @@ $I->wantTo('I want to edit a task');
 $user = $I->signIn();
 
 $secondUser = $I->haveAnAccount([
-    'username' => 'janedoe',
-    'email' => 'jane@test.com',
+    'username' => 'janetdoe',
+    'email' => 'janet@test.com',
     'password' => '123456',
-    'name' => 'Jane Doe'
+    'name' => 'Janet Doe'
 ]);
 
 $thirdUser = $I->haveAnAccount([
-    'username' => 'testuser',
-    'email' => 'test@test.com',
+    'username' => 'testguy',
+    'email' => 'testguy@test.com',
     'password' => '123456',
-    'name' => 'Test User'
+    'name' => 'Test Guy'
 ]);
 
 $fourthUser = $I->haveAnAccount([
@@ -45,7 +45,7 @@ $I->click('.task-overview__setting');
 $I->fillField('name', 'Updating name');
 $I->fillField('description', 'Updating description');
 
-$I->selectOption('memberList[]', ['testuser', 'reagano']);
+$I->selectOption('memberList[]', ['testguy', 'reagano']);
 
 $I->click('Save Changes');
 

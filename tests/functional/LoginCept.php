@@ -5,10 +5,10 @@ $I->wantTo('login to my Divvy account');
 
 $I->assertFalse(Auth::check());
 
-$username = 'johndoe';
-$email = 'johndoe@example.com';
+$username = 'testuser';
+$email = 'testuser@example.com';
 $password = '123456';
-$name = 'John Doe';
+$name = 'Test User';
 
 $user = $I->haveAnAccount([
     'username' => $username,

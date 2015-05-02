@@ -6,17 +6,17 @@ $I->wantTo('I want to add a user to a project');
 $user = $I->signIn();
 
 $secondUser = $I->haveAnAccount([
-    'username' => 'janedoe',
-    'email' => 'jane@test.com',
+    'username' => 'janetdoe',
+    'email' => 'janet@test.com',
     'password' => '123456',
-    'name' => 'Jane Doe'
+    'name' => 'Janet Doe'
 ]);
 
 $thirdUser = $I->haveAnAccount([
-    'username' => 'testuser',
-    'email' => 'test@test.com',
+    'username' => 'testguy',
+    'email' => 'testguy@test.com',
     'password' => '123456',
-    'name' => 'Test User'
+    'name' => 'Test Guy'
 ]);
 
 
@@ -24,10 +24,10 @@ $project = $I->amAProjectAdmin($user);
 
 $I->amOnPage('/p/' . $project->id);
 
-$I->selectOption('user', 'jane@test.com');
+$I->selectOption('user', 'janet@test.com');
 $I->click('input[type=submit]');
 
-$I->selectOption('user', 'test@test.com');
+$I->selectOption('user', 'testguy@test.com');
 $I->click('input[type=submit]');
 
 $I->seeRecord('project_user', [

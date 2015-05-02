@@ -6,19 +6,16 @@ $I->wantTo('I want to upload a avatar to my profile');
 $user = $I->signIn();
 
 $I->click('Profile');
-$I->seeCurrentUrlEquals('/johndoe');
+$I->seeCurrentUrlEquals('/testuser');
 $I->click('.header__button');
 $I->seeRecord('profiles', [
     'avatar_path' => null
 ]);
-//$I->seeCurrentUrlEquals('dfasdf');
-//$I->seeElement('//img[@src="/images/avatars/default.jpg"]');
-//
 
 $I->attachFile('#avatar-input', 'avatar.jpg');
 $I->click('Upload Avatar');
 
-$I->seeCurrentUrlEquals('/johndoe');
+$I->seeCurrentUrlEquals('/testuser');
 $I->seeElement('//img[@src="/images/avatars/' . $user->profile->avatar_path . '"]');
 $I->seeRecord('profiles', [
     'user_id' => $user->id,

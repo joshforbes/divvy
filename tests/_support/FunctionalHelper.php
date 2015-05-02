@@ -22,10 +22,10 @@ class FunctionalHelper extends Module {
 
     public function signIn()
     {
-        $username = 'johndoe';
-        $email = 'johndoe@example.com';
+        $username = 'testuser';
+        $email = 'testuser@example.com';
         $password = '123456';
-        $name = 'John Doe';
+        $name = 'Test User';
 
         $user = $this->haveAnAccount([
             'username' => $username,

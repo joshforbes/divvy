@@ -7,17 +7,17 @@ $I->wantTo('I want to add a task to a project');
 $user = $I->signIn();
 
 $secondUser = $I->haveAnAccount([
-    'username' => 'janedoe',
-    'email' => 'jane@test.com',
+    'username' => 'janetdoe',
+    'email' => 'janet@test.com',
     'password' => '123456',
-    'name' => 'Jane Doe'
+    'name' => 'Janet Doe'
 ]);
 
 $thirdUser = $I->haveAnAccount([
-    'username' => 'testuser',
-    'email' => 'test@test.com',
+    'username' => 'testguy',
+    'email' => 'testguy@test.com',
     'password' => '123456',
-    'name' => 'Test User'
+    'name' => 'Test Guy'
 ]);
 
 $project = $I->amAProjectAdmin($user);
@@ -32,7 +32,7 @@ $I->click('.header__button');
 $I->fillField('name', 'Test Task');
 $I->fillField('description', 'A Test Task');
 
-$I->selectOption('memberList[]', ['johndoe', 'janedoe', 'testuser']);
+$I->selectOption('memberList[]', ['testuser', 'janetdoe', 'testguy']);
 
 $I->click('Save Task');
 

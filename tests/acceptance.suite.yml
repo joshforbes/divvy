@@ -7,8 +7,12 @@
 class_name: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser
+        - WebDriver
         - AcceptanceHelper
+        - Asserts
+        - Filesystem
+        - Laravel5
     config:
-        PhpBrowser:
-            url: 'http://localhost/myapp/'
+        WebDriver:
+            url: 'http://divvy.app:8000'
+            browser: firefox
