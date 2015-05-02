@@ -13,7 +13,6 @@ require('laravel-elixir-codeception');
  |
  */
 
-
 elixir(function(mix) {
     mix.sass('app.scss')
         .copy(
@@ -43,6 +42,8 @@ elixir(function(mix) {
 
     mix.scripts(
         [
+
+
             'utilities/ajax.js',
             'modules/dashboardModule.js',
             'modules/profileModule.js',

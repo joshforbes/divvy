@@ -2,40 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42cdb1d5-8b6e-4047-bd25-3a856df9e117" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/testing.sqlite" afterPath="$PROJECT_DIR$/storage/testing.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/AcceptanceHelper.php" afterPath="$PROJECT_DIR$/tests/_support/AcceptanceHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/AcceptanceTester.php" afterPath="$PROJECT_DIR$/tests/acceptance/AcceptanceTester.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/AddCommentToDiscussionCept.php" afterPath="$PROJECT_DIR$/tests/functional/AddCommentToDiscussionCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/AddCommentToSubtaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/AddCommentToSubtaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/AddDiscussionToTaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/AddDiscussionToTaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/AddSubtaskToTaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/AddSubtaskToTaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/AddTaskToProjectCept.php" afterPath="$PROJECT_DIR$/tests/functional/AddTaskToProjectCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/AddUserToProjectCept.php" afterPath="$PROJECT_DIR$/tests/functional/AddUserToProjectCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/CompleteSubtaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/CompleteSubtaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/CompleteTaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/CompleteTaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/CreateProjectCept.php" afterPath="$PROJECT_DIR$/tests/functional/CreateProjectCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/DeleteASubtaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/DeleteASubtaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/DeleteCommentOnDiscussionCept.php" afterPath="$PROJECT_DIR$/tests/functional/DeleteCommentOnDiscussionCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/DeleteCommentOnSubtaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/DeleteCommentOnSubtaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/DeleteDiscussionCept.php" afterPath="$PROJECT_DIR$/tests/functional/DeleteDiscussionCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/DeleteTaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/DeleteTaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/EditCommentOnDiscussionCept.php" afterPath="$PROJECT_DIR$/tests/functional/EditCommentOnDiscussionCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/EditCommentOnSubtaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/EditCommentOnSubtaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/EditDiscussionCept.php" afterPath="$PROJECT_DIR$/tests/functional/EditDiscussionCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/EditSubtaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/EditSubtaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/EditTaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/EditTaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" afterPath="$PROJECT_DIR$/tests/_support/FunctionalHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/ProfileCept.php" afterPath="$PROJECT_DIR$/tests/functional/ProfileCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/ProfileEditCept.php" afterPath="$PROJECT_DIR$/tests/functional/ProfileEditCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/RegisterCept.php" afterPath="$PROJECT_DIR$/tests/functional/RegisterCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/ReopenSubtaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/ReopenSubtaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/ReopenTaskCept.php" afterPath="$PROJECT_DIR$/tests/functional/ReopenTaskCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/UploadAvatarCept.php" afterPath="$PROJECT_DIR$/tests/functional/UploadAvatarCept.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional.suite.yml" afterPath="$PROJECT_DIR$/tests/functional.suite.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/partials/nav.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/nav.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/errors/401.blade.php" afterPath="$PROJECT_DIR$/resources/views/errors/401.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/errors/503.blade.php" afterPath="$PROJECT_DIR$/resources/views/errors/503.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/discussions/partials/discussion-overview.blade.php" afterPath="$PROJECT_DIR$/resources/views/discussions/partials/discussion-overview.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
     </list>
     <ignored path="divvy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AcceptanceTester.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/acceptance/AcceptanceTester.php">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="41175">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8611111" vertical-offset="325" max-vertical-offset="1975">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,13 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Handlers/Events/Pusher/SubtaskWasModified.php" />
-        <option value="$PROJECT_DIR$/resources/views/comments/partials/edit-comment-modal.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/subtasks/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/Handlers/Events/Pusher/CommentWasDeleted.php" />
-        <option value="$PROJECT_DIR$/app/Handlers/Events/Pusher/CommentWasLeftOnSubtask.php" />
-        <option value="$PROJECT_DIR$/app/Handlers/Events/Pusher/CommentWasLeftOnDiscussion.php" />
-        <option value="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
         <option value="$PROJECT_DIR$/resources/views/comments/partials/comment.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/comments/partials/comments.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/modules/commentModule.js" />
@@ -129,6 +95,13 @@
         <option value="$PROJECT_DIR$/tests/functional/EditCommentOnDiscussionCept.php" />
         <option value="$PROJECT_DIR$/tests/functional/EditCommentOnSubtaskCept.php" />
         <option value="$PROJECT_DIR$/tests/acceptance.suite.yml" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/partials/favicon.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/discussions/partials/discussion-overview.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/errors/401.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/errors/404.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/errors/503.blade.php" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -197,52 +170,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="divvy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -264,12 +191,22 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="profiles" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,7 +220,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divvy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,7 +249,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="ProfileCont&#9;null&#9;null&#10;routes&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/routes.php&#10;nav&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/layouts/partials/nav.blade.php&#10;CommentCon&#9;null&#9;null&#10;SubtaskCon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/SubtasksController.php&#10;comment&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/comments/partials/comments.blade.php&#10;show&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/subtasks/show.blade.php&#10;taskMod&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/taskModule.js&#10;subtaskmo&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/subtaskModule.js&#10;subtaskCon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/SubtasksController.php&#10;TaskContr&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/TasksController.php&#10;projectMod&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;DiscussionMod&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/discussionModule.js&#10;edit-&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/discussions/partials/edit-form.blade.php&#10;TaskControl&#9;null&#9;null&#10;TaskController&#9;null&#9;null&#10;DiscussionCon&#9;null&#9;null&#10;_comm&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_comment.scss&#10;disc&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_discussion.scss&#10;_subtask&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_subtask.scss&#10;_commen&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_comment.scss&#10;subtask&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_subtasks.scss&#10;taskModule&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/taskModule.js&#10;subtaskMod&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/subtaskModule.js&#10;project&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;admin&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/projects/admin.blade.php&#10;commentc&#9;null&#9;null&#10;User&#9;FILE&#9;file:///Users/josh/code/divvy/app/User.php&#10;_comment.scss&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_comment.scss&#10;hea&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_header.scss&#10;dashboard&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/pages/dashboard.blade.php&#10;login&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/auth/login.blade.php&#10;notifica&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/notificationModule.js&#10;_not&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_notification-dropdown.scss&#10;task&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/taskModule.js&#10;taskModul&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/taskModule.js&#10;acti&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_activity-log.scss&#10;_notification&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_notification.scss&#10;Activity&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ActivityController.php&#10;Ac&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/Auth/AuthController.php&#10;dash&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/pages/dashboard.blade.php&#10;error-con&#9;null&#9;null&#10;.er&#9;null&#9;null&#10;authCon&#9;null&#9;null&#10;ProjectCon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;ProfileCon&#9;null&#9;null&#10;profileMo&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/profileModule.js&#10;Notif&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/NotificationsController.php&#10;notificationsCon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/NotificationsController.php&#10;notificationRep&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="Activity&#9;null&#9;null&#10;task/show&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/tasks/show.blade.php&#10;_variable&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/_variables.scss&#10;ProfileCont&#9;null&#9;null&#10;routes&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/routes.php&#10;nav&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/layouts/partials/nav.blade.php&#10;CommentCon&#9;null&#9;null&#10;SubtaskCon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/SubtasksController.php&#10;comment&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/comments/partials/comments.blade.php&#10;show&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/subtasks/show.blade.php&#10;taskMod&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/taskModule.js&#10;subtaskmo&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/subtaskModule.js&#10;subtaskCon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/SubtasksController.php&#10;TaskContr&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/TasksController.php&#10;projectMod&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;DiscussionMod&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/discussionModule.js&#10;edit-&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/discussions/partials/edit-form.blade.php&#10;TaskControl&#9;null&#9;null&#10;TaskController&#9;null&#9;null&#10;DiscussionCon&#9;null&#9;null&#10;_comm&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_comment.scss&#10;disc&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_discussion.scss&#10;_subtask&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_subtask.scss&#10;_commen&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_comment.scss&#10;subtask&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_subtasks.scss&#10;taskModule&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/taskModule.js&#10;subtaskMod&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/subtaskModule.js&#10;project&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/projectModule.js&#10;admin&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/projects/admin.blade.php&#10;commentc&#9;null&#9;null&#10;User&#9;FILE&#9;file:///Users/josh/code/divvy/app/User.php&#10;_comment.scss&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_comment.scss&#10;hea&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_header.scss&#10;dashboard&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/pages/dashboard.blade.php&#10;login&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/auth/login.blade.php&#10;notifica&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/notificationModule.js&#10;_not&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_notification-dropdown.scss&#10;task&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/taskModule.js&#10;taskModul&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/taskModule.js&#10;acti&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_activity-log.scss&#10;_notification&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/sass/components/_notification.scss&#10;Ac&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/Auth/AuthController.php&#10;dash&#9;FILE&#9;file:///Users/josh/code/divvy/resources/views/pages/dashboard.blade.php&#10;error-con&#9;null&#9;null&#10;.er&#9;null&#9;null&#10;authCon&#9;null&#9;null&#10;ProjectCon&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/ProjectsController.php&#10;ProfileCon&#9;null&#9;null&#10;profileMo&#9;FILE&#9;file:///Users/josh/code/divvy/resources/assets/js/modules/profileModule.js&#10;Notif&#9;FILE&#9;file:///Users/josh/code/divvy/app/Http/Controllers/NotificationsController.php" />
     <property name="options.lastSelected" value="Laravel.SettingsForm" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -417,85 +372,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/_output/LoginCept.fail.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/_output/LoginCept.fail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9444444" vertical-offset="850" max-vertical-offset="2325">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516471000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2015-05-01.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1925">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functional/LoginCept.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="900">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <marker date="1430516407000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430516407000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ExampleTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder=" A basic functional test example. ..." />
-            <marker date="1423059445000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functional/LogoutCept.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/_output/UploadAvatarCept.fail.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/_output/UploadAvatarCept.fail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.9444444" vertical-offset="1525" max-vertical-offset="4325">
@@ -1333,6 +1209,347 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="41175">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1430536533000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" Inherited Methods ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder=" [!] Method is generated. Documentation taken from corresponding module. ..." />
+            <marker date="1430536533000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/partials/favicon.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="900">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tasks/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6111111" vertical-offset="700" max-vertical-offset="1650">
+          <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+          <folding>
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430012910000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/discussions/partials/discussions.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3888889" vertical-offset="0" max-vertical-offset="900">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding>
+            <marker date="1429808217000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429808217000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429808217000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429808217000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429808217000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429808217000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429808217000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429808217000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ActivityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5833334" vertical-offset="1525" max-vertical-offset="2425">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <marker date="1430063298000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1430063298000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430063298000" expanded="true" signature="-1:-1" placeholder=" @param ActivityRepository $activityRepository ..." />
+            <marker date="1430063298000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430063298000" expanded="true" signature="-1:-1" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1430063298000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430063298000" expanded="true" signature="-1:-1" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1430063298000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430063298000" expanded="true" signature="-1:-1" placeholder=" Display the activity for the specified user within a Project ..." />
+            <marker date="1430063298000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430063298000" expanded="true" signature="-1:-1" placeholder=" Display the activity for the specified user within a task ..." />
+            <marker date="1430063298000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/discussions/partials/discussion-overview.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22222222" vertical-offset="0" max-vertical-offset="900">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <marker date="1430538357000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538357000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538357000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538357000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538357000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538357000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538357000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/sass/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.19444445" vertical-offset="825" max-vertical-offset="21925">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41666666" vertical-offset="0" max-vertical-offset="1200">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1430537588000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430537588000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430537588000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430537588000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/errors/401.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44444445" vertical-offset="325" max-vertical-offset="1350">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding>
+            <marker date="1430538944000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538944000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538944000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538944000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538944000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538944000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538944000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538944000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538944000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538944000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538944000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/errors/404.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.055555556" vertical-offset="0" max-vertical-offset="1375">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="36" selection-end-column="9" />
+          <folding>
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/errors/503.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9444444" vertical-offset="50" max-vertical-offset="1325">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430538967000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8611111" vertical-offset="325" max-vertical-offset="1975">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
