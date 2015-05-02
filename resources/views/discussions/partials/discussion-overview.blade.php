@@ -6,7 +6,7 @@
             <a class="discussions__overview-title discussions__overview-title--medium" href="{{ route('discussion.show', [$project->id, $task->id, $discussion->id]) }}">{!! $discussion->present()->truncatedTitle(70) !!}</a>
         </div>
         <div class="discussions__meta">
-            <a href="{{ route('profile.show', $discussion->author->username) }}">{{$discussion->author->username}}</a>
+            <a href="{{ route('activity.showTask', [$project->id, $task->id, $discussion->author->username]) }}">{{$discussion->author->username}}</a>
             {{ $discussion->created_at->diffForHumans() }}
         </div>
 
