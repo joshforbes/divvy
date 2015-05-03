@@ -1,0 +1,44 @@
+
+.input-group {
+    margin: 20px auto 40px;
+    width: 80%;
+
+    input[type="text"] {
+        outline: none;
+        width: 60%;
+        height: 4em;
+        padding-left: 1em;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .select2 {
+        width: 60% !important;
+    }
+
+    .select2-selection {
+        height: 4em;
+        outline: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border: 1px solid lightgray;
+
+    }
+
+    span#select2-usersList-container {
+        line-height: 4em;
+        padding-left: 1em;
+    }
+
+    span.select2-selection__arrow {
+        display: none;
+    }
+
+    .btn {
+        width: 40%;
+        height: 4em;
+        background-color: $accent-color;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

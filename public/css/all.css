@@ -1392,7 +1392,7 @@ pre {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .splash-signup-section .registration-wrapper, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .splash-signup-section .text-wrapper, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1661,7 +1661,7 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .splash-signup-section .registration-wrapper, .col-md-5, .col-md-6, .col-md-7, .splash-signup-section .text-wrapper, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
@@ -1669,13 +1669,13 @@ pre {
     width: 16.66667%; }
   .col-md-3 {
     width: 25%; }
-  .col-md-4, .splash-signup-section .registration-wrapper {
+  .col-md-4 {
     width: 33.33333%; }
   .col-md-5 {
     width: 41.66667%; }
   .col-md-6 {
     width: 50%; }
-  .col-md-7, .splash-signup-section .text-wrapper {
+  .col-md-7 {
     width: 58.33333%; }
   .col-md-8 {
     width: 66.66667%; }
@@ -1741,7 +1741,7 @@ pre {
     left: 100%; }
   .col-md-offset-0 {
     margin-left: 0%; }
-  .col-md-offset-1, .splash-signup-section .registration-wrapper {
+  .col-md-offset-1 {
     margin-left: 8.33333%; }
   .col-md-offset-2 {
     margin-left: 16.66667%; }
@@ -3563,30 +3563,30 @@ a.badge:hover, a.badge:focus {
   text-decoration: none;
   cursor: pointer; }
 
-.jumbotron, .splash-signup-section {
+.jumbotron {
   padding: 30px 15px;
   margin-bottom: 30px;
   color: inherit;
   background-color: #eeeeee; }
-  .jumbotron h1, .splash-signup-section h1, .jumbotron .h1, .splash-signup-section .h1 {
+  .jumbotron h1, .jumbotron .h1 {
     color: inherit; }
-  .jumbotron p, .splash-signup-section p {
+  .jumbotron p {
     margin-bottom: 15px;
     font-size: 21px;
     font-weight: 200; }
-  .jumbotron > hr, .splash-signup-section > hr {
+  .jumbotron > hr {
     border-top-color: #d5d5d5; }
-  .container .jumbotron, .container .splash-signup-section, .container-fluid .jumbotron, .container-fluid .splash-signup-section {
+  .container .jumbotron, .container-fluid .jumbotron {
     border-radius: 6px; }
-  .jumbotron .container, .splash-signup-section .container {
+  .jumbotron .container {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
-    .jumbotron, .splash-signup-section {
+    .jumbotron {
       padding: 48px 0; }
-      .container .jumbotron, .container .splash-signup-section, .container-fluid .jumbotron, .container-fluid .splash-signup-section {
+      .container .jumbotron, .container-fluid .jumbotron {
         padding-left: 60px;
         padding-right: 60px; }
-      .jumbotron h1, .splash-signup-section h1, .jumbotron .h1, .splash-signup-section .h1 {
+      .jumbotron h1, .jumbotron .h1 {
         font-size: 63px; } }
 
 .thumbnail {
@@ -7026,41 +7026,6 @@ input[type="submit"] {
       text-decoration: none;
       color: inherit; }
 
-/**
-SPLASH
-**/
-.splash-signup-section {
-  background-color: #eeeeee;
-  color: #184D59;
-  padding: 6em 0; }
-  .splash-signup-section .splash-hero-wrapper {
-    margin-left: -15px;
-    margin-right: -15px; }
-    .splash-signup-section .splash-hero-wrapper:before, .splash-signup-section .splash-hero-wrapper:after {
-      content: " ";
-      display: table; }
-    .splash-signup-section .splash-hero-wrapper:after {
-      clear: both; }
-  .splash-signup-section .text-wrapper {
-    padding-left: 0; }
-  .splash-signup-section .registration-wrapper {
-    margin-top: 2em;
-    padding-right: 0; }
-  .splash-signup-section .form-group {
-    margin-top: 1em;
-    margin-bottom: 0em; }
-  .splash-signup-section .form-control {
-    height: 3em; }
-  .splash-signup-section .btn {
-    margin-top: 1em;
-    font-weight: 600;
-    font-size: 1.2em;
-    background-color: #184D59;
-    border: 0; }
-
-/**
-ADD USER TO PROJECT
-**/
 .input-group {
   margin: 20px auto 40px;
   width: 80%; }
@@ -7093,19 +7058,3 @@ ADD USER TO PROJECT
 
 .hide {
   display: none; }
-
-/** PROFILE **/
-.avatar-wrap {
-  position: relative;
-  margin-right: 2em; }
-  .avatar-wrap .avatar-upload-button {
-    position: absolute;
-    bottom: 0;
-    display: block;
-    background-color: white;
-    width: 200px;
-    height: 3em;
-    opacity: .8;
-    text-align: center;
-    line-height: 3em;
-    cursor: pointer; }
