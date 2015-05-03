@@ -6892,7 +6892,6 @@ var taskModule = (function() {
         channel.bind('taskModified', taskModified);
         channel.bind('taskWasDeleted', taskWasDeleted);
         channel.bind('taskWasCompleted', taskWasCompleted);
-        channel.bind('taskWasIncomplete', taskWasIncomplete);
         channel.bind('commentWasLeftOnSubtask', commentWasLeftOnSubtask);
         channel.bind('commentWasLeftOnDiscussion', commentWasLeftOnDiscussion);
         channel.bind('commentWasDeletedOnSubtask', commentWasDeletedOnSubtask);
