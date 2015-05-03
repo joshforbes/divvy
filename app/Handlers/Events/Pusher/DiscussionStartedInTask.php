@@ -38,7 +38,8 @@ class DiscussionStartedInTask {
 
         $this->pusher->trigger($channel, 'discussionStartedInTask', [
             'partial' => (String) $partial,
-            'editPartial' => (String) $editPartial
+            'editPartial' => (String) $editPartial,
+            'author' => $discussion->author
         ]);
 
     }

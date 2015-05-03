@@ -5,7 +5,7 @@
         @if($subtask->comments->count() > 0)
             @include('subtasks.partials.comments-overview')
         @endif
-        <button class="subtasks__controls__icon" data-toggle="modal" data-target={{"#" . $subtask->id . "-modal"}}>
+        <button class="subtasks__controls__icon" data-toggle="modal" data-target={{"#" . $subtask->id . "-subtask-modal"}}>
             <i class="fa fa-pencil-square-o"></i>
         </button>
 

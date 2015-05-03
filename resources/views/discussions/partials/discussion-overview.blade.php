@@ -17,13 +17,15 @@
                 @include('discussions.partials.comments-overview')
             @endif
             @if (Auth::user()->isDiscussionAuthor($discussion->id) || Auth::user()->isAdmin($project->id))
-                <button class="discussions__controls__icon" data-toggle="modal" data-target={{"#" . $discussion->id . "-modal"}}>
-                    <i class="fa fa-pencil-square-o"></i>
-                </button>
+                <span class="discussions__controls__icons">
+                    <button class="discussions__controls__icon" data-toggle="modal" data-target={{"#" . $discussion->id . "-discussion-modal"}}>
+                        <i class="fa fa-pencil-square-o"></i>
+                    </button>
 
-                {!! Form::open(['data-remote', 'method' => 'DELETE', 'route' => ['discussion.destroy', $project->id, $task->id, $discussion->id]]) !!}
-                <button class="discussions__controls__icon"><i class="fa fa-trash-o"></i></button>
-                {!! Form::close() !!}
+                    {!! Form::open(['data-remote', 'method' => 'DELETE', 'route' => ['discussion.destroy', $project->id, $task->id, $discussion->id]]) !!}
+                    <button class="discussions__controls__icon"><i class="fa fa-trash-o"></i></button>
+                    {!! Form::close() !!}
+                </span>
             @endif
 
         </div>

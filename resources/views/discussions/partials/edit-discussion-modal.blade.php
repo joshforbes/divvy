@@ -1,4 +1,4 @@
-<div class="edit-discussion-modal modal fade" id="{{$discussion->id . "-modal"}}" tabindex="-1">
+<div class="edit-discussion-modal modal fade" id="{{$discussion->id . "-discussion-modal"}}" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal__header">

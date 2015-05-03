@@ -72,7 +72,8 @@ class CommentWasLeftOnDiscussion {
 
         $this->pusher->trigger($channel, 'commentWasLeft', [
             'partial' => (String) $partial,
-            'editPartial' => (String) $editPartial
+            'editPartial' => (String) $editPartial,
+            'author' => $comment->author
         ]);
     }
 

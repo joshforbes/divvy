@@ -6,19 +6,19 @@
         <div class="container">
             <h3 class="header__title">Discussion</h3>
 
-            @if(!$task->isCompleted())
-            <div class="header__controls header__controls--discussion">
+            @if(!$task->isCompleted() && (Auth::user()->isDiscussionAuthor($discussion->id) || Auth::user()->isAdmin($project->id)))
+                <div class="header__controls header__controls--discussion">
 
-                <div class="header__icon-wrapper header__icon-wrapper--discussion">
-                    {!! Form::open(['data-remote', 'method' => 'DELETE', 'route' => ['discussion.destroy', $project->id, $task->id, $discussion->id]]) !!}
-                    <button class="header__icon"><i class="fa fa-trash-o"></i></button>
-                    {!! Form::close() !!}
+                    <div class="header__icon-wrapper header__icon-wrapper--discussion">
+                        {!! Form::open(['data-remote', 'method' => 'DELETE', 'route' => ['discussion.destroy', $project->id, $task->id, $discussion->id]]) !!}
+                        <button class="header__icon"><i class="fa fa-trash-o"></i></button>
+                        {!! Form::close() !!}
 
-                    <button class="header__icon" data-toggle="modal" data-target=".edit-discussion-modal">
-                        <i class="fa fa-pencil-square-o"></i>
-                    </button>
+                        <button class="header__icon" data-toggle="modal" data-target=".edit-discussion-modal">
+                            <i class="fa fa-pencil-square-o"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
             @endif
 
             <div class="crumbs">
@@ -48,7 +48,7 @@
                 @include('comments.partials.comments')
 
                 <div class="comments__form-wrapper hide">
-                    {!! Form::open(['route' => ['comment.storeDiscussion', $project->id, $task->id, $discussion->id], 'class' => 'comments__form']) !!}
+                    {!! Form::open(['data-remote', 'route' => ['comment.storeDiscussion', $project->id, $task->id, $discussion->id], 'class' => 'comments__form']) !!}
                     {!! Form::textarea('body', null, ['class' => 'comments__form__input', 'placeholder' => 'Add a comment']) !!}
                     <button class="comments__form__button">Submit</button>
                     {!! Form::close() !!}

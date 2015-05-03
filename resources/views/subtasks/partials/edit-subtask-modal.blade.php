@@ -1,4 +1,4 @@
-<div class="edit-subtask-modal modal fade" id="{{$subtask->id . "-modal"}}" tabindex="-1">
+<div class="edit-subtask-modal modal fade" id="{{$subtask->id . "-subtask-modal"}}" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal__header">

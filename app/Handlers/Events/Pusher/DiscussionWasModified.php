@@ -53,7 +53,8 @@ class DiscussionWasModified {
         $this->pusher->trigger($channel, 'discussionWasModified', [
             'discussionId' => $discussion->id,
             'partial'      => (String)$partial,
-            'editPartial'  => (String)$editPartial
+            'editPartial'  => (String)$editPartial,
+            'author'       => $discussion->author
         ]);
     }
 
@@ -75,7 +76,8 @@ class DiscussionWasModified {
         $this->pusher->trigger($channel, 'discussionWasModified', [
             'discussionId' => $discussion->id,
             'partial'      => (String)$partial,
-            'editPartial'  => (String)$editPartial
+            'editPartial'  => (String)$editPartial,
+            'author'       => $discussion->author
         ]);
 
     }

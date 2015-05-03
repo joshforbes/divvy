@@ -6528,6 +6528,11 @@ var dashboardModule = (function() {
         $("#" + data.projectId + "-modal").modal('hide');
 
         project.replaceWith(data.partial);
+
+        //remove the settings button if not a project admin
+        if ( !isProjectAdmin(data) ) {
+            project.find('.project-overview__settings-button').remove();
+        }
     }
 
     function isProjectAdmin(data) {
@@ -6944,7 +6949,7 @@ var taskModule = (function() {
     // bootstrap table the edit modal has to be replaced separately.
     function subtaskWasModified(data) {
         var subtask = $(".subtasks__row[data-subtask='" + data.subtaskId + "']");
-        var editModal = $("#" + data.subtaskId + "-modal");
+        var editModal = $("#" + data.subtaskId + "-subtask-modal");
         var editForm = editModal.find('.subtask-form');
 
         editModal.modal('hide');
@@ -7008,6 +7013,11 @@ var taskModule = (function() {
         newDiscussion.first().show(500);
 
         $('.add-discussion-modal').modal('hide');
+
+        //remove the settings button if not a project admin
+        if ( !isDiscussionAuthor(data.author.username) && !isProjectAdmin() ) {
+            newDiscussion.find('.discussions__controls__icon').remove();
+        }
     }
 
     // Pusher event listener that removes the specified discussion from the
@@ -7031,7 +7041,7 @@ var taskModule = (function() {
     // bootstrap table the edit modal has to be replaced separately.
     function discussionWasModified(data) {
         var discussion = $(".discussions__row[data-discussion='" + data.discussionId + "']");
-        var editModal = $("#" + data.discussionId + "-modal");
+        var editModal = $("#" + data.discussionId + "-discussion-modal");
         var editForm = editModal.find('.discussion-form');
 
         editModal.modal('hide');
@@ -7039,6 +7049,12 @@ var taskModule = (function() {
         discussion.replaceWith(data.partial);
 
         editForm.parent().html(data.editPartial);
+
+        //remove the settings button if not a project admin
+        if ( !isDiscussionAuthor(data.author.username) && !isProjectAdmin() ) {
+            $(".discussions__row[data-discussion='" + data.discussionId + "']")
+                .find('.discussions__controls__icon').remove();
+        }
     }
 
     // Pusher event listener that updates the members list as well as the
@@ -7160,6 +7176,10 @@ var taskModule = (function() {
         });
 
         return found;
+    }
+
+    function isDiscussionAuthor(author) {
+        return divvy.currentUser == author;
     }
 
     return {
@@ -7488,11 +7508,19 @@ var commentModule = (function() {
     // to the comments container.
     function commentWasLeft(data) {
         var newComment = $(data.partial).hide();
+        var commentEdit = $(data.editPartial);
 
         newComment.appendTo('.comments');
         newComment.last().slideDown(500);
 
+        commentEdit.appendTo('.comments');
+
         hideCommentForm();
+
+        //remove the settings button if not a project admin
+        if ( !isCommentAuthor(data.author.username) ) {
+            newComment.find('.comment__settings-button').remove();
+        }
     }
 
     // Pusher event listener that replaces the specified comment with an
@@ -7500,10 +7528,23 @@ var commentModule = (function() {
     function commentWasModified(data) {
         var comment = $(".comment[data-comment='" + data.commentId + "']");
         var newComment = $(data.partial);
+        var editModal = $('#' + data.commentId + '-modal');
+        var editForm = editModal.find('.modal-form');
 
-        $("#" + data.commentId + "-modal").modal('hide');
+        editModal.modal('hide');
 
         comment.replaceWith(newComment);
+        editForm.parent().html(data.editPartial);
+
+
+        //remove the settings button if not a project admin
+        if ( !isCommentAuthor(data.author.username) ) {
+            newComment.find('.comment__settings-button').remove();
+        }
+    }
+
+    function isCommentAuthor(author) {
+        return divvy.currentUser == author;
     }
 
     return {

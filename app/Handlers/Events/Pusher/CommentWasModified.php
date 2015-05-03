@@ -55,12 +55,13 @@ class CommentWasModified {
         $channel = 'd'.$discussion->id;
 
         $partial = view('comments.partials.comment', compact('task', 'project', 'comment'));
-        $editPartial = view('comments.partials.edit-comment-modal', compact('task', 'project', 'comment'));
+        $editPartial = view('comments.partials.edit-form', compact('task', 'project', 'comment'));
 
         $this->pusher->trigger($channel, 'commentWasModified', [
             'commentId' => $comment->id,
             'partial' => (String) $partial,
-            'editPartial' => (String) $editPartial
+            'editPartial' => (String) $editPartial,
+            'author' => $comment->author
         ]);
 
     }
@@ -80,12 +81,13 @@ class CommentWasModified {
         $channel = 's'.$subtask->id;
 
         $partial = view('comments.partials.comment', compact('task', 'project', 'comment'));
-        $editPartial = view('comments.partials.edit-comment-modal', compact('task', 'project', 'comment'));
+        $editPartial = view('comments.partials.edit-form', compact('task', 'project', 'comment'));
 
         $this->pusher->trigger($channel, 'commentWasModified', [
             'commentId' => $comment->id,
             'partial' => (String) $partial,
-            'editPartial' => (String) $editPartial
+            'editPartial' => (String) $editPartial,
+            'author' => $comment->author
         ]);
     }
 }

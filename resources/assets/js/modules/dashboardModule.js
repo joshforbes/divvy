@@ -51,6 +51,11 @@ var dashboardModule = (function() {
         $("#" + data.projectId + "-modal").modal('hide');
 
         project.replaceWith(data.partial);
+
+        //remove the settings button if not a project admin
+        if ( !isProjectAdmin(data) ) {
+            project.find('.project-overview__settings-button').remove();
+        }
     }
 
     function isProjectAdmin(data) {

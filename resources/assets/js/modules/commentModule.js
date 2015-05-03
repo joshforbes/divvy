@@ -51,11 +51,19 @@ var commentModule = (function() {
     // to the comments container.
     function commentWasLeft(data) {
         var newComment = $(data.partial).hide();
+        var commentEdit = $(data.editPartial);
 
         newComment.appendTo('.comments');
         newComment.last().slideDown(500);
 
+        commentEdit.appendTo('.comments');
+
         hideCommentForm();
+
+        //remove the settings button if not a project admin
+        if ( !isCommentAuthor(data.author.username) ) {
+            newComment.find('.comment__settings-button').remove();
+        }
     }
 
     // Pusher event listener that replaces the specified comment with an
@@ -63,10 +71,23 @@ var commentModule = (function() {
     function commentWasModified(data) {
         var comment = $(".comment[data-comment='" + data.commentId + "']");
         var newComment = $(data.partial);
+        var editModal = $('#' + data.commentId + '-modal');
+        var editForm = editModal.find('.modal-form');
 
-        $("#" + data.commentId + "-modal").modal('hide');
+        editModal.modal('hide');
 
         comment.replaceWith(newComment);
+        editForm.parent().html(data.editPartial);
+
+
+        //remove the settings button if not a project admin
+        if ( !isCommentAuthor(data.author.username) ) {
+            newComment.find('.comment__settings-button').remove();
+        }
+    }
+
+    function isCommentAuthor(author) {
+        return divvy.currentUser == author;
     }
 
     return {
