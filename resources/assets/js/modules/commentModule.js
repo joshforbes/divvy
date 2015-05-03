@@ -10,19 +10,19 @@ var commentModule = (function() {
     }
 
     function showCommentForm() {
-        s.commentForm.hide().removeClass('hide').slideDown(600);
-        s.newCommentButton.slideUp(600);
+        $('.comments__form-wrapper').hide().removeClass('hide').slideDown(600);
+        $('.comments__new-link').slideUp(600);
     }
 
     function hideCommentForm() {
-        $(s.commentForm).slideUp(600);
-        s.newCommentButton.slideDown(600);
+        $('.comments__form-wrapper').slideUp(600);
+        $('.comments__new-link').slideDown(600);
     }
 
     function bindUIactions() {
         $('body').on('click', '.comment__settings-button', showSettings);
         $('body').on('click', '.comment__settings-close', hideSettings);
-        s.newCommentButton.on('click', showCommentForm);
+        $('body').on('click', '.comments__new-link', showCommentForm);
     }
 
     function bindPusherEvents() {
@@ -52,7 +52,7 @@ var commentModule = (function() {
     function commentWasLeft(data) {
         var newComment = $(data.partial).hide();
 
-        newComment.appendTo(s.comments);
+        newComment.appendTo('.comments');
         newComment.last().slideDown(500);
 
         hideCommentForm();
@@ -61,7 +61,6 @@ var commentModule = (function() {
     // Pusher event listener that replaces the specified comment with an
     // updated version from the server.
     function commentWasModified(data) {
-        console.log('yes');
         var comment = $(".comment[data-comment='" + data.commentId + "']");
         var newComment = $(data.partial);
 

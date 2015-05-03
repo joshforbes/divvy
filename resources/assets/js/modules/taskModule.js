@@ -39,6 +39,8 @@ var taskModule = (function() {
         channel.bind('discussionWasModified', discussionWasModified);
         channel.bind('taskModified', taskModified);
         channel.bind('taskWasDeleted', taskWasDeleted);
+        channel.bind('taskWasCompleted', taskWasCompleted);
+        channel.bind('taskWasIncomplete', taskWasIncomplete);
         channel.bind('commentWasLeftOnSubtask', commentWasLeftOnSubtask);
         channel.bind('commentWasLeftOnDiscussion', commentWasLeftOnDiscussion);
         channel.bind('commentWasDeletedOnSubtask', commentWasDeletedOnSubtask);
@@ -207,6 +209,14 @@ var taskModule = (function() {
     // provides a link back to the project page
     function taskWasDeleted(data) {
         $('.header').siblings('.container').html(data.partial);
+    }
+
+    // Pusher event listener that responds to a Task being completed.
+    // Replaces the page body with a completed overlay and removes
+    // the header controls
+    function taskWasCompleted(data) {
+        $('.header').siblings('.container').html(data.partial);
+        $('.header__button').remove();
     }
 
     // Pusher event listener that responds to a Comment being left on

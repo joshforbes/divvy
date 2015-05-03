@@ -5,14 +5,7 @@
         <div class="container">
             <h3 class="header__title">{{ $task->name }}</h3>
 
-            <div class="header__controls">
-                <button class="header__button" data-toggle="modal" data-target=".add-subtask-modal">
-                    + Subtask
-                </button>
-                <button class="header__button" data-toggle="modal" data-target=".add-discussion-modal">
-                    + Discussion
-                </button>
-            </div>
+            @include('tasks.partials.header-controls')
 
             <div class="crumbs">
                 <span class="crumb">
@@ -30,25 +23,11 @@
 
     <div class="container">
 
-        <div class="information-wrapper">
-
-            <div class="activity-log-wrapper">
-                @include('activity.partials.task-activity-log')
-            </div>
-
-            <div class="members-wrapper">
-                @include('users.partials.task-members')
-            </div>
-
-            <div class="task-progress-wrapper">
-                @include('tasks.partials.task-progress')
-            </div>
-
-        </div>
-
-        @include('subtasks.partials.subtasks')
-
-        @include('discussions.partials.discussions')
+        @if($task->isCompleted())
+            @include('layouts.partials.completed-overlay')
+        @else
+            @include('tasks.partials.task-wrapper')
+        @endif
 
     </div>
 

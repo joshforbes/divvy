@@ -55,6 +55,7 @@ var discussionModule = (function() {
         var channel = pusher.subscribe(divvy.taskChannel);
 
         channel.bind('taskWasDeleted', taskWasDeleted);
+        channel.bind('taskWasCompleted', taskWasCompleted);
     }
 
     // Pusher event listener that responds to the Task being deleted.
@@ -62,6 +63,14 @@ var discussionModule = (function() {
     // provides a link back to the project page
     function taskWasDeleted(data) {
         $('.header').siblings('.container').html(data.partial);
+    }
+
+    // Pusher event listener that responds to the Task being completed.
+    // Replaces the discussion body with a completed-overlay and removes
+    // buttons from the header
+    function taskWasCompleted(data) {
+        $('.header').siblings('.container').html(data.partial);
+        $('.header__controls').remove();
     }
 
     return {

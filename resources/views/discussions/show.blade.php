@@ -6,6 +6,7 @@
         <div class="container">
             <h3 class="header__title">Discussion</h3>
 
+            @if(!$task->isCompleted())
             <div class="header__controls header__controls--discussion">
 
                 <div class="header__icon-wrapper header__icon-wrapper--discussion">
@@ -17,8 +18,8 @@
                         <i class="fa fa-pencil-square-o"></i>
                     </button>
                 </div>
-
             </div>
+            @endif
 
             <div class="crumbs">
                 <span class="crumb">
@@ -37,22 +38,28 @@
 
     <div class="container">
 
-        <div class="discussion-wrapper">
+        @if($task->isCompleted())
+            @include('layouts.partials.completed-overlay')
+        @else
+            <div class="discussion-wrapper">
 
-            @include('discussions.partials.discussion')
+                @include('discussions.partials.discussion')
 
-            @include('comments.partials.comments')
+                @include('comments.partials.comments')
 
-            <div class="comments__form-wrapper hide">
-                {!! Form::open(['route' => ['comment.storeDiscussion', $project->id, $task->id, $discussion->id], 'class' => 'comments__form']) !!}
-                {!! Form::textarea('body', null, ['class' => 'comments__form__input', 'placeholder' => 'Add a comment']) !!}
-                <button class="comments__form__button">Submit</button>
-                {!! Form::close() !!}
+                <div class="comments__form-wrapper hide">
+                    {!! Form::open(['route' => ['comment.storeDiscussion', $project->id, $task->id, $discussion->id], 'class' => 'comments__form']) !!}
+                    {!! Form::textarea('body', null, ['class' => 'comments__form__input', 'placeholder' => 'Add a comment']) !!}
+                    <button class="comments__form__button">Submit</button>
+                    {!! Form::close() !!}
+                </div>
+
+                <div class="comments__new-link"><i class="fa fa-pencil"></i>Enter a new comment</div>
+
             </div>
+        @endif
 
-            <div class="comments__new-link"><i class="fa fa-pencil"></i>Enter a new comment</div>
 
-        </div>
 
     </div>
 

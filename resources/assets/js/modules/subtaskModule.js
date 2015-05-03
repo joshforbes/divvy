@@ -11,6 +11,8 @@ var subtaskModule = (function() {
 
         channel.bind('subtaskWasModified', subtaskWasModified);
         channel.bind('subtaskWasDeleted', subtaskWasDeleted);
+        channel.bind('subtaskWasCompleted', subtaskWasCompleted);
+        channel.bind('subtaskWasIncomplete', subtaskWasIncomplete);
     }
 
     // Pusher event listener that replaces the specified discussion with an
@@ -27,11 +29,21 @@ var subtaskModule = (function() {
         editForm.parent().html(data.editPartial);
     }
 
-    // Pusher event listener that responds to the Discussion being deleted.
+    // Pusher event listener that responds to the Subtask being deleted.
     // Replaces the whole discussion page with data from the server, which
     // provides a link back to the task page
     function subtaskWasDeleted(data) {
-        $('.header').siblings('.container').html(data.partial);
+        s.header.siblings('.container').html(data.partial);
+    }
+
+    function subtaskWasCompleted(data) {
+        s.header.siblings('.container').html(data.partial);
+        $('.header__controls').replaceWith(data.headerPartial);
+    }
+
+    function subtaskWasIncomplete(data) {
+        s.header.siblings('.container').html(data.partial);
+        $('.header__controls').replaceWith(data.headerPartial);
     }
 
     //bind Pusher events that are fired at the project level
@@ -67,8 +79,8 @@ var subtaskModule = (function() {
     return {
         settings: {
             subtask: $('.subtask'),
-            editModal: $('.edit-subtask-modal')
-
+            editModal: $('.edit-subtask-modal'),
+            header: $('.header')
         },
 
         init: function() {

@@ -45,18 +45,14 @@
 
     </div>
 
-
     @include('tasks.partials.add-task-modal')
-
 
 @endsection
 
 @section('js')
-    <script src="/js/vendor/select2.js"></script>
     <script>
         $(".modal-form__member-select").select2();
         $('.members-edit__list').select2();
         projectModule.init();
-
     </script>
 @endsection

@@ -6891,6 +6891,8 @@ var taskModule = (function() {
         channel.bind('discussionWasModified', discussionWasModified);
         channel.bind('taskModified', taskModified);
         channel.bind('taskWasDeleted', taskWasDeleted);
+        channel.bind('taskWasCompleted', taskWasCompleted);
+        channel.bind('taskWasIncomplete', taskWasIncomplete);
         channel.bind('commentWasLeftOnSubtask', commentWasLeftOnSubtask);
         channel.bind('commentWasLeftOnDiscussion', commentWasLeftOnDiscussion);
         channel.bind('commentWasDeletedOnSubtask', commentWasDeletedOnSubtask);
@@ -7059,6 +7061,14 @@ var taskModule = (function() {
     // provides a link back to the project page
     function taskWasDeleted(data) {
         $('.header').siblings('.container').html(data.partial);
+    }
+
+    // Pusher event listener that responds to a Task being completed.
+    // Replaces the page body with a completed overlay and removes
+    // the header controls
+    function taskWasCompleted(data) {
+        $('.header').siblings('.container').html(data.partial);
+        $('.header__button').remove();
     }
 
     // Pusher event listener that responds to a Comment being left on
@@ -7254,6 +7264,8 @@ var subtaskModule = (function() {
 
         channel.bind('subtaskWasModified', subtaskWasModified);
         channel.bind('subtaskWasDeleted', subtaskWasDeleted);
+        channel.bind('subtaskWasCompleted', subtaskWasCompleted);
+        channel.bind('subtaskWasIncomplete', subtaskWasIncomplete);
     }
 
     // Pusher event listener that replaces the specified discussion with an
@@ -7270,11 +7282,21 @@ var subtaskModule = (function() {
         editForm.parent().html(data.editPartial);
     }
 
-    // Pusher event listener that responds to the Discussion being deleted.
+    // Pusher event listener that responds to the Subtask being deleted.
     // Replaces the whole discussion page with data from the server, which
     // provides a link back to the task page
     function subtaskWasDeleted(data) {
-        $('.header').siblings('.container').html(data.partial);
+        s.header.siblings('.container').html(data.partial);
+    }
+
+    function subtaskWasCompleted(data) {
+        s.header.siblings('.container').html(data.partial);
+        $('.header__controls').replaceWith(data.headerPartial);
+    }
+
+    function subtaskWasIncomplete(data) {
+        s.header.siblings('.container').html(data.partial);
+        $('.header__controls').replaceWith(data.headerPartial);
     }
 
     //bind Pusher events that are fired at the project level
@@ -7310,8 +7332,8 @@ var subtaskModule = (function() {
     return {
         settings: {
             subtask: $('.subtask'),
-            editModal: $('.edit-subtask-modal')
-
+            editModal: $('.edit-subtask-modal'),
+            header: $('.header')
         },
 
         init: function() {
@@ -7380,6 +7402,7 @@ var discussionModule = (function() {
         var channel = pusher.subscribe(divvy.taskChannel);
 
         channel.bind('taskWasDeleted', taskWasDeleted);
+        channel.bind('taskWasCompleted', taskWasCompleted);
     }
 
     // Pusher event listener that responds to the Task being deleted.
@@ -7387,6 +7410,14 @@ var discussionModule = (function() {
     // provides a link back to the project page
     function taskWasDeleted(data) {
         $('.header').siblings('.container').html(data.partial);
+    }
+
+    // Pusher event listener that responds to the Task being completed.
+    // Replaces the discussion body with a completed-overlay and removes
+    // buttons from the header
+    function taskWasCompleted(data) {
+        $('.header').siblings('.container').html(data.partial);
+        $('.header__controls').remove();
     }
 
     return {
@@ -7417,19 +7448,19 @@ var commentModule = (function() {
     }
 
     function showCommentForm() {
-        s.commentForm.hide().removeClass('hide').slideDown(600);
-        s.newCommentButton.slideUp(600);
+        $('.comments__form-wrapper').hide().removeClass('hide').slideDown(600);
+        $('.comments__new-link').slideUp(600);
     }
 
     function hideCommentForm() {
-        $(s.commentForm).slideUp(600);
-        s.newCommentButton.slideDown(600);
+        $('.comments__form-wrapper').slideUp(600);
+        $('.comments__new-link').slideDown(600);
     }
 
     function bindUIactions() {
         $('body').on('click', '.comment__settings-button', showSettings);
         $('body').on('click', '.comment__settings-close', hideSettings);
-        s.newCommentButton.on('click', showCommentForm);
+        $('body').on('click', '.comments__new-link', showCommentForm);
     }
 
     function bindPusherEvents() {
@@ -7459,7 +7490,7 @@ var commentModule = (function() {
     function commentWasLeft(data) {
         var newComment = $(data.partial).hide();
 
-        newComment.appendTo(s.comments);
+        newComment.appendTo('.comments');
         newComment.last().slideDown(500);
 
         hideCommentForm();
@@ -7468,7 +7499,6 @@ var commentModule = (function() {
     // Pusher event listener that replaces the specified comment with an
     // updated version from the server.
     function commentWasModified(data) {
-        console.log('yes');
         var comment = $(".comment[data-comment='" + data.commentId + "']");
         var newComment = $(data.partial);
 

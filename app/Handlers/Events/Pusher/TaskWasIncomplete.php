@@ -29,6 +29,13 @@ class TaskWasIncomplete {
      */
     public function handle($event)
     {
+        $this->handleProject($event);
+
+        $this->handleTask($event);
+    }
+
+    private function handleProject($event)
+    {
         $task = $event->task;
         $project = $event->project;
         $channel = 'p'.$project->id;
@@ -38,7 +45,27 @@ class TaskWasIncomplete {
             'taskId' => $task->id,
             'partial' => (String) $partial,
         ]);
+    }
 
+    /**
+     * handles events related to the Task page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    private function handleTask($event)
+    {
+        $task = $event->task;
+        $project = $event->project;
+        $subtasks = $task->subtasks;
+        $channel = 't'.$task->id;
+        $partial = view('tasks.partials.task-wrapper', compact('task', 'project', 'subtasks'));
+        $headerPartial = view('tasks.partials.header-controls', compact('task'));
+
+        $this->pusher->trigger($channel, 'taskWasIncomplete', [
+            'partial' => (String) $partial,
+            'headerPartial' => (String) $headerPartial
+        ]);
     }
 
 

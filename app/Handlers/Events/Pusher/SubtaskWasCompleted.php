@@ -26,17 +26,51 @@ class SubtaskWasCompleted {
      */
     public function handle($event)
     {
+        $this->handleTask($event);
+
+        $this->handleSubtask($event);
+
+    }
+
+    /**
+     * handles events related to the Task page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    private function handleTask($event)
+    {
         $task = $event->task;
         $project = $event->project;
         $subtask = $event->subject;
-        $channel = 't'.$task->id;
+        $channel = 't' . $task->id;
         $partial = view('subtasks.partials.subtask-overview-wrapper', compact('task', 'project', 'subtask'));
 
         $this->pusher->trigger($channel, 'subtaskWasCompleted', [
             'subtaskId' => $subtask->id,
-            'partial' => (String) $partial,
+            'partial'   => (String)$partial,
         ]);
+    }
 
+    /**
+     * handles events related to the Subtask page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
+    private function handleSubtask($event)
+    {
+        $task = $event->task;
+        $project = $event->project;
+        $subtask = $event->subject;
+        $channel = 's' . $subtask->id;
+        $partial = view('layouts.partials.completed-overlay');
+        $headerPartial = view('subtasks.partials.header-controls', compact('task', 'project', 'subtask'));
+
+        $this->pusher->trigger($channel, 'subtaskWasCompleted', [
+            'partial'       => (String)$partial,
+            'headerPartial' => (String)$headerPartial
+        ]);
     }
 
 }
