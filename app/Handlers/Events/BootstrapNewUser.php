@@ -74,8 +74,7 @@ class BootstrapNewUser {
 		$task = $this->dispatcher->dispatch(
 			new AddTaskToProjectCommand(
 				'A Task',
-				'Tasks are a way to assign work to a group of project members.
-				Only members assigned to the task can see it.',
+				'Tasks are a way to assign work to a group of project members. Only members assigned to the task can see it.',
 				[
 					0 => $user->id,
 					1 => $janedoe->id,
@@ -132,8 +131,7 @@ class BootstrapNewUser {
 		$taskCompleted = $this->dispatcher->dispatch(
 			new AddTaskToProjectCommand(
 				'Another Task',
-				'When a task has been finished it can be marked as complete.
-				Something else comes up, just reopen it.',
+				'When a task has been finished it can be marked as complete. Something else comes up, just reopen it.',
 				[
 					0 => $user->id,
 					1 => $janedoe->id
