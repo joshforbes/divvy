@@ -1,0 +1,56 @@
+.splash-overview {
+
+    &__header {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+
+        @media(max-width: 600px){
+            font-size: 28px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        width: 50%;
+        font-size: 16px;
+        margin: 0 auto;
+
+        @media(max-width: 950px){
+            width: 75%;
+        }
+
+        @media(max-width: 640px){
+            width: 85%;
+            margin-bottom: 40px;
+            font-size: 15px;
+        }
+    }
+
+    &__image {
+        position: relative;
+        width: 75%;
+        max-width: 900px;
+        margin: -50px auto 0;
+        display: block;
+        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.4);
+        bottom: -100px;
+        border-radius: 5px;
+
+        @media(max-width: 950px){
+            bottom: -50px;
+            margin: 0 auto;
+        }
+
+        @media(max-width: 640px){
+            bottom: -10px;
+            margin: 0 auto;
+        }
+
+        @media(max-width: 570px){
+            width: 90%;
+        }
+
+    }
+
+}

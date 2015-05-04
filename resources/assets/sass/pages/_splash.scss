@@ -2,5 +2,13 @@
     position: relative;
 }
 
-.splash__section {
+.splash {
+
+    &__section{
+        @include container-fixed();
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+        overflow: hidden;
+    }
+
 }

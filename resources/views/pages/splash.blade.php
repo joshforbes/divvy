@@ -37,11 +37,129 @@
                 <div class="hero__subtext">Invite your team - divvy it up - get stuff done.</div>
             <a class="hero__register" href="/auth/register"><span>Sign up</span></a>
         </div>
-
     </div>
 
-    <section class="splash__section">
+    <section class="splash__section splash-overview">
+        <div class="splash-overview__header">
+            Lorem ipsum dolor sit amet.
+        </div>
 
+        <div class="splash-overview__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, rem reprehenderit. Eaque exercitationem minus pariatur. A accusantium adipisci aspernatur atque blanditiis corporis cum distinctio dolore dolores dolorum ducimus esse eveniet harum inventore iure labore laboriosam minima natus numquam odio omnis, praesentium quia rem repellendus reprehenderit sed similique soluta unde vitae.</div>
+
+        <img class="splash-overview__image" src="{{ asset('images/browser-shot.jpg') }}" alt=""/>
+
+    </section>
+
+    <section class="splash__section splash-spotlight">
+
+        <img class="splash-spotlight__tablet-mock" src="{{ asset('images/tablet-mock.png') }}" alt=""/>
+
+        <img class="splash-spotlight__laptop-mock" src="{{ asset('images/laptop-mock.png') }}" alt=""/>
+
+        <img class="splash-spotlight__phone-mock" src="{{ asset('images/test-for-web.png') }}" alt=""/>
+
+        <div class="splash-spotlight__text">
+            <div class="splash-spotlight__header">Lorem ipsum dolor sit amet.</div>
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At atque ducimus eaque harum iure, labore odio voluptates. A ad amet cum debitis dicta id illo in ipsa iusto laboriosam necessitatibus non perferendis quisquam rerum, totam unde veritatis voluptatem! Asperiores culpa deleniti exercitationem expedita explicabo illum, maiores molestiae quis suscipit unde.
+        </div>
+
+    </section>
+
+    <section class="splash__section splash-features">
+        <div class="container">
+
+            <div class="splash-features__header">
+                Features
+            </div>
+            <div class="splash-features__rule"></div>
+
+            <div class="splash-features__features">
+                <div class="splash-features__feature">
+                    <div class="splash-features__icon">
+                        <i class="fa fa-gears"></i>
+                    </div>
+
+                    <div class="splash-features__feature__header">
+                        Collaboration
+                    </div>
+
+                    <div class="splash-features__feature__body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
+                    </div>
+                </div>
+
+                <div class="splash-features__feature">
+                    <div class="splash-features__icon">
+                        <i class="fa fa-bolt"></i>
+                    </div>
+
+                    <div class="splash-features__feature__header">
+                        Real Time
+                    </div>
+
+                    <div class="splash-features__feature__body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
+                    </div>
+                </div>
+
+                <div class="splash-features__feature">
+                    <div class="splash-features__icon">
+                        <i class="fa fa-mobile"></i>
+                    </div>
+
+                    <div class="splash-features__feature__header">
+                        Portable
+                    </div>
+
+                    <div class="splash-features__feature__body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
+                    </div>
+                </div>
+
+                <div class="splash-features__feature">
+                    <div class="splash-features__icon">
+                        <i class="fa fa-bell-o"></i>
+                    </div>
+
+                    <div class="splash-features__feature__header">
+                        Notifications
+                    </div>
+
+                    <div class="splash-features__feature__body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
+                    </div>
+                </div>
+
+                <div class="splash-features__feature">
+                    <div class="splash-features__icon">
+                        <i class="fa fa-comments-o"></i>
+                    </div>
+
+                    <div class="splash-features__feature__header">
+                        Communication
+                    </div>
+
+                    <div class="splash-features__feature__body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
+                    </div>
+                </div>
+
+                <div class="splash-features__feature">
+                    <div class="splash-features__icon">
+                        <i class="fa fa-folder-open-o"></i>
+                    </div>
+
+                    <div class="splash-features__feature__header">
+                        Organization
+                    </div>
+
+                    <div class="splash-features__feature__body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
