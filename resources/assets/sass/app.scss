@@ -8,6 +8,8 @@
 @import "pages/project-admin";
 @import "pages/task-show";
 @import "pages/login";
+@import "pages/register";
+@import "pages/password";
 @import "pages/discussion-show";
 @import "pages/subtask-show";
 @import "pages/activity-index";
@@ -49,11 +51,17 @@
 @import "components/splash-overview";
 @import "components/splash-spotlight";
 @import "components/splash-features";
+@import "components/register-form";
+@import "components/password-form";
 @import "components/select2";
 
 
 .hide {
     display: none;
+}
+
+input:focus, textarea:focus {
+    outline: none;
 }
 
 

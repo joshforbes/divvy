@@ -5015,17 +5015,43 @@ button.close {
     clear: both; }
 
 .login-form {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
-  @media (min-width: 992px) {
+  width: 400px;
+  margin: 0 auto; }
+  @media (max-width: 420px) {
     .login-form {
-      margin-left: 33.33333%; } }
-  @media (min-width: 992px) {
-    .login-form {
-      float: left;
-      width: 33.33333%; } }
+      width: 320px; } }
+
+.register-wrapper {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .register-wrapper:before, .register-wrapper:after {
+    content: " ";
+    display: table; }
+  .register-wrapper:after {
+    clear: both; }
+
+.register-form {
+  width: 400px;
+  margin: 0 auto; }
+  @media (max-width: 420px) {
+    .register-form {
+      width: 320px; } }
+
+.password-wrapper {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .password-wrapper:before, .password-wrapper:after {
+    content: " ";
+    display: table; }
+  .password-wrapper:after {
+    clear: both; }
+
+.password-form {
+  width: 400px;
+  margin: 0 auto; }
+  @media (max-width: 420px) {
+    .password-form {
+      width: 320px; } }
 
 .discussion-wrapper {
   position: relative;
@@ -6848,6 +6874,14 @@ input[type="submit"] {
   width: 300px;
   margin: 30px auto -10px; }
 
+.password-error-container {
+  width: 300px;
+  margin: 30px auto -10px; }
+
+.register-error-container {
+  width: 300px;
+  margin: 30px auto -10px; }
+
 .navbar {
   max-height: 62px !important;
   margin-bottom: 0; }
@@ -7305,6 +7339,75 @@ input[type="submit"] {
         .splash-features__feature__body {
           padding: 0; } }
 
+.register-form {
+  background: #fff;
+  border: thin solid #ededed;
+  margin-top: 50px;
+  padding: 0 25px; }
+  .register-form__header {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555555;
+    margin: 0 0 35px 0;
+    padding-top: 30px; }
+  .register-form__input {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    margin: 5px auto;
+    padding: 15px;
+    font-size: .8em;
+    border: 1.5px solid #cccccc; }
+  .register-form__button {
+    width: 100%;
+    height: 50px;
+    background-color: #184D59;
+    border: none;
+    outline: none;
+    margin: 20px auto 0;
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    font-size: 1em; }
+
+.password-form {
+  background: #fff;
+  border: thin solid #ededed;
+  margin-top: 50px;
+  padding: 0 25px; }
+  .password-form__header {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555555;
+    margin: 0 0 35px 0;
+    padding-top: 30px; }
+  .password-form__input {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    margin: 5px auto;
+    padding: 15px;
+    font-size: .8em;
+    border: 1.5px solid #cccccc; }
+  .password-form__button {
+    width: 100%;
+    height: 50px;
+    background-color: #184D59;
+    border: none;
+    outline: none;
+    margin: 20px auto 0;
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    font-size: 1em; }
+
+.password-success {
+  margin-top: 30px; }
+
 .input-group {
   margin: 20px auto 40px;
   width: 80%; }
@@ -7337,3 +7440,6 @@ input[type="submit"] {
 
 .hide {
   display: none; }
+
+input:focus, textarea:focus {
+  outline: none; }
