@@ -2,7 +2,7 @@
 
 <div class="error-container alert alert-danger hide"></div>
 
-<i class="fa fa-file"></i>{!! Form::label('name', 'Name: ') !!}
+{!! Form::label('name', 'Name: ') !!}
 {!! Form::text('name', null, ['placeholder' => 'Task Name', 'class' => 'modal-form__input']) !!}
 
 {!! Form::submit('Save Changes', ['class' => 'modal-form__button']) !!}

@@ -2,10 +2,10 @@
 
 <div class="error-container alert alert-danger hide"></div>
 
-<i class="fa fa-file"></i>{!! Form::label('title', 'Title: ') !!}
+{!! Form::label('title', 'Title: ') !!}
 {!! Form::text('title', null, ['placeholder' => 'Discussion Topic Name', 'class' => 'modal-form__input']) !!}
 
-<i class="fa fa-file-text"></i>{!! Form::label('body', 'Body: ') !!}
+{!! Form::label('body', 'Body: ') !!}
 {!! Form::textarea('body', null, ['class' => 'modal-form__input modal-form__input--textarea', 'placeholder' => 'Discussion Text']) !!}
 
 {!! Form::submit('Save Changes', ['class' => 'modal-form__button']) !!}

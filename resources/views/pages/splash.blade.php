@@ -46,7 +46,7 @@
 
         <div class="splash-overview__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, rem reprehenderit. Eaque exercitationem minus pariatur. A accusantium adipisci aspernatur atque blanditiis corporis cum distinctio dolore dolores dolorum ducimus esse eveniet harum inventore iure labore laboriosam minima natus numquam odio omnis, praesentium quia rem repellendus reprehenderit sed similique soluta unde vitae.</div>
 
-        <img class="splash-overview__image" src="{{ asset('images/browser-shot.jpg') }}" alt=""/>
+        <img class="splash-overview__image" src="{{ asset('images/browser-shot.png') }}" alt=""/>
 
     </section>
 
@@ -56,7 +56,7 @@
 
         <img class="splash-spotlight__laptop-mock" src="{{ asset('images/laptop-mock.png') }}" alt=""/>
 
-        <img class="splash-spotlight__phone-mock" src="{{ asset('images/test-for-web.png') }}" alt=""/>
+        <img class="splash-spotlight__phone-mock" src="{{ asset('images/phone-mock.png') }}" alt=""/>
 
         <div class="splash-spotlight__text">
             <div class="splash-spotlight__header">Lorem ipsum dolor sit amet.</div>
@@ -165,9 +165,5 @@
 
 </div>
 
-
-
-
-<script src="/js/all.js"></script>
 </body>
 </html>

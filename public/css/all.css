@@ -5458,57 +5458,39 @@ input[type="submit"] {
   .modal-form .fa {
     margin-right: 5px; }
   .modal-form__input {
-    display: block;
+    display: inline-block;
     width: 100%;
-    height: 40px;
-    padding: 10px;
-    background-color: #eeeeee;
-    color: #184D59;
-    border: 0;
-    margin-bottom: 15px; }
-    .modal-form__input::-moz-placeholder {
-      color: #777777;
-      opacity: 1; }
-    .modal-form__input:-ms-input-placeholder {
-      color: #777777; }
-    .modal-form__input::-webkit-input-placeholder {
-      color: #777777; }
+    height: 50px;
+    margin: 0px auto 20px;
+    padding: 15px;
+    font-size: .9em;
+    border: 1.5px solid #cccccc; }
   .modal-form__input--textarea {
     height: 160px; }
+  .modal-form label {
+    margin-bottom: 5px; }
   .modal-form .select2-container {
-    width: 100% !important; }
+    width: 100% !important;
+    margin-bottom: 20px; }
   .modal-form .select2-selection {
-    background-color: #eeeeee;
-    height: 40px;
-    line-height: 30px;
+    border: 1.5px solid #cccccc;
+    height: 50px;
+    line-height: 35px;
     padding-left: 5px;
-    border: 0;
-    border-radius: 0;
     color: #184D59; }
   .modal-form__button {
-    color: white;
+    width: 30%;
+    height: 50px;
     background-color: #184D59;
-    border-color: black;
-    padding: 10px 15px;
-    font-size: 1em;
-    line-height: 1em;
-    border-radius: 5px;
-    border: 0px;
-    box-shadow: 0px 1px black;
+    border: none;
+    outline: none;
     float: right;
-    margin: 20px; }
-    .modal-form__button:hover, .modal-form__button:focus, .modal-form__button.focus, .modal-form__button:active, .modal-form__button.active, .open > .modal-form__button.dropdown-toggle {
-      color: white;
-      background-color: #0d2a31;
-      border-color: black; }
-    .modal-form__button:active, .modal-form__button.active, .open > .modal-form__button.dropdown-toggle {
-      background-image: none; }
-    .modal-form__button.disabled, .modal-form__button.disabled:hover, .modal-form__button.disabled:focus, .modal-form__button.disabled.focus, .modal-form__button.disabled:active, .modal-form__button.disabled.active, .modal-form__button[disabled], .modal-form__button[disabled]:hover, .modal-form__button[disabled]:focus, .modal-form__button[disabled].focus, .modal-form__button[disabled]:active, .modal-form__button[disabled].active, fieldset[disabled] .modal-form__button, fieldset[disabled] .modal-form__button:hover, fieldset[disabled] .modal-form__button:focus, fieldset[disabled] .modal-form__button.focus, fieldset[disabled] .modal-form__button:active, fieldset[disabled] .modal-form__button.active {
-      background-color: #184D59;
-      border-color: black; }
-    .modal-form__button .badge {
-      color: #184D59;
-      background-color: white; }
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    font-size: 1em; }
 
 .task {
   height: 600px;
@@ -6238,7 +6220,8 @@ input[type="submit"] {
   .modal__header {
     color: #184D59;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    padding: 15px 15px; }
+    padding: 15px 15px;
+    margin-bottom: 20px; }
   .modal__title {
     font-size: 18px; }
   .modal__close {
@@ -6875,15 +6858,15 @@ input[type="submit"] {
   margin-top: -30px; }
 
 .login-error-container {
-  width: 300px;
+  width: 320px;
   margin: 30px auto -10px; }
 
 .password-error-container {
-  width: 300px;
+  width: 320px;
   margin: 30px auto -10px; }
 
 .register-error-container {
-  width: 300px;
+  width: 320px;
   margin: 30px auto -10px; }
 
 .navbar {
