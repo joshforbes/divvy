@@ -1,5 +1,7 @@
 <div class="members-edit__add-container">
     {!! Form::open(['data-remote', 'route' => ['project.addUser', $project->id]]) !!}
+    <div class="error-container alert alert-danger hide"></div>
+
     <div class="input-group">
         <select name="user" class="members-edit__list" id="usersList" data-placeholder="Add a User to Project">
             <option></option>

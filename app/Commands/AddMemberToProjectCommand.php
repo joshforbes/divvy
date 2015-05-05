@@ -43,10 +43,10 @@ class AddMemberToProjectCommand extends Command implements SelfHandling {
 
 		$user = $userRepository->findByEmail($this->userEmail);
 
-		if (!$user)
-		{
-			dd('invite email');
-		}
+//		if (!$user)
+//		{
+//			dd('invite email');
+//		}
 
 		$projectRepository->addUser($user, $project);
 
