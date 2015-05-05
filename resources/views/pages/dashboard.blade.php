@@ -44,7 +44,6 @@
 @endsection
 
 @section('js')
-    <script src="/js/vendor/select2.js"></script>
     <script>
         dashboardModule.init();
     </script>
