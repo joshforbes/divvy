@@ -69,7 +69,7 @@ class CommentWasLeftOnSubtask {
         $channel = 's'.$subtask->id;
 
         $partial = view('comments.partials.comment', compact('task', 'project', 'subtask', 'comment'));
-        $editPartial = view('comments.partials.edit-form', compact('task', 'project', 'subtask', 'comment'));
+        $editPartial = view('comments.partials.edit-comment-modal', compact('task', 'project', 'subtask', 'comment'));
 
         $this->pusher->trigger($channel, 'commentWasLeft', [
             'partial' => (String) $partial,
