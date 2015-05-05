@@ -34,6 +34,12 @@ class TaskWasIncomplete {
         $this->handleTask($event);
     }
 
+    /**
+     * handles events related to the Project page/channel
+     *
+     * @param $event
+     * @throws \PusherException
+     */
     private function handleProject($event)
     {
         $task = $event->task;

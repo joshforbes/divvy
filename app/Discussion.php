@@ -12,6 +12,11 @@ class Discussion extends Model {
 	protected $presenter = 'App\Presenters\DiscussionPresenter';
 
 
+	/**
+	 * The fields that can be mass assigned
+	 *
+	 * @var array
+	 */
 	protected $fillable = ['title', 'body', 'task_id', 'user_id'];
 
 	/**

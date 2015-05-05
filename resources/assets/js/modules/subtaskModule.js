@@ -1,10 +1,7 @@
 var subtaskModule = (function() {
     var s;
 
-    function bindUIactions() {
-
-    }
-
+    // binds all the pusher event listeners
     function bindPusherEvents() {
         var pusher = new Pusher('bf3b73f9a228dfef0913');
         var channel = pusher.subscribe(divvy.channel);
@@ -36,11 +33,15 @@ var subtaskModule = (function() {
         s.header.siblings('.container').html(data.partial);
     }
 
+    // Pusher event listener that replaces the page body with a completed overlay
+    // and removes the subtask buttons from the header
     function subtaskWasCompleted(data) {
         s.header.siblings('.container').html(data.partial);
         $('.header__controls').replaceWith(data.headerPartial);
     }
 
+    // Pusher event listener that removes the completed overlay from the page body
+    // and adds the subtask controls to the header
     function subtaskWasIncomplete(data) {
         s.header.siblings('.container').html(data.partial);
         $('.header__controls').replaceWith(data.headerPartial);

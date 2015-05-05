@@ -21,6 +21,7 @@ class NotifyUsers {
 
     /**
      * Handle the event.
+     * Notify all users that are affected by the event
      *
      * @param $event
      */

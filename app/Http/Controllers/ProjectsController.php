@@ -23,6 +23,9 @@ class ProjectsController extends Controller {
      */
     private $projectRepository;
 
+    /**
+     * @param ProjectRepository $projectRepository
+     */
     public function __construct(ProjectRepository $projectRepository)
     {
         parent::__construct();

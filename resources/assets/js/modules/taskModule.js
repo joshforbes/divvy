@@ -2,10 +2,14 @@ var taskModule = (function() {
     var s;
     var showingCompleted = 0;
 
+    // bind any UI actions. Note that if an action is bound through the body
+    // that means it needs to be applied to a dynamic element that may be added
+    // through ajax or pusher.
     function bindUIactions() {
         $('body').on('click', '.subtasks__more-link', showCompletedSubtasks);
     }
 
+    // show and animate the completed subtasks
     function showCompletedSubtasks(e) {
         var completedSubtasks = $('.subtasks__row--completed');
 
@@ -321,6 +325,7 @@ var taskModule = (function() {
         return found;
     }
 
+    // Checks to see if the current user is the discussion author
     function isDiscussionAuthor(author) {
         return divvy.currentUser == author;
     }

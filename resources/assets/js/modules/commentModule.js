@@ -1,30 +1,38 @@
 var commentModule = (function() {
     var s;
 
+    // show and animate the project settings overlay
     function showSettings() {
         $(this).next(s.projectSettingsOverlay).hide().removeClass('hide').slideDown(600);
     }
 
+    // hide and animate the project settings overlay
     function hideSettings() {
         $(this).parent(s.projectSettingsOverlay).slideUp(600);
     }
 
+    // show and animate the comment form
     function showCommentForm() {
         $('.comments__form-wrapper').hide().removeClass('hide').slideDown(600);
         $('.comments__new-link').slideUp(600);
     }
 
+    // hide and animate the comment form
     function hideCommentForm() {
         $('.comments__form-wrapper').slideUp(600);
         $('.comments__new-link').slideDown(600);
     }
 
+    // bind any UI actions. Note that if an action is bound through the body
+    // that means it needs to be applied to a dynamic element that may be added
+    // through ajax or pusher.
     function bindUIactions() {
         $('body').on('click', '.comment__settings-button', showSettings);
         $('body').on('click', '.comment__settings-close', hideSettings);
         $('body').on('click', '.comments__new-link', showCommentForm);
     }
 
+    // bind the pusher event listeners
     function bindPusherEvents() {
         var pusher = new Pusher('bf3b73f9a228dfef0913');
         var channel = pusher.subscribe(divvy.channel);
@@ -34,6 +42,8 @@ var commentModule = (function() {
         channel.bind('commentWasModified', commentWasModified);
     }
 
+    // Pusher event listener that removes the specified comment
+    // from the comment container
     function commentWasDeleted(data) {
         var comment = $(".comment[data-comment='" + data.commentId + "']");
 
@@ -86,6 +96,7 @@ var commentModule = (function() {
         }
     }
 
+    // checks to see if current user is the comment author
     function isCommentAuthor(author) {
         return divvy.currentUser == author;
     }

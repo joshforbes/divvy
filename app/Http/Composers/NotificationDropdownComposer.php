@@ -21,7 +21,7 @@ class NotificationDropdownComposer {
     }
 
     /**
-     * Bind data to the view.
+     * Binds notification data to the navigation bar
      *
      * @param  View  $view
      * @return void

@@ -49,13 +49,17 @@ class BootstrapNewUser {
 	 */
 	public function handle($event)
 	{
+
+		// Get the users
 		$user = $event->user;
 		$system = $this->userRepository->findByUsername('system');
 		$johndoe = $this->userRepository->findByUsername('johndoe');
 		$janedoe = $this->userRepository->findByUsername('janedoe');
 
+		// Login the newly registered user
 		$this->auth->login($user);
 
+		// Create the bootstrap project
 		$project = $this->dispatcher->dispatch(
 			new StartNewProjectCommand(
 				'Explore Divvy',
@@ -64,13 +68,14 @@ class BootstrapNewUser {
 			)
 		);
 
+		// Add the users to the bootstrap project
 		$this->projectRepository->addAdmin($user, $project);
 		$this->projectRepository->addUser($user, $project);
 		$this->projectRepository->addUser($johndoe, $project);
 		$this->projectRepository->addUser($janedoe, $project);
 
 
-
+		// Add the first task to the project
 		$task = $this->dispatcher->dispatch(
 			new AddTaskToProjectCommand(
 				'A Task',
@@ -127,7 +132,7 @@ class BootstrapNewUser {
 		);
 
 
-
+		// Add the second task to the project
 		$taskCompleted = $this->dispatcher->dispatch(
 			new AddTaskToProjectCommand(
 				'Another Task',
@@ -141,6 +146,7 @@ class BootstrapNewUser {
 			)
 		);
 
+		// Complete the second task
 		$this->taskRepository->complete($taskCompleted->id);
 
 		$this->dispatcher->dispatch(

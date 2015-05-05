@@ -1,10 +1,7 @@
 var discussionModule = (function() {
     var s;
 
-    function bindUIactions() {
-
-    }
-
+    // binds the pusher event listeners
     function bindPusherEvents() {
         var pusher = new Pusher('bf3b73f9a228dfef0913');
         var channel = pusher.subscribe(divvy.channel);

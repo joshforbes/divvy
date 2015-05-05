@@ -20,11 +20,12 @@ class LogProjectActivity {
 
 	/**
 	 * Handle the event.
+	 * Create a log entry for any event passed in
+	 *
 	 * @param $event
 	 */
 	public function handle($event)
 	{
-
 
 		$activity = Activity::log([
 			'action' => $event->action,

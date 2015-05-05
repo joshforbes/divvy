@@ -5,6 +5,11 @@ use Laracasts\Presenter\Presenter;
 
 class TaskPresenter extends Presenter {
 
+    /**
+     * Calculate the completion percentage for the task
+     *
+     * @return float|int
+     */
     public function completionPercentage()
     {
         if ($this->subtasks->count() == 0)

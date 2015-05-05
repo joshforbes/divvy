@@ -9,7 +9,11 @@ class Activity extends Model {
 
     protected $presenter = 'App\Presenters\ActivityPresenter';
 
-
+    /**
+     * The fields that can be mass assigned
+     *
+     * @var array
+     */
     protected $fillable = ['action', 'subject_type', 'subject_id', 'user_id', 'project_id', 'task_id'];
 
     /**

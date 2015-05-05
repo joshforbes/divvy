@@ -11,7 +11,11 @@ class Project extends Model {
 
 	protected $presenter = 'App\Presenters\ProjectPresenter';
 
-
+	/**
+	 * The fields that can be mass assigned
+	 *
+	 * @var array
+	 */
 	protected $fillable = ['name', 'description'];
 
 	/**

@@ -36,6 +36,12 @@ class NotificationRepository {
         return Notification::where('user_id', $userId)->where('read', 0)->orderBy('created_at', 'DESC')->get();
     }
 
+    /**
+     * Find the most recent notification for the specified user
+     *
+     * @param $userId
+     * @return mixed
+     */
     public function findNewestNotification($userId)
     {
         return Notification::where('user_id', $userId)->where('read', 0)->orderBy('created_at', 'DESC')->firstOrFail();

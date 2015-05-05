@@ -11,6 +11,11 @@ class Task extends Model {
 
     protected $presenter = 'App\Presenters\TaskPresenter';
 
+    /**
+     * The fields that can be mass assigned
+     *
+     * @var array
+     */
     protected $fillable = ['name', 'description', 'project_id', 'user_id', 'is_complete'];
 
     /**

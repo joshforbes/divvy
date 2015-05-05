@@ -14,6 +14,12 @@ class ProfilePresenter extends Presenter {
         return '/images/avatars/' . $filename;
     }
 
+    /**
+     * Generate a img tag for the avatar
+     *
+     * @param string $size
+     * @return string
+     */
     public function avatarHtml($size = '200px')
     {
         return '<img style="height:' . $size . '; width:' . $size . ';"  src=' . $this->avatar() . '>';

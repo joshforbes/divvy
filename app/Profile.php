@@ -26,6 +26,11 @@ class Profile extends Model {
         return $this->belongsTo('App\User', 'user_id');
     }
 
+    /**
+     * Creates a new blank profile for association with a new user
+     *
+     * @return static
+     */
     public static function forNewUser()
     {
         return new static;
