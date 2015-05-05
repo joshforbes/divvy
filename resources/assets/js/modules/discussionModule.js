@@ -79,7 +79,6 @@ var discussionModule = (function() {
 
         init: function() {
             s = this.settings;
-            bindUIactions();
             bindPusherEvents();
             bindPusherProjectEvents();
             bindPusherTaskEvents();

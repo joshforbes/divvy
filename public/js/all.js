@@ -7391,7 +7391,6 @@ var subtaskModule = (function() {
 
         init: function() {
             s = this.settings;
-            bindUIactions();
             bindPusherEvents();
             bindPusherProjectEvents();
             bindPusherTaskEvents();
@@ -7479,7 +7478,6 @@ var discussionModule = (function() {
 
         init: function() {
             s = this.settings;
-            bindUIactions();
             bindPusherEvents();
             bindPusherProjectEvents();
             bindPusherTaskEvents();
