@@ -41,16 +41,21 @@
 
     <section class="splash__section splash-overview">
         <div class="splash-overview__header">
-            Communication and Delegation
+            Delegation and Communication
         </div>
 
         <div class="splash-overview__text">
-            Being a project manager is all about communication and delegation. The role of
-            project management software is to simplify these cornerstones. Divvy gives project
-            managers the tools they need to easily assign tasks to members, monitor activity,
-            and keep track of progress. For team members we think collaboration is the key to
-            success. While on a task a member is never more than a click away from starting
-            a discussion with their team. By working together, we can accomplish great things.
+            {{--Being a project manager is all about communication and delegation. The role of--}}
+            {{--project management software is to simplify these cornerstones. Divvy gives project--}}
+            {{--managers the tools they need to easily assign tasks to members, monitor activity,--}}
+            {{--and keep track of progress. For team members we think collaboration is the key to--}}
+            {{--success. While on a task a member is never more than a click away from starting--}}
+            {{--a discussion with their team. By working together, we can accomplish great things.--}}
+            The cornerstones to any successful project, Divvy makes them so simple. We give project
+            managers the tools they need to easily assign tasks to members, monitor activity, and
+            keep track of progress. While team members will enjoy the communication tools that
+            promote collaboration. We put tasks and discussions together so that there is never
+            any barrier to reaching out to teammates.
         </div>
         <img class="splash-overview__image" src="{{ asset('images/browser-shot.png') }}" alt=""/>
 
