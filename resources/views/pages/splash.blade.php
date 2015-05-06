@@ -45,12 +45,6 @@
         </div>
 
         <div class="splash-overview__text">
-            {{--Being a project manager is all about communication and delegation. The role of--}}
-            {{--project management software is to simplify these cornerstones. Divvy gives project--}}
-            {{--managers the tools they need to easily assign tasks to members, monitor activity,--}}
-            {{--and keep track of progress. For team members we think collaboration is the key to--}}
-            {{--success. While on a task a member is never more than a click away from starting--}}
-            {{--a discussion with their team. By working together, we can accomplish great things.--}}
             The cornerstones to any successful project, Divvy makes them so simple. We give project
             managers the tools they need to easily assign tasks to members, monitor activity, and
             keep track of progress. While team members will enjoy the communication tools that
@@ -71,7 +65,7 @@
 
         <div class="splash-spotlight__text">
             <div class="splash-spotlight__header">Projects on the go</div>
-            Team members on the road? No problem, divvy is designed to work just as well
+            Team members on the road? No problem, Divvy is designed to work just as well
             on your phone as on your desktop. Never miss out just because you are out of the
             office. Complete a task or participate in a discussion from anywhere. All your actions
             remain perfectly in sync with your team members.
@@ -98,7 +92,7 @@
                     </div>
 
                     <div class="splash-features__feature__body">
-                        By grouping communications and tasks together divvy makes collaboration easy.
+                        By grouping communications and tasks together Divvy makes collaboration easy.
                         Roadblocks are easily overcome when you can reach out to a teammate for help.                    </div>
                 </div>
 
