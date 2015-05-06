@@ -15,7 +15,7 @@ var subtaskModule = (function() {
     // Pusher event listener that replaces the specified discussion with an
     // updated version from the server.
     function subtaskWasModified(data) {
-        var subtask = s.subtask;
+        var subtask = $('.subtask');
         var editModal = s.editModal;
         var editForm = editModal.find('.modal-form');
 

@@ -13,7 +13,7 @@ var discussionModule = (function() {
     // Pusher event listener that replaces the specified discussion with an
     // updated version from the server.
     function discussionWasModified(data) {
-        var discussion = s.discussion;
+        var discussion = $('.discussion');
         var editModal = s.editModal;
         var editForm = editModal.find('.modal-form');
 
