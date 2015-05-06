@@ -41,11 +41,17 @@
 
     <section class="splash__section splash-overview">
         <div class="splash-overview__header">
-            Lorem ipsum dolor sit amet.
+            Communication and Delegation
         </div>
 
-        <div class="splash-overview__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, rem reprehenderit. Eaque exercitationem minus pariatur. A accusantium adipisci aspernatur atque blanditiis corporis cum distinctio dolore dolores dolorum ducimus esse eveniet harum inventore iure labore laboriosam minima natus numquam odio omnis, praesentium quia rem repellendus reprehenderit sed similique soluta unde vitae.</div>
-
+        <div class="splash-overview__text">
+            Being a project manager is all about communication and delegation. The role of
+            project management software is to simplify these cornerstones. Divvy gives project
+            managers the tools they need to easily assign tasks to members, monitor activity,
+            and keep track of progress. For team members we think collaboration is the key to
+            success. While on a task a member is never more than a click away from starting
+            a discussion with their team. By working together, we can accomplish great things.
+        </div>
         <img class="splash-overview__image" src="{{ asset('images/browser-shot.png') }}" alt=""/>
 
     </section>
@@ -59,9 +65,11 @@
         <img class="splash-spotlight__phone-mock" src="{{ asset('images/phone-mock.png') }}" alt=""/>
 
         <div class="splash-spotlight__text">
-            <div class="splash-spotlight__header">Lorem ipsum dolor sit amet.</div>
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At atque ducimus eaque harum iure, labore odio voluptates. A ad amet cum debitis dicta id illo in ipsa iusto laboriosam necessitatibus non perferendis quisquam rerum, totam unde veritatis voluptatem! Asperiores culpa deleniti exercitationem expedita explicabo illum, maiores molestiae quis suscipit unde.
+            <div class="splash-spotlight__header">Projects on the go</div>
+            Team members on the road? No problem, divvy is designed to work just as well
+            on your phone as on your desktop. Never miss out just because you are out of the
+            office. Complete a task or participate in a discussion from anywhere. All your actions
+            remain perfectly in sync with your team members.
         </div>
 
     </section>
@@ -85,8 +93,8 @@
                     </div>
 
                     <div class="splash-features__feature__body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
-                    </div>
+                        By grouping communications and tasks together divvy makes collaboration easy.
+                        Roadblocks are easily overcome when you can reach out to a teammate for help.                    </div>
                 </div>
 
                 <div class="splash-features__feature">
@@ -99,7 +107,8 @@
                     </div>
 
                     <div class="splash-features__feature__body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
+                        Your project is always in sync. When a team member adds a new task everyone
+                        will see it instantly, no reload required.  Everything happens in real time.
                     </div>
                 </div>
 
@@ -113,7 +122,8 @@
                     </div>
 
                     <div class="splash-features__feature__body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
+                        Designed for all of your devices: desktop, laptop, tablet, or phone -
+                        divvy looks and works great on them all. No need to download anything from the app store.
                     </div>
                 </div>
 
@@ -127,8 +137,8 @@
                     </div>
 
                     <div class="splash-features__feature__body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
-                    </div>
+                        Never miss a thing. Divvy’s notification system alerts you to all actions that
+                        affect you. Someone comments on your discussion topic? You’ll know it.                    </div>
                 </div>
 
                 <div class="splash-features__feature">
@@ -141,7 +151,8 @@
                     </div>
 
                     <div class="splash-features__feature__body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
+                        Email threads can get messy - leave them behind.
+                        Our robust discussion and commenting system makes project communication easy to follow.
                     </div>
                 </div>
 
@@ -155,7 +166,8 @@
                     </div>
 
                     <div class="splash-features__feature__body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti dolores iste natus quas repellat tempora tempore temporibus unde voluptate?
+                        Keeping organized just got easier. Divvy automatically tracks all activity
+                        within your project. See whats been going on at glance, without the paperwork.
                     </div>
                 </div>
             </div>
