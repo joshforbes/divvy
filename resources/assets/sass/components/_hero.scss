@@ -1,7 +1,7 @@
 .hero {
     background: linear-gradient(
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7)
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
     ), url('/images/hero-1920.jpg') no-repeat top center fixed;
     background-size: cover;
     width: 100%;
@@ -10,8 +10,8 @@
 
     @media(max-width: 960px){
         background: linear-gradient(
-                rgba(0, 0, 0, 0.7),
-                rgba(0, 0, 0, 0.7)
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
         ), url('/images/hero-960.jpg') no-repeat top center fixed;
 
         height: 500px;
@@ -19,16 +19,16 @@
 
     @media(max-width: 700px){
         background: linear-gradient(
-                rgba(0, 0, 0, 0.7),
-                rgba(0, 0, 0, 0.7)
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
         ), url('/images/hero-700.jpg') no-repeat top center fixed;
         height: 400px;
     }
 
     @media(max-width: 450px){
         background: linear-gradient(
-                rgba(0, 0, 0, 0.7),
-                rgba(0, 0, 0, 0.7)
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
         ), url('/images/hero-450.jpg') no-repeat top center fixed;
         height: 300px;
     }
